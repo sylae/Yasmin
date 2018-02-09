@@ -362,6 +362,14 @@
                 <td></td>
             </tr>
                     <tr>
+                <td class="type" id="property_vanityURL">
+                                                                                bool
+                </td>
+                <td><a name="property_vanityURL" href="#property_vanityURL">$vanityURL</a></td>
+                <td class="last">Whether the guild has a vanity invite url.</td>
+                <td></td>
+            </tr>
+                    <tr>
                 <td class="type" id="property_verificationLevel">
                                                                                 string
                 </td>
@@ -572,6 +580,16 @@
                     <abbr title="React\Promise\Promise">Promise</abbr>
                 </div>
                 <div class="col-md-8 type">
+                    <a href="#method_getVanityInvite">getVanityInvite</a>()
+        
+                                            <p>Returns the vanity invite. The guild must be partnered, i.e. have 'VANITY_URL' in guild features. Resolves with an instance of Invite.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="React\Promise\Promise">Promise</abbr>
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_leave">leave</a>()
         
                                             <p>Leaves the guild.</p>                </div>
@@ -725,7 +743,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method_addMember">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L183">line 183</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L187">line 187</a></div>
         <code>                    <abbr title="React\Promise\Promise">Promise</abbr>
     <strong>addMember</strong>(<a href="../../../CharlotteDunois/Yasmin/Models/User.html"><abbr title="CharlotteDunois\Yasmin\Models\User">User</abbr></a>|string $user, string $accessToken, array $options = array())
         </code>
@@ -789,7 +807,7 @@ array(
             </div>
                     <div class="method-item">
                     <h3 id="method_ban">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L232">line 232</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L236">line 236</a></div>
         <code>                    <abbr title="React\Promise\Promise">Promise</abbr>
     <strong>ban</strong>(<a href="../../../CharlotteDunois/Yasmin/Models/GuildMember.html"><abbr title="CharlotteDunois\Yasmin\Models\GuildMember">GuildMember</abbr></a>|<a href="../../../CharlotteDunois/Yasmin/Models/User.html"><abbr title="CharlotteDunois\Yasmin\Models\User">User</abbr></a>|string $user, int $days = 0, string $reason = &#039;&#039;)
         </code>
@@ -843,7 +861,7 @@ array(
             </div>
                     <div class="method-item">
                     <h3 id="method_createChannel">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L274">line 274</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L278">line 278</a></div>
         <code>                    <abbr title="React\Promise\Promise">Promise</abbr>
     <strong>createChannel</strong>(array $options, string $reason = &#039;&#039;)
         </code>
@@ -932,7 +950,7 @@ array(
             </div>
                     <div class="method-item">
                     <h3 id="method_createEmoji">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L325">line 325</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L329">line 329</a></div>
         <code>                    <abbr title="React\Promise\Promise">Promise</abbr>
     <strong>createEmoji</strong>(string $file, string $name, array|<a href="../../../CharlotteDunois/Yasmin/Utils/Collection.html"><abbr title="CharlotteDunois\Yasmin\Utils\Collection">Collection</abbr></a> $roles = array(), string $reason = &#039;&#039;)
         </code>
@@ -1002,7 +1020,7 @@ array(
             </div>
                     <div class="method-item">
                     <h3 id="method_createRole">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L375">line 375</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L379">line 379</a></div>
         <code>                    <abbr title="React\Promise\Promise">Promise</abbr>
     <strong>createRole</strong>(array $options, string $reason = &#039;&#039;)
         </code>
@@ -1082,7 +1100,7 @@ array(
             </div>
                     <div class="method-item">
                     <h3 id="method_delete">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L392">line 392</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L396">line 396</a></div>
         <code>                    <abbr title="React\Promise\Promise">Promise</abbr>
     <strong>delete</strong>()
         </code>
@@ -1116,7 +1134,7 @@ array(
             </div>
                     <div class="method-item">
                     <h3 id="method_edit">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L426">line 426</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L430">line 430</a></div>
         <code>                    <abbr title="React\Promise\Promise">Promise</abbr>
     <strong>edit</strong>(array $options, string $reason = &#039;&#039;)
         </code>
@@ -1183,7 +1201,7 @@ array(
             </div>
                     <div class="method-item">
                     <h3 id="method_fetchAuditLog">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L514">line 514</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L518">line 518</a></div>
         <code>                    <abbr title="React\Promise\Promise">Promise</abbr>
     <strong>fetchAuditLog</strong>(array $options = array())
         </code>
@@ -1249,7 +1267,7 @@ array(
             </div>
                     <div class="method-item">
                     <h3 id="method_fetchBans">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L539">line 539</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L543">line 543</a></div>
         <code>                    <abbr title="React\Promise\Promise">Promise</abbr>
     <strong>fetchBans</strong>()
         </code>
@@ -1283,7 +1301,7 @@ array(
             </div>
                     <div class="method-item">
                     <h3 id="method_fetchInvites">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L562">line 562</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L566">line 566</a></div>
         <code>                    <abbr title="React\Promise\Promise">Promise</abbr>
     <strong>fetchInvites</strong>()
         </code>
@@ -1328,7 +1346,7 @@ array(
             </div>
                     <div class="method-item">
                     <h3 id="method_fetchMember">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L583">line 583</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L587">line 587</a></div>
         <code>                    <abbr title="React\Promise\Promise">Promise</abbr>
     <strong>fetchMember</strong>(string $userid)
         </code>
@@ -1383,7 +1401,7 @@ array(
             </div>
                     <div class="method-item">
                     <h3 id="method_fetchMembers">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L601">line 601</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L605">line 605</a></div>
         <code>                    <abbr title="React\Promise\Promise">Promise</abbr>
     <strong>fetchMembers</strong>(string $query = &#039;&#039;, int $limit = 0)
         </code>
@@ -1432,7 +1450,7 @@ array(
             </div>
                     <div class="method-item">
                     <h3 id="method_fetchVoiceRegions">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L644">line 644</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L648">line 648</a></div>
         <code>                    <abbr title="React\Promise\Promise">Promise</abbr>
     <strong>fetchVoiceRegions</strong>()
         </code>
@@ -1477,7 +1495,7 @@ array(
             </div>
                     <div class="method-item">
                     <h3 id="method_fetchWebhooks">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L664">line 664</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L668">line 668</a></div>
         <code>                    <abbr title="React\Promise\Promise">Promise</abbr>
     <strong>fetchWebhooks</strong>()
         </code>
@@ -1522,7 +1540,7 @@ array(
             </div>
                     <div class="method-item">
                     <h3 id="method_getIconURL">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L685">line 685</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L689">line 689</a></div>
         <code>                    string|null
     <strong>getIconURL</strong>(string $format = &#039;png&#039;, int|null $size = null)
         </code>
@@ -1571,7 +1589,7 @@ array(
             </div>
                     <div class="method-item">
                     <h3 id="method_getSplashURL">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L699">line 699</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L703">line 703</a></div>
         <code>                    string|null
     <strong>getSplashURL</strong>(string $format = &#039;png&#039;, int|null $size = null)
         </code>
@@ -1619,8 +1637,53 @@ array(
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_getVanityInvite">
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L716">line 716</a></div>
+        <code>                    <abbr title="React\Promise\Promise">Promise</abbr>
+    <strong>getVanityInvite</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the vanity invite. The guild must be partnered, i.e. have 'VANITY_URL' in guild features. Resolves with an instance of Invite.</p>                                                                
+        
+                            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="React\Promise\Promise">Promise</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                            <a href="../../../CharlotteDunois/Yasmin/Models/Invite.html"><abbr title="CharlotteDunois\Yasmin\Models\Invite">Invite</abbr></a>
+                                    </td>
+                <td></td>
+            </tr>
+            </table>
+
+                        
+                        
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_leave">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L711">line 711</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L731">line 731</a></div>
         <code>                    <abbr title="React\Promise\Promise">Promise</abbr>
     <strong>leave</strong>()
         </code>
@@ -1654,7 +1717,7 @@ array(
             </div>
                     <div class="method-item">
                     <h3 id="method_pruneMembers">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L726">line 726</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L746">line 746</a></div>
         <code>                    <abbr title="React\Promise\Promise">Promise</abbr>
     <strong>pruneMembers</strong>(int $days, bool $dry = false, string $reason = &#039;&#039;)
         </code>
@@ -1708,7 +1771,7 @@ array(
             </div>
                     <div class="method-item">
                     <h3 id="method_setAFKChannel">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L741">line 741</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L761">line 761</a></div>
         <code>                    <abbr title="React\Promise\Promise">Promise</abbr>
     <strong>setAFKChannel</strong>(string|<a href="../../../CharlotteDunois/Yasmin/Models/VoiceChannel.html"><abbr title="CharlotteDunois\Yasmin\Models\VoiceChannel">VoiceChannel</abbr></a>|null $channel, string $reason = &#039;&#039;)
         </code>
@@ -1757,7 +1820,7 @@ array(
             </div>
                     <div class="method-item">
                     <h3 id="method_setAFKTimeout">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L751">line 751</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L771">line 771</a></div>
         <code>                    <abbr title="React\Promise\Promise">Promise</abbr>
     <strong>setAFKTimeout</strong>(int|null $timeout, string $reason = &#039;&#039;)
         </code>
@@ -1806,7 +1869,7 @@ array(
             </div>
                     <div class="method-item">
                     <h3 id="method_setChannelPositions">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L761">line 761</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L781">line 781</a></div>
         <code>                    <abbr title="React\Promise\Promise">Promise</abbr>
     <strong>setChannelPositions</strong>(array $channels, string $reason = &#039;&#039;)
         </code>
@@ -1855,7 +1918,7 @@ array(
             </div>
                     <div class="method-item">
                     <h3 id="method_setExplicitContentFilter">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L809">line 809</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L829">line 829</a></div>
         <code>                    <abbr title="React\Promise\Promise">Promise</abbr>
     <strong>setExplicitContentFilter</strong>(int $filter, string $reason = &#039;&#039;)
         </code>
@@ -1904,7 +1967,7 @@ array(
             </div>
                     <div class="method-item">
                     <h3 id="method_setIcon">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L819">line 819</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L839">line 839</a></div>
         <code>                    <abbr title="React\Promise\Promise">Promise</abbr>
     <strong>setIcon</strong>(string $icon, string $reason = &#039;&#039;)
         </code>
@@ -1953,7 +2016,7 @@ array(
             </div>
                     <div class="method-item">
                     <h3 id="method_setName">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L829">line 829</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L849">line 849</a></div>
         <code>                    <abbr title="React\Promise\Promise">Promise</abbr>
     <strong>setName</strong>(string $name, string $reason = &#039;&#039;)
         </code>
@@ -2002,7 +2065,7 @@ array(
             </div>
                     <div class="method-item">
                     <h3 id="method_setOwner">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L839">line 839</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L859">line 859</a></div>
         <code>                    <abbr title="React\Promise\Promise">Promise</abbr>
     <strong>setOwner</strong>(string|<a href="../../../CharlotteDunois/Yasmin/Models/GuildMember.html"><abbr title="CharlotteDunois\Yasmin\Models\GuildMember">GuildMember</abbr></a> $owner, string $reason = &#039;&#039;)
         </code>
@@ -2051,7 +2114,7 @@ array(
             </div>
                     <div class="method-item">
                     <h3 id="method_setRegion">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L849">line 849</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L869">line 869</a></div>
         <code>                    <abbr title="React\Promise\Promise">Promise</abbr>
     <strong>setRegion</strong>(string|<a href="../../../CharlotteDunois/Yasmin/Models/VoiceRegion.html"><abbr title="CharlotteDunois\Yasmin\Models\VoiceRegion">VoiceRegion</abbr></a> $region, string $reason = &#039;&#039;)
         </code>
@@ -2100,7 +2163,7 @@ array(
             </div>
                     <div class="method-item">
                     <h3 id="method_setRolePositions">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L785">line 785</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L805">line 805</a></div>
         <code>                    <abbr title="React\Promise\Promise">Promise</abbr>
     <strong>setRolePositions</strong>(array $roles, string $reason = &#039;&#039;)
         </code>
@@ -2149,7 +2212,7 @@ array(
             </div>
                     <div class="method-item">
                     <h3 id="method_setSplash">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L859">line 859</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L879">line 879</a></div>
         <code>                    <abbr title="React\Promise\Promise">Promise</abbr>
     <strong>setSplash</strong>(string $splash, string $reason = &#039;&#039;)
         </code>
@@ -2198,7 +2261,7 @@ array(
             </div>
                     <div class="method-item">
                     <h3 id="method_setSystemChannel">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L869">line 869</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L889">line 889</a></div>
         <code>                    <abbr title="React\Promise\Promise">Promise</abbr>
     <strong>setSystemChannel</strong>(string|<a href="../../../CharlotteDunois/Yasmin/Models/TextChannel.html"><abbr title="CharlotteDunois\Yasmin\Models\TextChannel">TextChannel</abbr></a>|null $channel, string $reason = &#039;&#039;)
         </code>
@@ -2247,7 +2310,7 @@ array(
             </div>
                     <div class="method-item">
                     <h3 id="method_setVerificationLevel">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L879">line 879</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L899">line 899</a></div>
         <code>                    <abbr title="React\Promise\Promise">Promise</abbr>
     <strong>setVerificationLevel</strong>(int $level, string $reason = &#039;&#039;)
         </code>
@@ -2296,7 +2359,7 @@ array(
             </div>
                     <div class="method-item">
                     <h3 id="method_unban">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L889">line 889</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L909">line 909</a></div>
         <code>                    <abbr title="React\Promise\Promise">Promise</abbr>
     <strong>unban</strong>(<a href="../../../CharlotteDunois/Yasmin/Models/User.html"><abbr title="CharlotteDunois\Yasmin\Models\User">User</abbr></a>|string $user, string $reason = &#039;&#039;)
         </code>
