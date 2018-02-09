@@ -99,7 +99,15 @@
                     <tr>
                 <td>ALL</td>
                 <td class="last">
-                    <p><em></em></p>
+                    <p><em>The value of the bitfield with all permissions granted.</em></p>
+                    <p></p>
+                                            <pre><code class="language-php">const ALL = 2146958591;</code></pre>
+                                    </td>
+            </tr>
+                    <tr>
+                <td>PERMISSIONS</td>
+                <td class="last">
+                    <p><em>Available Permissions in Discord.</em></p>
                     <p></p>
                                     </td>
             </tr>
@@ -201,7 +209,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Permissions.php#L25">line 25</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Permissions.php#L69">line 69</a></div>
         <code>                    
     <strong>__construct</strong>(int $permission = 0)
         </code>
@@ -236,7 +244,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_add">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Permissions.php#L93">line 93</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Permissions.php#L137">line 137</a></div>
         <code>                    <abbr title="CharlotteDunois\Yasmin\Models\$this">$this</abbr>
     <strong>add</strong>(int|string ...$permissions)
         </code>
@@ -289,7 +297,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_has">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Permissions.php#L57">line 57</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Permissions.php#L101">line 101</a></div>
         <code>                    bool
     <strong>has</strong>(array|int|string $permissions, bool $checkAdmin = true)
         </code>
@@ -347,7 +355,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_missing">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Permissions.php#L83">line 83</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Permissions.php#L127">line 127</a></div>
         <code>                    bool
     <strong>missing</strong>(array|int|string $permissions, bool $checkAdmin = true)
         </code>
@@ -405,7 +413,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_remove">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Permissions.php#L110">line 110</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Permissions.php#L154">line 154</a></div>
         <code>                    <abbr title="CharlotteDunois\Yasmin\Models\$this">$this</abbr>
     <strong>remove</strong>(int|string ...$permissions)
         </code>
@@ -458,7 +466,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_resolve">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Permissions.php#L127">line 127</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Permissions.php#L171">line 171</a></div>
         <code>        static            int
     <strong>resolve</strong>(int|string $permission)
         </code>
@@ -511,7 +519,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_resolveToName">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Permissions.php#L143">line 143</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Permissions.php#L187">line 187</a></div>
         <code>        static            string
     <strong>resolveToName</strong>(int|string $permission)
         </code>

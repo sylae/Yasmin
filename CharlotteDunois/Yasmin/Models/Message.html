@@ -93,6 +93,28 @@
                     </div>
     
     
+            <h2>Constants</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td>MESSAGE_TYPES</td>
+                <td class="last">
+                    <p><em>Messages Types.</em></p>
+                    <p></p>
+                                            <pre><code class="language-php">const MESSAGE_TYPES = array(
+    0 =&gt; &#039;DEFAULT&#039;,
+    1 =&gt; &#039;RECIPIENT_ADD&#039;,
+    2 =&gt; &#039;RECIPIENT_REMOVE&#039;,
+    3 =&gt; &#039;CALL&#039;,
+    4 =&gt; &#039;CHANNEL_NAME_CHANGE&#039;,
+    5 =&gt; &#039;CHANNEL_ICON_CHANGE&#039;,
+    6 =&gt; &#039;CHANNEL_PINNED_MESSAGE&#039;,
+    7 =&gt; &#039;GUILD_MEMBER_JOIN&#039;
+);</code></pre>
+                                    </td>
+            </tr>
+            </table>
+
     
             <h2>Properties</h2>
 
@@ -310,7 +332,7 @@
                                                                                 string
                 </td>
                 <td><a name="property_type" href="#property_type">$type</a></td>
-                <td class="last">The type of the message. (see \CharlotteDunois\Yasmin\Constants::MESSAGE_TYPES)</td>
+                <td class="last">The type of the message. (see Message::MESSAGE_TYPES)</td>
                 <td></td>
             </tr>
                     <tr>
@@ -435,7 +457,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method___toString">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Message.php#L363">line 363</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Message.php#L379">line 379</a></div>
         <code>                    
     <strong>__toString</strong>()
         </code>
@@ -460,7 +482,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_clearReactions">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Message.php#L161">line 161</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Message.php#L177">line 177</a></div>
         <code>                    <abbr title="React\Promise\Promise">Promise</abbr>
     <strong>clearReactions</strong>()
         </code>
@@ -494,7 +516,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_collectReactions">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Message.php#L188">line 188</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Message.php#L204">line 204</a></div>
         <code>                    <abbr title="React\Promise\Promise">Promise</abbr>
     <strong>collectReactions</strong>(callable $filter, array $options = array())
         </code>
@@ -563,7 +585,7 @@ array(
             </div>
                     <div class="method-item">
                     <h3 id="method_delete">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Message.php#L253">line 253</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Message.php#L269">line 269</a></div>
         <code>                    <abbr title="React\Promise\Promise">Promise</abbr>
     <strong>delete</strong>(float|int $timeout = 0, string $reason = &#039;&#039;)
         </code>
@@ -612,7 +634,7 @@ array(
             </div>
                     <div class="method-item">
                     <h3 id="method_edit">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Message.php#L229">line 229</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Message.php#L245">line 245</a></div>
         <code>                    <abbr title="React\Promise\Promise">Promise</abbr>
     <strong>edit</strong>(string|null $content, array $options = array())
         </code>
@@ -672,7 +694,7 @@ array(
             </div>
                     <div class="method-item">
                     <h3 id="method_fetchWebhook">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Message.php#L273">line 273</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Message.php#L289">line 289</a></div>
         <code>                    <abbr title="React\Promise\Promise">Promise</abbr>
     <strong>fetchWebhook</strong>()
         </code>
@@ -726,7 +748,7 @@ array(
             </div>
                     <div class="method-item">
                     <h3 id="method_pin">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Message.php#L290">line 290</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Message.php#L306">line 306</a></div>
         <code>                    <abbr title="React\Promise\Promise">Promise</abbr>
     <strong>pin</strong>()
         </code>
@@ -760,7 +782,7 @@ array(
             </div>
                     <div class="method-item">
                     <h3 id="method_react">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Message.php#L304">line 304</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Message.php#L320">line 320</a></div>
         <code>                    <abbr title="React\Promise\Promise">Promise</abbr>
     <strong>react</strong>(<a href="../../../CharlotteDunois/Yasmin/Models/Emoji.html"><abbr title="CharlotteDunois\Yasmin\Models\Emoji">Emoji</abbr></a>|<a href="../../../CharlotteDunois/Yasmin/Models/MessageReaction.html"><abbr title="CharlotteDunois\Yasmin\Models\MessageReaction">MessageReaction</abbr></a>|string $emoji)
         </code>
@@ -815,7 +837,7 @@ array(
             </div>
                     <div class="method-item">
                     <h3 id="method_reply">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Message.php#L344">line 344</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Message.php#L360">line 360</a></div>
         <code>                    <abbr title="React\Promise\Promise">Promise</abbr>
     <strong>reply</strong>(string $content, array $options = array())
         </code>
@@ -875,7 +897,7 @@ array(
             </div>
                     <div class="method-item">
                     <h3 id="method_unpin">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Message.php#L352">line 352</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Message.php#L368">line 368</a></div>
         <code>                    <abbr title="React\Promise\Promise">Promise</abbr>
     <strong>unpin</strong>()
         </code>
