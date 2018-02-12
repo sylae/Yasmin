@@ -121,7 +121,7 @@
                     <tr>
                 <td>TYPES</td>
                 <td class="last">
-                    <p><em>Activity types.</em></p>
+                    <p><em>The Activity types.</em></p>
                     <p></p>
                                             <pre><code class="language-php">const TYPES = array(
     0 =&gt; &#039;playing&#039;,
@@ -190,7 +190,7 @@
                                                                                 array|null
                 </td>
                 <td><a name="property_party" href="#property_party">$party</a></td>
-                <td class="last">Party of the activity, an array of ('id', 'size' => [ size, max ]), or null.</td>
+                <td class="last">Party of the activity, an array in the format <code>[ 'id' => string, 'size' => [ size (int), max (int|null) ] ]</code>, or null.</td>
                 <td></td>
             </tr>
                     <tr>
@@ -230,7 +230,7 @@
                                                                                 array|null
                 </td>
                 <td><a name="property_timestamps" href="#property_timestamps">$timestamps</a></td>
-                <td class="last">Timestamps for the activity, an array of ('start' => \DateTime|null, 'end' => \DateTime|null), or null.</td>
+                <td class="last">Timestamps for the activity, an array in the format <code>[ 'start' => \DateTime|null, 'end' => \DateTime|null ]</code>, or null.</td>
                 <td></td>
             </tr>
                     <tr>
@@ -323,7 +323,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_isRichPresence">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Activity.php#L125">line 125</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Activity.php#L132">line 132</a></div>
         <code>                    bool
     <strong>isRichPresence</strong>()
         </code>
