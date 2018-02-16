@@ -108,6 +108,35 @@
                 <td class="last">
                     <p><em>All available actions keyed under their names to their numeric values.</em></p>
                     <p></p>
+                                            <pre><code class="language-php">const ACTION_TYPES = array(
+    &#039;ALL&#039; =&gt; null,
+    &#039;GUILD_UPDATE&#039; =&gt; 1,
+    &#039;CHANNEL_UPDATE&#039; =&gt; 11,
+    &#039;CHANNEL_CREATE&#039; =&gt; 10,
+    &#039;CHANNEL_OVERWRITE_CREATE&#039; =&gt; 13,
+    &#039;CHANNEL_DELETE&#039; =&gt; 12,
+    &#039;CHANNEL_OVERWRITE_UPDATE&#039; =&gt; 14,
+    &#039;CHANNEL_OVERWRITE_DELETE&#039; =&gt; 15,
+    &#039;MEMBER_KICK&#039; =&gt; 20,
+    &#039;MEMBER_PRUNE&#039; =&gt; 21,
+    &#039;MEMBER_BAN_ADD&#039; =&gt; 22,
+    &#039;MEMBER_BAN_REMOVE&#039; =&gt; 23,
+    &#039;MEMBER_UPDATE&#039; =&gt; 24,
+    &#039;MEMBER_ROLE_UPDATE&#039; =&gt; 25,
+    &#039;ROLE_CREATE&#039; =&gt; 30,
+    &#039;ROLE_UPDATE&#039; =&gt; 31,
+    &#039;ROLE_DELETE&#039; =&gt; 32,
+    &#039;INVITE_CREATE&#039; =&gt; 40,
+    &#039;INVITE_UPDATE&#039; =&gt; 41,
+    &#039;INVITE_DELETE&#039; =&gt; 42,
+    &#039;WEBHOOK_CREATE&#039; =&gt; 50,
+    &#039;WEBHOOK_UPDATE&#039; =&gt; 51,
+    &#039;WEBHOOK_DELETE&#039; =&gt; 52,
+    &#039;EMOJI_CREATE&#039; =&gt; 60,
+    &#039;EMOJI_UPDATE&#039; =&gt; 61,
+    &#039;EMOJI_DELETE&#039; =&gt; 62,
+    &#039;MESSAGE_DELETE&#039; =&gt; 72
+);</code></pre>
                                     </td>
             </tr>
                     <tr>
@@ -115,6 +144,18 @@
                 <td class="last">
                     <p><em>Key mirror of all available audit log targets.</em></p>
                     <p></p>
+                                            <pre><code class="language-php">const TARGET_TYPES = array(
+    &#039;ALL&#039; =&gt; &#039;ALL&#039;,
+    &#039;GUILD&#039; =&gt; &#039;GUILD&#039;,
+    &#039;CHANNEL&#039; =&gt; &#039;CHANNEL&#039;,
+    &#039;USER&#039; =&gt; &#039;USER&#039;,
+    &#039;ROLE&#039; =&gt; &#039;ROLE&#039;,
+    &#039;INVITE&#039; =&gt; &#039;INVITE&#039;,
+    &#039;WEBHOOK&#039; =&gt; &#039;WEBHOOK&#039;,
+    &#039;EMOJI&#039; =&gt; &#039;EMOJI&#039;,
+    &#039;MESSAGE&#039; =&gt; &#039;MESSAGE&#039;,
+    &#039;UNKNOWN&#039; =&gt; &#039;UNKNOWN&#039;
+);</code></pre>
                                     </td>
             </tr>
             </table>
@@ -253,7 +294,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method_getActionType">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/AuditLogEntry.php#L207">line 207</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/AuditLogEntry.php#L209">line 209</a></div>
         <code>        static            string
     <strong>getActionType</strong>(int $actionType)
         </code>
@@ -307,7 +348,7 @@
     
 
                     <div class="method-description">
-                                    <p>Finds the target type from the entry action.</p>                    <p>One of GUILD, CHANNEL, USER, ROLE, INVITE, WEBHOOK, EMOJI, MESSAGE or UNKNOWN.</p>                                            
+                                    <p>Finds the target type from the entry action.</p>                                                                
         
                             </div>
                 <div class="tags">
@@ -333,6 +374,17 @@
 
             
             
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                            <abbr title="CharlotteDunois\Yasmin\Models\AuditLogEntry::TARGET_TYPES">AuditLogEntry::TARGET_TYPES</abbr>
+                                    </td>
+                <td></td>
+            </tr>
+            </table>
+
                         
                         
                     </div>
