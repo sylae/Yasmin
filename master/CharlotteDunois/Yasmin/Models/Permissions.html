@@ -116,6 +116,39 @@
                 <td class="last">
                     <p><em>Available Permissions in Discord.</em></p>
                     <p></p>
+                                            <pre><code class="language-php">const PERMISSIONS = array(
+    &#039;CREATE_INSTANT_INVITE&#039; =&gt; 1 &lt;&lt; 0,
+    &#039;KICK_MEMBERS&#039; =&gt; 1 &lt;&lt; 1,
+    &#039;BAN_MEMBERS&#039; =&gt; 1 &lt;&lt; 2,
+    &#039;ADMINISTRATOR&#039; =&gt; 1 &lt;&lt; 3,
+    &#039;MANAGE_CHANNELS&#039; =&gt; 1 &lt;&lt; 4,
+    &#039;MANAGE_GUILD&#039; =&gt; 1 &lt;&lt; 5,
+    &#039;ADD_REACTIONS&#039; =&gt; 1 &lt;&lt; 6,
+    &#039;VIEW_AUDIT_LOG&#039; =&gt; 1 &lt;&lt; 7,
+
+    &#039;VIEW_CHANNEL&#039; =&gt; 1 &lt;&lt; 10,
+    &#039;SEND_MESSAGES&#039; =&gt; 1 &lt;&lt; 11,
+    &#039;SEND_TTS_MESSAGES&#039; =&gt; 1 &lt;&lt; 12,
+    &#039;MANAGE_MESSAGES&#039; =&gt; 1 &lt;&lt; 13,
+    &#039;EMBED_LINKS&#039; =&gt; 1 &lt;&lt; 14,
+    &#039;ATTACH_FILES&#039; =&gt; 1 &lt;&lt; 15,
+    &#039;READ_MESSAGE_HISTORY&#039; =&gt; 1 &lt;&lt; 16,
+    &#039;MENTION_EVERYONE&#039; =&gt; 1 &lt;&lt; 17,
+    &#039;USE_EXTERNAL_EMOJIS&#039; =&gt; 1 &lt;&lt; 18,
+
+    &#039;CONNECT&#039; =&gt; 1 &lt;&lt; 20,
+    &#039;SPEAK&#039; =&gt; 1 &lt;&lt; 21,
+    &#039;MUTE_MEMBERS&#039; =&gt; 1 &lt;&lt; 22,
+    &#039;DEAFEN_MEMBERS&#039; =&gt; 1 &lt;&lt; 23,
+    &#039;MOVE_MEMBERS&#039; =&gt; 1 &lt;&lt; 24,
+    &#039;USE_VAD&#039; =&gt; 1 &lt;&lt; 25,
+
+    &#039;CHANGE_NICKNAME&#039; =&gt; 1 &lt;&lt; 26,
+    &#039;MANAGE_NICKNAMES&#039; =&gt; 1 &lt;&lt; 27,
+    &#039;MANAGE_ROLES&#039; =&gt; 1 &lt;&lt; 28,
+    &#039;MANAGE_WEBHOOKS&#039; =&gt; 1 &lt;&lt; 29,
+    &#039;MANAGE_EMOJIS&#039; =&gt; 1 &lt;&lt; 30
+);</code></pre>
                                     </td>
             </tr>
             </table>
@@ -216,7 +249,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Permissions.php#L69">line 69</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Permissions.php#L70">line 70</a></div>
         <code>                    
     <strong>__construct</strong>(int $permission = 0)
         </code>
@@ -251,7 +284,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_add">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Permissions.php#L137">line 137</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Permissions.php#L138">line 138</a></div>
         <code>                    <abbr title="CharlotteDunois\Yasmin\Models\$this">$this</abbr>
     <strong>add</strong>(int|string ...$permissions)
         </code>
@@ -304,7 +337,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_has">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Permissions.php#L101">line 101</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Permissions.php#L102">line 102</a></div>
         <code>                    bool
     <strong>has</strong>(array|int|string $permissions, bool $checkAdmin = true)
         </code>
@@ -362,7 +395,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_missing">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Permissions.php#L127">line 127</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Permissions.php#L128">line 128</a></div>
         <code>                    bool
     <strong>missing</strong>(array|int|string $permissions, bool $checkAdmin = true)
         </code>
@@ -420,7 +453,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_remove">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Permissions.php#L154">line 154</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Permissions.php#L155">line 155</a></div>
         <code>                    <abbr title="CharlotteDunois\Yasmin\Models\$this">$this</abbr>
     <strong>remove</strong>(int|string ...$permissions)
         </code>
@@ -473,7 +506,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_resolve">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Permissions.php#L171">line 171</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Permissions.php#L172">line 172</a></div>
         <code>        static            int
     <strong>resolve</strong>(int|string $permission)
         </code>
@@ -526,7 +559,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_resolveToName">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Permissions.php#L187">line 187</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Permissions.php#L188">line 188</a></div>
         <code>        static            string
     <strong>resolveToName</strong>(int|string $permission)
         </code>
