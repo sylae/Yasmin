@@ -597,12 +597,12 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    
+                    int
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_sweep">sweep</a>(int $time)
         
-                                            <p>Sweeps messages, deletes messages older than the parameter (timestamp - $time).</p>                </div>
+                                            <p>Sweeps messages, deletes messages older than the parameter (timestamp - $time). Returns the amount of sweeped messages.</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -2809,8 +2809,8 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_sweep">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/MessageStorage.php#L47">line 47</a></div>
-        <code>                    
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/MessageStorage.php#L48">line 48</a></div>
+        <code>                    int
     <strong>sweep</strong>(int $time)
         </code>
     </h3>
@@ -2819,7 +2819,7 @@
     
 
                     <div class="method-description">
-                                    <p>Sweeps messages, deletes messages older than the parameter (timestamp - $time).</p>                                                                
+                                    <p>Sweeps messages, deletes messages older than the parameter (timestamp - $time). Returns the amount of sweeped messages.</p>                                                                
         
                             </div>
                 <div class="tags">
@@ -2834,6 +2834,15 @@
             </table>
 
             
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
             
             
                         
