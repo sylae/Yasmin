@@ -332,6 +332,16 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_destroyUtil">destroyUtil</a>(string $name)
+        
+                                            <p>Destroys an Util and calls <code>destroy</code> (requires that it is registered as such).</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
                 </div>
                 <div class="col-md-8 type">
@@ -458,6 +468,16 @@
                     <a href="#method_once">once</a>(string  $event, callable  $listener)
         
                                             <p>Attach a listener to an event, for exactly once. The method is from the trait - only for documentation purpose here.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_registerUtil">registerUtil</a>(string $name)
+        
+                                            <p>Registers an Util, if it has a setLoop method. All methods used need to be static.</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -866,6 +886,41 @@ array(
         </tr>
     </table>
 
+            
+            
+                        
+                        
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_destroyUtil">
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Client.php#L781">line 781</a></div>
+        <code>                    
+    <strong>destroyUtil</strong>(string $name)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Destroys an Util and calls <code>destroy</code> (requires that it is registered as such).</p>                                                                
+        
+                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
             
             
                         
@@ -1463,6 +1518,41 @@ array(
                     <tr>
                 <td>callable </td>
                 <td>$listener</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                        
+                        
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_registerUtil">
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Client.php#L770">line 770</a></div>
+        <code>                    
+    <strong>registerUtil</strong>(string $name)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Registers an Util, if it has a setLoop method. All methods used need to be static.</p>                    <p>It will set the event loop through <code>setLoop</code> and on destroy will call <code>destroy</code>.</p>                                            
+        
+                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
                 <td></td>
             </tr>
             </table>
