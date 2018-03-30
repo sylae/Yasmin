@@ -164,7 +164,7 @@
                     string|null
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_getLargeImageURL">getLargeImageURL</a>(int $size = null)
+                    <a href="#method_getLargeImageURL">getLargeImageURL</a>(int|null $size = null)
         
                                             <p>Returns the URL of the large image.</p>                </div>
                 <div class="col-md-2"></div>
@@ -174,7 +174,7 @@
                     string|null
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_getSmallImageURL">getSmallImageURL</a>(int $size = null)
+                    <a href="#method_getSmallImageURL">getSmallImageURL</a>(int|null $size = null)
         
                                             <p>Returns the URL of the small image.</p>                </div>
                 <div class="col-md-2"></div>
@@ -189,7 +189,7 @@
                     <h3 id="method_getLargeImageURL">
         <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/RichPresenceAssets.php#L64">line 64</a></div>
         <code>                    string|null
-    <strong>getLargeImageURL</strong>(int $size = null)
+    <strong>getLargeImageURL</strong>(int|null $size = null)
         </code>
     </h3>
     <div class="details">
@@ -203,9 +203,9 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td>int</td>
+                <td>int|null</td>
                 <td>$size</td>
-                <td>Any powers of 2.</td>
+                <td>Any powers of 2 (16-2048).</td>
             </tr>
             </table>
 
@@ -231,7 +231,7 @@
                     <h3 id="method_getSmallImageURL">
         <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/RichPresenceAssets.php#L85">line 85</a></div>
         <code>                    string|null
-    <strong>getSmallImageURL</strong>(int $size = null)
+    <strong>getSmallImageURL</strong>(int|null $size = null)
         </code>
     </h3>
     <div class="details">
@@ -245,9 +245,9 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td>int</td>
+                <td>int|null</td>
                 <td>$size</td>
-                <td>Any powers of 2.</td>
+                <td>Any powers of 2 (16-2048).</td>
             </tr>
             </table>
 
