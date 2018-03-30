@@ -121,10 +121,10 @@
             <table class="table table-condensed">
                     <tr>
                 <td class="type" id="property_applicationID">
-                                                                                string|null
+                                                                                int|null
                 </td>
                 <td><a name="property_applicationID" href="#property_applicationID">$applicationID</a></td>
-                <td class="last">Returns the application ID which created the group DM channel.</td>
+                <td class="last">The application ID which created the group DM channel.</td>
                 <td></td>
             </tr>
                     <tr>
@@ -161,7 +161,7 @@
             </tr>
                     <tr>
                 <td class="type" id="property_id">
-                                                                                string
+                                                                                int
                 </td>
                 <td><a name="property_id" href="#property_id">$id</a></td>
                 <td class="last">The channel ID.</td>
@@ -177,7 +177,7 @@
             </tr>
                     <tr>
                 <td class="type" id="property_lastMessageID">
-                                                                                string|null
+                                                                                int|null
                 </td>
                 <td><a name="property_lastMessageID" href="#property_lastMessageID">$lastMessageID</a></td>
                 <td class="last">The last message ID, or null.</td>
@@ -201,7 +201,7 @@
             </tr>
                     <tr>
                 <td class="type" id="property_ownerID">
-                                                                                string|null
+                                                                                int|null
                 </td>
                 <td><a name="property_ownerID" href="#property_ownerID">$ownerID</a></td>
                 <td class="last">The owner ID of this channel, or null.</td>
@@ -234,7 +234,7 @@
                     <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_addRecipient">addRecipient</a>(string|<a href="../../../CharlotteDunois/Yasmin/Models/User.html"><abbr title="CharlotteDunois\Yasmin\Models\User">User</abbr></a> $user, string $accessToken, string $nick = &#039;&#039;)
+                    <a href="#method_addRecipient">addRecipient</a>(<a href="../../../CharlotteDunois/Yasmin/Models/User.html"><abbr title="CharlotteDunois\Yasmin\Models\User">User</abbr></a>|int $user, string $accessToken, string $nick = &#039;&#039;)
         
                                             <p>Adds the given user to the Group DM channel using the given access token. Resolves with $this.</p>                </div>
                 <div class="col-md-2"></div>
@@ -264,7 +264,7 @@
                     <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_fetchMessage">fetchMessage</a>(string $id)
+                    <a href="#method_fetchMessage">fetchMessage</a>(int $id)
         
                                             <p>Fetches a specific message using the ID. Resolves with an instance of Message.</p>                </div>
                 <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Traits/TextChannelTrait.html#method_fetchMessage"><abbr title="CharlotteDunois\Yasmin\Traits\TextChannelTrait">TextChannelTrait</abbr></a></small></div>
@@ -324,7 +324,7 @@
                     <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_removeRecipient">removeRecipient</a>(string|<a href="../../../CharlotteDunois/Yasmin/Models/User.html"><abbr title="CharlotteDunois\Yasmin\Models\User">User</abbr></a> $user)
+                    <a href="#method_removeRecipient">removeRecipient</a>(<a href="../../../CharlotteDunois/Yasmin/Models/User.html"><abbr title="CharlotteDunois\Yasmin\Models\User">User</abbr></a>|int $user)
         
                                             <p>Removes the given user from the Group DM channel. Resolves with $this.</p>                </div>
                 <div class="col-md-2"></div>
@@ -379,7 +379,7 @@
                     <h3 id="method_addRecipient">
         <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/GroupDMChannel.php#L39">line 39</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
-    <strong>addRecipient</strong>(string|<a href="../../../CharlotteDunois/Yasmin/Models/User.html"><abbr title="CharlotteDunois\Yasmin\Models\User">User</abbr></a> $user, string $accessToken, string $nick = &#039;&#039;)
+    <strong>addRecipient</strong>(<a href="../../../CharlotteDunois/Yasmin/Models/User.html"><abbr title="CharlotteDunois\Yasmin\Models\User">User</abbr></a>|int $user, string $accessToken, string $nick = &#039;&#039;)
         </code>
     </h3>
     <div class="details">
@@ -393,7 +393,7 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td>string|<a href="../../../CharlotteDunois/Yasmin/Models/User.html"><abbr title="CharlotteDunois\Yasmin\Models\User">User</abbr></a></td>
+                <td><a href="../../../CharlotteDunois/Yasmin/Models/User.html"><abbr title="CharlotteDunois\Yasmin\Models\User">User</abbr></a>|int</td>
                 <td>$user</td>
                 <td>The User instance, or the user ID.</td>
             </tr>
@@ -559,7 +559,7 @@ array(
                     <h3 id="method_fetchMessage">
         <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Traits/TextChannelTrait.html#method_fetchMessage"><abbr title="CharlotteDunois\Yasmin\Traits\TextChannelTrait">TextChannelTrait</abbr></a> at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Traits/TextChannelTrait.php#L126">line 126</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
-    <strong>fetchMessage</strong>(string $id)
+    <strong>fetchMessage</strong>(int $id)
         </code>
     </h3>
     <div class="details">
@@ -573,7 +573,7 @@ array(
 
                     <table class="table table-condensed">
                     <tr>
-                <td>string</td>
+                <td>int</td>
                 <td>$id</td>
                 <td></td>
             </tr>
@@ -624,9 +624,9 @@ array(
 
 <pre>
 array(
-  'after' => string, (message ID)
-  'around' => string, (message ID)
-  'before' => string, (message ID)
+  'after' => int, (message ID)
+  'around' => int, (message ID)
+  'before' => int, (message ID)
   'limit' => int, (1-100, defaults to 50)
 )
 </pre>
@@ -857,7 +857,7 @@ array(
                     <h3 id="method_removeRecipient">
         <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/GroupDMChannel.php#L71">line 71</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
-    <strong>removeRecipient</strong>(string|<a href="../../../CharlotteDunois/Yasmin/Models/User.html"><abbr title="CharlotteDunois\Yasmin\Models\User">User</abbr></a> $user)
+    <strong>removeRecipient</strong>(<a href="../../../CharlotteDunois/Yasmin/Models/User.html"><abbr title="CharlotteDunois\Yasmin\Models\User">User</abbr></a>|int $user)
         </code>
     </h3>
     <div class="details">
@@ -871,7 +871,7 @@ array(
 
                     <table class="table table-condensed">
                     <tr>
-                <td>string|<a href="../../../CharlotteDunois/Yasmin/Models/User.html"><abbr title="CharlotteDunois\Yasmin\Models\User">User</abbr></a></td>
+                <td><a href="../../../CharlotteDunois/Yasmin/Models/User.html"><abbr title="CharlotteDunois\Yasmin\Models\User">User</abbr></a>|int</td>
                 <td>$user</td>
                 <td>The User instance, or the user ID.</td>
             </tr>

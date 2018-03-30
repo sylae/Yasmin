@@ -131,7 +131,7 @@
                     <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_fetchMessage">fetchMessage</a>(string $id)
+                    <a href="#method_fetchMessage">fetchMessage</a>(int $id)
         
                                             <p>Fetches a specific message using the ID. Resolves with an instance of Message.</p>                </div>
                 <div class="col-md-2"></div>
@@ -335,7 +335,7 @@ array(
                     <h3 id="method_fetchMessage">
         <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Traits/TextChannelTrait.php#L126">line 126</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
-    <strong>fetchMessage</strong>(string $id)
+    <strong>fetchMessage</strong>(int $id)
         </code>
     </h3>
     <div class="details">
@@ -349,7 +349,7 @@ array(
 
                     <table class="table table-condensed">
                     <tr>
-                <td>string</td>
+                <td>int</td>
                 <td>$id</td>
                 <td></td>
             </tr>
@@ -400,9 +400,9 @@ array(
 
 <pre>
 array(
-  'after' => string, (message ID)
-  'around' => string, (message ID)
-  'before' => string, (message ID)
+  'after' => int, (message ID)
+  'around' => int, (message ID)
+  'before' => int, (message ID)
   'limit' => int, (1-100, defaults to 50)
 )
 </pre>

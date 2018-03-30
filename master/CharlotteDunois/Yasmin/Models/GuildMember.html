@@ -187,7 +187,7 @@
             </tr>
                     <tr>
                 <td class="type" id="property_id">
-                                                                                string
+                                                                                int
                 </td>
                 <td><a name="property_id" href="#property_id">$id</a></td>
                 <td class="last">The ID of the member.</td>
@@ -307,7 +307,7 @@
             </tr>
                     <tr>
                 <td class="type" id="property_voiceChannelID">
-                                                                                string|null
+                                                                                int|null
                 </td>
                 <td><a name="property_voiceChannelID" href="#property_voiceChannelID">$voiceChannelID</a></td>
                 <td class="last">The ID of the voice channel the member is in, or null.</td>
@@ -315,7 +315,7 @@
             </tr>
                     <tr>
                 <td class="type" id="property_voiceSessionID">
-                                                                                string
+                                                                                string|null
                 </td>
                 <td><a name="property_voiceSessionID" href="#property_voiceSessionID">$voiceSessionID</a></td>
                 <td class="last">The voice session ID, or null.</td>
@@ -342,7 +342,7 @@
                     <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_addRole">addRole</a>(<a href="../../../CharlotteDunois/Yasmin/Models/Role.html"><abbr title="CharlotteDunois\Yasmin\Models\Role">Role</abbr></a>|string $role, string $reason = &#039;&#039;)
+                    <a href="#method_addRole">addRole</a>(<a href="../../../CharlotteDunois/Yasmin/Models/Role.html"><abbr title="CharlotteDunois\Yasmin\Models\Role">Role</abbr></a>|int $role, string $reason = &#039;&#039;)
         
                                             <p>Adds a role to the guild member. Resolves with $this.</p>                </div>
                 <div class="col-md-2"></div>
@@ -402,7 +402,7 @@
                     <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_removeRole">removeRole</a>(<a href="../../../CharlotteDunois/Yasmin/Models/Role.html"><abbr title="CharlotteDunois\Yasmin\Models\Role">Role</abbr></a>|string $role, string $reason = &#039;&#039;)
+                    <a href="#method_removeRole">removeRole</a>(<a href="../../../CharlotteDunois/Yasmin/Models/Role.html"><abbr title="CharlotteDunois\Yasmin\Models\Role">Role</abbr></a>|int $role, string $reason = &#039;&#039;)
         
                                             <p>Removes a role from the guild member. Resolves with $this.</p>                </div>
                 <div class="col-md-2"></div>
@@ -500,7 +500,7 @@
                     <h3 id="method_addRole">
         <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/GuildMember.php#L211">line 211</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
-    <strong>addRole</strong>(<a href="../../../CharlotteDunois/Yasmin/Models/Role.html"><abbr title="CharlotteDunois\Yasmin\Models\Role">Role</abbr></a>|string $role, string $reason = &#039;&#039;)
+    <strong>addRole</strong>(<a href="../../../CharlotteDunois/Yasmin/Models/Role.html"><abbr title="CharlotteDunois\Yasmin\Models\Role">Role</abbr></a>|int $role, string $reason = &#039;&#039;)
         </code>
     </h3>
     <div class="details">
@@ -514,7 +514,7 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td><a href="../../../CharlotteDunois/Yasmin/Models/Role.html"><abbr title="CharlotteDunois\Yasmin\Models\Role">Role</abbr></a>|string</td>
+                <td><a href="../../../CharlotteDunois/Yasmin/Models/Role.html"><abbr title="CharlotteDunois\Yasmin\Models\Role">Role</abbr></a>|int</td>
                 <td>$role</td>
                 <td>A role instance or role ID.</td>
             </tr>
@@ -801,7 +801,7 @@ array(
                     <h3 id="method_removeRole">
         <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/GuildMember.php#L342">line 342</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
-    <strong>removeRole</strong>(<a href="../../../CharlotteDunois/Yasmin/Models/Role.html"><abbr title="CharlotteDunois\Yasmin\Models\Role">Role</abbr></a>|string $role, string $reason = &#039;&#039;)
+    <strong>removeRole</strong>(<a href="../../../CharlotteDunois/Yasmin/Models/Role.html"><abbr title="CharlotteDunois\Yasmin\Models\Role">Role</abbr></a>|int $role, string $reason = &#039;&#039;)
         </code>
     </h3>
     <div class="details">
@@ -815,7 +815,7 @@ array(
 
                     <table class="table table-condensed">
                     <tr>
-                <td><a href="../../../CharlotteDunois/Yasmin/Models/Role.html"><abbr title="CharlotteDunois\Yasmin\Models\Role">Role</abbr></a>|string</td>
+                <td><a href="../../../CharlotteDunois/Yasmin/Models/Role.html"><abbr title="CharlotteDunois\Yasmin\Models\Role">Role</abbr></a>|int</td>
                 <td>$role</td>
                 <td>A role instance or role ID.</td>
             </tr>

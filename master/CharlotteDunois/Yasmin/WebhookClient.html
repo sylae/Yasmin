@@ -115,10 +115,10 @@
             </tr>
                     <tr>
                 <td class="type" id="property_channelID">
-                                                                                string|null
+                                                                                int|null
                 </td>
                 <td><a name="property_channelID" href="#property_channelID">$channelID</a></td>
-                <td class="last">The channel the webhook belongs to.</td>
+                <td class="last">The channel the webhook belongs to, or null.</td>
                 <td><small>from&nbsp;<a href="../../CharlotteDunois/Yasmin/Models/Webhook.html#property_channelID"><abbr title="CharlotteDunois\Yasmin\Models\Webhook">Webhook</abbr></a></small></td>
             </tr>
                     <tr>
@@ -131,7 +131,7 @@
             </tr>
                     <tr>
                 <td class="type" id="property_guildID">
-                                                                                string|null
+                                                                                int|null
                 </td>
                 <td><a name="property_guildID" href="#property_guildID">$guildID</a></td>
                 <td class="last">The guild the webhook belongs to, or null.</td>
@@ -139,7 +139,7 @@
             </tr>
                     <tr>
                 <td class="type" id="property_id">
-                                                                                string
+                                                                                int
                 </td>
                 <td><a name="property_id" href="#property_id">$id</a></td>
                 <td class="last">The webhook ID.</td>
@@ -180,7 +180,7 @@
                     
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method___construct">__construct</a>(string $id, string $token, array $options = array(), <abbr title="React\EventLoop\LoopInterface">LoopInterface</abbr>|null $loop = null)
+                    <a href="#method___construct">__construct</a>(int $id, string $token, <abbr title="React\EventLoop\LoopInterface">LoopInterface</abbr>|null $loop = null, array $options = array())
         
                                             <p>Constructor.</p>                </div>
                 <div class="col-md-2"></div>
@@ -225,7 +225,7 @@
                     <h3 id="method___construct">
         <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/WebhookClient.php#L25">line 25</a></div>
         <code>                    
-    <strong>__construct</strong>(string $id, string $token, array $options = array(), <abbr title="React\EventLoop\LoopInterface">LoopInterface</abbr>|null $loop = null)
+    <strong>__construct</strong>(int $id, string $token, <abbr title="React\EventLoop\LoopInterface">LoopInterface</abbr>|null $loop = null, array $options = array())
         </code>
     </h3>
     <div class="details">
@@ -239,7 +239,7 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td>string</td>
+                <td>int</td>
                 <td>$id</td>
                 <td>The webhook ID.</td>
             </tr>
@@ -249,14 +249,14 @@
                 <td>The webhook token.</td>
             </tr>
                     <tr>
-                <td>array</td>
-                <td>$options</td>
-                <td>Any Client Options.</td>
-            </tr>
-                    <tr>
                 <td><abbr title="React\EventLoop\LoopInterface">LoopInterface</abbr>|null</td>
                 <td>$loop</td>
                 <td>The ReactPHP Event Loop.</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td>Any Client Options.</td>
             </tr>
             </table>
 
