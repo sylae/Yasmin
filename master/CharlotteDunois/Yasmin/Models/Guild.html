@@ -168,7 +168,7 @@
             </tr>
                     <tr>
                 <td class="type" id="property_afkChannelID">
-                                                                                int|null
+                                                                                string|null
                 </td>
                 <td><a name="property_afkChannelID" href="#property_afkChannelID">$afkChannelID</a></td>
                 <td class="last">The ID of the afk channel, or null.</td>
@@ -256,7 +256,7 @@
             </tr>
                     <tr>
                 <td class="type" id="property_embedChannelID">
-                                                                                int|null
+                                                                                string|null
                 </td>
                 <td><a name="property_embedChannelID" href="#property_embedChannelID">$embedChannelID</a></td>
                 <td class="last">The ID of the embed channel, or null.</td>
@@ -304,7 +304,7 @@
             </tr>
                     <tr>
                 <td class="type" id="property_id">
-                                                                                int
+                                                                                string
                 </td>
                 <td><a name="property_id" href="#property_id">$id</a></td>
                 <td class="last">The guild ID.</td>
@@ -368,7 +368,7 @@
             </tr>
                     <tr>
                 <td class="type" id="property_ownerID">
-                                                                                int
+                                                                                string
                 </td>
                 <td><a name="property_ownerID" href="#property_ownerID">$ownerID</a></td>
                 <td class="last">The ID of the owner.</td>
@@ -416,7 +416,7 @@
             </tr>
                     <tr>
                 <td class="type" id="property_systemChannelID">
-                                                                                int|null
+                                                                                string|null
                 </td>
                 <td><a name="property_systemChannelID" href="#property_systemChannelID">$systemChannelID</a></td>
                 <td class="last">The ID of the system channel, or null.</td>
@@ -456,7 +456,7 @@
             </tr>
                     <tr>
                 <td class="type" id="property_widgetChannelID">
-                                                                                int|null
+                                                                                string|null
                 </td>
                 <td><a name="property_widgetChannelID" href="#property_widgetChannelID">$widgetChannelID</a></td>
                 <td class="last">The ID of the widget channel, or null.</td>
@@ -481,7 +481,7 @@
                     <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_addMember">addMember</a>(<a href="../../../CharlotteDunois/Yasmin/Models/User.html"><abbr title="CharlotteDunois\Yasmin\Models\User">User</abbr></a>|int $user, string $accessToken, array $options = array())
+                    <a href="#method_addMember">addMember</a>(<a href="../../../CharlotteDunois/Yasmin/Models/User.html"><abbr title="CharlotteDunois\Yasmin\Models\User">User</abbr></a>|string $user, string $accessToken, array $options = array())
         
                                             <p>Adds the given user to the guild using the OAuth Access Token. Requires the CREATE_INSTANT_INVITE permission. Resolves with $this.</p>                </div>
                 <div class="col-md-2"></div>
@@ -491,7 +491,7 @@
                     <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_ban">ban</a>(<a href="../../../CharlotteDunois/Yasmin/Models/GuildMember.html"><abbr title="CharlotteDunois\Yasmin\Models\GuildMember">GuildMember</abbr></a>|<a href="../../../CharlotteDunois/Yasmin/Models/User.html"><abbr title="CharlotteDunois\Yasmin\Models\User">User</abbr></a>|int $user, int $days = 0, string $reason = &#039;&#039;)
+                    <a href="#method_ban">ban</a>(<a href="../../../CharlotteDunois/Yasmin/Models/GuildMember.html"><abbr title="CharlotteDunois\Yasmin\Models\GuildMember">GuildMember</abbr></a>|<a href="../../../CharlotteDunois/Yasmin/Models/User.html"><abbr title="CharlotteDunois\Yasmin\Models\User">User</abbr></a>|string $user, int $days = 0, string $reason = &#039;&#039;)
         
                                             <p>Bans the given user. Resolves with $this.</p>                </div>
                 <div class="col-md-2"></div>
@@ -581,7 +581,7 @@
                     <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_fetchMember">fetchMember</a>(int $userid)
+                    <a href="#method_fetchMember">fetchMember</a>(string $userid)
         
                                             <p>Fetches a specific guild member. Resolves with an instance of GuildMember.</p>                </div>
                 <div class="col-md-2"></div>
@@ -753,7 +753,7 @@
                 <div class="col-md-8 type">
                     <a href="#method_setRolePositions">setRolePositions</a>(array $roles, string $reason = &#039;&#039;)
         
-                                            <p>Batch-updates the guild's roles positions. Roles is an array of <code>role ID (int)|Role => position (int)</code> pairs. Resolves with $this.</p>                </div>
+                                            <p>Batch-updates the guild's roles positions. Roles is an array of <code>role ID (string)|Role => position (int)</code> pairs. Resolves with $this.</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -791,7 +791,7 @@
                     <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_unban">unban</a>(<a href="../../../CharlotteDunois/Yasmin/Models/User.html"><abbr title="CharlotteDunois\Yasmin\Models\User">User</abbr></a>|int $user, string $reason = &#039;&#039;)
+                    <a href="#method_unban">unban</a>(<a href="../../../CharlotteDunois/Yasmin/Models/User.html"><abbr title="CharlotteDunois\Yasmin\Models\User">User</abbr></a>|string $user, string $reason = &#039;&#039;)
         
                                             <p>Unbans the given user. Resolves with $this.</p>                </div>
                 <div class="col-md-2"></div>
@@ -806,7 +806,7 @@
                     <h3 id="method_addMember">
         <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L237">line 237</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
-    <strong>addMember</strong>(<a href="../../../CharlotteDunois/Yasmin/Models/User.html"><abbr title="CharlotteDunois\Yasmin\Models\User">User</abbr></a>|int $user, string $accessToken, array $options = array())
+    <strong>addMember</strong>(<a href="../../../CharlotteDunois/Yasmin/Models/User.html"><abbr title="CharlotteDunois\Yasmin\Models\User">User</abbr></a>|string $user, string $accessToken, array $options = array())
         </code>
     </h3>
     <div class="details">
@@ -830,7 +830,7 @@ array(
 
                     <table class="table table-condensed">
                     <tr>
-                <td><a href="../../../CharlotteDunois/Yasmin/Models/User.html"><abbr title="CharlotteDunois\Yasmin\Models\User">User</abbr></a>|int</td>
+                <td><a href="../../../CharlotteDunois/Yasmin/Models/User.html"><abbr title="CharlotteDunois\Yasmin\Models\User">User</abbr></a>|string</td>
                 <td>$user</td>
                 <td>A guild member or User instance, or the user ID.</td>
             </tr>
@@ -868,7 +868,7 @@ array(
                     <h3 id="method_ban">
         <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L286">line 286</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
-    <strong>ban</strong>(<a href="../../../CharlotteDunois/Yasmin/Models/GuildMember.html"><abbr title="CharlotteDunois\Yasmin\Models\GuildMember">GuildMember</abbr></a>|<a href="../../../CharlotteDunois/Yasmin/Models/User.html"><abbr title="CharlotteDunois\Yasmin\Models\User">User</abbr></a>|int $user, int $days = 0, string $reason = &#039;&#039;)
+    <strong>ban</strong>(<a href="../../../CharlotteDunois/Yasmin/Models/GuildMember.html"><abbr title="CharlotteDunois\Yasmin\Models\GuildMember">GuildMember</abbr></a>|<a href="../../../CharlotteDunois/Yasmin/Models/User.html"><abbr title="CharlotteDunois\Yasmin\Models\User">User</abbr></a>|string $user, int $days = 0, string $reason = &#039;&#039;)
         </code>
     </h3>
     <div class="details">
@@ -882,7 +882,7 @@ array(
 
                     <table class="table table-condensed">
                     <tr>
-                <td><a href="../../../CharlotteDunois/Yasmin/Models/GuildMember.html"><abbr title="CharlotteDunois\Yasmin\Models\GuildMember">GuildMember</abbr></a>|<a href="../../../CharlotteDunois/Yasmin/Models/User.html"><abbr title="CharlotteDunois\Yasmin\Models\User">User</abbr></a>|int</td>
+                <td><a href="../../../CharlotteDunois/Yasmin/Models/GuildMember.html"><abbr title="CharlotteDunois\Yasmin\Models\GuildMember">GuildMember</abbr></a>|<a href="../../../CharlotteDunois/Yasmin/Models/User.html"><abbr title="CharlotteDunois\Yasmin\Models\User">User</abbr></a>|string</td>
                 <td>$user</td>
                 <td>A guild member or User instance, or the user ID.</td>
             </tr>
@@ -937,12 +937,12 @@ array(
   'bitrate' => int, (only for voice channels)
   'userLimit' => int, (only for voice channels, 0 = unlimited)
   'permissionOverwrites' => \CharlotteDunois\Yasmin\Utils\Collection|array, (an array or Collection of PermissionOverwrite instances or permission overwrite arrays*)
-  'parent' => \CharlotteDunois\Yasmin\Models\CategoryChannel|int, (int = channel ID)
+  'parent' => \CharlotteDunois\Yasmin\Models\CategoryChannel|string, (string = channel ID)
   'nsfw' => bool (only for text channels)
 )
 
   *  array(
-  *      'id' => int, (an user/member or role ID)
+  *      'id' => string, (an user/member or role ID)
   *      'type' => 'member'|'role',
   *      'allow' => \CharlotteDunois\Yasmin\Models\Permissions|int,
   *      'deny' => \CharlotteDunois\Yasmin\Models\Permissions|int
@@ -1202,9 +1202,9 @@ array(
   'verificationLevel' => int,
   'explicitContentFilter' => int,
   'defaultMessageNotifications' => int,
-  'afkChannel' => string|int|\CharlotteDunois\Yasmin\Models\VoiceChannel|null,
+  'afkChannel' => string|\CharlotteDunois\Yasmin\Models\VoiceChannel|null,
   'afkTimeout' => int|null,
-  'systemChannel' => string|int|\CharlotteDunois\Yasmin\Models\TextChannel|null,
+  'systemChannel' => string|\CharlotteDunois\Yasmin\Models\TextChannel|null,
   'owner' => string|\CharlotteDunois\Yasmin\Models\GuildMember,
   'icon' => string, (file path or URL, or data)
   'splash' => string, (file path or URL, or data)
@@ -1262,10 +1262,10 @@ array(
 
 <pre>
 array(
-  'before' => \CharlotteDunois\Yasmin\Models\AuditLogEntry|int, (int = Audit Log Entry ID)
-  'after' => \CharlotteDunois\Yasmin\Models\AuditLogEntry|int, (int = Audit Log Entry ID)
+  'before' => string|\CharlotteDunois\Yasmin\Models\AuditLogEntry, (string = Audit Log Entry ID)
+  'after' => string|\CharlotteDunois\Yasmin\Models\AuditLogEntry, (string = Audit Log Entry ID)
   'limit' => int,
-  'user' => \CharlotteDunois\Yasmin\Models\User|int, (int = User ID)
+  'user' => string|\CharlotteDunois\Yasmin\Models\User,
   'type' => string|int
 )
 </pre>
@@ -1389,7 +1389,7 @@ array(
                     <h3 id="method_fetchMember">
         <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L629">line 629</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
-    <strong>fetchMember</strong>(int $userid)
+    <strong>fetchMember</strong>(string $userid)
         </code>
     </h3>
     <div class="details">
@@ -1403,7 +1403,7 @@ array(
 
                     <table class="table table-condensed">
                     <tr>
-                <td>int</td>
+                <td>string</td>
                 <td>$userid</td>
                 <td>The ID of the guild member.</td>
             </tr>
@@ -2180,7 +2180,7 @@ array(
     
 
                     <div class="method-description">
-                                    <p>Batch-updates the guild's roles positions. Roles is an array of <code>role ID (int)|Role => position (int)</code> pairs. Resolves with $this.</p>                                                </div>
+                                    <p>Batch-updates the guild's roles positions. Roles is an array of <code>role ID (string)|Role => position (int)</code> pairs. Resolves with $this.</p>                                                </div>
                 <div class="tags">
                             <h4>Parameters</h4>
 
@@ -2360,7 +2360,7 @@ array(
                     <h3 id="method_unban">
         <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L951">line 951</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
-    <strong>unban</strong>(<a href="../../../CharlotteDunois/Yasmin/Models/User.html"><abbr title="CharlotteDunois\Yasmin\Models\User">User</abbr></a>|int $user, string $reason = &#039;&#039;)
+    <strong>unban</strong>(<a href="../../../CharlotteDunois/Yasmin/Models/User.html"><abbr title="CharlotteDunois\Yasmin\Models\User">User</abbr></a>|string $user, string $reason = &#039;&#039;)
         </code>
     </h3>
     <div class="details">
@@ -2374,7 +2374,7 @@ array(
 
                     <table class="table table-condensed">
                     <tr>
-                <td><a href="../../../CharlotteDunois/Yasmin/Models/User.html"><abbr title="CharlotteDunois\Yasmin\Models\User">User</abbr></a>|int</td>
+                <td><a href="../../../CharlotteDunois/Yasmin/Models/User.html"><abbr title="CharlotteDunois\Yasmin\Models\User">User</abbr></a>|string</td>
                 <td>$user</td>
                 <td>An User instance or the user ID.</td>
             </tr>

@@ -163,7 +163,7 @@
             </tr>
                     <tr>
                 <td class="type" id="property_id">
-                                                                                int
+                                                                                string
                 </td>
                 <td><a name="property_id" href="#property_id">$id</a></td>
                 <td class="last">The channel ID.</td>
@@ -179,7 +179,7 @@
             </tr>
                     <tr>
                 <td class="type" id="property_lastMessageID">
-                                                                                int|null
+                                                                                string|null
                 </td>
                 <td><a name="property_lastMessageID" href="#property_lastMessageID">$lastMessageID</a></td>
                 <td class="last">The last message ID, or null.</td>
@@ -219,7 +219,7 @@
             </tr>
                     <tr>
                 <td class="type" id="property_parentID">
-                                                                                int|null
+                                                                                string|null
                 </td>
                 <td><a name="property_parentID" href="#property_parentID">$parentID</a></td>
                 <td class="last">The ID of the parent channel, or null.</td>
@@ -366,7 +366,7 @@
                     <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_fetchMessage">fetchMessage</a>(int $id)
+                    <a href="#method_fetchMessage">fetchMessage</a>(string $id)
         
                                             <p>Fetches a specific message using the ID. Resolves with an instance of Message.</p>                </div>
                 <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Traits/TextChannelTrait.html#method_fetchMessage"><abbr title="CharlotteDunois\Yasmin\Traits\TextChannelTrait">TextChannelTrait</abbr></a></small></div>
@@ -957,7 +957,7 @@ array(
    'nsfw' => bool, (text channels only)
    'bitrate' => int, (voice channels only)
    'userLimit' => int, (voice channels only)
-   'parent' => \CharlotteDunois\Yasmin\Models\CategoryChannel|int, (int = channel ID)
+   'parent' => \CharlotteDunois\Yasmin\Models\CategoryChannel|string, (string = channel ID)
    'permissionOverwrites' => \CharlotteDunois\Yasmin\Utils\Collection|array (an array or Collection of PermissionOverwrite instances or permission overwrite arrays)
 )
 </pre>
@@ -1052,7 +1052,7 @@ array(
                     <h3 id="method_fetchMessage">
         <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Traits/TextChannelTrait.html#method_fetchMessage"><abbr title="CharlotteDunois\Yasmin\Traits\TextChannelTrait">TextChannelTrait</abbr></a> at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Traits/TextChannelTrait.php#L126">line 126</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
-    <strong>fetchMessage</strong>(int $id)
+    <strong>fetchMessage</strong>(string $id)
         </code>
     </h3>
     <div class="details">
@@ -1066,7 +1066,7 @@ array(
 
                     <table class="table table-condensed">
                     <tr>
-                <td>int</td>
+                <td>string</td>
                 <td>$id</td>
                 <td></td>
             </tr>
@@ -1117,9 +1117,9 @@ array(
 
 <pre>
 array(
-  'after' => int, (message ID)
-  'around' => int, (message ID)
-  'before' => int, (message ID)
+  'after' => string, (message ID)
+  'around' => string, (message ID)
+  'before' => string, (message ID)
   'limit' => int, (1-100, defaults to 50)
 )
 </pre>
