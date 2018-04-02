@@ -490,7 +490,7 @@ Includes everyone and here mentions.</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_resolveMessageOptionsFiles">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Utils/DataHelpers.php#L239">line 239</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Utils/DataHelpers.php#L251">line 251</a></div>
         <code>        static            <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>resolveMessageOptionsFiles</strong>(array $options)
         </code>
@@ -541,7 +541,7 @@ Includes everyone and here mentions.</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_splitMessage">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Utils/DataHelpers.php#L206">line 206</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Utils/DataHelpers.php#L218">line 218</a></div>
         <code>        static            string[]
     <strong>splitMessage</strong>(string $text, array $options = array())
         </code>
@@ -551,7 +551,17 @@ Includes everyone and here mentions.</p>                            </div>
     
 
                     <div class="method-description">
-                                    <p>Splits a string into multiple chunks at a designated character that do not exceed a specific length.</p>                                                </div>
+                                    <p>Splits a string into multiple chunks at a designated character that do not exceed a specific length.</p>                    <p>Options will be merged into default split options (see Message), so missing elements will get added.</p>
+
+<pre>
+array(
+    'before' => string, (the string to add before the chunk)
+    'after' => string, (the string to add after the chunk)
+    'char' => string, (the string to split on)
+    'maxLength' => int (the max. length of each chunk)
+)
+</pre>
+</p>                            </div>
                 <div class="tags">
                             <h4>Parameters</h4>
 
@@ -580,6 +590,17 @@ Includes everyone and here mentions.</p>                            </div>
 
             
             
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                            <a href="../../../CharlotteDunois/Yasmin/Models/Message.html"><abbr title="CharlotteDunois\Yasmin\Models\Message">Message</abbr></a>
+                                    </td>
+                <td></td>
+            </tr>
+            </table>
+
                         
                         
                     </div>
@@ -588,7 +609,7 @@ Includes everyone and here mentions.</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_waitForEvent">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Utils/DataHelpers.php#L308">line 308</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Utils/DataHelpers.php#L320">line 320</a></div>
         <code>        static            <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>waitForEvent</strong>(<abbr title="CharlotteDunois\Events\EventEmitterInterface">EventEmitterInterface</abbr> $emitter, string $event, callable|null $filter = null, array $options = array())
         </code>
