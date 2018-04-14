@@ -354,7 +354,7 @@
                     <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_fetchInvite">fetchInvite</a>(string $invite)
+                    <a href="#method_fetchInvite">fetchInvite</a>(string $invite, bool $withCounts = false)
         
                                             <p>Obtains an invite from Discord. Resolves with an instance of Invite.</p>                </div>
                 <div class="col-md-2"></div>
@@ -621,7 +621,7 @@ array(
             </div>
                     <div class="method-item">
                     <h3 id="method_addPeriodicTimer">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Client.php#L799">line 799</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Client.php#L800">line 800</a></div>
         <code>                    <abbr title="React\EventLoop\Timer\Timer">Timer</abbr>
     <strong>addPeriodicTimer</strong>(float|int $interval, callable $callback)
         </code>
@@ -668,7 +668,7 @@ array(
             </div>
                     <div class="method-item">
                     <h3 id="method_addTimer">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Client.php#L783">line 783</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Client.php#L784">line 784</a></div>
         <code>                    <abbr title="React\EventLoop\Timer\Timer">Timer</abbr>
     <strong>addTimer</strong>(float|int $timeout, callable $callback)
         </code>
@@ -715,7 +715,7 @@ array(
             </div>
                     <div class="method-item">
                     <h3 id="method_cancelTimer">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Client.php#L813">line 813</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Client.php#L814">line 814</a></div>
         <code>                    bool
     <strong>cancelTimer</strong>(<abbr title="React\EventLoop\TimerInterface">TimerInterface</abbr>|<abbr title="React\EventLoop\Timer\TimerInterface">TimerInterface</abbr> $timer)
         </code>
@@ -757,7 +757,7 @@ array(
             </div>
                     <div class="method-item">
                     <h3 id="method_cancelTimers">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Client.php#L827">line 827</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Client.php#L828">line 828</a></div>
         <code>                    
     <strong>cancelTimers</strong>()
         </code>
@@ -919,7 +919,7 @@ array(
             </div>
                     <div class="method-item">
                     <h3 id="method_destroyUtil">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Client.php#L867">line 867</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Client.php#L868">line 868</a></div>
         <code>                    
     <strong>destroyUtil</strong>(string $name)
         </code>
@@ -995,9 +995,9 @@ array(
             </div>
                     <div class="method-item">
                     <h3 id="method_fetchInvite">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Client.php#L689">line 689</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Client.php#L690">line 690</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
-    <strong>fetchInvite</strong>(string $invite)
+    <strong>fetchInvite</strong>(string $invite, bool $withCounts = false)
         </code>
     </h3>
     <div class="details">
@@ -1014,6 +1014,11 @@ array(
                 <td>string</td>
                 <td>$invite</td>
                 <td>The invite code or an invite URL.</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$withCounts</td>
+                <td>Whether the invite should contain approximate counts.</td>
             </tr>
             </table>
 
@@ -1048,7 +1053,7 @@ array(
             </div>
                     <div class="method-item">
                     <h3 id="method_fetchUser">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Client.php#L709">line 709</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Client.php#L710">line 710</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>fetchUser</strong>(string $userid)
         </code>
@@ -1101,7 +1106,7 @@ array(
             </div>
                     <div class="method-item">
                     <h3 id="method_fetchVoiceRegions">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Client.php#L727">line 727</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Client.php#L728">line 728</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>fetchVoiceRegions</strong>()
         </code>
@@ -1144,7 +1149,7 @@ array(
             </div>
                     <div class="method-item">
                     <h3 id="method_fetchWebhook">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Client.php#L749">line 749</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Client.php#L750">line 750</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>fetchWebhook</strong>(string $id, string|null $token = null)
         </code>
@@ -1202,7 +1207,7 @@ array(
             </div>
                     <div class="method-item">
                     <h3 id="method_generateOAuthInvite">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Client.php#L766">line 766</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Client.php#L767">line 767</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>generateOAuthInvite</strong>(string|int ...$permissions)
         </code>
@@ -1364,7 +1369,7 @@ array(
             </div>
                     <div class="method-item">
                     <h3 id="method_getUtils">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Client.php#L847">line 847</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Client.php#L848">line 848</a></div>
         <code>                    string[]
     <strong>getUtils</strong>()
         </code>
@@ -1560,7 +1565,7 @@ array(
             </div>
                     <div class="method-item">
                     <h3 id="method_registerUtil">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Client.php#L856">line 856</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Client.php#L857">line 857</a></div>
         <code>                    
     <strong>registerUtil</strong>(string $name)
         </code>
