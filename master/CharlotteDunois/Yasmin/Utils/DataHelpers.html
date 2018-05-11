@@ -609,7 +609,7 @@ array(
             </div>
                     <div class="method-item">
                     <h3 id="method_waitForEvent">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Utils/DataHelpers.php#L320">line 320</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Utils/DataHelpers.php#L321">line 321</a></div>
         <code>        static            <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>waitForEvent</strong>(<abbr title="CharlotteDunois\Events\EventEmitterInterface">EventEmitterInterface</abbr> $emitter, string $event, callable|null $filter = null, array $options = array())
         </code>
@@ -669,7 +669,11 @@ array(
                     <table class="table table-condensed">
                     <tr>
                 <td><a href="https://secure.php.net/RangeException" target="_blank">RangeException</a></td>
-                <td></td>
+                <td>The exception the promise gets rejected with, if waiting times out.</td>
+            </tr>
+                    <tr>
+                <td><a href="https://secure.php.net/OutOfBoundsException" target="_blank">OutOfBoundsException</a></td>
+                <td>The exception the promise gets rejected with, if the promise gets cancelled.</td>
             </tr>
             </table>
 
