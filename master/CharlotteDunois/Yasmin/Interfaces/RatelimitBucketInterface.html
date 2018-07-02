@@ -100,11 +100,12 @@
             <div class="description">
             <p>This interface defines required methods and their arguments for managing route ratelimits using various systems.<br>
 The ratelimit bucket queue is always managed in memory (as in belongs to that process), however the ratelimits are distributed to the used system.</p>            <p>Included are two ratelimit bucket systems:<br>
- * In memory ratelimit bucket using arrays - Class: <code>\CharlotteDunois\Yasmin\HTTP\RatelimitBucket</code> (default)<br>
+ * In memory ratelimit bucket, using arrays - Class: <code>\CharlotteDunois\Yasmin\HTTP\RatelimitBucket</code> (default)<br>
  * Redis ratelimit bucket, using Athena to interface with Redis - Class: <code>\CharlotteDunois\Yasmin\HTTP\AthenaRatelimitBucket</code></p>
 
-<p>To use a different one then the default, you have to pass the full qualified class name to the client constructor as client option <code>http.ratelimitbucket.name</code>.<br>
-The Redis ratelimit bucket system uses Athena, an asynchronous redis cache for PHP. The package is called <code>charlottedunois/athena</code> (which is suggested on composer).<br>
+<p>To use a different one than the default, you have to pass the full qualified class name to the client constructor as client option <code>http.ratelimitbucket.name</code>.</p>
+
+<p>The Redis ratelimit bucket system uses Athena, an asynchronous redis cache for PHP. The package is called <code>charlottedunois/athena</code> (which is suggested on composer).<br>
 To be able to use the Redis ratelimit bucket, you need to pass an instance of <code>AthenaCache</code> as client option <code>http.ratelimitbucket.athena</code> to the client.</p>                    </div>
     
     
@@ -221,7 +222,7 @@ To be able to use the Redis ratelimit bucket, you need to pass an instance of <c
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/RatelimitBucketInterface.php#L31">line 31</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/RatelimitBucketInterface.php#L32">line 32</a></div>
         <code>                    
     <strong>__construct</strong>(<abbr title="CharlotteDunois\Yasmin\HTTP\APIManager">APIManager</abbr> $api, string $endpoint)
         </code>
@@ -268,7 +269,7 @@ To be able to use the Redis ratelimit bucket, you need to pass an instance of <c
             </div>
                     <div class="method-item">
                     <h3 id="method___destruct">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/RatelimitBucketInterface.php#L36">line 36</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/RatelimitBucketInterface.php#L37">line 37</a></div>
         <code>                    
     <strong>__destruct</strong>()
         </code>
@@ -291,7 +292,7 @@ To be able to use the Redis ratelimit bucket, you need to pass an instance of <c
             </div>
                     <div class="method-item">
                     <h3 id="method_clear">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/RatelimitBucketInterface.php#L97">line 97</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/RatelimitBucketInterface.php#L98">line 98</a></div>
         <code>                    
     <strong>clear</strong>()
         </code>
@@ -314,7 +315,7 @@ To be able to use the Redis ratelimit bucket, you need to pass an instance of <c
             </div>
                     <div class="method-item">
                     <h3 id="method_getEndpoint">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/RatelimitBucketInterface.php#L51">line 51</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/RatelimitBucketInterface.php#L52">line 52</a></div>
         <code>                    string
     <strong>getEndpoint</strong>()
         </code>
@@ -346,7 +347,7 @@ To be able to use the Redis ratelimit bucket, you need to pass an instance of <c
             </div>
                     <div class="method-item">
                     <h3 id="method_getMeta">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/RatelimitBucketInterface.php#L86">line 86</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/RatelimitBucketInterface.php#L87">line 87</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>|array
     <strong>getMeta</strong>()
         </code>
@@ -386,7 +387,7 @@ array(
             </div>
                     <div class="method-item">
                     <h3 id="method_handleRatelimit">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/RatelimitBucketInterface.php#L45">line 45</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/RatelimitBucketInterface.php#L46">line 46</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>|void
     <strong>handleRatelimit</strong>(int|null $limit, int|null $remaining, int|null $resetTime)
         </code>
@@ -438,7 +439,7 @@ array(
             </div>
                     <div class="method-item">
                     <h3 id="method_push">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/RatelimitBucketInterface.php#L64">line 64</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/RatelimitBucketInterface.php#L65">line 65</a></div>
         <code>                    $this
     <strong>push</strong>(<abbr title="CharlotteDunois\Yasmin\HTTP\APIRequest">APIRequest</abbr> $request)
         </code>
@@ -480,7 +481,7 @@ array(
             </div>
                     <div class="method-item">
                     <h3 id="method_shift">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/RatelimitBucketInterface.php#L92">line 92</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/RatelimitBucketInterface.php#L93">line 93</a></div>
         <code>                    <abbr title="CharlotteDunois\Yasmin\HTTP\APIRequest">APIRequest</abbr>|false
     <strong>shift</strong>()
         </code>
@@ -512,7 +513,7 @@ array(
             </div>
                     <div class="method-item">
                     <h3 id="method_size">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/RatelimitBucketInterface.php#L57">line 57</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/RatelimitBucketInterface.php#L58">line 58</a></div>
         <code>                    int
     <strong>size</strong>()
         </code>
@@ -544,7 +545,7 @@ array(
             </div>
                     <div class="method-item">
                     <h3 id="method_unshift">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/RatelimitBucketInterface.php#L71">line 71</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/RatelimitBucketInterface.php#L72">line 72</a></div>
         <code>                    $this
     <strong>unshift</strong>(<abbr title="CharlotteDunois\Yasmin\HTTP\APIRequest">APIRequest</abbr> $request)
         </code>
