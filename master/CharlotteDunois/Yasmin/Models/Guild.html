@@ -709,7 +709,7 @@
                 <div class="col-md-8 type">
                     <a href="#method_setChannelPositions">setChannelPositions</a>(array $channels, string $reason = &#039;&#039;)
         
-                                            <p>Batch-updates the guild's channels positions. Channels is an array of <code>channel ID (string)|GuildChannelInterface => position (int)</code> pairs. Resolves with $this.</p>                </div>
+                                            <p>Batch-updates the guild's channels positions. Channels is an array of <code>channel ID (string)|GuildChannelInterface =&gt; position (int)</code> pairs. Resolves with $this.</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -769,7 +769,7 @@
                 <div class="col-md-8 type">
                     <a href="#method_setRolePositions">setRolePositions</a>(array $roles, string $reason = &#039;&#039;)
         
-                                            <p>Batch-updates the guild's roles positions. Roles is an array of <code>role ID (string)|Role => position (int)</code> pairs. Resolves with $this.</p>                </div>
+                                            <p>Batch-updates the guild's roles positions. Roles is an array of <code>role ID (string)|Role =&gt; position (int)</code> pairs. Resolves with $this.</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -832,14 +832,13 @@
                     <div class="method-description">
                                     <p>Adds the given user to the guild using the OAuth Access Token. Requires the CREATE_INSTANT_INVITE permission. Resolves with $this.</p>                    <p>Options are as following (all fields are optional):</p>
 
-<pre>
-array(
-  'nick' => string, (the nickname for the user, requires MANAGE_NICKNAMES permissions)
-  'roles' => array|\CharlotteDunois\Yasmin\Utils\Collection, (array or Collection of Role instances or role IDs, requires MANAGE_ROLES permission)
-  'mute' => bool, (whether the user is muted, requires MUTE_MEMBERS permission)
-  'deaf' => bool, (whether the user is deafened, requires DEAFEN_MEMBERS permission)
+<pre><code>array(
+  'nick' =&gt; string, (the nickname for the user, requires MANAGE_NICKNAMES permissions)
+  'roles' =&gt; array|\CharlotteDunois\Yasmin\Utils\Collection, (array or Collection of Role instances or role IDs, requires MANAGE_ROLES permission)
+  'mute' =&gt; bool, (whether the user is muted, requires MUTE_MEMBERS permission)
+  'deaf' =&gt; bool, (whether the user is deafened, requires DEAFEN_MEMBERS permission)
 )
-</pre>
+</code></pre>
 </p>                            </div>
                 <div class="tags">
                             <h4>Parameters</h4>
@@ -946,25 +945,24 @@ array(
                     <div class="method-description">
                                     <p>Creates a new channel in the guild. Resolves with an instance of GuildChannelInterface.</p>                    <p>Options are as following (all fields except name are optional):</p>
 
-<pre>
-array(
-  'name' => string,
-  'type' => 'category'|'text'|'voice', (defaults to 'text')
-  'topic' => string, (only for text channels)
-  'bitrate' => int, (only for voice channels)
-  'userLimit' => int, (only for voice channels, 0 = unlimited)
-  'permissionOverwrites' => \CharlotteDunois\Yasmin\Utils\Collection|array, (an array or Collection of PermissionOverwrite instances or permission overwrite arrays*)
-  'parent' => \CharlotteDunois\Yasmin\Models\CategoryChannel|string, (string = channel ID)
-  'nsfw' => bool (only for text channels)
+<pre><code>array(
+  'name' =&gt; string,
+  'type' =&gt; 'category'|'text'|'voice', (defaults to 'text')
+  'topic' =&gt; string, (only for text channels)
+  'bitrate' =&gt; int, (only for voice channels)
+  'userLimit' =&gt; int, (only for voice channels, 0 = unlimited)
+  'permissionOverwrites' =&gt; \CharlotteDunois\Yasmin\Utils\Collection|array, (an array or Collection of PermissionOverwrite instances or permission overwrite arrays*)
+  'parent' =&gt; \CharlotteDunois\Yasmin\Models\CategoryChannel|string, (string = channel ID)
+  'nsfw' =&gt; bool (only for text channels)
 )
 
   *  array(
-  *      'id' => string, (an user/member or role ID)
-  *      'type' => 'member'|'role',
-  *      'allow' => \CharlotteDunois\Yasmin\Models\Permissions|int,
-  *      'deny' => \CharlotteDunois\Yasmin\Models\Permissions|int
+  *      'id' =&gt; string, (an user/member or role ID)
+  *      'type' =&gt; 'member'|'role',
+  *      'allow' =&gt; \CharlotteDunois\Yasmin\Models\Permissions|int,
+  *      'deny' =&gt; \CharlotteDunois\Yasmin\Models\Permissions|int
   *  )
-</pre>
+</code></pre>
 </p>                            </div>
                 <div class="tags">
                             <h4>Parameters</h4>
@@ -1102,15 +1100,14 @@ array(
                     <div class="method-description">
                                     <p>Creates a new role in the guild. Resolves with an instance of Role.</p>                    <p>Options are as following (all are optional):</p>
 
-<pre>
-array(
-  'name' => string,
-  'permissions' => int|\CharlotteDunois\Yasmin\Models\Permissions,
-  'color' => int|string,
-  'hoist' => bool,
-  'mentionable' => bool
+<pre><code>array(
+  'name' =&gt; string,
+  'permissions' =&gt; int|\CharlotteDunois\Yasmin\Models\Permissions,
+  'color' =&gt; int|string,
+  'hoist' =&gt; bool,
+  'mentionable' =&gt; bool
 )
-</pre>
+</code></pre>
 </p>                            </div>
                 <div class="tags">
                             <h4>Parameters</h4>
@@ -1212,22 +1209,21 @@ array(
                     <div class="method-description">
                                     <p>Edits the guild. Resolves with $this.</p>                    <p>Options are as following (at least one is required):</p>
 
-<pre>
-array(
-  'name' => string,
-  'region' => string,
-  'verificationLevel' => int,
-  'explicitContentFilter' => int,
-  'defaultMessageNotifications' => int,
-  'afkChannel' => string|\CharlotteDunois\Yasmin\Models\VoiceChannel|null,
-  'afkTimeout' => int|null,
-  'systemChannel' => string|\CharlotteDunois\Yasmin\Models\TextChannel|null,
-  'owner' => string|\CharlotteDunois\Yasmin\Models\GuildMember,
-  'icon' => string, (file path or URL, or data)
-  'splash' => string, (file path or URL, or data)
-  'region' => string|\CharlotteDunois\Yasmin\Models\VoiceRegion
+<pre><code>array(
+  'name' =&gt; string,
+  'region' =&gt; string,
+  'verificationLevel' =&gt; int,
+  'explicitContentFilter' =&gt; int,
+  'defaultMessageNotifications' =&gt; int,
+  'afkChannel' =&gt; string|\CharlotteDunois\Yasmin\Models\VoiceChannel|null,
+  'afkTimeout' =&gt; int|null,
+  'systemChannel' =&gt; string|\CharlotteDunois\Yasmin\Models\TextChannel|null,
+  'owner' =&gt; string|\CharlotteDunois\Yasmin\Models\GuildMember,
+  'icon' =&gt; string, (file path or URL, or data)
+  'splash' =&gt; string, (file path or URL, or data)
+  'region' =&gt; string|\CharlotteDunois\Yasmin\Models\VoiceRegion
 )
-</pre>
+</code></pre>
 </p>                            </div>
                 <div class="tags">
                             <h4>Parameters</h4>
@@ -1277,15 +1273,14 @@ array(
                     <div class="method-description">
                                     <p>Fetch audit log for the guild. Resolves with an instance of AuditLog.</p>                    <p>Options are as following (all are optional):</p>
 
-<pre>
-array(
-  'before' => string|\CharlotteDunois\Yasmin\Models\AuditLogEntry, (string = Audit Log Entry ID)
-  'after' => string|\CharlotteDunois\Yasmin\Models\AuditLogEntry, (string = Audit Log Entry ID)
-  'limit' => int,
-  'user' => string|\CharlotteDunois\Yasmin\Models\User,
-  'type' => string|int
+<pre><code>array(
+  'before' =&gt; string|\CharlotteDunois\Yasmin\Models\AuditLogEntry, (string = Audit Log Entry ID)
+  'after' =&gt; string|\CharlotteDunois\Yasmin\Models\AuditLogEntry, (string = Audit Log Entry ID)
+  'limit' =&gt; int,
+  'user' =&gt; string|\CharlotteDunois\Yasmin\Models\User,
+  'type' =&gt; string|int
 )
-</pre>
+</code></pre>
 </p>                            </div>
                 <div class="tags">
                             <h4>Parameters</h4>
@@ -1915,7 +1910,7 @@ array(
     
 
                     <div class="method-description">
-                                    <p>Batch-updates the guild's channels positions. Channels is an array of <code>channel ID (string)|GuildChannelInterface => position (int)</code> pairs. Resolves with $this.</p>                                                </div>
+                                    <p>Batch-updates the guild's channels positions. Channels is an array of <code>channel ID (string)|GuildChannelInterface =&gt; position (int)</code> pairs. Resolves with $this.</p>                                                </div>
                 <div class="tags">
                             <h4>Parameters</h4>
 
@@ -2197,7 +2192,7 @@ array(
     
 
                     <div class="method-description">
-                                    <p>Batch-updates the guild's roles positions. Roles is an array of <code>role ID (string)|Role => position (int)</code> pairs. Resolves with $this.</p>                                                </div>
+                                    <p>Batch-updates the guild's roles positions. Roles is an array of <code>role ID (string)|Role =&gt; position (int)</code> pairs. Resolves with $this.</p>                                                </div>
                 <div class="tags">
                             <h4>Parameters</h4>
 

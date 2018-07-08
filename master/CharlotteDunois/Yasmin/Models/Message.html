@@ -558,13 +558,12 @@
                     <div class="method-description">
                                     <p>Collects reactions during a specific duration. Resolves with a Collection of MessageReaction instances, mapped by their IDs or names (unicode emojis).</p>                    <p>Options are as following:</p>
 
-<pre>
-array(
-  'max' => int, (max. message reactions to collect)
-  'time' => int, (duration, in seconds, default 30)
-  'errors' => array, (optional, which failed "conditions" (max not reached in time ("time")) lead to a rejected promise, defaults to [])
+<pre><code>array(
+  'max' =&gt; int, (max. message reactions to collect)
+  'time' =&gt; int, (duration, in seconds, default 30)
+  'errors' =&gt; array, (optional, which failed "conditions" (max not reached in time ("time")) lead to a rejected promise, defaults to [])
 )
-</pre>
+</code></pre>
 </p>                            </div>
                 <div class="tags">
                             <h4>Parameters</h4>

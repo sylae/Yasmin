@@ -547,27 +547,26 @@
     
 
                     <div class="method-description">
-                                    <p>What do you expect this to do? It makes a new Client instance. Available client options are as following (all are optional):</p>                    <p><pre>
-array(
-  'disableClones' => bool|string[], (disables cloning of class instances (for perfomance), affects update events - bool: true - disables all cloning)
-  'disableEveryone' => bool, (disables the everyone and here mentions and replaces them with plaintext, defaults to true)
-  'fetchAllMembers' => bool, (fetches all guild members, this should be avoided - necessary members get automatically fetched)
-  'messageCache' => bool, (enables message cache, defaults to true)
-  'messageCacheLifetime' => int, (invalidates messages in the store older than the specified duration)
-  'messageSweepInterval' => int, (interval when the message cache gets invalidated (see messageCacheLifetime), defaults to messageCacheLifetime)
-  'presenceCache' => bool, (enables presence cache, defaults to true)
-  'shardID' => int, (shard ID, 0-indexed, always needs to be smaller than shardCount, important for sharding)
-  'shardCount' => int, (shard count, important for sharding)
-  'userSweepInterval' => int, (interval when the user cache gets invalidated (users sharing no mutual guilds get removed), defaults to 600)
-  'http.ratelimitbucket.name' => string, (class name of the custom ratelimit bucket, has to implement the interface)
-  'http.restTimeOffset' => int|float, (specifies how many seconds should be waited after one REST request before the next REST request should be done)
-  'ws.compression' => string, (Enables a specific one, defaults to zlib-stream, which is currently the only available compression)
-  'ws.encoding' => string, (use a specific websocket encoding, JSON or ETF (if suggested package installed), recommended is JSON for now)
-  'ws.disabledEvents' => string[], (disables specific websocket events (e.g. TYPING_START), only disable websocket events if you know what they do)
-  'ws.largeThreshold' => int, (50-250, members threshold after which guilds gets counted as large, defaults to 250)
-  'ws.presence' => array (the presence to send on WS connect, see https://discordapp.com/developers/docs/topics/gateway#gateway-status-update)
+                                    <p>What do you expect this to do? It makes a new Client instance. Available client options are as following (all are optional):</p>                    <p><pre><code>array(
+  'disableClones' =&gt; bool|string[], (disables cloning of class instances (for perfomance), affects update events - bool: true - disables all cloning)
+  'disableEveryone' =&gt; bool, (disables the everyone and here mentions and replaces them with plaintext, defaults to true)
+  'fetchAllMembers' =&gt; bool, (fetches all guild members, this should be avoided - necessary members get automatically fetched)
+  'messageCache' =&gt; bool, (enables message cache, defaults to true)
+  'messageCacheLifetime' =&gt; int, (invalidates messages in the store older than the specified duration)
+  'messageSweepInterval' =&gt; int, (interval when the message cache gets invalidated (see messageCacheLifetime), defaults to messageCacheLifetime)
+  'presenceCache' =&gt; bool, (enables presence cache, defaults to true)
+  'shardID' =&gt; int, (shard ID, 0-indexed, always needs to be smaller than shardCount, important for sharding)
+  'shardCount' =&gt; int, (shard count, important for sharding)
+  'userSweepInterval' =&gt; int, (interval when the user cache gets invalidated (users sharing no mutual guilds get removed), defaults to 600)
+  'http.ratelimitbucket.name' =&gt; string, (class name of the custom ratelimit bucket, has to implement the interface)
+  'http.restTimeOffset' =&gt; int|float, (specifies how many seconds should be waited after one REST request before the next REST request should be done)
+  'ws.compression' =&gt; string, (Enables a specific one, defaults to zlib-stream, which is currently the only available compression)
+  'ws.encoding' =&gt; string, (use a specific websocket encoding, JSON or ETF (if suggested package installed), recommended is JSON for now)
+  'ws.disabledEvents' =&gt; string[], (disables specific websocket events (e.g. TYPING_START), only disable websocket events if you know what they do)
+  'ws.largeThreshold' =&gt; int, (50-250, members threshold after which guilds gets counted as large, defaults to 250)
+  'ws.presence' =&gt; array (the presence to send on WS connect, see https://discordapp.com/developers/docs/topics/gateway#gateway-status-update)
 )
-</pre>
+</code></pre>
 </p>                            </div>
                 <div class="tags">
                             <h4>Parameters</h4>
@@ -793,41 +792,40 @@ array(
     
 
                     <div class="method-description">
-                                    <p>Creates a new guild. Resolves with an instance of Guild. Options is as following, everything is optional unless specified:</p>                    <p><pre>
-array(
-  'name' => string, (required)
-  'region' => \CharlotteDunois\Yasmin\Models\VoiceRegion|string, (required)
-  'icon' => string, (an URL, a filepath or data)
-  'verificationLevel' => int, (0-4)
-  'defaultMessageNotifications' => int, (0 or 1)
-  'explicitContentFilter' => int, (0-2)
-  'roles' => array, (an array of role arrays*)
-  'channels' => array (an array of channel arrays**)
+                                    <p>Creates a new guild. Resolves with an instance of Guild. Options is as following, everything is optional unless specified:</p>                    <p><pre><code>array(
+  'name' =&gt; string, (required)
+  'region' =&gt; \CharlotteDunois\Yasmin\Models\VoiceRegion|string, (required)
+  'icon' =&gt; string, (an URL, a filepath or data)
+  'verificationLevel' =&gt; int, (0-4)
+  'defaultMessageNotifications' =&gt; int, (0 or 1)
+  'explicitContentFilter' =&gt; int, (0-2)
+  'roles' =&gt; array, (an array of role arrays*)
+  'channels' =&gt; array (an array of channel arrays**)
 
     * array( // role array
-    *   'name' => string, (required)
-    *   'permissions' => \CharlotteDunois\Yasmin\Models\Permissions|int,
-    *   'color' => int|string,
-    *   'hoist' => bool,
-    *   'mentionable' => bool
+    *   'name' =&gt; string, (required)
+    *   'permissions' =&gt; \CharlotteDunois\Yasmin\Models\Permissions|int,
+    *   'color' =&gt; int|string,
+    *   'hoist' =&gt; bool,
+    *   'mentionable' =&gt; bool
     * )
 
     ** array( // channel array
-    **   'name' => string, (required)
-    **   'type' => 'text'|'voice', (category is not supported by the API, defaults to 'text')
-    **   'bitrate' => int, (only for voice channels)
-    **   'userLimit' => int, (only for voice channels, 0 = unlimited)
-    **   'permissionOverwrites' => array, (an array of permission overwrite arrays***)
-    **   'nsfw' => bool (only for text channels)
+    **   'name' =&gt; string, (required)
+    **   'type' =&gt; 'text'|'voice', (category is not supported by the API, defaults to 'text')
+    **   'bitrate' =&gt; int, (only for voice channels)
+    **   'userLimit' =&gt; int, (only for voice channels, 0 = unlimited)
+    **   'permissionOverwrites' =&gt; array, (an array of permission overwrite arrays***)
+    **   'nsfw' =&gt; bool (only for text channels)
     ** )
 
     *** array( // overwrite array, all required
-    ***   'id' => \CharlotteDunois\Yasmin\Models\User|string, (string = user ID or role name (of above role array!))
-    ***   'allow' => \CharlotteDunois\Yasmin\Models\Permissions|int,
-    ***   'deny' => \CharlotteDunois\Yasmin\Models\Permissions|int
+    ***   'id' =&gt; \CharlotteDunois\Yasmin\Models\User|string, (string = user ID or role name (of above role array!))
+    ***   'allow' =&gt; \CharlotteDunois\Yasmin\Models\Permissions|int,
+    ***   'deny' =&gt; \CharlotteDunois\Yasmin\Models\Permissions|int
     *** )
 )
-</pre>
+</code></pre>
 </p>                            </div>
                 <div class="tags">
                             <h4>Parameters</h4>

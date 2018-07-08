@@ -414,11 +414,10 @@
     
 
                     <div class="method-description">
-                                    <p>Creates a new Group DM with the owner of the access tokens. Resolves with an instance of GroupDMChannel. The structure of the array is as following:</p>                    <p><pre>
-array(
-   accessToken => \CharlotteDunois\Yasmin\Models\User|string (user ID)
+                                    <p>Creates a new Group DM with the owner of the access tokens. Resolves with an instance of GroupDMChannel. The structure of the array is as following:</p>                    <p><pre><code>array(
+   accessToken =&gt; \CharlotteDunois\Yasmin\Models\User|string (user ID)
 )
-</pre>
+</code></pre>
 
 <p>The nicks array is an associative array of userID => nick. The nick defaults to the username.</p>                            </div>
                 <div class="tags">
@@ -778,18 +777,17 @@ $client->user->setGame('Yasmin');</code></pre>
     
 
                     <div class="method-description">
-                                    <p>Set your presence. Ratelimit is 5/60s, which gets handled by this method and after the ratelimit passed, it will set the last set presence as presence, skipping all previous set presences. Resolves with $this.</p>                    <p><pre>
-array(
-    'afk' => bool,
-    'since' => int|null,
-    'status' => string,
-    'game' => array(
-        'name' => string,
-        'type' => int,
-        'url' => string|null
+                                    <p>Set your presence. Ratelimit is 5/60s, which gets handled by this method and after the ratelimit passed, it will set the last set presence as presence, skipping all previous set presences. Resolves with $this.</p>                    <p><pre><code>array(
+    'afk' =&gt; bool,
+    'since' =&gt; int|null,
+    'status' =&gt; string,
+    'game' =&gt; array(
+        'name' =&gt; string,
+        'type' =&gt; int,
+        'url' =&gt; string|null
     )|null
 )
-</pre>
+</code></pre>
 
 <p>Any field in the first dimension is optional and will be automatically filled with the last known value.</p>                            </div>
                 <div class="tags">

@@ -278,13 +278,12 @@
                     <div class="method-description">
                                     <p>Collects messages during a specific duration (and max. amount). Resolves with a Collection of Message instances, mapped by their IDs.</p>                    <p>Options are as following (all are optional):</p>
 
-<pre>
-array(
-  'max' => int, (max. messages to collect)
-  'time' => int, (duration, in seconds, default 30)
-  'errors' => array, (optional, which failed "conditions" (max not reached in time ("time")) lead to a rejected promise, defaults to [])
+<pre><code>array(
+  'max' =&gt; int, (max. messages to collect)
+  'time' =&gt; int, (duration, in seconds, default 30)
+  'errors' =&gt; array, (optional, which failed "conditions" (max not reached in time ("time")) lead to a rejected promise, defaults to [])
 )
-</pre>
+</code></pre>
 </p>                            </div>
                 <div class="tags">
                             <h4>Parameters</h4>
@@ -398,14 +397,13 @@ array(
                     <div class="method-description">
                                     <p>Fetches messages of this channel. Resolves with a Collection of Message instances, mapped by their ID.</p>                    <p>Options are as following:</p>
 
-<pre>
-array(
-  'after' => string, (message ID)
-  'around' => string, (message ID)
-  'before' => string, (message ID)
-  'limit' => int, (1-100, defaults to 50)
+<pre><code>array(
+  'after' =&gt; string, (message ID)
+  'around' =&gt; string, (message ID)
+  'before' =&gt; string, (message ID)
+  'limit' =&gt; int, (1-100, defaults to 50)
 )
-</pre>
+</code></pre>
 </p>                            </div>
                 <div class="tags">
                             <h4>Parameters</h4>
@@ -545,23 +543,22 @@ array(
                     <div class="method-description">
                                     <p>Sends a message to a channel. Resolves with an instance of Message, or a Collection of Message instances, mapped by their ID.</p>                    <p>Options are as following (all are optional):</p>
 
-<pre>
-array(
-   'embed' => array|\CharlotteDunois\Yasmin\Models\MessageEmbed, (an (embed) array/object or an instance of MessageEmbed)
-   'files' => array, (an array of <code>[ 'name' => string, 'data' => string || 'path' => string ]</code> or just plain file contents, file paths or URLs)
-   'nonce' => string, (a snowflake used for optimistic sending)
-   'disableEveryone' => bool, (whether @everyone and @here should be replaced with plaintext, defaults to client option disableEveryone)
-   'tts' => bool,
-   'split' => bool|array, (*)
+<pre><code>array(
+   'embed' =&gt; array|\CharlotteDunois\Yasmin\Models\MessageEmbed, (an (embed) array/object or an instance of MessageEmbed)
+   'files' =&gt; array, (an array of `[ 'name' =&gt; string, 'data' =&gt; string || 'path' =&gt; string ]` or just plain file contents, file paths or URLs)
+   'nonce' =&gt; string, (a snowflake used for optimistic sending)
+   'disableEveryone' =&gt; bool, (whether @everyone and @here should be replaced with plaintext, defaults to client option disableEveryone)
+   'tts' =&gt; bool,
+   'split' =&gt; bool|array, (*)
 )
 
   * array(
-  *   'before' => string, (The string to insert before the split)
-  *   'after' => string, (The string to insert after the split)
-  *   'char' => string, (The string to split on)
-  *   'maxLength' => int, (The max. length of each message)
+  *   'before' =&gt; string, (The string to insert before the split)
+  *   'after' =&gt; string, (The string to insert after the split)
+  *   'char' =&gt; string, (The string to split on)
+  *   'maxLength' =&gt; int, (The max. length of each message)
   * )
-</pre>
+</code></pre>
 </p>                            </div>
                 <div class="tags">
                             <h4>Parameters</h4>

@@ -143,7 +143,7 @@
                 <div class="col-md-8 type">
                     <a href="#method_parseMentions">parseMentions</a>(<a href="../../../CharlotteDunois/Yasmin/Client.html"><abbr title="CharlotteDunois\Yasmin\Client">Client</abbr></a>|null $client, string $content)
         
-                                            <p>Parses mentions in a text. Resolves with an array of <code>[ 'type' => string, 'ref' => Models ]</code> arrays, in the order they were parsed.</p>                </div>
+                                            <p>Parses mentions in a text. Resolves with an array of <code>[ 'type' =&gt; string, 'ref' =&gt; Models ]</code> arrays, in the order they were parsed.</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -193,7 +193,7 @@
                 <div class="col-md-8 type">
                     <a href="#method_waitForEvent">waitForEvent</a>(<abbr title="CharlotteDunois\Events\EventEmitterInterface">EventEmitterInterface</abbr> $emitter, string $event, callable|null $filter = null, array $options = array())
         
-                                            <p>Waits for a specific event to get emitted. Additional filter may be applied to look for a specific event (invoked as <code>$filter(&#46;&#46;&#46;$args)</code>). Resolves with an array of arguments (from the event).</p>                </div>
+                                            <p>Waits for a specific event to get emitted. Additional filter may be applied to look for a specific event (invoked as <code>$filter(\.\.\.$args)</code>). Resolves with an array of arguments (from the event).</p>                </div>
                 <div class="col-md-2"></div>
             </div>
             </div>
@@ -359,7 +359,7 @@
     
 
                     <div class="method-description">
-                                    <p>Parses mentions in a text. Resolves with an array of <code>[ 'type' => string, 'ref' => Models ]</code> arrays, in the order they were parsed.</p>                    <p>For mentions not available to this method or the client (e.g. mentioning a channel with no access to), <code>ref</code> will be the parsed mention (string).
+                                    <p>Parses mentions in a text. Resolves with an array of <code>[ 'type' =&gt; string, 'ref' =&gt; Models ]</code> arrays, in the order they were parsed.</p>                    <p>For mentions not available to this method or the client (e.g. mentioning a channel with no access to), <code>ref</code> will be the parsed mention (string).
 Includes everyone and here mentions.</p>                            </div>
                 <div class="tags">
                             <h4>Parameters</h4>
@@ -553,14 +553,13 @@ Includes everyone and here mentions.</p>                            </div>
                     <div class="method-description">
                                     <p>Splits a string into multiple chunks at a designated character that do not exceed a specific length.</p>                    <p>Options will be merged into default split options (see Message), so missing elements will get added.</p>
 
-<pre>
-array(
-    'before' => string, (the string to add before the chunk)
-    'after' => string, (the string to add after the chunk)
-    'char' => string, (the string to split on)
-    'maxLength' => int (the max. length of each chunk)
+<pre><code>array(
+    'before' =&gt; string, (the string to add before the chunk)
+    'after' =&gt; string, (the string to add after the chunk)
+    'char' =&gt; string, (the string to split on)
+    'maxLength' =&gt; int (the max. length of each chunk)
 )
-</pre>
+</code></pre>
 </p>                            </div>
                 <div class="tags">
                             <h4>Parameters</h4>
@@ -619,13 +618,12 @@ array(
     
 
                     <div class="method-description">
-                                    <p>Waits for a specific event to get emitted. Additional filter may be applied to look for a specific event (invoked as <code>$filter(&#46;&#46;&#46;$args)</code>). Resolves with an array of arguments (from the event).</p>                    <p>Options may be:</p>
+                                    <p>Waits for a specific event to get emitted. Additional filter may be applied to look for a specific event (invoked as <code>$filter(\.\.\.$args)</code>). Resolves with an array of arguments (from the event).</p>                    <p>Options may be:</p>
 
-<pre>
-array(
-    'time' => int (if the event hasn't been found yet, this will define a timeout (in seconds) after which the promise gets rejected)
+<pre><code>array(
+    'time' =&gt; int (if the event hasn't been found yet, this will define a timeout (in seconds) after which the promise gets rejected)
 )
-</pre>
+</code></pre>
 </p>                            </div>
                 <div class="tags">
                             <h4>Parameters</h4>
