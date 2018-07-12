@@ -534,7 +534,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Client.php#L218">line 218</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Client.php#L220">line 220</a></div>
         <code>                    
     <strong>__construct</strong>(array $options = array(), <abbr title="React\EventLoop\LoopInterface">LoopInterface</abbr>|null $loop = null)
         </code>
@@ -557,6 +557,8 @@
   'userSweepInterval' =&gt; int, (interval when the user cache gets invalidated (users sharing no mutual guilds get removed), defaults to 600)
   'http.ratelimitbucket.name' =&gt; string, (class name of the custom ratelimit bucket, has to implement the interface)
   'http.restTimeOffset' =&gt; int|float, (specifies how many seconds should be waited after one REST request before the next REST request should be done)
+  'http.requestErrorDelay' =&gt; int|float, (specifies how many seconds should be waited after three HTTP 5XX errors before queueing the request again, after two additional retries the time will be doubled, defaults to 30)
+  'http.requestMaxRetries' =&gt; int, (specifies how many times the request should be retried on HTTP 5XX until we give up, defaults to 0 (never give up))
   'ws.compression' =&gt; string, (Enables a specific one, defaults to zlib-stream, which is currently the only available compression)
   'ws.encoding' =&gt; string, (use a specific websocket encoding, JSON or ETF (if suggested package installed), recommended is JSON for now)
   'ws.disabledEvents' =&gt; string[], (disables specific websocket events (e.g. TYPING_START), only disable websocket events if you know what they do)
@@ -620,7 +622,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_addPeriodicTimer">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Client.php#L787">line 787</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Client.php#L789">line 789</a></div>
         <code>                    <abbr title="React\EventLoop\Timer\Timer">Timer</abbr>
     <strong>addPeriodicTimer</strong>(float|int $interval, callable $callback)
         </code>
@@ -667,7 +669,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_addTimer">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Client.php#L771">line 771</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Client.php#L773">line 773</a></div>
         <code>                    <abbr title="React\EventLoop\Timer\Timer">Timer</abbr>
     <strong>addTimer</strong>(float|int $timeout, callable $callback)
         </code>
@@ -714,7 +716,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_cancelTimer">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Client.php#L801">line 801</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Client.php#L803">line 803</a></div>
         <code>                    bool
     <strong>cancelTimer</strong>(<abbr title="React\EventLoop\TimerInterface">TimerInterface</abbr>|<abbr title="React\EventLoop\Timer\TimerInterface">TimerInterface</abbr> $timer)
         </code>
@@ -756,7 +758,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_cancelTimers">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Client.php#L815">line 815</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Client.php#L817">line 817</a></div>
         <code>                    
     <strong>cancelTimers</strong>()
         </code>
@@ -779,7 +781,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_createGuild">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Client.php#L542">line 542</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Client.php#L544">line 544</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>createGuild</strong>(array $options)
         </code>
@@ -875,7 +877,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_destroy">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Client.php#L480">line 480</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Client.php#L482">line 482</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>destroy</strong>(bool $destroyUtils = true)
         </code>
@@ -917,7 +919,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_destroyUtil">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Client.php#L855">line 855</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Client.php#L857">line 857</a></div>
         <code>                    
     <strong>destroyUtil</strong>(string $name)
         </code>
@@ -950,7 +952,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_fetchApplication">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Client.php#L661">line 661</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Client.php#L663">line 663</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>fetchApplication</strong>()
         </code>
@@ -993,7 +995,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_fetchInvite">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Client.php#L677">line 677</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Client.php#L679">line 679</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>fetchInvite</strong>(string $invite, bool $withCounts = false)
         </code>
@@ -1051,7 +1053,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_fetchUser">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Client.php#L697">line 697</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Client.php#L699">line 699</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>fetchUser</strong>(string $userid)
         </code>
@@ -1104,7 +1106,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_fetchVoiceRegions">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Client.php#L715">line 715</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Client.php#L717">line 717</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>fetchVoiceRegions</strong>()
         </code>
@@ -1147,7 +1149,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_fetchWebhook">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Client.php#L737">line 737</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Client.php#L739">line 739</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>fetchWebhook</strong>(string $id, string|null $token = null)
         </code>
@@ -1205,7 +1207,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_generateOAuthInvite">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Client.php#L754">line 754</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Client.php#L756">line 756</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>generateOAuthInvite</strong>(string|int ...$permissions)
         </code>
@@ -1256,7 +1258,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getLoop">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Client.php#L383">line 383</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Client.php#L385">line 385</a></div>
         <code>                    <abbr title="React\EventLoop\LoopInterface">LoopInterface</abbr>
     <strong>getLoop</strong>()
         </code>
@@ -1288,7 +1290,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getOption">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Client.php#L393">line 393</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Client.php#L395">line 395</a></div>
         <code>                    mixed
     <strong>getOption</strong>(string $name, mixed $default = null)
         </code>
@@ -1335,7 +1337,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getPing">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Client.php#L405">line 405</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Client.php#L407">line 407</a></div>
         <code>                    int|float
     <strong>getPing</strong>()
         </code>
@@ -1367,7 +1369,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getUtils">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Client.php#L835">line 835</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Client.php#L837">line 837</a></div>
         <code>                    string[]
     <strong>getUtils</strong>()
         </code>
@@ -1399,7 +1401,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getWSstatus">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Client.php#L418">line 418</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Client.php#L420">line 420</a></div>
         <code>                    int
     <strong>getWSstatus</strong>()
         </code>
@@ -1431,7 +1433,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_login">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Client.php#L429">line 429</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Client.php#L431">line 431</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>login</strong>(string $token, bool $force = false)
         </code>
@@ -1563,7 +1565,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_registerUtil">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Client.php#L844">line 844</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Client.php#L846">line 846</a></div>
         <code>                    
     <strong>registerUtil</strong>(string $name)
         </code>
@@ -1667,7 +1669,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_serialize">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Client.php#L311">line 311</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Client.php#L313">line 313</a></div>
         <code>                    string
     <strong>serialize</strong>()
         </code>
@@ -1699,7 +1701,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_unserialize">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Client.php#L325">line 325</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Client.php#L327">line 327</a></div>
         <code>                    
     <strong>unserialize</strong>(string $vars)
         </code>
