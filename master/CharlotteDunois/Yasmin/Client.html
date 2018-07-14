@@ -557,7 +557,7 @@
   'userSweepInterval' =&gt; int, (interval when the user cache gets invalidated (users sharing no mutual guilds get removed), defaults to 600)
   'http.ratelimitbucket.name' =&gt; string, (class name of the custom ratelimit bucket, has to implement the interface)
   'http.restTimeOffset' =&gt; int|float, (specifies how many seconds should be waited after one REST request before the next REST request should be done)
-  'http.requestErrorDelay' =&gt; int|float, (specifies how many seconds should be waited after three HTTP 5XX errors before queueing the request again, after two additional retries the time will be doubled, defaults to 30)
+  'http.requestErrorDelay' =&gt; int, (specifies how many seconds should be waited after a HTTP 5XX error before queueing the request again, after two retries the time will be doubled, defaults to 30 - minimum 15)
   'http.requestMaxRetries' =&gt; int, (specifies how many times the request should be retried on HTTP 5XX until we give up, defaults to 0 (never give up))
   'ws.compression' =&gt; string, (Enables a specific one, defaults to zlib-stream, which is currently the only available compression)
   'ws.encoding' =&gt; string, (use a specific websocket encoding, JSON or ETF (if suggested package installed), recommended is JSON for now)
