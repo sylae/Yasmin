@@ -488,7 +488,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method___toString">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Message.php#L398">line 398</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Message.php#L405">line 405</a></div>
         <code>                    
     <strong>__toString</strong>()
         </code>
@@ -543,7 +543,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_collectReactions">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Message.php#L209">line 209</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Message.php#L211">line 211</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>collectReactions</strong>(callable $filter, array $options = array())
         </code>
@@ -584,11 +584,24 @@
                     <table class="table table-condensed">
         <tr>
             <td><abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr></td>
-            <td></td>
+            <td>This promise is cancellable.</td>
         </tr>
     </table>
 
             
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="https://secure.php.net/RangeException" target="_blank">RangeException</a></td>
+                <td>The exception the promise gets rejected with, if waiting times out.</td>
+            </tr>
+                    <tr>
+                <td><a href="https://secure.php.net/OutOfBoundsException" target="_blank">OutOfBoundsException</a></td>
+                <td>The exception the promise gets rejected with, if the promise gets cancelled.</td>
+            </tr>
+            </table>
+
             
                             <h4>See also</h4>
 
@@ -609,7 +622,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_delete">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Message.php#L274">line 274</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Message.php#L281">line 281</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>delete</strong>(float|int $timeout = 0, string $reason = &#039;&#039;)
         </code>
@@ -656,7 +669,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_edit">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Message.php#L250">line 250</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Message.php#L257">line 257</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>edit</strong>(string|null $content, array $options = array())
         </code>
@@ -714,7 +727,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_fetchWebhook">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Message.php#L294">line 294</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Message.php#L301">line 301</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>fetchWebhook</strong>()
         </code>
@@ -766,7 +779,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getJumpURL">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Message.php#L311">line 311</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Message.php#L318">line 318</a></div>
         <code>                    string
     <strong>getJumpURL</strong>()
         </code>
@@ -798,7 +811,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_pin">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Message.php#L320">line 320</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Message.php#L327">line 327</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>pin</strong>()
         </code>
@@ -830,7 +843,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_react">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Message.php#L334">line 334</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Message.php#L341">line 341</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>react</strong>(<a href="../../../CharlotteDunois/Yasmin/Models/Emoji.html"><abbr title="CharlotteDunois\Yasmin\Models\Emoji">Emoji</abbr></a>|<a href="../../../CharlotteDunois/Yasmin/Models/MessageReaction.html"><abbr title="CharlotteDunois\Yasmin\Models\MessageReaction">MessageReaction</abbr></a>|string $emoji)
         </code>
@@ -883,7 +896,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_reply">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Message.php#L379">line 379</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Message.php#L386">line 386</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>reply</strong>(string $content, array $options = array())
         </code>
@@ -941,7 +954,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_unpin">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Message.php#L387">line 387</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Message.php#L394">line 394</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>unpin</strong>()
         </code>
