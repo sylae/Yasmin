@@ -198,16 +198,6 @@
                                             <p>Generates a new snowflake.</p>                </div>
                 <div class="col-md-2"></div>
             </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    bool
-                </div>
-                <div class="col-md-8 type">
-                    <a href="#method_isValid">isValid</a>()
-        
-                                            <p>This method merely determines whether a given snowflake is considered valid, but not if it exists.</p>                </div>
-                <div class="col-md-2"></div>
-            </div>
             </div>
 
 
@@ -216,7 +206,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Utils/Snowflake.php#L41">line 41</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Utils/Snowflake.php#L42">line 42</a></div>
         <code>                    
     <strong>__construct</strong>(string|int $snowflake)
         </code>
@@ -240,6 +230,15 @@
 
             
             
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="https://secure.php.net/InvalidArgumentException" target="_blank">InvalidArgumentException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
             
                         
                         
@@ -249,7 +248,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_deconstruct">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Utils/Snowflake.php#L90">line 90</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Utils/Snowflake.php#L95">line 95</a></div>
         <code>        static            <a href="../../../CharlotteDunois/Yasmin/Utils/Snowflake.html"><abbr title="CharlotteDunois\Yasmin\Utils\Snowflake">Snowflake</abbr></a>
     <strong>deconstruct</strong>(string|int $snowflake)
         </code>
@@ -291,7 +290,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_generate">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Utils/Snowflake.php#L100">line 100</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Utils/Snowflake.php#L105">line 105</a></div>
         <code>        static            string
     <strong>generate</strong>(int $workerID = 1, int $processID = 0)
         </code>
@@ -324,38 +323,6 @@
                     <table class="table table-condensed">
         <tr>
             <td>string</td>
-            <td></td>
-        </tr>
-    </table>
-
-            
-            
-                        
-                        
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_isValid">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Utils/Snowflake.php#L148">line 148</a></div>
-        <code>                    bool
-    <strong>isValid</strong>()
-        </code>
-    </h3>
-    <div class="details">
-            
-    
-
-                    <div class="method-description">
-                                    <p>This method merely determines whether a given snowflake is considered valid, but not if it exists.</p>                                                </div>
-                <div class="tags">
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td>bool</td>
             <td></td>
         </tr>
     </table>
