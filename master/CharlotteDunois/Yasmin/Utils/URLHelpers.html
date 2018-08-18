@@ -117,7 +117,7 @@
             <div class="container-fluid underlined">
                     <div class="row">
                 <div class="col-md-2 type">
-                    static&nbsp;
+                    static&nbsp;void
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_destroy">destroy</a>()
@@ -127,12 +127,12 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    static&nbsp;
+                    static&nbsp;<abbr title="GuzzleHttp\Client">Client</abbr>
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_getHTTPClient">getHTTPClient</a>()
         
-                                            <p>Returns the Guzzle client.</p>                </div>
+                                            <p>Returns the Guzzle client. This method may be changed at any time.</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -173,8 +173,8 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method_destroy">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Utils/URLHelpers.php#L95">line 95</a></div>
-        <code>        static            
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Utils/URLHelpers.php#L100">line 100</a></div>
+        <code>        static            void
     <strong>destroy</strong>()
         </code>
     </h3>
@@ -186,6 +186,15 @@
                                     <p>Cancels the Guzzle timer and unsets it.</p>                                                </div>
                 <div class="tags">
             
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
             
             
                         
@@ -196,8 +205,8 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getHTTPClient">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Utils/URLHelpers.php#L66">line 66</a></div>
-        <code>        static            
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Utils/URLHelpers.php#L69">line 69</a></div>
+        <code>        static            <abbr title="GuzzleHttp\Client">Client</abbr>
     <strong>getHTTPClient</strong>()
         </code>
     </h3>
@@ -206,9 +215,18 @@
     
 
                     <div class="method-description">
-                                    <p>Returns the Guzzle client.</p>                                                </div>
+                                    <p>Returns the Guzzle client. This method may be changed at any time.</p>                                                </div>
                 <div class="tags">
             
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="GuzzleHttp\Client">Client</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
             
             
                         
@@ -219,7 +237,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_makeRequest">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Utils/URLHelpers.php#L109">line 109</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Utils/URLHelpers.php#L114">line 114</a></div>
         <code>        static            <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>makeRequest</strong>(<abbr title="Psr\Http\Message\RequestInterface">RequestInterface</abbr> $request, array|null $requestOptions = null)
         </code>
@@ -277,7 +295,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_makeRequestSync">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Utils/URLHelpers.php#L127">line 127</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Utils/URLHelpers.php#L132">line 132</a></div>
         <code>        static            <abbr title="Psr\Http\Message\ResponseInterface">ResponseInterface</abbr>
     <strong>makeRequestSync</strong>(<abbr title="Psr\Http\Message\RequestInterface">RequestInterface</abbr> $request, array|null $requestOptions = null)
         </code>
@@ -324,7 +342,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_resolveURLToData">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Utils/URLHelpers.php#L141">line 141</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Utils/URLHelpers.php#L146">line 146</a></div>
         <code>        static            <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>resolveURLToData</strong>(string $url, array|null $requestHeaders = null)
         </code>

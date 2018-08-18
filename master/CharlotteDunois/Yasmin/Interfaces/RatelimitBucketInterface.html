@@ -133,7 +133,7 @@ To be able to use the Redis ratelimit bucket, you need to pass an instance of <c
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    
+                    void
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_clear">clear</a>()
@@ -193,7 +193,7 @@ To be able to use the Redis ratelimit bucket, you need to pass an instance of <c
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    
+                    void
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_setBusy">setBusy</a>(bool $busy)
@@ -309,8 +309,8 @@ To be able to use the Redis ratelimit bucket, you need to pass an instance of <c
             </div>
                     <div class="method-item">
                     <h3 id="method_clear">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/RatelimitBucketInterface.php#L110">line 110</a></div>
-        <code>                    
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/RatelimitBucketInterface.php#L112">line 112</a></div>
+        <code>                    void
     <strong>clear</strong>()
         </code>
     </h3>
@@ -322,6 +322,15 @@ To be able to use the Redis ratelimit bucket, you need to pass an instance of <c
                                     <p>Unsets all queue items.</p>                                                </div>
                 <div class="tags">
             
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
             
             
                         
@@ -332,7 +341,7 @@ To be able to use the Redis ratelimit bucket, you need to pass an instance of <c
             </div>
                     <div class="method-item">
                     <h3 id="method_getEndpoint">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/RatelimitBucketInterface.php#L64">line 64</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/RatelimitBucketInterface.php#L65">line 65</a></div>
         <code>                    string
     <strong>getEndpoint</strong>()
         </code>
@@ -364,7 +373,7 @@ To be able to use the Redis ratelimit bucket, you need to pass an instance of <c
             </div>
                     <div class="method-item">
                     <h3 id="method_getMeta">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/RatelimitBucketInterface.php#L99">line 99</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/RatelimitBucketInterface.php#L100">line 100</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>|array
     <strong>getMeta</strong>()
         </code>
@@ -403,7 +412,7 @@ To be able to use the Redis ratelimit bucket, you need to pass an instance of <c
             </div>
                     <div class="method-item">
                     <h3 id="method_handleRatelimit">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/RatelimitBucketInterface.php#L58">line 58</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/RatelimitBucketInterface.php#L59">line 59</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>|void
     <strong>handleRatelimit</strong>(int|null $limit, int|null $remaining, int|null $resetTime)
         </code>
@@ -487,7 +496,7 @@ To be able to use the Redis ratelimit bucket, you need to pass an instance of <c
             </div>
                     <div class="method-item">
                     <h3 id="method_push">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/RatelimitBucketInterface.php#L77">line 77</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/RatelimitBucketInterface.php#L78">line 78</a></div>
         <code>                    $this
     <strong>push</strong>(<abbr title="CharlotteDunois\Yasmin\HTTP\APIRequest">APIRequest</abbr> $request)
         </code>
@@ -529,8 +538,8 @@ To be able to use the Redis ratelimit bucket, you need to pass an instance of <c
             </div>
                     <div class="method-item">
                     <h3 id="method_setBusy">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/RatelimitBucketInterface.php#L49">line 49</a></div>
-        <code>                    
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/RatelimitBucketInterface.php#L50">line 50</a></div>
+        <code>                    void
     <strong>setBusy</strong>(bool $busy)
         </code>
     </h3>
@@ -552,6 +561,15 @@ To be able to use the Redis ratelimit bucket, you need to pass an instance of <c
             </table>
 
             
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
             
             
                         
@@ -562,7 +580,7 @@ To be able to use the Redis ratelimit bucket, you need to pass an instance of <c
             </div>
                     <div class="method-item">
                     <h3 id="method_shift">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/RatelimitBucketInterface.php#L105">line 105</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/RatelimitBucketInterface.php#L106">line 106</a></div>
         <code>                    <abbr title="CharlotteDunois\Yasmin\HTTP\APIRequest">APIRequest</abbr>|false
     <strong>shift</strong>()
         </code>
@@ -594,7 +612,7 @@ To be able to use the Redis ratelimit bucket, you need to pass an instance of <c
             </div>
                     <div class="method-item">
                     <h3 id="method_size">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/RatelimitBucketInterface.php#L70">line 70</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/RatelimitBucketInterface.php#L71">line 71</a></div>
         <code>                    int
     <strong>size</strong>()
         </code>
@@ -626,7 +644,7 @@ To be able to use the Redis ratelimit bucket, you need to pass an instance of <c
             </div>
                     <div class="method-item">
                     <h3 id="method_unshift">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/RatelimitBucketInterface.php#L84">line 84</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/RatelimitBucketInterface.php#L85">line 85</a></div>
         <code>                    $this
     <strong>unshift</strong>(<abbr title="CharlotteDunois\Yasmin\HTTP\APIRequest">APIRequest</abbr> $request)
         </code>
