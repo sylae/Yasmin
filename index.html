@@ -7,6 +7,7 @@ var pathname = path[1] || path[0];
 if(pathname.substr(0, 1) === "/") {
     pathname = pathname.substr(1, pathname.length);
 }
+
 window.location = window.location.protocol+"//"+window.location.host+"/"+(path.length > 1 ? "Yasmin/" : "")+"master/"+pathname;
 </script>
 </head>
