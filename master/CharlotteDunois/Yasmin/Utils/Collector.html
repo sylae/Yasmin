@@ -109,9 +109,9 @@
                     
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method___construct">__construct</a>(<abbr title="CharlotteDunois\Events\EventEmitterInterface">EventEmitterInterface</abbr> $emitter, string $event, callable $filter, callable $handler, array $options = array())
+                    <a href="#method___construct">__construct</a>(<abbr title="CharlotteDunois\Events\EventEmitterInterface">EventEmitterInterface</abbr> $emitter, string $event, callable $handler, callable|null $filter = null, array $options = array())
         
-                                            <p>The filter gets applied to look for a specific event (invoked as <code>$filter($item)</code>).</p>                </div>
+                                            <p>The handler gets invoked as `$handler(.</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -144,7 +144,7 @@
                     <h3 id="method___construct">
         <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Utils/Collector.php#L89">line 89</a></div>
         <code>                    
-    <strong>__construct</strong>(<abbr title="CharlotteDunois\Events\EventEmitterInterface">EventEmitterInterface</abbr> $emitter, string $event, callable $filter, callable $handler, array $options = array())
+    <strong>__construct</strong>(<abbr title="CharlotteDunois\Events\EventEmitterInterface">EventEmitterInterface</abbr> $emitter, string $event, callable $handler, callable|null $filter = null, array $options = array())
         </code>
     </h3>
     <div class="details">
@@ -152,11 +152,13 @@
     
 
                     <div class="method-description">
-                                    <p>The filter gets applied to look for a specific event (invoked as <code>$filter($item)</code>).</p>                    <p>Options may be:</p>
+                                    <p>The handler gets invoked as `$handler(.</p>                    <p>..$item)<code>. The optional filter get applied to look for a specific event (invoked as</code>$filter(...$item)`).</p>
+
+<p>Options may be:</p>
 
 <pre><code>array(
-    'max' =&gt; int, (amount of elements to collect)
-    'time' =&gt; int, (maximum amount of time (in seconds) to spend collecting, defaults to 30 seconds)
+    'max' =&gt; int, (maximum amount of elements to collect)
+    'time' =&gt; int, (maximum amount of time (in seconds) to spend collecting (0 = unlimited), defaults to 30 seconds)
     'errors' =&gt; string[], (which unmet conditions lead to a promise rejection)
 )
 </code></pre>
@@ -177,13 +179,13 @@
             </tr>
                     <tr>
                 <td>callable</td>
-                <td>$filter</td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td>callable</td>
                 <td>$handler</td>
                 <td>How the collect item should be handled. Must return an array of <code>[ $key, $value ]</code>.</td>
+            </tr>
+                    <tr>
+                <td>callable|null</td>
+                <td>$filter</td>
+                <td></td>
             </tr>
                     <tr>
                 <td>array</td>

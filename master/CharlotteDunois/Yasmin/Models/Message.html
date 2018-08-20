@@ -398,7 +398,7 @@
                 <div class="col-md-8 type">
                     <a href="#method_collectReactions">collectReactions</a>(callable $filter, array $options = array())
         
-                                            <p>Collects reactions during a specific duration. Resolves with a Collection of MessageReaction instances, mapped by their IDs or names (unicode emojis).</p>                </div>
+                                            <p>Collects reactions during a specific duration. Resolves with a Collection of <code>[ $messageReaction, $user ]</code> arrays, mapped by their IDs or names (unicode emojis).</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -489,7 +489,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method___toString">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Message.php#L380">line 380</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Message.php#L381">line 381</a></div>
         <code>                    string
     <strong>__toString</strong>()
         </code>
@@ -553,7 +553,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_collectReactions">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Message.php#L212">line 212</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Message.php#L213">line 213</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>collectReactions</strong>(callable $filter, array $options = array())
         </code>
@@ -563,7 +563,7 @@
     
 
                     <div class="method-description">
-                                    <p>Collects reactions during a specific duration. Resolves with a Collection of MessageReaction instances, mapped by their IDs or names (unicode emojis).</p>                    <p>Options are as following:</p>
+                                    <p>Collects reactions during a specific duration. Resolves with a Collection of <code>[ $messageReaction, $user ]</code> arrays, mapped by their IDs or names (unicode emojis).</p>                    <p>Options are as following:</p>
 
 <pre><code>array(
   'max' =&gt; int, (max. message reactions to collect)
@@ -579,7 +579,7 @@
                     <tr>
                 <td>callable</td>
                 <td>$filter</td>
-                <td>The filter to only collect desired reactions.</td>
+                <td>The filter to only collect desired reactions. Signature: <code>function (MessageReaction $messageReaction, User $user): bool</code></td>
             </tr>
                     <tr>
                 <td>array</td>
@@ -624,6 +624,12 @@
             </tr>
                     <tr>
                 <td>
+                                            <a href="../../../CharlotteDunois/Yasmin/Models/User.html"><abbr title="CharlotteDunois\Yasmin\Models\User">User</abbr></a>
+                                    </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>
                                             <a href="../../../CharlotteDunois/Yasmin/Utils/Collector.html"><abbr title="CharlotteDunois\Yasmin\Utils\Collector">Collector</abbr></a>
                                     </td>
                 <td></td>
@@ -638,7 +644,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_delete">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Message.php#L255">line 255</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Message.php#L256">line 256</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>delete</strong>(float|int $timeout = 0, string $reason = &#039;&#039;)
         </code>
@@ -685,7 +691,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_edit">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Message.php#L231">line 231</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Message.php#L232">line 232</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>edit</strong>(string|null $content, array $options = array())
         </code>
@@ -743,7 +749,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_fetchWebhook">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Message.php#L275">line 275</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Message.php#L276">line 276</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>fetchWebhook</strong>()
         </code>
@@ -795,7 +801,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getJumpURL">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Message.php#L292">line 292</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Message.php#L293">line 293</a></div>
         <code>                    string
     <strong>getJumpURL</strong>()
         </code>
@@ -827,7 +833,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_pin">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Message.php#L301">line 301</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Message.php#L302">line 302</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>pin</strong>()
         </code>
@@ -859,7 +865,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_react">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Message.php#L315">line 315</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Message.php#L316">line 316</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>react</strong>(<a href="../../../CharlotteDunois/Yasmin/Models/Emoji.html"><abbr title="CharlotteDunois\Yasmin\Models\Emoji">Emoji</abbr></a>|<a href="../../../CharlotteDunois/Yasmin/Models/MessageReaction.html"><abbr title="CharlotteDunois\Yasmin\Models\MessageReaction">MessageReaction</abbr></a>|string $emoji)
         </code>
@@ -912,7 +918,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_reply">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Message.php#L360">line 360</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Message.php#L361">line 361</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>reply</strong>(string $content, array $options = array())
         </code>
@@ -970,7 +976,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_unpin">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Message.php#L368">line 368</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Message.php#L369">line 369</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>unpin</strong>()
         </code>
