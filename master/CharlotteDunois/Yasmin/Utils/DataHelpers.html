@@ -211,7 +211,7 @@
                 <div class="col-md-8 type">
                     <a href="#method_waitForEvent">waitForEvent</a>(<abbr title="CharlotteDunois\Events\EventEmitterInterface">EventEmitterInterface</abbr> $emitter, string $event, callable|null $filter = null, array $options = array())
         
-                                            <p>Waits for a specific event to get emitted. Additional filter may be applied to look for a specific event (invoked as <code>$filter(\.\.\.$args)</code>). Resolves with an array of arguments (from the event).</p>                </div>
+                                            <p>Waits for a specific event to get emitted. Additional filter may be applied to look for a specific event (invoked as `$filter(.</p>                </div>
                 <div class="col-md-2"></div>
             </div>
             </div>
@@ -710,7 +710,9 @@ Includes everyone and here mentions.</p>                            </div>
     
 
                     <div class="method-description">
-                                    <p>Waits for a specific event to get emitted. Additional filter may be applied to look for a specific event (invoked as <code>$filter(\.\.\.$args)</code>). Resolves with an array of arguments (from the event).</p>                    <p>Options may be:</p>
+                                    <p>Waits for a specific event to get emitted. Additional filter may be applied to look for a specific event (invoked as `$filter(.</p>                    <p>..$args)`). Resolves with an array of arguments (from the event).</p>
+
+<p>Options may be:</p>
 
 <pre><code>array(
     'time' =&gt; int (if the event hasn't been found yet, this will define a timeout (in seconds) after which the promise gets rejected)
