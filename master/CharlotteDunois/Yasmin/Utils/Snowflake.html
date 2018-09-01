@@ -156,6 +156,14 @@
                 <td></td>
             </tr>
                     <tr>
+                <td class="type" id="property_value">
+                                                                                string|int
+                </td>
+                <td><a name="property_value" href="#property_value">$value</a></td>
+                <td class="last">The snowflake value.</td>
+                <td></td>
+            </tr>
+                    <tr>
                 <td class="type" id="property_workerID">
                                                                                 int
                 </td>
@@ -199,6 +207,16 @@
                                             <p>Generates a new snowflake.</p>                </div>
                 <div class="col-md-2"></div>
             </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getShardID">getShardID</a>(int $shardCount)
+        
+                                            <p>Compute the shard ID from the snowflake.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
             </div>
 
 
@@ -207,7 +225,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Utils/Snowflake.php#L42">line 42</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Utils/Snowflake.php#L44">line 44</a></div>
         <code>                    
     <strong>__construct</strong>(string|int $snowflake)
         </code>
@@ -249,7 +267,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_deconstruct">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Utils/Snowflake.php#L96">line 96</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Utils/Snowflake.php#L101">line 101</a></div>
         <code>        static            <a href="../../../CharlotteDunois/Yasmin/Utils/Snowflake.html"><abbr title="CharlotteDunois\Yasmin\Utils\Snowflake">Snowflake</abbr></a>
     <strong>deconstruct</strong>(string|int $snowflake)
         </code>
@@ -291,7 +309,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_generate">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Utils/Snowflake.php#L106">line 106</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Utils/Snowflake.php#L111">line 111</a></div>
         <code>        static            string
     <strong>generate</strong>(int $workerID = 1, int $processID = 0)
         </code>
@@ -324,6 +342,48 @@
                     <table class="table table-condensed">
         <tr>
             <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                        
+                        
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getShardID">
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Utils/Snowflake.php#L160">line 160</a></div>
+        <code>                    int
+    <strong>getShardID</strong>(int $shardCount)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compute the shard ID from the snowflake.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$shardCount</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
             <td></td>
         </tr>
     </table>

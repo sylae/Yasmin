@@ -316,7 +316,7 @@
                     <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_setActivity">setActivity</a>(<a href="../../../CharlotteDunois/Yasmin/Models/Activity.html"><abbr title="CharlotteDunois\Yasmin\Models\Activity">Activity</abbr></a>|string|null $name, int $type = 0)
+                    <a href="#method_setActivity">setActivity</a>(<a href="../../../CharlotteDunois/Yasmin/Models/Activity.html"><abbr title="CharlotteDunois\Yasmin\Models\Activity">Activity</abbr></a>|string|null $name, int $type = 0, int|null $shardID = null)
         
                                             <p>Set your activity. Resolves with $this.</p>                </div>
                 <div class="col-md-2"></div>
@@ -336,7 +336,7 @@
                     <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_setGame">setGame</a>(string|null $name, string $url = &#039;&#039;)
+                    <a href="#method_setGame">setGame</a>(string|null $name, string $url = &#039;&#039;, int|null $shardID = null)
         
                                             <p>Set your playing game. Resolves with $this.</p>                </div>
                 <div class="col-md-2"></div>
@@ -346,7 +346,7 @@
                     <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_setPresence">setPresence</a>(array $presence)
+                    <a href="#method_setPresence">setPresence</a>(array $presence, int|null $shardID = null)
         
                                             <p>Set your presence. Ratelimit is 5/60s, which gets handled by this method and after the ratelimit passed, it will set the last set presence as presence, skipping all previous set presences. Resolves with $this.</p>                </div>
                 <div class="col-md-2"></div>
@@ -411,7 +411,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_createGroupDM">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/ClientUser.php#L273">line 273</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/ClientUser.php#L287">line 287</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>createGroupDM</strong>(array $userWithAccessTokens, array $nicks = array())
         </code>
@@ -624,9 +624,9 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setActivity">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/ClientUser.php#L120">line 120</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/ClientUser.php#L121">line 121</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
-    <strong>setActivity</strong>(<a href="../../../CharlotteDunois/Yasmin/Models/Activity.html"><abbr title="CharlotteDunois\Yasmin\Models\Activity">Activity</abbr></a>|string|null $name, int $type = 0)
+    <strong>setActivity</strong>(<a href="../../../CharlotteDunois/Yasmin/Models/Activity.html"><abbr title="CharlotteDunois\Yasmin\Models\Activity">Activity</abbr></a>|string|null $name, int $type = 0, int|null $shardID = null)
         </code>
     </h3>
     <div class="details">
@@ -648,6 +648,11 @@
                 <td>int</td>
                 <td>$type</td>
                 <td>Optional if first argument is an Activity. The type of your activity. Should be listening (2) or watching (3). For playing/streaming use ClientUser::setGame.</td>
+            </tr>
+                    <tr>
+                <td>int|null</td>
+                <td>$shardID</td>
+                <td>Unless explicitely given, all presences will be fanned out to all shards.</td>
             </tr>
             </table>
 
@@ -721,9 +726,9 @@ $client->user->setAvatar(file_get_contents(__DIR__.'/resources/avatar.png'));</c
             </div>
                     <div class="method-item">
                     <h3 id="method_setGame">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/ClientUser.php#L149">line 149</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/ClientUser.php#L151">line 151</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
-    <strong>setGame</strong>(string|null $name, string $url = &#039;&#039;)
+    <strong>setGame</strong>(string|null $name, string $url = &#039;&#039;, int|null $shardID = null)
         </code>
     </h3>
     <div class="details">
@@ -745,6 +750,11 @@ $client->user->setAvatar(file_get_contents(__DIR__.'/resources/avatar.png'));</c
                 <td>string</td>
                 <td>$url</td>
                 <td>If you're streaming, this is the url to the stream.</td>
+            </tr>
+                    <tr>
+                <td>int|null</td>
+                <td>$shardID</td>
+                <td>Unless explicitely given, all presences will be fanned out to all shards.</td>
             </tr>
             </table>
 
@@ -774,9 +784,9 @@ $client->user->setGame('Yasmin');</code></pre>
             </div>
                     <div class="method-item">
                     <h3 id="method_setPresence">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/ClientUser.php#L194">line 194</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/ClientUser.php#L197">line 197</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
-    <strong>setPresence</strong>(array $presence)
+    <strong>setPresence</strong>(array $presence, int|null $shardID = null)
         </code>
     </h3>
     <div class="details">
@@ -805,6 +815,11 @@ $client->user->setGame('Yasmin');</code></pre>
                 <td>array</td>
                 <td>$presence</td>
                 <td></td>
+            </tr>
+                    <tr>
+                <td>int|null</td>
+                <td>$shardID</td>
+                <td>Unless explicitely given, all presences will be fanned out to all shards.</td>
             </tr>
             </table>
 
@@ -890,7 +905,7 @@ $client->user->setStatus('online');</code></pre>
             </div>
                     <div class="method-item">
                     <h3 id="method_setUsername">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/ClientUser.php#L249">line 249</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/ClientUser.php#L263">line 263</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>setUsername</strong>(string $username)
         </code>

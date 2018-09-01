@@ -159,9 +159,9 @@
                     void
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_disconnect">disconnect</a>(int $code, string $reason)
+                    <a href="#method_disconnect">disconnect</a>(<a href="../../CharlotteDunois/Yasmin/Models/Shard.html"><abbr title="CharlotteDunois\Yasmin\Models\Shard">Shard</abbr></a> $shard, int $code, string $reason)
         
-                                            <p>Emitted when the client gets disconnected from the gateway.</p>                </div>
+                                            <p>Emitted when the shard gets disconnected from the gateway.</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -419,9 +419,9 @@
                     void
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_reconnect">reconnect</a>()
+                    <a href="#method_reconnect">reconnect</a>(<a href="../../CharlotteDunois/Yasmin/Models/Shard.html"><abbr title="CharlotteDunois\Yasmin\Models\Shard">Shard</abbr></a> $shard)
         
-                                            <p>Emitted when the client tries to reconnect.</p>                </div>
+                                            <p>Emitted when the shard tries to reconnect.</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -734,7 +734,7 @@
                     <h3 id="method_disconnect">
         <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/ClientEvents.php#L28">line 28</a></div>
         <code>                    void
-    <strong>disconnect</strong>(int $code, string $reason)
+    <strong>disconnect</strong>(<a href="../../CharlotteDunois/Yasmin/Models/Shard.html"><abbr title="CharlotteDunois\Yasmin\Models\Shard">Shard</abbr></a> $shard, int $code, string $reason)
         </code>
     </h3>
     <div class="details">
@@ -742,11 +742,16 @@
     
 
                     <div class="method-description">
-                                    <p>Emitted when the client gets disconnected from the gateway.</p>                                                </div>
+                                    <p>Emitted when the shard gets disconnected from the gateway.</p>                                                </div>
                 <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../CharlotteDunois/Yasmin/Models/Shard.html"><abbr title="CharlotteDunois\Yasmin\Models\Shard">Shard</abbr></a></td>
+                <td>$shard</td>
+                <td></td>
+            </tr>
                     <tr>
                 <td>int</td>
                 <td>$code</td>
@@ -1930,7 +1935,7 @@
                     <h3 id="method_reconnect">
         <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/ClientEvents.php#L34">line 34</a></div>
         <code>                    void
-    <strong>reconnect</strong>()
+    <strong>reconnect</strong>(<a href="../../CharlotteDunois/Yasmin/Models/Shard.html"><abbr title="CharlotteDunois\Yasmin\Models\Shard">Shard</abbr></a> $shard)
         </code>
     </h3>
     <div class="details">
@@ -1938,8 +1943,18 @@
     
 
                     <div class="method-description">
-                                    <p>Emitted when the client tries to reconnect.</p>                                                </div>
+                                    <p>Emitted when the shard tries to reconnect.</p>                                                </div>
                 <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../CharlotteDunois/Yasmin/Models/Shard.html"><abbr title="CharlotteDunois\Yasmin\Models\Shard">Shard</abbr></a></td>
+                <td>$shard</td>
+                <td></td>
+            </tr>
+            </table>
+
             
                             <h4>Return Value</h4>
 
