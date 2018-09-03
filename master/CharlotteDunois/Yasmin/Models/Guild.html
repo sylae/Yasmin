@@ -583,9 +583,19 @@
                     <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
                 </div>
                 <div class="col-md-8 type">
+                    <a href="#method_fetchBan">fetchBan</a>(<a href="../../../CharlotteDunois/Yasmin/Models/User.html"><abbr title="CharlotteDunois\Yasmin\Models\User">User</abbr></a>|string $user)
+        
+                                            <p>Fetches a specific ban for a user. Resolves with an array <code>[ 'reason' =&gt; string|null, 'user' =&gt; User ]</code>.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_fetchBans">fetchBans</a>()
         
-                                            <p>Fetch all bans of the guild. Resolves with a Collection of array('reason' => string|null, 'user' => User), mapped by the user ID.</p>                </div>
+                                            <p>Fetch all bans of the guild. Resolves with a Collection of array <code>[ 'reason' =&gt; string|null, 'user' =&gt; User ]</code>, mapped by the user ID.</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -1329,8 +1339,50 @@
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_fetchBan">
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L598">line 598</a></div>
+        <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
+    <strong>fetchBan</strong>(<a href="../../../CharlotteDunois/Yasmin/Models/User.html"><abbr title="CharlotteDunois\Yasmin\Models\User">User</abbr></a>|string $user)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Fetches a specific ban for a user. Resolves with an array <code>[ 'reason' =&gt; string|null, 'user' =&gt; User ]</code>.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../CharlotteDunois/Yasmin/Models/User.html"><abbr title="CharlotteDunois\Yasmin\Models\User">User</abbr></a>|string</td>
+                <td>$user</td>
+                <td>An User instance or the user ID.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                        
+                        
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_fetchBans">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L597">line 597</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L620">line 620</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>fetchBans</strong>()
         </code>
@@ -1340,7 +1392,7 @@
     
 
                     <div class="method-description">
-                                    <p>Fetch all bans of the guild. Resolves with a Collection of array('reason' => string|null, 'user' => User), mapped by the user ID.</p>                                                </div>
+                                    <p>Fetch all bans of the guild. Resolves with a Collection of array <code>[ 'reason' =&gt; string|null, 'user' =&gt; User ]</code>, mapped by the user ID.</p>                                                </div>
                 <div class="tags">
             
                             <h4>Return Value</h4>
@@ -1362,7 +1414,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_fetchInvites">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L620">line 620</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L643">line 643</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>fetchInvites</strong>()
         </code>
@@ -1405,7 +1457,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_fetchMember">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L641">line 641</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L664">line 664</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>fetchMember</strong>(string $userid)
         </code>
@@ -1458,7 +1510,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_fetchMembers">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L660">line 660</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L683">line 683</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>fetchMembers</strong>(string $query = &#039;&#039;, int $limit = 0)
         </code>
@@ -1514,7 +1566,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_fetchVoiceRegions">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L736">line 736</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L759">line 759</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>fetchVoiceRegions</strong>()
         </code>
@@ -1557,7 +1609,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_fetchWebhooks">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L756">line 756</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L779">line 779</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>fetchWebhooks</strong>()
         </code>
@@ -1600,7 +1652,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getIconURL">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L777">line 777</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L800">line 800</a></div>
         <code>                    string|null
     <strong>getIconURL</strong>(string $format = &#039;png&#039;, int|null $size = null)
         </code>
@@ -1647,7 +1699,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getSplashURL">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L795">line 795</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L818">line 818</a></div>
         <code>                    string|null
     <strong>getSplashURL</strong>(string $format = &#039;png&#039;, int|null $size = null)
         </code>
@@ -1694,7 +1746,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getVanityInvite">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L812">line 812</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L835">line 835</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>getVanityInvite</strong>()
         </code>
@@ -1737,7 +1789,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_leave">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L827">line 827</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L850">line 850</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>leave</strong>()
         </code>
@@ -1769,7 +1821,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_pruneMembers">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L842">line 842</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L865">line 865</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>pruneMembers</strong>(int $days, bool $dry = false, string $reason = &#039;&#039;)
         </code>
@@ -1821,7 +1873,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setAFKChannel">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L857">line 857</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L880">line 880</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>setAFKChannel</strong>(string|<a href="../../../CharlotteDunois/Yasmin/Models/VoiceChannel.html"><abbr title="CharlotteDunois\Yasmin\Models\VoiceChannel">VoiceChannel</abbr></a>|null $channel, string $reason = &#039;&#039;)
         </code>
@@ -1868,7 +1920,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setAFKTimeout">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L867">line 867</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L890">line 890</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>setAFKTimeout</strong>(int|null $timeout, string $reason = &#039;&#039;)
         </code>
@@ -1915,7 +1967,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setChannelPositions">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L877">line 877</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L900">line 900</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>setChannelPositions</strong>(array $channels, string $reason = &#039;&#039;)
         </code>
@@ -1962,7 +2014,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setExplicitContentFilter">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L925">line 925</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L948">line 948</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>setExplicitContentFilter</strong>(int $filter, string $reason = &#039;&#039;)
         </code>
@@ -2009,7 +2061,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setIcon">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L935">line 935</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L958">line 958</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>setIcon</strong>(string $icon, string $reason = &#039;&#039;)
         </code>
@@ -2056,7 +2108,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setName">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L945">line 945</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L968">line 968</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>setName</strong>(string $name, string $reason = &#039;&#039;)
         </code>
@@ -2103,7 +2155,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setOwner">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L955">line 955</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L978">line 978</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>setOwner</strong>(string|<a href="../../../CharlotteDunois/Yasmin/Models/GuildMember.html"><abbr title="CharlotteDunois\Yasmin\Models\GuildMember">GuildMember</abbr></a> $owner, string $reason = &#039;&#039;)
         </code>
@@ -2150,7 +2202,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setRegion">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L965">line 965</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L988">line 988</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>setRegion</strong>(string|<a href="../../../CharlotteDunois/Yasmin/Models/VoiceRegion.html"><abbr title="CharlotteDunois\Yasmin\Models\VoiceRegion">VoiceRegion</abbr></a> $region, string $reason = &#039;&#039;)
         </code>
@@ -2197,7 +2249,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setRolePositions">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L901">line 901</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L924">line 924</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>setRolePositions</strong>(array $roles, string $reason = &#039;&#039;)
         </code>
@@ -2244,7 +2296,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setSplash">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L975">line 975</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L998">line 998</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>setSplash</strong>(string $splash, string $reason = &#039;&#039;)
         </code>
@@ -2291,7 +2343,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setSystemChannel">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L985">line 985</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L1008">line 1008</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>setSystemChannel</strong>(string|<a href="../../../CharlotteDunois/Yasmin/Models/TextChannel.html"><abbr title="CharlotteDunois\Yasmin\Models\TextChannel">TextChannel</abbr></a>|null $channel, string $reason = &#039;&#039;)
         </code>
@@ -2338,7 +2390,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setVerificationLevel">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L995">line 995</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L1018">line 1018</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>setVerificationLevel</strong>(int $level, string $reason = &#039;&#039;)
         </code>
@@ -2385,7 +2437,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_unban">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L1005">line 1005</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L1028">line 1028</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>unban</strong>(<a href="../../../CharlotteDunois/Yasmin/Models/User.html"><abbr title="CharlotteDunois\Yasmin\Models\User">User</abbr></a>|string $user, string $reason = &#039;&#039;)
         </code>
