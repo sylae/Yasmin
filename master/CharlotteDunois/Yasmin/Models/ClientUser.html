@@ -148,7 +148,7 @@
                                                                                 int
                 </td>
                 <td><a name="property_defaultAvatar" href="#property_defaultAvatar">$defaultAvatar</a></td>
-                <td class="last">The identifier of the default avatar for this user.</td>
+                <td class="last">DEPRECATED: The identifier of the default avatar for this user.</td>
                 <td><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Models/User.html#property_defaultAvatar"><abbr title="CharlotteDunois\Yasmin\Models\User">User</abbr></a></small></td>
             </tr>
                     <tr>
@@ -164,7 +164,7 @@
                                                                                 <a href="../../../CharlotteDunois/Yasmin/Models/DMChannel.html"><abbr title="CharlotteDunois\Yasmin\Models\DMChannel">DMChannel</abbr></a>|null
                 </td>
                 <td><a name="property_dmChannel" href="#property_dmChannel">$dmChannel</a></td>
-                <td class="last">The DM channel for this user, if it exists, or null.</td>
+                <td class="last">DEPRECATED: The DM channel for this user, if it exists, or null.</td>
                 <td><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Models/User.html#property_dmChannel"><abbr title="CharlotteDunois\Yasmin\Models\User">User</abbr></a></small></td>
             </tr>
                     <tr>
@@ -188,7 +188,7 @@
                                                                                 <a href="../../../CharlotteDunois/Yasmin/Models/Message.html"><abbr title="CharlotteDunois\Yasmin\Models\Message">Message</abbr></a>|null
                 </td>
                 <td><a name="property_lastMessage" href="#property_lastMessage">$lastMessage</a></td>
-                <td class="last">The laste message the user sent while the client was online, or null.</td>
+                <td class="last">DEPRECATED (with no replacement): The last message the user sent while the client was online, or null.</td>
                 <td><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Models/User.html#property_lastMessage"><abbr title="CharlotteDunois\Yasmin\Models\User">User</abbr></a></small></td>
             </tr>
                     <tr>
@@ -196,7 +196,7 @@
                                                                                 string|null
                 </td>
                 <td><a name="property_lastMessageID" href="#property_lastMessageID">$lastMessageID</a></td>
-                <td class="last">The last ID of the message the user sent while the client was online, or null.</td>
+                <td class="last">DEPRECATED: The last ID of the message the user sent while the client was online, or null.</td>
                 <td><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Models/User.html#property_lastMessageID"><abbr title="CharlotteDunois\Yasmin\Models\User">User</abbr></a></small></td>
             </tr>
                     <tr>
@@ -212,7 +212,7 @@
                                                                                 <a href="../../../CharlotteDunois/Yasmin/Models/Presence.html"><abbr title="CharlotteDunois\Yasmin\Models\Presence">Presence</abbr></a>|null
                 </td>
                 <td><a name="property_presence" href="#property_presence">$presence</a></td>
-                <td class="last">The presence for this user, or null.</td>
+                <td class="last">DEPRECATED: The presence for this user, or null.</td>
                 <td><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Models/User.html#property_presence"><abbr title="CharlotteDunois\Yasmin\Models\User">User</abbr></a></small></td>
             </tr>
                     <tr>
@@ -313,6 +313,16 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
+                    <a href="../../../CharlotteDunois/Yasmin/Models/Presence.html"><abbr title="CharlotteDunois\Yasmin\Models\Presence">Presence</abbr></a>|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getPresence">getPresence</a>()
+        
+                                            <p>Gets the presence for this user, or null.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Models/User.html#method_getPresence"><abbr title="CharlotteDunois\Yasmin\Models\User">User</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
                 </div>
                 <div class="col-md-8 type">
@@ -379,7 +389,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method___toString">
-        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Models/User.html#method___toString"><abbr title="CharlotteDunois\Yasmin\Models\User">User</abbr></a> at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/User.php#L256">line 256</a></div>
+        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Models/User.html#method___toString"><abbr title="CharlotteDunois\Yasmin\Models\User">User</abbr></a> at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/User.php#L270">line 270</a></div>
         <code>                    string
     <strong>__toString</strong>()
         </code>
@@ -474,7 +484,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getAvatarURL">
-        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Models/User.html#method_getAvatarURL"><abbr title="CharlotteDunois\Yasmin\Models\User">User</abbr></a> at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/User.php#L202">line 202</a></div>
+        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Models/User.html#method_getAvatarURL"><abbr title="CharlotteDunois\Yasmin\Models\User">User</abbr></a> at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/User.php#L195">line 195</a></div>
         <code>                    string|null
     <strong>getAvatarURL</strong>(int|null $size = 1024, string $format = &#039;&#039;)
         </code>
@@ -521,7 +531,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getDefaultAvatarURL">
-        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Models/User.html#method_getDefaultAvatarURL"><abbr title="CharlotteDunois\Yasmin\Models\User">User</abbr></a> at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/User.php#L184">line 184</a></div>
+        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Models/User.html#method_getDefaultAvatarURL"><abbr title="CharlotteDunois\Yasmin\Models\User">User</abbr></a> at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/User.php#L177">line 177</a></div>
         <code>                    string
     <strong>getDefaultAvatarURL</strong>(int|null $size = 1024, string $format = &#039;&#039;)
         </code>
@@ -577,7 +587,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getDisplayAvatarURL">
-        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Models/User.html#method_getDisplayAvatarURL"><abbr title="CharlotteDunois\Yasmin\Models\User">User</abbr></a> at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/User.php#L224">line 224</a></div>
+        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Models/User.html#method_getDisplayAvatarURL"><abbr title="CharlotteDunois\Yasmin\Models\User">User</abbr></a> at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/User.php#L217">line 217</a></div>
         <code>                    string
     <strong>getDisplayAvatarURL</strong>(int|null $size = 1024, string $format = &#039;&#039;)
         </code>
@@ -610,6 +620,38 @@
                     <table class="table table-condensed">
         <tr>
             <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                        
+                        
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPresence">
+        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Models/User.html#method_getPresence"><abbr title="CharlotteDunois\Yasmin\Models\User">User</abbr></a> at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/User.php#L229">line 229</a></div>
+        <code>                    <a href="../../../CharlotteDunois/Yasmin/Models/Presence.html"><abbr title="CharlotteDunois\Yasmin\Models\Presence">Presence</abbr></a>|null
+    <strong>getPresence</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Gets the presence for this user, or null.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../CharlotteDunois/Yasmin/Models/Presence.html"><abbr title="CharlotteDunois\Yasmin\Models\Presence">Presence</abbr></a>|null</td>
             <td></td>
         </tr>
     </table>

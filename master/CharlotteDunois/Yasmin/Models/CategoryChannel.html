@@ -123,7 +123,7 @@
                                                                                 <a href="../../../CharlotteDunois/Yasmin/Utils/Collection.html"><abbr title="CharlotteDunois\Yasmin\Utils\Collection">Collection</abbr></a>
                 </td>
                 <td><a name="property_children" href="#property_children">$children</a></td>
-                <td class="last">Returns all channels which are childrens of this category.</td>
+                <td class="last">DEPRECATED: Returns all channels which are childrens of this category.</td>
                 <td></td>
             </tr>
                     <tr>
@@ -261,6 +261,26 @@
         
                                             <p>Fetches all invites of this channel. Resolves with a Collection of Invite instances, mapped by their code.</p>                </div>
                 <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Traits/GuildChannelTrait.html#method_fetchInvites"><abbr title="CharlotteDunois\Yasmin\Traits\GuildChannelTrait">GuildChannelTrait</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../CharlotteDunois/Yasmin/Utils/Collection.html"><abbr title="CharlotteDunois\Yasmin\Utils\Collection">Collection</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getChildren">getChildren</a>()
+        
+                                            <p>Returns all channels which are childrens of this category.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isPermissionsLocked">isPermissionsLocked</a>()
+        
+                                            <p>Whether the permission overwrites match the parent channel (permissions synced).</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Traits/GuildChannelTrait.html#method_isPermissionsLocked"><abbr title="CharlotteDunois\Yasmin\Traits\GuildChannelTrait">GuildChannelTrait</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -653,8 +673,81 @@
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_getChildren">
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/CategoryChannel.php#L82">line 82</a></div>
+        <code>                    <a href="../../../CharlotteDunois/Yasmin/Utils/Collection.html"><abbr title="CharlotteDunois\Yasmin\Utils\Collection">Collection</abbr></a>
+    <strong>getChildren</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns all channels which are childrens of this category.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../CharlotteDunois/Yasmin/Utils/Collection.html"><abbr title="CharlotteDunois\Yasmin\Utils\Collection">Collection</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                        
+                        
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isPermissionsLocked">
+        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Traits/GuildChannelTrait.html#method_isPermissionsLocked"><abbr title="CharlotteDunois\Yasmin\Traits\GuildChannelTrait">GuildChannelTrait</abbr></a> at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Traits/GuildChannelTrait.php#L206">line 206</a></div>
+        <code>                    bool
+    <strong>isPermissionsLocked</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Whether the permission overwrites match the parent channel (permissions synced).</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="https://secure.php.net/BadMethodCallException" target="_blank">BadMethodCallException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                        
+                        
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_lockPermissions">
-        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Traits/GuildChannelTrait.html#method_lockPermissions"><abbr title="CharlotteDunois\Yasmin\Traits\GuildChannelTrait">GuildChannelTrait</abbr></a> at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Traits/GuildChannelTrait.php#L351">line 351</a></div>
+        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Traits/GuildChannelTrait.html#method_lockPermissions"><abbr title="CharlotteDunois\Yasmin\Traits\GuildChannelTrait">GuildChannelTrait</abbr></a> at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Traits/GuildChannelTrait.php#L373">line 373</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>lockPermissions</strong>(string $reason = &#039;&#039;)
         </code>
@@ -705,7 +798,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_overwritePermissions">
-        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Traits/GuildChannelTrait.html#method_overwritePermissions"><abbr title="CharlotteDunois\Yasmin\Traits\GuildChannelTrait">GuildChannelTrait</abbr></a> at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Traits/GuildChannelTrait.php#L290">line 290</a></div>
+        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Traits/GuildChannelTrait.html#method_overwritePermissions"><abbr title="CharlotteDunois\Yasmin\Traits\GuildChannelTrait">GuildChannelTrait</abbr></a> at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Traits/GuildChannelTrait.php#L312">line 312</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>overwritePermissions</strong>(<a href="../../../CharlotteDunois/Yasmin/Models/GuildMember.html"><abbr title="CharlotteDunois\Yasmin\Models\GuildMember">GuildMember</abbr></a>|<a href="../../../CharlotteDunois/Yasmin/Models/Role.html"><abbr title="CharlotteDunois\Yasmin\Models\Role">Role</abbr></a>|string $memberOrRole, <a href="../../../CharlotteDunois/Yasmin/Models/Permissions.html"><abbr title="CharlotteDunois\Yasmin\Models\Permissions">Permissions</abbr></a>|int $allow, <a href="../../../CharlotteDunois/Yasmin/Models/Permissions.html"><abbr title="CharlotteDunois\Yasmin\Models\Permissions">Permissions</abbr></a>|int $deny = 0, string $reason = &#039;&#039;)
         </code>
@@ -782,7 +875,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_overwritesFor">
-        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Traits/GuildChannelTrait.html#method_overwritesFor"><abbr title="CharlotteDunois\Yasmin\Traits\GuildChannelTrait">GuildChannelTrait</abbr></a> at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Traits/GuildChannelTrait.php#L256">line 256</a></div>
+        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Traits/GuildChannelTrait.html#method_overwritesFor"><abbr title="CharlotteDunois\Yasmin\Traits\GuildChannelTrait">GuildChannelTrait</abbr></a> at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Traits/GuildChannelTrait.php#L278">line 278</a></div>
         <code>                    array
     <strong>overwritesFor</strong>(<a href="../../../CharlotteDunois/Yasmin/Models/GuildMember.html"><abbr title="CharlotteDunois\Yasmin\Models\GuildMember">GuildMember</abbr></a>|string $member)
         </code>
@@ -839,7 +932,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_permissionsFor">
-        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Traits/GuildChannelTrait.html#method_permissionsFor"><abbr title="CharlotteDunois\Yasmin\Traits\GuildChannelTrait">GuildChannelTrait</abbr></a> at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Traits/GuildChannelTrait.php#L208">line 208</a></div>
+        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Traits/GuildChannelTrait.html#method_permissionsFor"><abbr title="CharlotteDunois\Yasmin\Traits\GuildChannelTrait">GuildChannelTrait</abbr></a> at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Traits/GuildChannelTrait.php#L230">line 230</a></div>
         <code>                    <a href="../../../CharlotteDunois/Yasmin/Models/Permissions.html"><abbr title="CharlotteDunois\Yasmin\Models\Permissions">Permissions</abbr></a>
     <strong>permissionsFor</strong>(<a href="../../../CharlotteDunois/Yasmin/Models/GuildMember.html"><abbr title="CharlotteDunois\Yasmin\Models\GuildMember">GuildMember</abbr></a>|string $member)
         </code>
@@ -901,7 +994,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setNSFW">
-        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Traits/GuildChannelTrait.html#method_setNSFW"><abbr title="CharlotteDunois\Yasmin\Traits\GuildChannelTrait">GuildChannelTrait</abbr></a> at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Traits/GuildChannelTrait.php#L403">line 403</a></div>
+        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Traits/GuildChannelTrait.html#method_setNSFW"><abbr title="CharlotteDunois\Yasmin\Traits\GuildChannelTrait">GuildChannelTrait</abbr></a> at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Traits/GuildChannelTrait.php#L425">line 425</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>setNSFW</strong>(bool $nsfw, string $reason = &#039;&#039;)
         </code>
@@ -957,7 +1050,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setName">
-        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Traits/GuildChannelTrait.html#method_setName"><abbr title="CharlotteDunois\Yasmin\Traits\GuildChannelTrait">GuildChannelTrait</abbr></a> at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Traits/GuildChannelTrait.php#L392">line 392</a></div>
+        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Traits/GuildChannelTrait.html#method_setName"><abbr title="CharlotteDunois\Yasmin\Traits\GuildChannelTrait">GuildChannelTrait</abbr></a> at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Traits/GuildChannelTrait.php#L414">line 414</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>setName</strong>(string $name, string $reason = &#039;&#039;)
         </code>
@@ -1013,7 +1106,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setParent">
-        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Traits/GuildChannelTrait.html#method_setParent"><abbr title="CharlotteDunois\Yasmin\Traits\GuildChannelTrait">GuildChannelTrait</abbr></a> at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Traits/GuildChannelTrait.php#L414">line 414</a></div>
+        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Traits/GuildChannelTrait.html#method_setParent"><abbr title="CharlotteDunois\Yasmin\Traits\GuildChannelTrait">GuildChannelTrait</abbr></a> at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Traits/GuildChannelTrait.php#L436">line 436</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>setParent</strong>(<a href="../../../CharlotteDunois/Yasmin/Models/CategoryChannel.html"><abbr title="CharlotteDunois\Yasmin\Models\CategoryChannel">CategoryChannel</abbr></a>|string $parent, string $reason = &#039;&#039;)
         </code>
@@ -1069,7 +1162,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setPermissionOverwrites">
-        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Traits/GuildChannelTrait.html#method_setPermissionOverwrites"><abbr title="CharlotteDunois\Yasmin\Traits\GuildChannelTrait">GuildChannelTrait</abbr></a> at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Traits/GuildChannelTrait.php#L425">line 425</a></div>
+        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Traits/GuildChannelTrait.html#method_setPermissionOverwrites"><abbr title="CharlotteDunois\Yasmin\Traits\GuildChannelTrait">GuildChannelTrait</abbr></a> at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Traits/GuildChannelTrait.php#L447">line 447</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>setPermissionOverwrites</strong>(<a href="../../../CharlotteDunois/Yasmin/Utils/Collection.html"><abbr title="CharlotteDunois\Yasmin\Utils\Collection">Collection</abbr></a>|array $permissionOverwrites, string $reason = &#039;&#039;)
         </code>
@@ -1125,7 +1218,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setPosition">
-        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Traits/GuildChannelTrait.html#method_setPosition"><abbr title="CharlotteDunois\Yasmin\Traits\GuildChannelTrait">GuildChannelTrait</abbr></a> at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Traits/GuildChannelTrait.php#L436">line 436</a></div>
+        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Traits/GuildChannelTrait.html#method_setPosition"><abbr title="CharlotteDunois\Yasmin\Traits\GuildChannelTrait">GuildChannelTrait</abbr></a> at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Traits/GuildChannelTrait.php#L458">line 458</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>setPosition</strong>(int $position, string $reason = &#039;&#039;)
         </code>
@@ -1181,7 +1274,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setTopic">
-        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Traits/GuildChannelTrait.html#method_setTopic"><abbr title="CharlotteDunois\Yasmin\Traits\GuildChannelTrait">GuildChannelTrait</abbr></a> at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Traits/GuildChannelTrait.php#L479">line 479</a></div>
+        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Traits/GuildChannelTrait.html#method_setTopic"><abbr title="CharlotteDunois\Yasmin\Traits\GuildChannelTrait">GuildChannelTrait</abbr></a> at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Traits/GuildChannelTrait.php#L501">line 501</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>setTopic</strong>(string $topic, string $reason = &#039;&#039;)
         </code>

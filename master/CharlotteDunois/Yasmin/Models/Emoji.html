@@ -201,10 +201,10 @@
             </tr>
                     <tr>
                 <td class="type" id="property_url">
-                                                                                string|null
+                                                                                string
                 </td>
                 <td><a name="property_url" href="#property_url">$url</a></td>
-                <td class="last">The URL to the emoji image, or null for unicode emoji.</td>
+                <td class="last">DEPRECATED: The URL to the emoji image.</td>
                 <td></td>
             </tr>
                     <tr>
@@ -273,6 +273,16 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getImageURL">getImageURL</a>()
+        
+                                            <p>Get the image URL of the custom emoji.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
                 </div>
                 <div class="col-md-8 type">
@@ -309,7 +319,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method___toString">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Emoji.php#L252">line 252</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Emoji.php#L261">line 261</a></div>
         <code>                    string
     <strong>__toString</strong>()
         </code>
@@ -341,7 +351,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_addRestrictedRole">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Emoji.php#L100">line 100</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Emoji.php#L96">line 96</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>addRestrictedRole</strong>(<a href="../../../CharlotteDunois/Yasmin/Models/Role.html"><abbr title="CharlotteDunois\Yasmin\Models\Role">Role</abbr></a>|string $role)
         </code>
@@ -392,7 +402,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_addRestrictedRoles">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Emoji.php#L115">line 115</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Emoji.php#L111">line 111</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>addRestrictedRoles</strong>(<a href="../../../CharlotteDunois/Yasmin/Models/Role.html"><abbr title="CharlotteDunois\Yasmin\Models\Role">Role</abbr></a>|string ...$role)
         </code>
@@ -443,7 +453,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_delete">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Emoji.php#L176">line 176</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Emoji.php#L172">line 172</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>delete</strong>(string $reason = &#039;&#039;)
         </code>
@@ -494,7 +504,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_edit">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Emoji.php#L144">line 144</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Emoji.php#L140">line 140</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>edit</strong>(array $options, string $reason = &#039;&#039;)
         </code>
@@ -556,8 +566,49 @@
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_getImageURL">
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Emoji.php#L189">line 189</a></div>
+        <code>                    string
+    <strong>getImageURL</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the image URL of the custom emoji.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="https://secure.php.net/BadMethodCallException" target="_blank">BadMethodCallException</a></td>
+                <td>Throws on unicode emojis.</td>
+            </tr>
+            </table>
+
+            
+                        
+                        
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_removeRestrictedRole">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Emoji.php#L194">line 194</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Emoji.php#L203">line 203</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>removeRestrictedRole</strong>(<a href="../../../CharlotteDunois/Yasmin/Models/Role.html"><abbr title="CharlotteDunois\Yasmin\Models\Role">Role</abbr></a>|string $role)
         </code>
@@ -608,7 +659,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_removeRestrictedRoles">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Emoji.php#L217">line 217</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Emoji.php#L226">line 226</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>removeRestrictedRoles</strong>(<a href="../../../CharlotteDunois/Yasmin/Models/Role.html"><abbr title="CharlotteDunois\Yasmin\Models\Role">Role</abbr></a>|string ...$role)
         </code>
@@ -659,7 +710,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setName">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Emoji.php#L244">line 244</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Emoji.php#L253">line 253</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>setName</strong>(string $name, string $reason = &#039;&#039;)
         </code>

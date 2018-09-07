@@ -142,7 +142,7 @@
                                                                                 int
                 </td>
                 <td><a name="property_calculatedPosition" href="#property_calculatedPosition">$calculatedPosition</a></td>
-                <td class="last">The role position in the role manager.</td>
+                <td class="last">DEPRECATED: The role position in the role manager.</td>
                 <td></td>
             </tr>
                     <tr>
@@ -182,7 +182,7 @@
                                                                                 bool
                 </td>
                 <td><a name="property_editable" href="#property_editable">$editable</a></td>
-                <td class="last">Whether the role can be edited by the client user.</td>
+                <td class="last">DEPRECATED: Whether the role can be edited by the client user.</td>
                 <td></td>
             </tr>
                     <tr>
@@ -321,6 +321,26 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCalculatedPosition">getCalculatedPosition</a>()
+        
+                                            <p>Calculates the positon of the role in the Discord client.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isEditable">isEditable</a>()
+        
+                                            <p>Whether the role can be edited by the client user.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
                 </div>
                 <div class="col-md-8 type">
@@ -387,7 +407,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method___toString">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Role.php#L295">line 295</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Role.php#L311">line 311</a></div>
         <code>                    string
     <strong>__toString</strong>()
         </code>
@@ -419,7 +439,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_comparePositionTo">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Role.php#L143">line 143</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Role.php#L130">line 130</a></div>
         <code>                    int
     <strong>comparePositionTo</strong>(<a href="../../../CharlotteDunois/Yasmin/Models/Role.html"><abbr title="CharlotteDunois\Yasmin\Models\Role">Role</abbr></a> $role)
         </code>
@@ -461,7 +481,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_delete">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Role.php#L216">line 216</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Role.php#L203">line 203</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>delete</strong>(string $reason = &#039;&#039;)
         </code>
@@ -503,7 +523,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_edit">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Role.php#L173">line 173</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Role.php#L160">line 160</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>edit</strong>(array $options, string $reason = &#039;&#039;)
         </code>
@@ -580,8 +600,72 @@
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_getCalculatedPosition">
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Role.php#L215">line 215</a></div>
+        <code>                    int
+    <strong>getCalculatedPosition</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Calculates the positon of the role in the Discord client.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                        
+                        
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isEditable">
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Role.php#L227">line 227</a></div>
+        <code>                    bool
+    <strong>isEditable</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Whether the role can be edited by the client user.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                        
+                        
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_setColor">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Role.php#L232">line 232</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Role.php#L248">line 248</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>setColor</strong>(int|string $color, string $reason = &#039;&#039;)
         </code>
@@ -648,7 +732,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setHoist">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Role.php#L243">line 243</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Role.php#L259">line 259</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>setHoist</strong>(bool $hoist, string $reason = &#039;&#039;)
         </code>
@@ -704,7 +788,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setMentionable">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Role.php#L254">line 254</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Role.php#L270">line 270</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>setMentionable</strong>(bool $mentionable, string $reason = &#039;&#039;)
         </code>
@@ -760,7 +844,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setName">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Role.php#L265">line 265</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Role.php#L281">line 281</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>setName</strong>(string $name, string $reason = &#039;&#039;)
         </code>
@@ -816,7 +900,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setPermissions">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Role.php#L276">line 276</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Role.php#L292">line 292</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>setPermissions</strong>(int|<a href="../../../CharlotteDunois/Yasmin/Models/Permissions.html"><abbr title="CharlotteDunois\Yasmin\Models\Permissions">Permissions</abbr></a> $permissions, string $reason = &#039;&#039;)
         </code>
@@ -872,7 +956,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setPosition">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Role.php#L287">line 287</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Role.php#L303">line 303</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>setPosition</strong>(int $position, string $reason = &#039;&#039;)
         </code>
