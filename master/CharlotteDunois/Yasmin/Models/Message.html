@@ -290,7 +290,7 @@
                                                                                 string|null
                 </td>
                 <td><a name="property_nonce" href="#property_nonce">$nonce</a></td>
-                <td class="last">A random number or string used for checking message delivery, or null.</td>
+                <td class="last">A snowflake used for checking message delivery, or null.</td>
                 <td></td>
             </tr>
                     <tr>
@@ -338,7 +338,7 @@
                                                                                 bool
                 </td>
                 <td><a name="property_tts" href="#property_tts">$tts</a></td>
-                <td class="last">Whether or not the message was Text-To-Speech.</td>
+                <td class="last">Whether or not the message is Text-To-Speech.</td>
                 <td></td>
             </tr>
                     <tr>
@@ -481,7 +481,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method___toString">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Message.php#L385">line 385</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Message.php#L478">line 478</a></div>
         <code>                    string
     <strong>__toString</strong>()
         </code>
@@ -513,7 +513,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_clearReactions">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Message.php#L183">line 183</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Message.php#L276">line 276</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>clearReactions</strong>()
         </code>
@@ -545,7 +545,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_collectReactions">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Message.php#L213">line 213</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Message.php#L306">line 306</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>collectReactions</strong>(callable $filter, array $options = array())
         </code>
@@ -636,7 +636,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_delete">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Message.php#L256">line 256</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Message.php#L349">line 349</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>delete</strong>(float|int $timeout = 0, string $reason = &#039;&#039;)
         </code>
@@ -683,7 +683,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_edit">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Message.php#L232">line 232</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Message.php#L325">line 325</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>edit</strong>(string|null $content, array $options = array())
         </code>
@@ -741,7 +741,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_fetchWebhook">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Message.php#L276">line 276</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Message.php#L369">line 369</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>fetchWebhook</strong>()
         </code>
@@ -793,7 +793,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getJumpURL">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Message.php#L293">line 293</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Message.php#L386">line 386</a></div>
         <code>                    string
     <strong>getJumpURL</strong>()
         </code>
@@ -825,7 +825,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_pin">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Message.php#L302">line 302</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Message.php#L395">line 395</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>pin</strong>()
         </code>
@@ -857,7 +857,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_react">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Message.php#L316">line 316</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Message.php#L409">line 409</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>react</strong>(<a href="../../../CharlotteDunois/Yasmin/Models/Emoji.html"><abbr title="CharlotteDunois\Yasmin\Models\Emoji">Emoji</abbr></a>|<a href="../../../CharlotteDunois/Yasmin/Models/MessageReaction.html"><abbr title="CharlotteDunois\Yasmin\Models\MessageReaction">MessageReaction</abbr></a>|string $emoji)
         </code>
@@ -910,7 +910,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_reply">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Message.php#L365">line 365</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Message.php#L458">line 458</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>reply</strong>(string $content, array $options = array())
         </code>
@@ -968,7 +968,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_unpin">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Message.php#L373">line 373</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Message.php#L466">line 466</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>unpin</strong>()
         </code>

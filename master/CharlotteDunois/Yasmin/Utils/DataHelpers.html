@@ -206,6 +206,16 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
+                    static&nbsp;mixed|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_typecastVariable">typecastVariable</a>(mixed $variable, string $type)
+        
+                                            <p>Typecasts the variable to the type, if not null.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     static&nbsp;<abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
                 </div>
                 <div class="col-md-8 type">
@@ -540,7 +550,7 @@ Includes everyone and here mentions.</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_resolveMessageOptionsFiles">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Utils/DataHelpers.php#L286">line 286</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Utils/DataHelpers.php#L241">line 241</a></div>
         <code>        static            <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>resolveMessageOptionsFiles</strong>(array $options)
         </code>
@@ -633,7 +643,7 @@ Includes everyone and here mentions.</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_splitMessage">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Utils/DataHelpers.php#L253">line 253</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Utils/DataHelpers.php#L325">line 325</a></div>
         <code>        static            string[]
     <strong>splitMessage</strong>(string $text, array $options = array())
         </code>
@@ -699,8 +709,64 @@ Includes everyone and here mentions.</p>                            </div>
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_typecastVariable">
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Utils/DataHelpers.php#L359">line 359</a></div>
+        <code>        static            mixed|null
+    <strong>typecastVariable</strong>(mixed $variable, string $type)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Typecasts the variable to the type, if not null.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$variable</td>
+                <td>&amp;$variable</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$type</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="https://secure.php.net/InvalidArgumentException" target="_blank">InvalidArgumentException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                        
+                        
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_waitForEvent">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Utils/DataHelpers.php#L370">line 370</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Utils/DataHelpers.php#L406">line 406</a></div>
         <code>        static            <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>waitForEvent</strong>(<abbr title="CharlotteDunois\Events\EventEmitterInterface">EventEmitterInterface</abbr> $emitter, string $event, callable|null $filter = null, array $options = array())
         </code>
