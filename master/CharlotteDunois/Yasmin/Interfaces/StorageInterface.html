@@ -247,6 +247,16 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_min">min</a>(mixed|null $key = null)
+        
+                                            <p>Return the minimum value of a given key.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     mixed|false
                 </div>
                 <div class="col-md-8 type">
@@ -273,6 +283,26 @@
                     <a href="#method_set">set</a>(mixed $key, mixed $value)
         
                                             <p>Sets a key-value pair.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../CharlotteDunois/Yasmin/Interfaces/StorageInterface.html"><abbr title="CharlotteDunois\Yasmin\Interfaces\StorageInterface">StorageInterface</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_sort">sort</a>(callable|null $closure = null, int $options = SORT_REGULAR)
+        
+                                            <p>Sorts the collection. Returns a new Storage instance.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../CharlotteDunois/Yasmin/Interfaces/StorageInterface.html"><abbr title="CharlotteDunois\Yasmin\Interfaces\StorageInterface">StorageInterface</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_sortBy">sortBy</a>(mixed|callable $sortkey, int $options = \SORT_REGULAR, bool $descending = false)
+        
+                                            <p>Sorts the collection by the given key. Returns a new Storage instance.</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -807,7 +837,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_max">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/StorageInterface.php#L143">line 143</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/StorageInterface.php#L167">line 167</a></div>
         <code>                    int
     <strong>max</strong>(mixed $key = &#039;&#039;)
         </code>
@@ -824,6 +854,48 @@
                     <table class="table table-condensed">
                     <tr>
                 <td>mixed</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                        
+                        
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_min">
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/StorageInterface.php#L160">line 160</a></div>
+        <code>                    int
+    <strong>min</strong>(mixed|null $key = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return the minimum value of a given key.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed|null</td>
                 <td>$key</td>
                 <td></td>
             </tr>
@@ -968,8 +1040,107 @@
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_sortByDesc">
+                    <h3 id="method_sort">
         <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/StorageInterface.php#L136">line 136</a></div>
+        <code>                    <a href="../../../CharlotteDunois/Yasmin/Interfaces/StorageInterface.html"><abbr title="CharlotteDunois\Yasmin\Interfaces\StorageInterface">StorageInterface</abbr></a>
+    <strong>sort</strong>(callable|null $closure = null, int $options = SORT_REGULAR)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sorts the collection. Returns a new Storage instance.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>callable|null</td>
+                <td>$closure</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$options</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../CharlotteDunois/Yasmin/Interfaces/StorageInterface.html"><abbr title="CharlotteDunois\Yasmin\Interfaces\StorageInterface">StorageInterface</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                        
+                        
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sortBy">
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/StorageInterface.php#L145">line 145</a></div>
+        <code>                    <a href="../../../CharlotteDunois/Yasmin/Interfaces/StorageInterface.html"><abbr title="CharlotteDunois\Yasmin\Interfaces\StorageInterface">StorageInterface</abbr></a>
+    <strong>sortBy</strong>(mixed|callable $sortkey, int $options = \SORT_REGULAR, bool $descending = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sorts the collection by the given key. Returns a new Storage instance.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed|callable</td>
+                <td>$sortkey</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$options</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$descending</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../CharlotteDunois/Yasmin/Interfaces/StorageInterface.html"><abbr title="CharlotteDunois\Yasmin\Interfaces\StorageInterface">StorageInterface</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                        
+                        
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sortByDesc">
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/StorageInterface.php#L153">line 153</a></div>
         <code>                    <a href="../../../CharlotteDunois/Yasmin/Interfaces/StorageInterface.html"><abbr title="CharlotteDunois\Yasmin\Interfaces\StorageInterface">StorageInterface</abbr></a>
     <strong>sortByDesc</strong>(mixed|<a href="https://secure.php.net/Closure" target="_blank">Closure</a> $sortkey, int $options = \SORT_REGULAR)
         </code>
