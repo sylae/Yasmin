@@ -167,7 +167,7 @@ To be able to use the Redis ratelimit bucket, you need to pass an instance of <c
                     <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>|void
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_handleRatelimit">handleRatelimit</a>(int|null $limit, int|null $remaining, int|null $resetTime)
+                    <a href="#method_handleRatelimit">handleRatelimit</a>(int|null $limit, int|null $remaining, float|null $resetTime)
         
                                             <p>Sets the ratelimits from the response.</p>                </div>
                 <div class="col-md-2"></div>
@@ -388,7 +388,7 @@ To be able to use the Redis ratelimit bucket, you need to pass an instance of <c
 
 <pre><code>array(
     'limited' =&gt; bool,
-    'resetTime' =&gt; int|null
+    'resetTime' =&gt; float|null
 )
 </code></pre>
 </p>                            </div>
@@ -415,7 +415,7 @@ To be able to use the Redis ratelimit bucket, you need to pass an instance of <c
                     <h3 id="method_handleRatelimit">
         <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/RatelimitBucketInterface.php#L59">line 59</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>|void
-    <strong>handleRatelimit</strong>(int|null $limit, int|null $remaining, int|null $resetTime)
+    <strong>handleRatelimit</strong>(int|null $limit, int|null $remaining, float|null $resetTime)
         </code>
     </h3>
     <div class="details">
@@ -439,9 +439,9 @@ To be able to use the Redis ratelimit bucket, you need to pass an instance of <c
                 <td></td>
             </tr>
                     <tr>
-                <td>int|null</td>
+                <td>float|null</td>
                 <td>$resetTime</td>
-                <td></td>
+                <td>Reset time in seconds with milliseconds.</td>
             </tr>
             </table>
 
