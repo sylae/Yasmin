@@ -89,7 +89,8 @@
     </div>
 
     <p>    class
-    <strong>EmojiStorage</strong>        extends <a href="../../../CharlotteDunois/Yasmin/Models/Storage.html"><abbr title="CharlotteDunois\Yasmin\Models\Storage">Storage</abbr></a>        (<a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/EmojiStorage.php" target="_blank">View source</a>)
+    <strong>EmojiStorage</strong>        extends <a href="../../../CharlotteDunois/Yasmin/Models/Storage.html"><abbr title="CharlotteDunois\Yasmin\Models\Storage">Storage</abbr></a>        implements
+        <a href="../../../CharlotteDunois/Yasmin/Interfaces/EmojiStorageInterface.html"><abbr title="CharlotteDunois\Yasmin\Interfaces\EmojiStorageInterface">EmojiStorageInterface</abbr></a>        (<a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/EmojiStorage.php" target="_blank">View source</a>)
 </p>
 
         
@@ -212,7 +213,7 @@
                     $this
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_delete">delete</a>(mixed $key)
+                    <a href="#method_delete">delete</a>(string $key)
         
                                             <p>Removes an item from the collection by its key.</p>                </div>
                 <div class="col-md-2"></div>
@@ -309,7 +310,7 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    mixed|null
+                    string|null
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_get">get</a>(mixed $key)
@@ -532,7 +533,7 @@
                     $this
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_set">set</a>(mixed $key, mixed $value)
+                    <a href="#method_set">set</a>(string $key, <a href="../../../CharlotteDunois/Yasmin/Models/Emoji.html"><abbr title="CharlotteDunois\Yasmin\Models\Emoji">Emoji</abbr></a> $value)
         
                                             <p>Sets a key-value pair.</p>                </div>
                 <div class="col-md-2"></div>
@@ -993,9 +994,9 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_delete">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/EmojiStorage.php#L73">line 73</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/EmojiStorage.php#L76">line 76</a></div>
         <code>                    $this
-    <strong>delete</strong>(mixed $key)
+    <strong>delete</strong>(string $key)
         </code>
     </h3>
     <div class="details">
@@ -1009,7 +1010,7 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td>mixed</td>
+                <td>string</td>
                 <td>$key</td>
                 <td></td>
             </tr>
@@ -1418,7 +1419,7 @@
                     <div class="method-item">
                     <h3 id="method_get">
         <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Models/Storage.html#method_get"><abbr title="CharlotteDunois\Yasmin\Models\Storage">Storage</abbr></a> at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Storage.php#L117">line 117</a></div>
-        <code>                    mixed|null
+        <code>                    string|null
     <strong>get</strong>(mixed $key)
         </code>
     </h3>
@@ -1444,7 +1445,7 @@
 
                     <table class="table table-condensed">
         <tr>
-            <td>mixed|null</td>
+            <td>string|null</td>
             <td></td>
         </tr>
     </table>
@@ -2368,9 +2369,9 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_set">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/EmojiStorage.php#L60">line 60</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/EmojiStorage.php#L62">line 62</a></div>
         <code>                    $this
-    <strong>set</strong>(mixed $key, mixed $value)
+    <strong>set</strong>(string $key, <a href="../../../CharlotteDunois/Yasmin/Models/Emoji.html"><abbr title="CharlotteDunois\Yasmin\Models\Emoji">Emoji</abbr></a> $value)
         </code>
     </h3>
     <div class="details">
@@ -2384,12 +2385,12 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td>mixed</td>
+                <td>string</td>
                 <td>$key</td>
                 <td></td>
             </tr>
                     <tr>
-                <td>mixed</td>
+                <td><a href="../../../CharlotteDunois/Yasmin/Models/Emoji.html"><abbr title="CharlotteDunois\Yasmin\Models\Emoji">Emoji</abbr></a></td>
                 <td>$value</td>
                 <td></td>
             </tr>

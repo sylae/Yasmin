@@ -89,7 +89,8 @@
     </div>
 
     <p>    class
-    <strong>UserStorage</strong>        extends <a href="../../../CharlotteDunois/Yasmin/Models/Storage.html"><abbr title="CharlotteDunois\Yasmin\Models\Storage">Storage</abbr></a>        (<a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/UserStorage.php" target="_blank">View source</a>)
+    <strong>UserStorage</strong>        extends <a href="../../../CharlotteDunois/Yasmin/Models/Storage.html"><abbr title="CharlotteDunois\Yasmin\Models\Storage">Storage</abbr></a>        implements
+        <a href="../../../CharlotteDunois/Yasmin/Interfaces/UserStorageInterface.html"><abbr title="CharlotteDunois\Yasmin\Interfaces\UserStorageInterface">UserStorageInterface</abbr></a>        (<a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/UserStorage.php" target="_blank">View source</a>)
 </p>
 
         
@@ -212,7 +213,7 @@
                     $this
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_delete">delete</a>(mixed $key)
+                    <a href="#method_delete">delete</a>(string $key)
         
                                             <p>Removes an item from the collection by its key.</p>                </div>
                 <div class="col-md-2"></div>
@@ -312,7 +313,7 @@
                     <a href="../../../CharlotteDunois/Yasmin/Models/User.html"><abbr title="CharlotteDunois\Yasmin\Models\User">User</abbr></a>|null
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_get">get</a>(mixed $key)
+                    <a href="#method_get">get</a>(string $key)
         
                                             <p>Returns the item for a given key. If the key does not exist, null is returned.</p>                </div>
                 <div class="col-md-2"></div>
@@ -532,7 +533,7 @@
                     $this
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_set">set</a>(mixed $key, mixed $value)
+                    <a href="#method_set">set</a>(string $key, <a href="../../../CharlotteDunois/Yasmin/Models/User.html"><abbr title="CharlotteDunois\Yasmin\Models\User">User</abbr></a> $value)
         
                                             <p>Sets a key-value pair.</p>                </div>
                 <div class="col-md-2"></div>
@@ -1003,9 +1004,9 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_delete">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/UserStorage.php#L104">line 104</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/UserStorage.php#L109">line 109</a></div>
         <code>                    $this
-    <strong>delete</strong>(mixed $key)
+    <strong>delete</strong>(string $key)
         </code>
     </h3>
     <div class="details">
@@ -1019,7 +1020,7 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td>mixed</td>
+                <td>string</td>
                 <td>$key</td>
                 <td></td>
             </tr>
@@ -1427,9 +1428,9 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_get">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/UserStorage.php#L83">line 83</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/UserStorage.php#L85">line 85</a></div>
         <code>                    <a href="../../../CharlotteDunois/Yasmin/Models/User.html"><abbr title="CharlotteDunois\Yasmin\Models\User">User</abbr></a>|null
-    <strong>get</strong>(mixed $key)
+    <strong>get</strong>(string $key)
         </code>
     </h3>
     <div class="details">
@@ -1443,7 +1444,7 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td>mixed</td>
+                <td>string</td>
                 <td>$key</td>
                 <td></td>
             </tr>
@@ -1460,6 +1461,15 @@
     </table>
 
             
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="https://secure.php.net/InvalidArgumentException" target="_blank">InvalidArgumentException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
             
                         
                         
@@ -2369,9 +2379,9 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_set">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/UserStorage.php#L91">line 91</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/UserStorage.php#L95">line 95</a></div>
         <code>                    $this
-    <strong>set</strong>(mixed $key, mixed $value)
+    <strong>set</strong>(string $key, <a href="../../../CharlotteDunois/Yasmin/Models/User.html"><abbr title="CharlotteDunois\Yasmin\Models\User">User</abbr></a> $value)
         </code>
     </h3>
     <div class="details">
@@ -2385,12 +2395,12 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td>mixed</td>
+                <td>string</td>
                 <td>$key</td>
                 <td></td>
             </tr>
                     <tr>
-                <td>mixed</td>
+                <td><a href="../../../CharlotteDunois/Yasmin/Models/User.html"><abbr title="CharlotteDunois\Yasmin\Models\User">User</abbr></a></td>
                 <td>$value</td>
                 <td></td>
             </tr>
@@ -2781,7 +2791,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_sweep">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/UserStorage.php#L134">line 134</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/UserStorage.php#L142">line 142</a></div>
         <code>                    int
     <strong>sweep</strong>()
         </code>

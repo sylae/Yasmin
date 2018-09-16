@@ -89,7 +89,8 @@
     </div>
 
     <p>    class
-    <strong>ChannelStorage</strong>        extends <a href="../../../CharlotteDunois/Yasmin/Models/Storage.html"><abbr title="CharlotteDunois\Yasmin\Models\Storage">Storage</abbr></a>        (<a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/ChannelStorage.php" target="_blank">View source</a>)
+    <strong>ChannelStorage</strong>        extends <a href="../../../CharlotteDunois/Yasmin/Models/Storage.html"><abbr title="CharlotteDunois\Yasmin\Models\Storage">Storage</abbr></a>        implements
+        <a href="../../../CharlotteDunois/Yasmin/Interfaces/ChannelStorageInterface.html"><abbr title="CharlotteDunois\Yasmin\Interfaces\ChannelStorageInterface">ChannelStorageInterface</abbr></a>        (<a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/ChannelStorage.php" target="_blank">View source</a>)
 </p>
 
         
@@ -237,7 +238,7 @@
                     $this
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_delete">delete</a>(mixed $key)
+                    <a href="#method_delete">delete</a>(string $key)
         
                                             <p>Removes an item from the collection by its key.</p>                </div>
                 <div class="col-md-2"></div>
@@ -337,7 +338,7 @@
                     <a href="../../../CharlotteDunois/Yasmin/Interfaces/ChannelInterface.html"><abbr title="CharlotteDunois\Yasmin\Interfaces\ChannelInterface">ChannelInterface</abbr></a>|null
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_get">get</a>(mixed $key)
+                    <a href="#method_get">get</a>(string $key)
         
                                             <p>Returns the item for a given key. If the key does not exist, null is returned.</p>                </div>
                 <div class="col-md-2"></div>
@@ -557,7 +558,7 @@
                     $this
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_set">set</a>(mixed $key, mixed $value)
+                    <a href="#method_set">set</a>(string $key, <a href="../../../CharlotteDunois/Yasmin/Interfaces/ChannelInterface.html"><abbr title="CharlotteDunois\Yasmin\Interfaces\ChannelInterface">ChannelInterface</abbr></a> $value)
         
                                             <p>Sets a key-value pair.</p>                </div>
                 <div class="col-md-2"></div>
@@ -801,7 +802,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_clear">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/ChannelStorage.php#L96">line 96</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/ChannelStorage.php#L99">line 99</a></div>
         <code>                    $this
     <strong>clear</strong>()
         </code>
@@ -1018,9 +1019,9 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_delete">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/ChannelStorage.php#L83">line 83</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/ChannelStorage.php#L86">line 86</a></div>
         <code>                    $this
-    <strong>delete</strong>(mixed $key)
+    <strong>delete</strong>(string $key)
         </code>
     </h3>
     <div class="details">
@@ -1034,7 +1035,7 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td>mixed</td>
+                <td>string</td>
                 <td>$key</td>
                 <td></td>
             </tr>
@@ -1444,7 +1445,7 @@
                     <h3 id="method_get">
         <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/ChannelStorage.php#L62">line 62</a></div>
         <code>                    <a href="../../../CharlotteDunois/Yasmin/Interfaces/ChannelInterface.html"><abbr title="CharlotteDunois\Yasmin\Interfaces\ChannelInterface">ChannelInterface</abbr></a>|null
-    <strong>get</strong>(mixed $key)
+    <strong>get</strong>(string $key)
         </code>
     </h3>
     <div class="details">
@@ -1458,7 +1459,7 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td>mixed</td>
+                <td>string</td>
                 <td>$key</td>
                 <td></td>
             </tr>
@@ -1475,6 +1476,15 @@
     </table>
 
             
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="https://secure.php.net/InvalidArgumentException" target="_blank">InvalidArgumentException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
             
                         
                         
@@ -2384,9 +2394,9 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_set">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/ChannelStorage.php#L70">line 70</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/ChannelStorage.php#L72">line 72</a></div>
         <code>                    $this
-    <strong>set</strong>(mixed $key, mixed $value)
+    <strong>set</strong>(string $key, <a href="../../../CharlotteDunois/Yasmin/Interfaces/ChannelInterface.html"><abbr title="CharlotteDunois\Yasmin\Interfaces\ChannelInterface">ChannelInterface</abbr></a> $value)
         </code>
     </h3>
     <div class="details">
@@ -2400,12 +2410,12 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td>mixed</td>
+                <td>string</td>
                 <td>$key</td>
                 <td></td>
             </tr>
                     <tr>
-                <td>mixed</td>
+                <td><a href="../../../CharlotteDunois/Yasmin/Interfaces/ChannelInterface.html"><abbr title="CharlotteDunois\Yasmin\Interfaces\ChannelInterface">ChannelInterface</abbr></a></td>
                 <td>$value</td>
                 <td></td>
             </tr>

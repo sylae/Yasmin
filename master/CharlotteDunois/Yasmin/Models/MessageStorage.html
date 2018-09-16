@@ -89,7 +89,8 @@
     </div>
 
     <p>    class
-    <strong>MessageStorage</strong>        extends <a href="../../../CharlotteDunois/Yasmin/Models/Storage.html"><abbr title="CharlotteDunois\Yasmin\Models\Storage">Storage</abbr></a>        (<a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/MessageStorage.php" target="_blank">View source</a>)
+    <strong>MessageStorage</strong>        extends <a href="../../../CharlotteDunois/Yasmin/Models/Storage.html"><abbr title="CharlotteDunois\Yasmin\Models\Storage">Storage</abbr></a>        implements
+        <a href="../../../CharlotteDunois/Yasmin/Interfaces/MessageStorageInterface.html"><abbr title="CharlotteDunois\Yasmin\Interfaces\MessageStorageInterface">MessageStorageInterface</abbr></a>        (<a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/MessageStorage.php" target="_blank">View source</a>)
 </p>
 
         
@@ -312,7 +313,7 @@
                     <a href="../../../CharlotteDunois/Yasmin/Models/Message.html"><abbr title="CharlotteDunois\Yasmin\Models\Message">Message</abbr></a>|null
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_get">get</a>(mixed $key)
+                    <a href="#method_get">get</a>(string $key)
         
                                             <p>Returns the item for a given key. If the key does not exist, null is returned.</p>                </div>
                 <div class="col-md-2"></div>
@@ -522,7 +523,7 @@
                     $this
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_set">set</a>(mixed $key, mixed $value)
+                    <a href="#method_set">set</a>(string $key, <a href="../../../CharlotteDunois/Yasmin/Models/Message.html"><abbr title="CharlotteDunois\Yasmin\Models\Message">Message</abbr></a> $value)
         
                                             <p>Sets a key-value pair.</p>                </div>
                 <div class="col-md-2"></div>
@@ -1419,7 +1420,7 @@
                     <h3 id="method_get">
         <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/MessageStorage.php#L68">line 68</a></div>
         <code>                    <a href="../../../CharlotteDunois/Yasmin/Models/Message.html"><abbr title="CharlotteDunois\Yasmin\Models\Message">Message</abbr></a>|null
-    <strong>get</strong>(mixed $key)
+    <strong>get</strong>(string $key)
         </code>
     </h3>
     <div class="details">
@@ -1433,7 +1434,7 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td>mixed</td>
+                <td>string</td>
                 <td>$key</td>
                 <td></td>
             </tr>
@@ -1450,6 +1451,15 @@
     </table>
 
             
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="https://secure.php.net/InvalidArgumentException" target="_blank">InvalidArgumentException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
             
                         
                         
@@ -2308,9 +2318,9 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_set">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/MessageStorage.php#L76">line 76</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/MessageStorage.php#L78">line 78</a></div>
         <code>                    $this
-    <strong>set</strong>(mixed $key, mixed $value)
+    <strong>set</strong>(string $key, <a href="../../../CharlotteDunois/Yasmin/Models/Message.html"><abbr title="CharlotteDunois\Yasmin\Models\Message">Message</abbr></a> $value)
         </code>
     </h3>
     <div class="details">
@@ -2324,12 +2334,12 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td>mixed</td>
+                <td>string</td>
                 <td>$key</td>
                 <td></td>
             </tr>
                     <tr>
-                <td>mixed</td>
+                <td><a href="../../../CharlotteDunois/Yasmin/Models/Message.html"><abbr title="CharlotteDunois\Yasmin\Models\Message">Message</abbr></a></td>
                 <td>$value</td>
                 <td></td>
             </tr>
@@ -2720,7 +2730,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_sweep">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/MessageStorage.php#L89">line 89</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/MessageStorage.php#L91">line 91</a></div>
         <code>                    int
     <strong>sweep</strong>(int $time)
         </code>
