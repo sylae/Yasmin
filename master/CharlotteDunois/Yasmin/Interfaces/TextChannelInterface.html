@@ -146,6 +146,16 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getType">getType</a>()
+        
+                                            <p>The channel type. (see \CharlotteDunois\Yasmin\Models\ChannelStorage::CHANNEL_TYPES)</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     bool
                 </div>
                 <div class="col-md-8 type">
@@ -202,7 +212,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method_bulkDelete">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/TextChannelInterface.php#L23">line 23</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/TextChannelInterface.php#L25">line 25</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>bulkDelete</strong>(<a href="../../../CharlotteDunois/Yasmin/Utils/Collection.html"><abbr title="CharlotteDunois\Yasmin\Utils\Collection">Collection</abbr></a>|array|int $messages, string $reason = &#039;&#039;, bool $filterOldMessages = false)
         </code>
@@ -254,7 +264,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_collectMessages">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/TextChannelInterface.php#L35">line 35</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/TextChannelInterface.php#L37">line 37</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>collectMessages</strong>(callable $filter, array $options = array())
         </code>
@@ -331,7 +341,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_fetchMessage">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/TextChannelInterface.php#L43">line 43</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/TextChannelInterface.php#L45">line 45</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>fetchMessage</strong>(string $id)
         </code>
@@ -384,7 +394,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_fetchMessages">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/TextChannelInterface.php#L51">line 51</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/TextChannelInterface.php#L53">line 53</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>fetchMessages</strong>(array $options = array())
         </code>
@@ -436,8 +446,40 @@
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_getType">
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/TextChannelInterface.php#L17">line 17</a></div>
+        <code>                    string
+    <strong>getType</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>The channel type. (see \CharlotteDunois\Yasmin\Models\ChannelStorage::CHANNEL_TYPES)</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                        
+                        
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_isTyping">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/TextChannelInterface.php#L86">line 86</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/TextChannelInterface.php#L88">line 88</a></div>
         <code>                    bool
     <strong>isTyping</strong>(<a href="../../../CharlotteDunois/Yasmin/Models/User.html"><abbr title="CharlotteDunois\Yasmin\Models\User">User</abbr></a> $user)
         </code>
@@ -479,7 +521,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_send">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/TextChannelInterface.php#L60">line 60</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/TextChannelInterface.php#L62">line 62</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>send</strong>(string $content, array $options = array())
         </code>
@@ -537,7 +579,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_startTyping">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/TextChannelInterface.php#L66">line 66</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/TextChannelInterface.php#L68">line 68</a></div>
         <code>                    void
     <strong>startTyping</strong>()
         </code>
@@ -569,7 +611,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_stopTyping">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/TextChannelInterface.php#L73">line 73</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/TextChannelInterface.php#L75">line 75</a></div>
         <code>                    void
     <strong>stopTyping</strong>(bool $force = false)
         </code>
@@ -611,7 +653,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_typingCount">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/TextChannelInterface.php#L79">line 79</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/TextChannelInterface.php#L81">line 81</a></div>
         <code>                    int
     <strong>typingCount</strong>()
         </code>
