@@ -489,7 +489,7 @@
                     void
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_voiceServerUpdate">voiceServerUpdate</a>(array $data)
+                    <a href="#method_voiceServerUpdate">voiceServerUpdate</a>(array|null $data)
         
                                             <p>Emitted when Discord responds to the user's Voice State Update event.</p>                </div>
                 <div class="col-md-2"></div>
@@ -2247,9 +2247,9 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_voiceServerUpdate">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/ClientEvents.php#L269">line 269</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/ClientEvents.php#L270">line 270</a></div>
         <code>                    void
-    <strong>voiceServerUpdate</strong>(array $data)
+    <strong>voiceServerUpdate</strong>(array|null $data)
         </code>
     </h3>
     <div class="details">
@@ -2257,13 +2257,13 @@
     
 
                     <div class="method-description">
-                                    <p>Emitted when Discord responds to the user's Voice State Update event.</p>                                                </div>
+                                    <p>Emitted when Discord responds to the user's Voice State Update event.</p>                    <p>If you get <code>null</code> for <code>$data</code>, then this means that there's no endpoint yet and need to await it = Awaiting Endpoint.</p>                            </div>
                 <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
-                <td>array</td>
+                <td>array|null</td>
                 <td>$data</td>
                 <td></td>
             </tr>
@@ -2300,7 +2300,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_voiceStateUpdate">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/ClientEvents.php#L275">line 275</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/ClientEvents.php#L276">line 276</a></div>
         <code>                    void
     <strong>voiceStateUpdate</strong>(<a href="../../CharlotteDunois/Yasmin/Models/GuildMember.html"><abbr title="CharlotteDunois\Yasmin\Models\GuildMember">GuildMember</abbr></a> $new, <a href="../../CharlotteDunois/Yasmin/Models/GuildMember.html"><abbr title="CharlotteDunois\Yasmin\Models\GuildMember">GuildMember</abbr></a>|null $old)
         </code>
