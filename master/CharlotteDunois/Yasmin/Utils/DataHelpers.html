@@ -109,6 +109,16 @@
                     static&nbsp;string
                 </div>
                 <div class="col-md-8 type">
+                    <a href="#method_cleanContent">cleanContent</a>(<a href="../../../CharlotteDunois/Yasmin/Models/Message.html"><abbr title="CharlotteDunois\Yasmin\Models\Message">Message</abbr></a> $message, string $text)
+        
+                                            <p>Cleans the text from mentions, by providing a context message.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_escapeMarkdown">escapeMarkdown</a>(string $text, bool $onlyCodeBlock = false, bool $onlyInlineCode = false)
         
                                             <p>Escapes any Discord-flavour markdown in a string.</p>                </div>
@@ -231,8 +241,55 @@
 
             <div id="method-details">
                     <div class="method-item">
+                    <h3 id="method_cleanContent">
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Utils/DataHelpers.php#L133">line 133</a></div>
+        <code>        static            string
+    <strong>cleanContent</strong>(<a href="../../../CharlotteDunois/Yasmin/Models/Message.html"><abbr title="CharlotteDunois\Yasmin\Models\Message">Message</abbr></a> $message, string $text)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Cleans the text from mentions, by providing a context message.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../CharlotteDunois/Yasmin/Models/Message.html"><abbr title="CharlotteDunois\Yasmin\Models\Message">Message</abbr></a></td>
+                <td>$message</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$text</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                        
+                        
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_escapeMarkdown">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Utils/DataHelpers.php#L134">line 134</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Utils/DataHelpers.php#L160">line 160</a></div>
         <code>        static            string
     <strong>escapeMarkdown</strong>(string $text, bool $onlyCodeBlock = false, bool $onlyInlineCode = false)
         </code>
@@ -409,7 +466,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_parseMentions">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Utils/DataHelpers.php#L155">line 155</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Utils/DataHelpers.php#L181">line 181</a></div>
         <code>        static            <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>parseMentions</strong>(<a href="../../../CharlotteDunois/Yasmin/Client.html"><abbr title="CharlotteDunois\Yasmin\Client">Client</abbr></a>|null $client, string $content)
         </code>
@@ -550,7 +607,7 @@ Includes everyone and here mentions.</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_resolveMessageOptionsFiles">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Utils/DataHelpers.php#L241">line 241</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Utils/DataHelpers.php#L267">line 267</a></div>
         <code>        static            <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>resolveMessageOptionsFiles</strong>(array $options)
         </code>
@@ -643,7 +700,7 @@ Includes everyone and here mentions.</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_splitMessage">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Utils/DataHelpers.php#L325">line 325</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Utils/DataHelpers.php#L351">line 351</a></div>
         <code>        static            string[]
     <strong>splitMessage</strong>(string $text, array $options = array())
         </code>
@@ -710,7 +767,7 @@ Includes everyone and here mentions.</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_typecastVariable">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Utils/DataHelpers.php#L359">line 359</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Utils/DataHelpers.php#L385">line 385</a></div>
         <code>        static            mixed|null
     <strong>typecastVariable</strong>(mixed $variable, string $type)
         </code>
@@ -766,7 +823,7 @@ Includes everyone and here mentions.</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_waitForEvent">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Utils/DataHelpers.php#L406">line 406</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Utils/DataHelpers.php#L432">line 432</a></div>
         <code>        static            <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>waitForEvent</strong>(<abbr title="CharlotteDunois\Events\EventEmitterInterface">EventEmitterInterface</abbr> $emitter, string $event, callable|null $filter = null, array $options = array())
         </code>
