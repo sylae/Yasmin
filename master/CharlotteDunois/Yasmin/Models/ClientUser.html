@@ -351,7 +351,7 @@
                 <div class="col-md-8 type">
                     <a href="#method_setPresence">setPresence</a>(array $presence, int|null $shardID = null)
         
-                                            <p>Set your presence. Ratelimit is 5/60s, which gets handled by this method and after the ratelimit passed, it will set the last set presence as presence, skipping all previous set presences. Resolves with $this.</p>                </div>
+                                            <p>Set your presence. Ratelimit is 5/60s, the gateway drops all further presence updates. Resolves with $this.</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -824,7 +824,7 @@ $client->user->setGame('Yasmin');</code></pre>
     
 
                     <div class="method-description">
-                                    <p>Set your presence. Ratelimit is 5/60s, which gets handled by this method and after the ratelimit passed, it will set the last set presence as presence, skipping all previous set presences. Resolves with $this.</p>                    <p><pre><code>array(
+                                    <p>Set your presence. Ratelimit is 5/60s, the gateway drops all further presence updates. Resolves with $this.</p>                    <p><pre><code>array(
     'afk' =&gt; bool,
     'since' =&gt; int|null,
     'status' =&gt; string,
