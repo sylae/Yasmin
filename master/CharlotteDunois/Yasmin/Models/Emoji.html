@@ -27,10 +27,8 @@
                 <div id="control-panel">
                     <form action="#" method="GET">
                 <select id="version-switcher" name="version">
-                                            <option value="../../../../v0.4.0/index.html" data-version="v0.4.0">v0.4.0</option>
-                                            <option value="../../../../v0.4.1/index.html" data-version="v0.4.1">v0.4.1</option>
-                                            <option value="../../../../v0.4.2/index.html" data-version="v0.4.2">v0.4.2</option>
                                             <option value="../../../../v0.5.0/index.html" data-version="v0.5.0">v0.5.0</option>
+                                            <option value="../../../../v0.5.1/index.html" data-version="v0.5.1">v0.5.1</option>
                                             <option value="../../../../master/index.html" data-version="master">master</option>
                                     </select>
             </form>
@@ -186,7 +184,7 @@
             </tr>
                     <tr>
                 <td class="type" id="property_roles">
-                                                                                <a href="../../../CharlotteDunois/Yasmin/Utils/Collection.html"><abbr title="CharlotteDunois\Yasmin\Utils\Collection">Collection</abbr></a>
+                                                                                <abbr title="CharlotteDunois\Collect\Collection">Collection</abbr>
                 </td>
                 <td><a name="property_roles" href="#property_roles">$roles</a></td>
                 <td class="last">A collection of roles that this emoji is active for (empty if all).</td>
@@ -198,14 +196,6 @@
                 </td>
                 <td><a name="property_uid" href="#property_uid">$uid</a></td>
                 <td class="last">The used identifier in the system (ID or name, that is).</td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type" id="property_url">
-                                                                                string
-                </td>
-                <td><a name="property_url" href="#property_url">$url</a></td>
-                <td class="last">DEPRECATED: The URL to the emoji image.</td>
                 <td></td>
             </tr>
                     <tr>
@@ -320,7 +310,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method___toString">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Emoji.php#L302">line 302</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Emoji.php#L298">line 298</a></div>
         <code>                    string
     <strong>__toString</strong>()
         </code>
@@ -352,7 +342,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_addRestrictedRole">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Emoji.php#L137">line 137</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Emoji.php#L133">line 133</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>addRestrictedRole</strong>(<a href="../../../CharlotteDunois/Yasmin/Models/Role.html"><abbr title="CharlotteDunois\Yasmin\Models\Role">Role</abbr></a>|string $role)
         </code>
@@ -403,7 +393,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_addRestrictedRoles">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Emoji.php#L152">line 152</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Emoji.php#L148">line 148</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>addRestrictedRoles</strong>(<a href="../../../CharlotteDunois/Yasmin/Models/Role.html"><abbr title="CharlotteDunois\Yasmin\Models\Role">Role</abbr></a>|string ...$role)
         </code>
@@ -454,7 +444,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_delete">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Emoji.php#L213">line 213</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Emoji.php#L209">line 209</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>delete</strong>(string $reason = &#039;&#039;)
         </code>
@@ -505,7 +495,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_edit">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Emoji.php#L181">line 181</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Emoji.php#L177">line 177</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>edit</strong>(array $options, string $reason = &#039;&#039;)
         </code>
@@ -519,7 +509,7 @@
 
 <pre><code>array(
   'name' =&gt; string,
-  'roles' =&gt; array&lt;string|\CharlotteDunois\Yasmin\Models\Role&gt;|\CharlotteDunois\Yasmin\Utils\Collection&lt;string|\CharlotteDunois\Yasmin\Models\Role&gt;
+  'roles' =&gt; array&lt;string|\CharlotteDunois\Yasmin\Models\Role&gt;|\CharlotteDunois\Collect\Collection&lt;string|\CharlotteDunois\Yasmin\Models\Role&gt;
 )
 </code></pre>
 </p>                            </div>
@@ -568,7 +558,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getImageURL">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Emoji.php#L230">line 230</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Emoji.php#L226">line 226</a></div>
         <code>                    string
     <strong>getImageURL</strong>()
         </code>
@@ -609,7 +599,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_removeRestrictedRole">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Emoji.php#L244">line 244</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Emoji.php#L240">line 240</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>removeRestrictedRole</strong>(<a href="../../../CharlotteDunois/Yasmin/Models/Role.html"><abbr title="CharlotteDunois\Yasmin\Models\Role">Role</abbr></a>|string $role)
         </code>
@@ -660,7 +650,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_removeRestrictedRoles">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Emoji.php#L267">line 267</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Emoji.php#L263">line 263</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>removeRestrictedRoles</strong>(<a href="../../../CharlotteDunois/Yasmin/Models/Role.html"><abbr title="CharlotteDunois\Yasmin\Models\Role">Role</abbr></a>|string ...$role)
         </code>
@@ -711,7 +701,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setName">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Emoji.php#L294">line 294</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Emoji.php#L290">line 290</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>setName</strong>(string $name, string $reason = &#039;&#039;)
         </code>

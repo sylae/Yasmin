@@ -27,10 +27,8 @@
                 <div id="control-panel">
                     <form action="#" method="GET">
                 <select id="version-switcher" name="version">
-                                            <option value="../../../../v0.4.0/index.html" data-version="v0.4.0">v0.4.0</option>
-                                            <option value="../../../../v0.4.1/index.html" data-version="v0.4.1">v0.4.1</option>
-                                            <option value="../../../../v0.4.2/index.html" data-version="v0.4.2">v0.4.2</option>
                                             <option value="../../../../v0.5.0/index.html" data-version="v0.5.0">v0.5.0</option>
+                                            <option value="../../../../v0.5.1/index.html" data-version="v0.5.1">v0.5.1</option>
                                             <option value="../../../../master/index.html" data-version="master">master</option>
                                     </select>
             </form>
@@ -145,27 +143,11 @@
                 <td></td>
             </tr>
                     <tr>
-                <td class="type" id="property_defaultAvatar">
-                                                                                int
-                </td>
-                <td><a name="property_defaultAvatar" href="#property_defaultAvatar">$defaultAvatar</a></td>
-                <td class="last">DEPRECATED: The identifier of the default avatar for this user.</td>
-                <td></td>
-            </tr>
-                    <tr>
                 <td class="type" id="property_discriminator">
                                                                                 string
                 </td>
                 <td><a name="property_discriminator" href="#property_discriminator">$discriminator</a></td>
                 <td class="last">The discriminator of this user.</td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type" id="property_dmChannel">
-                                                                                <a href="../../../CharlotteDunois/Yasmin/Models/DMChannel.html"><abbr title="CharlotteDunois\Yasmin\Models\DMChannel">DMChannel</abbr></a>|null
-                </td>
-                <td><a name="property_dmChannel" href="#property_dmChannel">$dmChannel</a></td>
-                <td class="last">DEPRECATED: The DM channel for this user, if it exists, or null.</td>
                 <td></td>
             </tr>
                     <tr>
@@ -185,35 +167,11 @@
                 <td></td>
             </tr>
                     <tr>
-                <td class="type" id="property_lastMessage">
-                                                                                <a href="../../../CharlotteDunois/Yasmin/Models/Message.html"><abbr title="CharlotteDunois\Yasmin\Models\Message">Message</abbr></a>|null
-                </td>
-                <td><a name="property_lastMessage" href="#property_lastMessage">$lastMessage</a></td>
-                <td class="last">DEPRECATED (with no replacement): The last message the user sent while the client was online, or null.</td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type" id="property_lastMessageID">
-                                                                                string|null
-                </td>
-                <td><a name="property_lastMessageID" href="#property_lastMessageID">$lastMessageID</a></td>
-                <td class="last">DEPRECATED: The last ID of the message the user sent while the client was online, or null.</td>
-                <td></td>
-            </tr>
-                    <tr>
                 <td class="type" id="property_mfaEnabled">
                                                                                 boolean|null
                 </td>
                 <td><a name="property_mfaEnabled" href="#property_mfaEnabled">$mfaEnabled</a></td>
                 <td class="last">Whether the user has two factor enabled on their account, or null if no information provided.</td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type" id="property_presence">
-                                                                                <a href="../../../CharlotteDunois/Yasmin/Models/Presence.html"><abbr title="CharlotteDunois\Yasmin\Models\Presence">Presence</abbr></a>|null
-                </td>
-                <td><a name="property_presence" href="#property_presence">$presence</a></td>
-                <td class="last">DEPRECATED: The presence for this user, or null.</td>
                 <td></td>
             </tr>
                     <tr>
@@ -342,7 +300,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method___toString">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/User.php#L317">line 317</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/User.php#L281">line 281</a></div>
         <code>                    string
     <strong>__toString</strong>()
         </code>
@@ -374,7 +332,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_createDM">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/User.php#L184">line 184</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/User.php#L148">line 148</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>createDM</strong>()
         </code>
@@ -417,7 +375,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_deleteDM">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/User.php#L205">line 205</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/User.php#L169">line 169</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>deleteDM</strong>()
         </code>
@@ -449,7 +407,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_fetchUserConnections">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/User.php#L299">line 299</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/User.php#L263">line 263</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>fetchUserConnections</strong>(string $accessToken)
         </code>
@@ -502,7 +460,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getAvatarURL">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/User.php#L242">line 242</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/User.php#L206">line 206</a></div>
         <code>                    string|null
     <strong>getAvatarURL</strong>(int|null $size = 1024, string $format = &#039;&#039;)
         </code>
@@ -549,7 +507,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getDefaultAvatarURL">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/User.php#L228">line 228</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/User.php#L192">line 192</a></div>
         <code>                    string
     <strong>getDefaultAvatarURL</strong>(int|null $size = 1024)
         </code>
@@ -600,7 +558,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getDisplayAvatarURL">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/User.php#L264">line 264</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/User.php#L228">line 228</a></div>
         <code>                    string
     <strong>getDisplayAvatarURL</strong>(int|null $size = 1024, string $format = &#039;&#039;)
         </code>
@@ -647,7 +605,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getPresence">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/User.php#L276">line 276</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/User.php#L240">line 240</a></div>
         <code>                    <a href="../../../CharlotteDunois/Yasmin/Models/Presence.html"><abbr title="CharlotteDunois\Yasmin\Models\Presence">Presence</abbr></a>|null
     <strong>getPresence</strong>()
         </code>
