@@ -195,7 +195,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_makeRequest">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Utils/URLHelpers.php#L85">line 85</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Utils/URLHelpers.php#L97">line 97</a></div>
         <code>        static            <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>makeRequest</strong>(<abbr title="Psr\Http\Message\RequestInterface">RequestInterface</abbr> $request, array|null $requestOptions = null)
         </code>
@@ -205,7 +205,17 @@
     
 
                     <div class="method-description">
-                                    <p>Makes an asynchronous request. Resolves with an instance of ResponseInterface.</p>                                                </div>
+                                    <p>Makes an asynchronous request. Resolves with an instance of ResponseInterface.</p>                    <p>The following request options are supported:</p>
+
+<pre><code>array(
+    'http_errors' =&gt; bool, (whether the HTTP client should obey the HTTP success code)
+    'multipart' =&gt; array, (multipart form data, an array of `[ 'name' =&gt; string, 'contents' =&gt; string|resource, 'filename' =&gt; string ]`)
+    'json' =&gt; mixed, (any JSON serializable type to send with the request as body payload)
+    'query' =&gt; string, (the URL query string to set to)
+    'headers' =&gt; string[], (HTTP headers to set)
+)
+</code></pre>
+</p>                            </div>
                 <div class="tags">
                             <h4>Parameters</h4>
 
@@ -253,7 +263,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_resolveURLToData">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Utils/URLHelpers.php#L148">line 148</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Utils/URLHelpers.php#L160">line 160</a></div>
         <code>        static            <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>resolveURLToData</strong>(string $url, array|null $requestHeaders = null)
         </code>
