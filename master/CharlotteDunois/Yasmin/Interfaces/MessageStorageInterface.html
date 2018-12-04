@@ -299,30 +299,40 @@
                     <a href="../../../CharlotteDunois/Yasmin/Interfaces/StorageInterface.html"><abbr title="CharlotteDunois\Yasmin\Interfaces\StorageInterface">StorageInterface</abbr></a>
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_sort">sort</a>(callable|null $closure = null, int $options = SORT_REGULAR)
+                    <a href="#method_sort">sort</a>(bool $descending = false, int $options = \SORT_REGULAR)
         
                                             <p>Sorts the collection. Returns a new Storage instance.</p>                </div>
                 <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Interfaces/StorageInterface.html#method_sort"><abbr title="CharlotteDunois\Yasmin\Interfaces\StorageInterface">StorageInterface</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    <a href="../../../CharlotteDunois/Yasmin/Interfaces/StorageInterface.html"><abbr title="CharlotteDunois\Yasmin\Interfaces\StorageInterface">StorageInterface</abbr></a>
+                    <abbr title="CharlotteDunois\Collect\Collection">Collection</abbr>
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_sortBy">sortBy</a>(mixed|callable $sortkey, int $options = \SORT_REGULAR, bool $descending = false)
+                    <a href="#method_sortCustom">sortCustom</a>(callable $closure)
         
-                                            <p>Sorts the collection by the given key. Returns a new Storage instance.</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Interfaces/StorageInterface.html#method_sortBy"><abbr title="CharlotteDunois\Yasmin\Interfaces\StorageInterface">StorageInterface</abbr></a></small></div>
+                                            <p>Sorts the collection using a custom sorting function. Returns a new Storage instance.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Interfaces/StorageInterface.html#method_sortCustom"><abbr title="CharlotteDunois\Yasmin\Interfaces\StorageInterface">StorageInterface</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    <a href="../../../CharlotteDunois/Yasmin/Interfaces/StorageInterface.html"><abbr title="CharlotteDunois\Yasmin\Interfaces\StorageInterface">StorageInterface</abbr></a>
+                    <abbr title="CharlotteDunois\Collect\Collection">Collection</abbr>
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_sortByDesc">sortByDesc</a>(mixed|<a href="https://secure.php.net/Closure" target="_blank">Closure</a> $sortkey, int $options = \SORT_REGULAR)
+                    <a href="#method_sortCustomKey">sortCustomKey</a>(callable $closure)
         
-                                            <p>Sorts the storage by the given key in descending order. Returns a new Storage instance.</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Interfaces/StorageInterface.html#method_sortByDesc"><abbr title="CharlotteDunois\Yasmin\Interfaces\StorageInterface">StorageInterface</abbr></a></small></div>
+                                            <p>Sorts the collection by key using a custom sorting function. Returns a new Storage instance.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Interfaces/StorageInterface.html#method_sortCustomKey"><abbr title="CharlotteDunois\Yasmin\Interfaces\StorageInterface">StorageInterface</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="CharlotteDunois\Collect\Collection">Collection</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_sortKey">sortKey</a>(bool $descending = false, int $options = \SORT_REGULAR)
+        
+                                            <p>Sorts the collection by key. Returns a new Storage instance.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Interfaces/StorageInterface.html#method_sortKey"><abbr title="CharlotteDunois\Yasmin\Interfaces\StorageInterface">StorageInterface</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -846,7 +856,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_max">
-        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Interfaces/StorageInterface.html#method_max"><abbr title="CharlotteDunois\Yasmin\Interfaces\StorageInterface">StorageInterface</abbr></a> at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/StorageInterface.php#L175">line 175</a></div>
+        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Interfaces/StorageInterface.html#method_max"><abbr title="CharlotteDunois\Yasmin\Interfaces\StorageInterface">StorageInterface</abbr></a> at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/StorageInterface.php#L172">line 172</a></div>
         <code>                    int
     <strong>max</strong>(mixed $key = &#039;&#039;)
         </code>
@@ -888,7 +898,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_min">
-        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Interfaces/StorageInterface.html#method_min"><abbr title="CharlotteDunois\Yasmin\Interfaces\StorageInterface">StorageInterface</abbr></a> at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/StorageInterface.php#L168">line 168</a></div>
+        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Interfaces/StorageInterface.html#method_min"><abbr title="CharlotteDunois\Yasmin\Interfaces\StorageInterface">StorageInterface</abbr></a> at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/StorageInterface.php#L179">line 179</a></div>
         <code>                    int
     <strong>min</strong>(mixed|null $key = null)
         </code>
@@ -1097,9 +1107,9 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_sort">
-        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Interfaces/StorageInterface.html#method_sort"><abbr title="CharlotteDunois\Yasmin\Interfaces\StorageInterface">StorageInterface</abbr></a> at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/StorageInterface.php#L144">line 144</a></div>
+        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Interfaces/StorageInterface.html#method_sort"><abbr title="CharlotteDunois\Yasmin\Interfaces\StorageInterface">StorageInterface</abbr></a> at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/StorageInterface.php#L143">line 143</a></div>
         <code>                    <a href="../../../CharlotteDunois/Yasmin/Interfaces/StorageInterface.html"><abbr title="CharlotteDunois\Yasmin\Interfaces\StorageInterface">StorageInterface</abbr></a>
-    <strong>sort</strong>(callable|null $closure = null, int $options = SORT_REGULAR)
+    <strong>sort</strong>(bool $descending = false, int $options = \SORT_REGULAR)
         </code>
     </h3>
     <div class="details">
@@ -1113,8 +1123,8 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td>callable|null</td>
-                <td>$closure</td>
+                <td>bool</td>
+                <td>$descending</td>
                 <td></td>
             </tr>
                     <tr>
@@ -1143,10 +1153,10 @@
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_sortBy">
-        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Interfaces/StorageInterface.html#method_sortBy"><abbr title="CharlotteDunois\Yasmin\Interfaces\StorageInterface">StorageInterface</abbr></a> at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/StorageInterface.php#L153">line 153</a></div>
-        <code>                    <a href="../../../CharlotteDunois/Yasmin/Interfaces/StorageInterface.html"><abbr title="CharlotteDunois\Yasmin\Interfaces\StorageInterface">StorageInterface</abbr></a>
-    <strong>sortBy</strong>(mixed|callable $sortkey, int $options = \SORT_REGULAR, bool $descending = false)
+                    <h3 id="method_sortCustom">
+        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Interfaces/StorageInterface.html#method_sortCustom"><abbr title="CharlotteDunois\Yasmin\Interfaces\StorageInterface">StorageInterface</abbr></a> at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/StorageInterface.php#L158">line 158</a></div>
+        <code>                    <abbr title="CharlotteDunois\Collect\Collection">Collection</abbr>
+    <strong>sortCustom</strong>(callable $closure)
         </code>
     </h3>
     <div class="details">
@@ -1154,68 +1164,100 @@
     
 
                     <div class="method-description">
-                                    <p>Sorts the collection by the given key. Returns a new Storage instance.</p>                                                </div>
+                                    <p>Sorts the collection using a custom sorting function. Returns a new Storage instance.</p>                                                </div>
                 <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
-                <td>mixed|callable</td>
-                <td>$sortkey</td>
-                <td></td>
+                <td>callable</td>
+                <td>$closure</td>
+                <td>Callback specification: <code>function ($a, $b): int</code></td>
             </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="CharlotteDunois\Collect\Collection">Collection</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                        
+                        
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sortCustomKey">
+        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Interfaces/StorageInterface.html#method_sortCustomKey"><abbr title="CharlotteDunois\Yasmin\Interfaces\StorageInterface">StorageInterface</abbr></a> at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/StorageInterface.php#L165">line 165</a></div>
+        <code>                    <abbr title="CharlotteDunois\Collect\Collection">Collection</abbr>
+    <strong>sortCustomKey</strong>(callable $closure)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sorts the collection by key using a custom sorting function. Returns a new Storage instance.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
                     <tr>
-                <td>int</td>
-                <td>$options</td>
-                <td></td>
+                <td>callable</td>
+                <td>$closure</td>
+                <td>Callback specification: <code>function ($a, $b): int</code></td>
             </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="CharlotteDunois\Collect\Collection">Collection</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                        
+                        
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sortKey">
+        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Interfaces/StorageInterface.html#method_sortKey"><abbr title="CharlotteDunois\Yasmin\Interfaces\StorageInterface">StorageInterface</abbr></a> at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/StorageInterface.php#L151">line 151</a></div>
+        <code>                    <abbr title="CharlotteDunois\Collect\Collection">Collection</abbr>
+    <strong>sortKey</strong>(bool $descending = false, int $options = \SORT_REGULAR)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sorts the collection by key. Returns a new Storage instance.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
                     <tr>
                 <td>bool</td>
                 <td>$descending</td>
                 <td></td>
             </tr>
-            </table>
-
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td><a href="../../../CharlotteDunois/Yasmin/Interfaces/StorageInterface.html"><abbr title="CharlotteDunois\Yasmin\Interfaces\StorageInterface">StorageInterface</abbr></a></td>
-            <td></td>
-        </tr>
-    </table>
-
-            
-            
-                        
-                        
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_sortByDesc">
-        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Interfaces/StorageInterface.html#method_sortByDesc"><abbr title="CharlotteDunois\Yasmin\Interfaces\StorageInterface">StorageInterface</abbr></a> at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/StorageInterface.php#L161">line 161</a></div>
-        <code>                    <a href="../../../CharlotteDunois/Yasmin/Interfaces/StorageInterface.html"><abbr title="CharlotteDunois\Yasmin\Interfaces\StorageInterface">StorageInterface</abbr></a>
-    <strong>sortByDesc</strong>(mixed|<a href="https://secure.php.net/Closure" target="_blank">Closure</a> $sortkey, int $options = \SORT_REGULAR)
-        </code>
-    </h3>
-    <div class="details">
-            
-    
-
-                    <div class="method-description">
-                                    <p>Sorts the storage by the given key in descending order. Returns a new Storage instance.</p>                                                </div>
-                <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td>mixed|<a href="https://secure.php.net/Closure" target="_blank">Closure</a></td>
-                <td>$sortkey</td>
-                <td></td>
-            </tr>
                     <tr>
                 <td>int</td>
                 <td>$options</td>
@@ -1228,7 +1270,7 @@
 
                     <table class="table table-condensed">
         <tr>
-            <td><a href="../../../CharlotteDunois/Yasmin/Interfaces/StorageInterface.html"><abbr title="CharlotteDunois\Yasmin\Interfaces\StorageInterface">StorageInterface</abbr></a></td>
+            <td><abbr title="CharlotteDunois\Collect\Collection">Collection</abbr></td>
             <td></td>
         </tr>
     </table>
