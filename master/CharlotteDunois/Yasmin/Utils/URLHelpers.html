@@ -117,6 +117,16 @@
             <div class="container-fluid underlined">
                     <div class="row">
                 <div class="col-md-2 type">
+                    static&nbsp;<abbr title="Psr\Http\Message\RequestInterface">RequestInterface</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_applyRequestOptions">applyRequestOptions</a>(<abbr title="Psr\Http\Message\RequestInterface">RequestInterface</abbr> $request, array $requestOptions)
+        
+                                            <p>Applies request options to the request.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     static&nbsp;<abbr title="Clue\React\Buzz\Browser">Browser</abbr>
                 </div>
                 <div class="col-md-8 type">
@@ -162,8 +172,64 @@
 
             <div id="method-details">
                     <div class="method-item">
+                    <h3 id="method_applyRequestOptions">
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Utils/URLHelpers.php#L175">line 175</a></div>
+        <code>        static            <abbr title="Psr\Http\Message\RequestInterface">RequestInterface</abbr>
+    <strong>applyRequestOptions</strong>(<abbr title="Psr\Http\Message\RequestInterface">RequestInterface</abbr> $request, array $requestOptions)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Applies request options to the request.</p>                    <p>The following request options are supported:</p>
+
+<pre><code>array(
+    'multipart' =&gt; array, (multipart form data, an array of `[ 'name' =&gt; string, 'contents' =&gt; string|resource, 'filename' =&gt; string ]`)
+    'json' =&gt; mixed, (any JSON serializable type to send with the request as body payload)
+    'query' =&gt; string, (the URL query string to set to)
+    'headers' =&gt; string[], (HTTP headers to set)
+)
+</code></pre>
+</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Psr\Http\Message\RequestInterface">RequestInterface</abbr></td>
+                <td>$request</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$requestOptions</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Psr\Http\Message\RequestInterface">RequestInterface</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                        
+                        
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_getHTTPClient">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Utils/URLHelpers.php#L70">line 70</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Utils/URLHelpers.php#L78">line 78</a></div>
         <code>        static            <abbr title="Clue\React\Buzz\Browser">Browser</abbr>
     <strong>getHTTPClient</strong>()
         </code>
@@ -195,7 +261,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_makeRequest">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Utils/URLHelpers.php#L97">line 97</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Utils/URLHelpers.php#L105">line 105</a></div>
         <code>        static            <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>makeRequest</strong>(<abbr title="Psr\Http\Message\RequestInterface">RequestInterface</abbr> $request, array|null $requestOptions = null)
         </code>
@@ -263,7 +329,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_resolveURLToData">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Utils/URLHelpers.php#L160">line 160</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Utils/URLHelpers.php#L131">line 131</a></div>
         <code>        static            <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>resolveURLToData</strong>(string $url, array|null $requestHeaders = null)
         </code>
