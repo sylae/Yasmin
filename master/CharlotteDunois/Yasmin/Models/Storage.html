@@ -100,19 +100,6 @@
     
     
     
-            <h2>Properties</h2>
-
-            <table class="table table-condensed">
-                    <tr>
-                <td class="type" id="property_emitUpdates">
-                    static                                                            bool
-                </td>
-                <td><a name="property_emitUpdates" href="#property_emitUpdates">$emitUpdates</a></td>
-                <td class="last">Tells the storages to emit <code>internal.storage.set</code> and <code>internal.storage.delete</code> events.</td>
-                <td></td>
-            </tr>
-            </table>
-
     
             <h2>Methods</h2>
 
@@ -225,7 +212,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method_copy">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Storage.php#L181">line 181</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Storage.php#L163">line 163</a></div>
         <code>                    <a href="../../../CharlotteDunois/Yasmin/Interfaces/StorageInterface.html"><abbr title="CharlotteDunois\Yasmin\Interfaces\StorageInterface">StorageInterface</abbr></a>
     <strong>copy</strong>()
         </code>
@@ -257,7 +244,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_delete">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Storage.php#L162">line 162</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Storage.php#L150">line 150</a></div>
         <code>                    $this
     <strong>delete</strong>(mixed $key)
         </code>
@@ -308,7 +295,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_filter">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Storage.php#L193">line 193</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Storage.php#L175">line 175</a></div>
         <code>                    <a href="../../../CharlotteDunois/Yasmin/Interfaces/StorageInterface.html"><abbr title="CharlotteDunois\Yasmin\Interfaces\StorageInterface">StorageInterface</abbr></a>
     <strong>filter</strong>(callable $closure)
         </code>
@@ -350,7 +337,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_get">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Storage.php#L128">line 128</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Storage.php#L122">line 122</a></div>
         <code>                    mixed|null
     <strong>get</strong>(mixed $key)
         </code>
@@ -401,7 +388,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_has">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Storage.php#L114">line 114</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Storage.php#L108">line 108</a></div>
         <code>                    bool
     <strong>has</strong>(mixed $key)
         </code>
@@ -452,7 +439,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_set">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Storage.php#L142">line 142</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Storage.php#L136">line 136</a></div>
         <code>                    $this
     <strong>set</strong>(mixed $key, mixed $value)
         </code>
@@ -508,7 +495,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_sort">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Storage.php#L206">line 206</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Storage.php#L188">line 188</a></div>
         <code>                    <abbr title="CharlotteDunois\Collect\Collection">Collection</abbr>
     <strong>sort</strong>(bool $descending = false, int $options = \SORT_REGULAR)
         </code>
@@ -555,7 +542,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_sortCustom">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Storage.php#L231">line 231</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Storage.php#L213">line 213</a></div>
         <code>                    <abbr title="CharlotteDunois\Collect\Collection">Collection</abbr>
     <strong>sortCustom</strong>(callable $closure)
         </code>
@@ -597,7 +584,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_sortCustomKey">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Storage.php#L243">line 243</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Storage.php#L225">line 225</a></div>
         <code>                    <abbr title="CharlotteDunois\Collect\Collection">Collection</abbr>
     <strong>sortCustomKey</strong>(callable $closure)
         </code>
@@ -639,7 +626,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_sortKey">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Storage.php#L219">line 219</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Storage.php#L201">line 201</a></div>
         <code>                    <abbr title="CharlotteDunois\Collect\Collection">Collection</abbr>
     <strong>sortKey</strong>(bool $descending = false, int $options = \SORT_REGULAR)
         </code>

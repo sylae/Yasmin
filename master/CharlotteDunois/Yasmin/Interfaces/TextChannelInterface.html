@@ -96,7 +96,7 @@
     
 
             <div class="description">
-            <p>Something all textchannels (all text-based channels) implement. See TextChannelTrait for full comments.</p>                                </div>
+            <p>Something all textchannels (all text-based channels) implement.</p>                                </div>
     
     
     
@@ -347,7 +347,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_collectMessages">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/TextChannelInterface.php#L38">line 38</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/TextChannelInterface.php#L49">line 49</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>collectMessages</strong>(callable $filter, array $options = array())
         </code>
@@ -357,7 +357,15 @@
     
 
                     <div class="method-description">
-                                    <p>Collects messages during a specific duration (and max. amount). Resolves with a Collection of Message instances, mapped by their IDs.</p>                                                </div>
+                                    <p>Collects messages during a specific duration (and max. amount). Resolves with a Collection of Message instances, mapped by their IDs.</p>                    <p>Options are as following (all are optional):</p>
+
+<pre><code>array(
+  'max' =&gt; int, (max. messages to collect)
+  'time' =&gt; int, (duration, in seconds, default 30)
+  'errors' =&gt; array, (optional, which failed "conditions" (max not reached in time ("time")) lead to a rejected promise, defaults to [])
+)
+</code></pre>
+</p>                            </div>
                 <div class="tags">
                             <h4>Parameters</h4>
 
@@ -424,7 +432,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_fetchMessage">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/TextChannelInterface.php#L46">line 46</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/TextChannelInterface.php#L57">line 57</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>fetchMessage</strong>(string $id)
         </code>
@@ -477,7 +485,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_fetchMessages">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/TextChannelInterface.php#L54">line 54</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/TextChannelInterface.php#L77">line 77</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>fetchMessages</strong>(array $options = array())
         </code>
@@ -487,7 +495,16 @@
     
 
                     <div class="method-description">
-                                    <p>Fetches messages of this channel. Resolves with a Collection of Message instances, mapped by their ID.</p>                                                </div>
+                                    <p>Fetches messages of this channel. Resolves with a Collection of Message instances, mapped by their ID.</p>                    <p>Options are as following:</p>
+
+<pre><code>array(
+  'after' =&gt; string, (message ID)
+  'around' =&gt; string, (message ID)
+  'before' =&gt; string, (message ID)
+  'limit' =&gt; int, (1-100, defaults to 50)
+)
+</code></pre>
+</p>                            </div>
                 <div class="tags">
                             <h4>Parameters</h4>
 
@@ -690,7 +707,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_isTyping">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/TextChannelInterface.php#L89">line 89</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/TextChannelInterface.php#L133">line 133</a></div>
         <code>                    bool
     <strong>isTyping</strong>(<a href="../../../CharlotteDunois/Yasmin/Models/User.html"><abbr title="CharlotteDunois\Yasmin\Models\User">User</abbr></a> $user)
         </code>
@@ -732,7 +749,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_send">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/TextChannelInterface.php#L63">line 63</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/TextChannelInterface.php#L107">line 107</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>send</strong>(string $content, array $options = array())
         </code>
@@ -742,7 +759,25 @@
     
 
                     <div class="method-description">
-                                    <p>Sends a message to a channel. Resolves with an instance of Message, or a Collection of Message instances, mapped by their ID.</p>                                                </div>
+                                    <p>Sends a message to a channel. Resolves with an instance of Message, or a Collection of Message instances, mapped by their ID.</p>                    <p>Options are as following (all are optional):</p>
+
+<pre><code>array(
+   'embed' =&gt; array|\CharlotteDunois\Yasmin\Models\MessageEmbed, (an (embed) array/object or an instance of MessageEmbed)
+   'files' =&gt; array, (an array of `[ 'name' =&gt; string, 'data' =&gt; string || 'path' =&gt; string ]` or just plain file contents, file paths or URLs)
+   'nonce' =&gt; string, (a snowflake used for optimistic sending)
+   'disableEveryone' =&gt; bool, (whether @everyone and @here should be replaced with plaintext, defaults to client option disableEveryone)
+   'tts' =&gt; bool,
+   'split' =&gt; bool|array, (*)
+)
+
+  * array(
+  *   'before' =&gt; string, (The string to insert before the split)
+  *   'after' =&gt; string, (The string to insert after the split)
+  *   'char' =&gt; string, (The string to split on)
+  *   'maxLength' =&gt; int, (The max. length of each message)
+  * )
+</code></pre>
+</p>                            </div>
                 <div class="tags">
                             <h4>Parameters</h4>
 
@@ -790,7 +825,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_startTyping">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/TextChannelInterface.php#L69">line 69</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/TextChannelInterface.php#L113">line 113</a></div>
         <code>                    void
     <strong>startTyping</strong>()
         </code>
@@ -822,7 +857,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_stopTyping">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/TextChannelInterface.php#L76">line 76</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/TextChannelInterface.php#L120">line 120</a></div>
         <code>                    void
     <strong>stopTyping</strong>(bool $force = false)
         </code>
@@ -864,7 +899,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_typingCount">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/TextChannelInterface.php#L82">line 82</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/TextChannelInterface.php#L126">line 126</a></div>
         <code>                    int
     <strong>typingCount</strong>()
         </code>
