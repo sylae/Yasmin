@@ -72,7 +72,7 @@ class CategoryChannel extends ClientBase implements \CharlotteDunois\Yasmin\Inte
      */
     function __construct(\CharlotteDunois\Yasmin\Client $client, \CharlotteDunois\Yasmin\Models\Guild $guild, array $channel) {
         parent::__construct($client);
-        $this->guild = $guild;
+        $this->guild = \CharlotteDunois\Yasmin\Reference::create($this, 'guild', $guild);
         
         $this->id = (string) $channel['id'];
         $this->type = \CharlotteDunois\Yasmin\Models\ChannelStorage::CHANNEL_TYPES[$channel['type']];
@@ -124,7 +124,7 @@ class CategoryChannel extends ClientBase implements \CharlotteDunois\Yasmin\Inte
             $this->permissionOverwrites->clear();
             
             foreach($channel['permission_overwrites'] as $permission) {
-                $this->permissionOverwrites->set($permission['id'], new \CharlotteDunois\Yasmin\Models\PermissionOverwrite($this->client, $this, $permission));
+                $this->permissionOverwrites->set($permission['id'], new \CharlotteDunois\Yasmin\Models\PermissionOverwrite($this->client->acquireReferencedInstance(), $this, $permission));
             }
         }
     }

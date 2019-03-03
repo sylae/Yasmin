@@ -288,11 +288,11 @@ class Client implements \CharlotteDunois\Events\EventEmitterInterface, \Serializ
         
         $this->checkOptionsStorages();
         
-        $this->channels = new $this->options['internal.storages.channels']($this);
-        $this->emojis = new $this->options['internal.storages.emojis']($this);
-        $this->guilds = new $this->options['internal.storages.guilds']($this);
-        $this->presences = new $this->options['internal.storages.presences']($this);
-        $this->users = new $this->options['internal.storages.users']($this);
+        $this->channels = \CharlotteDunois\Yasmin\Reference::create($this, 'storages.channel', (new $this->options['internal.storages.channels']($this)));
+        $this->emojis = \CharlotteDunois\Yasmin\Reference::create($this, 'storages.emojis', (new $this->options['internal.storages.emojis']($this)));
+        $this->guilds = \CharlotteDunois\Yasmin\Reference::create($this, 'storages.guilds', (new $this->options['internal.storages.guilds']($this)));
+        $this->presences = \CharlotteDunois\Yasmin\Reference::create($this, 'storages.presences', (new $this->options['internal.storages.presences']($this)));
+        $this->users = \CharlotteDunois\Yasmin\Reference::create($this, 'storages.users', (new $this->options['internal.storages.users']($this)));
         
         $this->shards = new \CharlotteDunois\Collect\Collection();
         

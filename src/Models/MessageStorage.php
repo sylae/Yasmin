@@ -21,7 +21,7 @@ class MessageStorage extends Storage implements \CharlotteDunois\Yasmin\Interfac
     
     /**
      * The sweep timer, or null.
-     * @var \React\EventLoop\TimerInterface|\React\EventLoop\Timer\TimerInterface|null
+     * @var \React\EventLoop\TimerInterface|null
      */
     protected $timer;
     
@@ -60,6 +60,8 @@ class MessageStorage extends Storage implements \CharlotteDunois\Yasmin\Interfac
         if($this->timer) {
             $this->client->cancelTimer($this->timer);
         }
+        
+        parent::__destruct();
     }
     
     /**

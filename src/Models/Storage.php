@@ -83,6 +83,7 @@ class Storage extends \CharlotteDunois\Collect\Collection
     }
     
     /**
+     * @param string  $data
      * @return void
      * @internal
      */

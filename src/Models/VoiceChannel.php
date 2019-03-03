@@ -103,11 +103,11 @@ class VoiceChannel extends ClientBase
      */
     function __construct(\CharlotteDunois\Yasmin\Client $client, \CharlotteDunois\Yasmin\Models\Guild $guild, array $channel) {
         parent::__construct($client);
-        $this->guild = $guild;
+        $this->guild = \CharlotteDunois\Yasmin\Reference::create($this, 'guilds', $guild);
         
         $this->id = (string) $channel['id'];
         $this->type = \CharlotteDunois\Yasmin\Models\ChannelStorage::CHANNEL_TYPES[$channel['type']];
-        $this->members = new \CharlotteDunois\Collect\Collection();
+        $this->members = \CharlotteDunois\Yasmin\Reference::create($this, 'members', (new \CharlotteDunois\Collect\Collection()));
         $this->permissionOverwrites = new \CharlotteDunois\Collect\Collection();
         
         $this->createdTimestamp = (int) \CharlotteDunois\Yasmin\Utils\Snowflake::deconstruct($this->id)->timestamp;
@@ -191,7 +191,7 @@ class VoiceChannel extends ClientBase
             $this->permissionOverwrites->clear();
             
             foreach($channel['permission_overwrites'] as $permission) {
-                $overwrite = new \CharlotteDunois\Yasmin\Models\PermissionOverwrite($this->client, $this, $permission);
+                $overwrite = new \CharlotteDunois\Yasmin\Models\PermissionOverwrite($this->client->acquireReferencedInstance(), $this, $permission);
                 $this->permissionOverwrites->set($overwrite->id, $overwrite);
             }
         }

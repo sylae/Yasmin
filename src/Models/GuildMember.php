@@ -110,12 +110,12 @@ class GuildMember extends ClientBase {
      */
     function __construct(\CharlotteDunois\Yasmin\Client $client, \CharlotteDunois\Yasmin\Models\Guild $guild, array $member) {
         parent::__construct($client);
-        $this->guild = $guild;
+        $this->guild = \CharlotteDunois\Yasmin\Reference::create($this, 'guild', $guild);
         
         $this->id = (string) $member['user']['id'];
         $this->client->users->patch($member['user']);
         
-        $this->roles = new \CharlotteDunois\Collect\Collection();
+        $this->roles = \CharlotteDunois\Yasmin\Reference::create($this, 'roles', (new \CharlotteDunois\Collect\Collection()));
         $this->joinedTimestamp = (new \DateTime((!empty($member['joined_at']) ? $member['joined_at'] : 'now')))->getTimestamp();
         
         $this->_patch($member);

@@ -58,7 +58,7 @@ class RichPresenceAssets extends ClientBase {
      */
     function __construct(\CharlotteDunois\Yasmin\Client $client, \CharlotteDunois\Yasmin\Models\Activity $activity, array $assets) {
         parent::__construct($client);
-        $this->activity = $activity;
+        $this->activity = \CharlotteDunois\Yasmin\Reference::create($this, 'activity', $activity);
         
         $this->largeImage = $assets['large_image'] ?? null;
         $this->largeText = $assets['large_text'] ?? null;

@@ -54,7 +54,7 @@ class UserConnection extends ClientBase {
      */
     function __construct(\CharlotteDunois\Yasmin\Client $client, \CharlotteDunois\Yasmin\Models\User $user, array $connection) {
         parent::__construct($client);
-        $this->user = $user;
+        $this->user = \CharlotteDunois\Yasmin\Reference::create($this, 'user', $user);
         
         $this->id = (string) $connection['id'];
         $this->name = (string) $connection['name'];

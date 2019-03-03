@@ -91,10 +91,10 @@ class MessageMentions extends ClientBase {
         parent::__construct($client);
         $this->message = $message;
         
-        $this->channels = new \CharlotteDunois\Collect\Collection();
-        $this->members = new \CharlotteDunois\Collect\Collection();
-        $this->roles = new \CharlotteDunois\Collect\Collection();
-        $this->users = new \CharlotteDunois\Collect\Collection();
+        $this->channels = \CharlotteDunois\Yasmin\Reference::create($this, 'channels', (new \CharlotteDunois\Collect\Collection()));
+        $this->members = \CharlotteDunois\Yasmin\Reference::create($this, 'members', (new \CharlotteDunois\Collect\Collection()));
+        $this->roles = \CharlotteDunois\Yasmin\Reference::create($this, 'roles', (new \CharlotteDunois\Collect\Collection()));
+        $this->users = \CharlotteDunois\Yasmin\Reference::create($this, 'users', (new \CharlotteDunois\Collect\Collection()));
         
         $this->everyone = !empty($msg['mention_everyone']);
         

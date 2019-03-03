@@ -304,7 +304,7 @@ class Webhook extends ClientBase {
         $this->avatar = $webhook['avatar'] ?? null;
         $this->channelID = \CharlotteDunois\Yasmin\Utils\DataHelpers::typecastVariable(($webhook['channel_id'] ?? null), 'string');
         $this->guildID = \CharlotteDunois\Yasmin\Utils\DataHelpers::typecastVariable(($webhook['guild_id'] ?? null), 'string');
-        $this->owner = (!empty($webhook['user']) ? $this->client->users->patch($webhook['user']) : null);
+        $this->owner = (!empty($webhook['user']) ? \CharlotteDunois\Yasmin\Reference::create($this, 'owner', $this->client->users->patch($webhook['user'])) : null);
         $this->token = $webhook['token'] ?? null;
     }
 }

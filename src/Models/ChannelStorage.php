@@ -80,7 +80,7 @@ class ChannelStorage extends Storage implements \CharlotteDunois\Yasmin\Interfac
      */
     function set($key, $value) {
         parent::set($key, $value);
-        if($this !== $this->client->channels) {
+        if($this !== $this->client->channels->acquireReferencedInstance()) {
             $this->client->channels->set($key, $value);
         }
         
@@ -94,7 +94,7 @@ class ChannelStorage extends Storage implements \CharlotteDunois\Yasmin\Interfac
      */
     function delete($key) {
         parent::delete($key);
-        if($this !== $this->client->channels) {
+        if($this !== $this->client->channels->acquireReferencedInstance()) {
             $this->client->channels->delete($key);
         }
         
@@ -106,7 +106,7 @@ class ChannelStorage extends Storage implements \CharlotteDunois\Yasmin\Interfac
      * @return $this
      */
     function clear() {
-        if($this !== $this->client->channels) {
+        if($this !== $this->client->channels->acquireReferencedInstance()) {
             foreach($this->data as $key => $val) {
                 $this->client->channels->delete($key);
                 unset($val);

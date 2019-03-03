@@ -54,12 +54,12 @@ class MessageReaction extends ClientBase {
      */
     function __construct(\CharlotteDunois\Yasmin\Client $client, \CharlotteDunois\Yasmin\Models\Message $message, \CharlotteDunois\Yasmin\Models\Emoji $emoji, array $reaction) {
         parent::__construct($client);
-        $this->message = $message;
-        $this->emoji = $emoji;
+        $this->message = \CharlotteDunois\Yasmin\Reference::create($this, 'message', $message);
+        $this->emoji = \CharlotteDunois\Yasmin\Reference::create($this, 'emoji', $emoji);
         
         $this->count = (int) $reaction['count'];
         $this->me = (bool) $reaction['me'];
-        $this->users = new \CharlotteDunois\Collect\Collection();
+        $this->users = \CharlotteDunois\Yasmin\Reference::create($this, 'users', (new \CharlotteDunois\Collect\Collection()));
     }
     
     /**

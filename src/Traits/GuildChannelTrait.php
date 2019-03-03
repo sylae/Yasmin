@@ -44,7 +44,7 @@ trait GuildChannelTrait {
         
         return (new \React\Promise\Promise(function (callable $resolve, callable $reject) use ($data) {
             $this->client->apimanager()->endpoints->channel->createChannelInvite($this->id, $data)->done(function ($data) use ($resolve) {
-                $invite = new \CharlotteDunois\Yasmin\Models\Invite($this->client, $data);
+                $invite = new \CharlotteDunois\Yasmin\Models\Invite($this->client->acquireReferencedInstance(), $data);
                 $resolve($invite);
             }, $reject);
         }));
@@ -172,7 +172,7 @@ trait GuildChannelTrait {
                 $collection = new \CharlotteDunois\Collect\Collection();
                 
                 foreach($data as $invite) {
-                    $inv = new \CharlotteDunois\Yasmin\Models\Invite($this->client, $invite);
+                    $inv = new \CharlotteDunois\Yasmin\Models\Invite($this->client->acquireReferencedInstance(), $invite);
                     $collection->set($inv->code, $inv);
                 }
                 
@@ -314,7 +314,7 @@ trait GuildChannelTrait {
                         $options['deny'] = $options['deny']->bitfield;
                     }
                     
-                    $overwrite = new \CharlotteDunois\Yasmin\Models\PermissionOverwrite($this->client, $this, $options);
+                    $overwrite = new \CharlotteDunois\Yasmin\Models\PermissionOverwrite($this->client->acquireReferencedInstance(), $this, $options);
                     $this->permissionOverwrites->set($overwrite->id, $overwrite);
                     
                     $resolve($overwrite);

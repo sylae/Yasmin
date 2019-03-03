@@ -81,7 +81,7 @@ class EmojiStorage extends Storage implements \CharlotteDunois\Yasmin\Interfaces
      */
     function set($key, $value) {
         parent::set($key, $value);
-        if($this !== $this->client->emojis) {
+        if($this !== $this->client->emojis->acquireReferencedInstance()) {
             $this->client->emojis->set($key, $value);
         }
         
@@ -95,7 +95,7 @@ class EmojiStorage extends Storage implements \CharlotteDunois\Yasmin\Interfaces
      */
     function delete($key) {
         parent::delete($key);
-        if($this !== $this->client->emojis) {
+        if($this !== $this->client->emojis->acquireReferencedInstance()) {
             $this->client->emojis->delete($key);
         }
         

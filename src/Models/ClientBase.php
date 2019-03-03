@@ -31,7 +31,9 @@ abstract class ClientBase extends Base {
      * @internal
      */
     function __construct(\CharlotteDunois\Yasmin\Client $client) {
-        $this->client = $client;
+        parent::__construct();
+        $this->client = \CharlotteDunois\Yasmin\Reference::create($this, 'client', $client);
+        //$this->client = $client;
     }
     
     /**
@@ -83,6 +85,7 @@ abstract class ClientBase extends Base {
     }
     
     /**
+     * @param string  $data
      * @return void
      * @internal
      */

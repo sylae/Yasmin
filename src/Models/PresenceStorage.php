@@ -83,7 +83,7 @@ class PresenceStorage extends Storage implements \CharlotteDunois\Yasmin\Interfa
         }
         
         parent::set($key, $value);
-        if($this !== $this->client->presences) {
+        if($this !== $this->client->presences->acquireReferencedInstance()) {
             $this->client->presences->set($key, $value);
         }
         
@@ -101,7 +101,7 @@ class PresenceStorage extends Storage implements \CharlotteDunois\Yasmin\Interfa
         }
         
         parent::delete($key);
-        if($this !== $this->client->presences) {
+        if($this !== $this->client->presences->acquireReferencedInstance()) {
             $this->client->presences->delete($key);
         }
         

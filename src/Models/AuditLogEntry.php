@@ -120,7 +120,7 @@ class AuditLogEntry extends ClientBase {
      */
     function __construct(\CharlotteDunois\Yasmin\Client $client, \CharlotteDunois\Yasmin\Models\AuditLog $log, array $entry) {
         parent::__construct($client);
-        $this->log = $log;
+        $this->log = \CharlotteDunois\Yasmin\Reference::create($this, 'log', $log);
         
         $this->id = (string) $entry['id'];
         $this->changes = $entry['changes'] ?? array();

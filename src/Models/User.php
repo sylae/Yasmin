@@ -265,7 +265,7 @@ class User extends ClientBase {
             $this->client->apimanager()->endpoints->user->getUserConnections($accessToken)->done(function ($data) use ($resolve) {
                 $collect = new \CharlotteDunois\Collect\Collection();
                 foreach($data as $conn) {
-                    $connection = new \CharlotteDunois\Yasmin\Models\UserConnection($this->client, $this, $conn);
+                    $connection = new \CharlotteDunois\Yasmin\Models\UserConnection($this->client->acquireReferencedInstance(), $this, $conn);
                     $collect->set($connection->id, $connection);
                 }
                 

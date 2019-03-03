@@ -71,10 +71,6 @@ class GuildStorage extends Storage implements \CharlotteDunois\Yasmin\Interfaces
      */
     function delete($key) {
         parent::delete($key);
-        if($this !== $this->client->guilds) {
-            $this->client->guilds->delete($key);
-        }
-        
         return $this;
     }
     

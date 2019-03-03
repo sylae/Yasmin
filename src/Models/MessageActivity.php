@@ -61,7 +61,7 @@ class MessageActivity extends ClientBase {
         if($activity['party_id'] !== null) {
             $name = \explode(':', $activity['party_id']);
             $uid = (string) ($name[1] ?? $name[0]);
-            $this->user = $this->client->users->get($uid);
+            $this->user = \CharlotteDunois\Yasmin\Reference::create($this, 'user', $this->client->users->get($uid));
         }
     }
     

@@ -15,7 +15,7 @@ namespace CharlotteDunois\Yasmin\Models;
 class UserStorage extends Storage implements \CharlotteDunois\Yasmin\Interfaces\UserStorageInterface {
     /**
      * The sweep timer, or null.
-     * @var \React\EventLoop\TimerInterface|\React\EventLoop\Timer\TimerInterface|null
+     * @var \React\EventLoop\TimerInterface|null
      */
     protected $timer;
     
@@ -102,7 +102,7 @@ class UserStorage extends Storage implements \CharlotteDunois\Yasmin\Interfaces\
      */
     function set($key, $value) {
         parent::set($key, $value);
-        if($this !== $this->client->users) {
+        if($this !== $this->client->users->acquireReferencedInstance()) {
             $this->client->users->set($key, $value);
         }
         
@@ -116,7 +116,7 @@ class UserStorage extends Storage implements \CharlotteDunois\Yasmin\Interfaces\
      */
     function delete($key) {
         parent::delete($key);
-        if($this !== $this->client->users) {
+        if($this !== $this->client->users->acquireReferencedInstance()) {
             $this->client->users->delete($key);
         }
         

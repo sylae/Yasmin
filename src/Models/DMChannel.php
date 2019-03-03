@@ -65,8 +65,8 @@ class DMChannel extends ClientBase implements \CharlotteDunois\Yasmin\Interfaces
         parent::__construct($client);
         
         $storage = $this->client->getOption('internal.storages.messages');
-        $this->messages = new $storage($this->client, $this);
-        $this->typings = new \CharlotteDunois\Collect\Collection();
+        $this->messages = \CharlotteDunois\Yasmin\Reference::create($this, 'messages', (new $storage($client, $this)));
+        $this->typings = \CharlotteDunois\Yasmin\Reference::create($this, 'typings', (new \CharlotteDunois\Collect\Collection()));
         
         $this->id = (string) $channel['id'];
         $this->type = \CharlotteDunois\Yasmin\Models\ChannelStorage::CHANNEL_TYPES[$channel['type']];
@@ -75,7 +75,7 @@ class DMChannel extends ClientBase implements \CharlotteDunois\Yasmin\Interfaces
         $this->createdTimestamp = (int) \CharlotteDunois\Yasmin\Utils\Snowflake::deconstruct($this->id)->timestamp;
         
         $this->ownerID = \CharlotteDunois\Yasmin\Utils\DataHelpers::typecastVariable(($channel['owner_id'] ?? null), 'string');
-        $this->recipients = new \CharlotteDunois\Collect\Collection();
+        $this->recipients = \CharlotteDunois\Yasmin\Reference::create($this, 'recipients', (new \CharlotteDunois\Collect\Collection()));
         
         if(!empty($channel['recipients'])) {
             foreach($channel['recipients'] as $rec) {

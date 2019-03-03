@@ -290,11 +290,11 @@ class Guild extends ClientBase {
         $presences = $this->client->getOption('internal.storages.presences');
         $roles = $this->client->getOption('internal.storages.roles');
         
-        $this->channels = new $channels($client);
-        $this->emojis = new $emojis($client, $this);
-        $this->members = new $members($client, $this);
-        $this->presences = new $presences($client);
-        $this->roles = new $roles($client, $this);
+        $this->channels = \CharlotteDunois\Yasmin\Reference::create($this, 'channels', (new $channels($client)));
+        $this->emojis = \CharlotteDunois\Yasmin\Reference::create($this, 'emojis', (new $emojis($client, $this)));
+        $this->members = \CharlotteDunois\Yasmin\Reference::create($this, 'members', (new $members($client, $this)));
+        $this->presences = \CharlotteDunois\Yasmin\Reference::create($this, 'presences', (new $presences($client)));
+        $this->roles = \CharlotteDunois\Yasmin\Reference::create($this, 'roles', (new $roles($client, $this)));
         
         $this->id = (string) $guild['id'];
         $snowflake = \CharlotteDunois\Yasmin\Utils\Snowflake::deconstruct($this->id);
@@ -691,7 +691,7 @@ class Guild extends ClientBase {
             }
             
             $this->client->apimanager()->endpoints->guild->getGuildAuditLog($this->id, $options)->done(function ($data) use ($resolve) {
-                $audit = new \CharlotteDunois\Yasmin\Models\AuditLog($this->client, $this, $data);
+                $audit = new \CharlotteDunois\Yasmin\Models\AuditLog($this->client->acquireReferencedInstance(), $this, $data);
                 $resolve($audit);
             }, $reject);
         }));
@@ -711,7 +711,7 @@ class Guild extends ClientBase {
             
             $this->client->apimanager()->endpoints->guild->getGuildBan($this->id, $user)->done(function ($data) use ($resolve) {
                 $user = $this->client->users->patch($data['user']);
-                $ban = new \CharlotteDunois\Yasmin\Models\GuildBan($this->client, $this, $user, ($data['reason'] ?? null));
+                $ban = new \CharlotteDunois\Yasmin\Models\GuildBan($this->client->acquireReferencedInstance(), $this, $user, ($data['reason'] ?? null));
                 
                 $resolve($ban);
             }, $reject);
@@ -730,7 +730,7 @@ class Guild extends ClientBase {
                 
                 foreach($data as $ban) {
                     $user = $this->client->users->patch($ban['user']);
-                    $gban = new \CharlotteDunois\Yasmin\Models\GuildBan($this->client, $this, $user, ($ban['reason'] ?? null));
+                    $gban = new \CharlotteDunois\Yasmin\Models\GuildBan($this->client->acquireReferencedInstance(), $this, $user, ($ban['reason'] ?? null));
                     
                     $collect->set($user->id, $gban);
                 }
@@ -751,7 +751,7 @@ class Guild extends ClientBase {
                 $collect = new \CharlotteDunois\Collect\Collection();
                 
                 foreach($data as $inv) {
-                    $invite = new \CharlotteDunois\Yasmin\Models\Invite($this->client, $inv);
+                    $invite = new \CharlotteDunois\Yasmin\Models\Invite($this->client->acquireReferencedInstance(), $inv);
                     $collect->set($invite->code, $invite);
                 }
                 
@@ -880,7 +880,7 @@ class Guild extends ClientBase {
                 $collect = new \CharlotteDunois\Collect\Collection();
                 
                 foreach($data as $region) {
-                    $voice = new \CharlotteDunois\Yasmin\Models\VoiceRegion($this->client, $region);
+                    $voice = new \CharlotteDunois\Yasmin\Models\VoiceRegion($this->client->acquireReferencedInstance(), $region);
                     $collect->set($voice->id, $voice);
                 }
                 
@@ -900,7 +900,7 @@ class Guild extends ClientBase {
                 $collect = new \CharlotteDunois\Collect\Collection();
                 
                 foreach($data as $web) {
-                    $hook = new \CharlotteDunois\Yasmin\Models\Webhook($this->client, $web);
+                    $hook = new \CharlotteDunois\Yasmin\Models\Webhook($this->client->acquireReferencedInstance(), $web);
                     $collect->set($hook->id, $hook);
                 }
                 
@@ -970,7 +970,7 @@ class Guild extends ClientBase {
             $this->client->apimanager()->endpoints->guild->getGuildVanityURL($this->id)->then(function ($data) {
                 return $this->client->apimanager()->endpoints->invite->getInvite($data['code']);
             })->done(function ($data) use ($resolve) {
-                $invite = new \CharlotteDunois\Yasmin\Models\Invite($this->client, $data);
+                $invite = new \CharlotteDunois\Yasmin\Models\Invite($this->client->acquireReferencedInstance(), $data);
                 $resolve($invite);
             }, $reject);
         }));

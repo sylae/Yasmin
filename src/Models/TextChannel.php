@@ -111,11 +111,11 @@ class TextChannel extends ClientBase
      */
     function __construct(\CharlotteDunois\Yasmin\Client $client, \CharlotteDunois\Yasmin\Models\Guild $guild, array $channel) {
         parent::__construct($client);
-        $this->guild = $guild;
+        $this->guild = \CharlotteDunois\Yasmin\Reference::create($this, 'guilds', $guild);
         
         $storage = $this->client->getOption('internal.storages.messages');
-        $this->messages = new $storage($this->client, $this);
-        $this->typings = new \CharlotteDunois\Collect\Collection();
+        $this->messages = \CharlotteDunois\Yasmin\Reference::create($this, 'messages', (new $storage($client, $this)));
+        $this->typings = \CharlotteDunois\Yasmin\Reference::create($this, 'typings', (new \CharlotteDunois\Collect\Collection()));
         
         $this->id = (string) $channel['id'];
         $this->type = \CharlotteDunois\Yasmin\Models\ChannelStorage::CHANNEL_TYPES[$channel['type']];
@@ -170,7 +170,7 @@ class TextChannel extends ClientBase
             
             $file->done(function ($avatar = null) use ($name, $reason, $resolve, $reject) {
                 $this->client->apimanager()->endpoints->webhook->createWebhook($this->id, $name, $avatar, $reason)->done(function ($data) use ($resolve) {
-                    $hook = new \CharlotteDunois\Yasmin\Models\Webhook($this->client, $data);
+                    $hook = new \CharlotteDunois\Yasmin\Models\Webhook($this->client->acquireReferencedInstance(), $data);
                     $resolve($hook);
                 }, $reject);
             }, $reject);
@@ -188,7 +188,7 @@ class TextChannel extends ClientBase
                 $collect = new \CharlotteDunois\Collect\Collection();
                 
                 foreach($data as $web) {
-                    $hook = new \CharlotteDunois\Yasmin\Models\Webhook($this->client, $web);
+                    $hook = new \CharlotteDunois\Yasmin\Models\Webhook($this->client->acquireReferencedInstance(), $web);
                     $collect->set($hook->id, $hook);
                 }
                 
@@ -231,7 +231,7 @@ class TextChannel extends ClientBase
             $this->permissionOverwrites->clear();
             
             foreach($channel['permission_overwrites'] as $permission) {
-                $overwrite = new \CharlotteDunois\Yasmin\Models\PermissionOverwrite($this->client, $this, $permission);
+                $overwrite = new \CharlotteDunois\Yasmin\Models\PermissionOverwrite($this->client->acquireReferencedInstance(), $this, $permission);
                 $this->permissionOverwrites->set($overwrite->id, $overwrite);
             }
         }

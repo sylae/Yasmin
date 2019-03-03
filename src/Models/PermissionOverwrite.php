@@ -57,7 +57,7 @@ class PermissionOverwrite extends ClientBase {
      */
     function __construct(\CharlotteDunois\Yasmin\Client $client, \CharlotteDunois\Yasmin\Interfaces\GuildChannelInterface $channel, array $permission) {
         parent::__construct($client);
-        $this->channel = $channel;
+        $this->channel = \CharlotteDunois\Yasmin\Reference::create($this, 'channel', $channel);
         
         $this->id = (string) $permission['id'];
         $this->type = (string) $permission['type'];

@@ -95,7 +95,7 @@ class Presence extends ClientBase {
       * @internal
       */
      function _patch(array $presence) {
-         $this->activity = (!empty($presence['game']) ? (new \CharlotteDunois\Yasmin\Models\Activity($this->client, $presence['game'])) : null);
+         $this->activity = (!empty($presence['game']) ? (new \CharlotteDunois\Yasmin\Models\Activity($this->client->acquireReferencedInstance(), $presence['game'])) : null);
          $this->status = $presence['status'];
          $this->clientStatus = (!empty($presence['client_status']) ? (new \CharlotteDunois\Yasmin\Models\ClientStatus($presence['client_status'])) : null);
      }

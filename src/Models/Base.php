@@ -19,6 +19,7 @@ abstract class Base implements \JsonSerializable, \Serializable {
      */
     function __construct() {
         // We don't have anything to do.
+        echo 'Construct '.\get_class($this).'#'.\spl_object_hash($this).\PHP_EOL;
     }
     
     /**
@@ -26,6 +27,8 @@ abstract class Base implements \JsonSerializable, \Serializable {
      * @internal
      */
     function __destruct() {
+        echo 'Destruct '.\get_class($this).'#'.\spl_object_hash($this).\PHP_EOL;
+        \CharlotteDunois\Yasmin\Reference::release($this);
         $this->_markForDelete();
     }
     
@@ -95,6 +98,7 @@ abstract class Base implements \JsonSerializable, \Serializable {
     }
     
     /**
+     * @param string  $data
      * @return void
      * @internal
      */
@@ -147,9 +151,9 @@ abstract class Base implements \JsonSerializable, \Serializable {
                                 if($count === 1) {
                                     $this->$key = new $class($val);
                                 } elseif($count === 2) {
-                                    $this->$key = new $class($this->client, $val);
+                                    $this->$key = new $class($this->client->acquireReferencedInstance(), $val);
                                 } elseif($count === 3) {
-                                    $this->$key = new $class($this->client, (\property_exists($this, 'guild') ? $this->guild : (\property_exists($this, 'channel') ? $this->channel : null)), $val);
+                                    $this->$key = new $class($this->client->acquireReferencedInstance(), (\property_exists($this, 'guild') ? $this->guild->acquireReferencedInstance() : (\property_exists($this, 'channel') ? $this->channel->acquireReferencedInstance() : null)), $val);
                                 } else {
                                     $this->client->emit('debug', 'Manual update of '.$key.' in '.\get_class($this).' ('.$count.') required');
                                 }

@@ -152,7 +152,7 @@ class Activity extends ClientBase {
             ) : null);
         $this->state = \CharlotteDunois\Yasmin\Utils\DataHelpers::typecastVariable(($activity['state'] ?? null), 'string');
         
-        $this->assets = (!empty($activity['assets']) ? (new \CharlotteDunois\Yasmin\Models\RichPresenceAssets($this->client, $this, $activity['assets'])) : null);
+        $this->assets = (!empty($activity['assets']) ? (new \CharlotteDunois\Yasmin\Models\RichPresenceAssets($client, $this, $activity['assets'])) : null);
         $this->timestamps = (!empty($activity['timestamps']) ? array(
             'start' => (!empty($activity['timestamps']['start']) ? \CharlotteDunois\Yasmin\Utils\DataHelpers::makeDateTime(((int) (((int) $activity['timestamps']['start']) / 1000))) : null),
             'end' => (!empty($activity['timestamps']['end']) ? \CharlotteDunois\Yasmin\Utils\DataHelpers::makeDateTime(((int) (((int) $activity['timestamps']['end']) / 1000))) : null)

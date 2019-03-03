@@ -186,10 +186,10 @@ class Message extends ClientBase {
      */
     function __construct(\CharlotteDunois\Yasmin\Client $client, \CharlotteDunois\Yasmin\Interfaces\TextChannelInterface $channel, array $message) {
         parent::__construct($client);
-        $this->channel = $channel;
+        $this->channel = \CharlotteDunois\Yasmin\Reference::create($this, 'channel', $channel);
         
         $this->id = $message['id'];
-        $this->author = (empty($message['webhook_id']) ? $this->client->users->patch($message['author']) : new \CharlotteDunois\Yasmin\Models\User($this->client, $message['author'], true));
+        $this->author = \CharlotteDunois\Yasmin\Reference::create($this, 'author', (empty($message['webhook_id']) ? $this->client->users->patch($message['author']) : new \CharlotteDunois\Yasmin\Models\User($client, $message['author'], true)));
         
         $this->createdTimestamp = (int) \CharlotteDunois\Yasmin\Utils\Snowflake::deconstruct($this->id)->timestamp;
         
@@ -204,8 +204,8 @@ class Message extends ClientBase {
             foreach($message['reactions'] as $reaction) {
                 $guild = ($this->channel instanceof \CharlotteDunois\Yasmin\Models\TextChannel ? $this->channel->getGuild() : null);
                 
-                $emoji = ($this->client->emojis->get($reaction['emoji']['id'] ?? $reaction['emoji']['name']) ?? (new \CharlotteDunois\Yasmin\Models\Emoji($this->client, $guild, $reaction['emoji'])));
-                $this->reactions->set($emoji->uid, (new \CharlotteDunois\Yasmin\Models\MessageReaction($this->client, $this, $emoji, $reaction)));
+                $emoji = ($this->client->emojis->get($reaction['emoji']['id'] ?? $reaction['emoji']['name']) ?? (new \CharlotteDunois\Yasmin\Models\Emoji($client, $guild, $reaction['emoji'])));
+                $this->reactions->set($emoji->uid, (new \CharlotteDunois\Yasmin\Models\MessageReaction($client, $this, $emoji, $reaction)));
             }
         }
         
@@ -295,7 +295,7 @@ class Message extends ClientBase {
             return ($this->id === $reaction->message->id && $filter($reaction, $user));
         };
         
-        $collector = new \CharlotteDunois\Yasmin\Utils\Collector($this->client, 'messageReactionAdd', $rhandler, $rfilter, $options);
+        $collector = new \CharlotteDunois\Yasmin\Utils\Collector($this->client->acquireReferencedInstance(), 'messageReactionAdd', $rhandler, $rfilter, $options);
         return $collector->collect();
     }
     
@@ -357,7 +357,7 @@ class Message extends ClientBase {
         
         return (new \React\Promise\Promise(function (callable $resolve, callable $reject) {
             $this->client->apimanager()->endpoints->webhook->getWebhook($this->webhookID)->done(function ($data) use ($resolve) {
-                $webhook = new \CharlotteDunois\Yasmin\Models\Webhook($this->client, $data);
+                $webhook = new \CharlotteDunois\Yasmin\Models\Webhook($this->client->acquireReferencedInstance(), $data);
                 $resolve($webhook);
             }, $reject);
         }));
@@ -477,13 +477,13 @@ class Message extends ClientBase {
             if(!$emoji) {
                 $guild = ($this->channel instanceof \CharlotteDunois\Yasmin\Interfaces\GuildChannelInterface ? $this->channel->getGuild() : null);
                 
-                $emoji = new \CharlotteDunois\Yasmin\Models\Emoji($this->client, $guild, $data['emoji']);
+                $emoji = new \CharlotteDunois\Yasmin\Models\Emoji($this->client->acquireReferencedInstance(), $guild, $data['emoji']);
                 if($guild) {
                     $guild->emojis->set($id, $emoji);
                 }
             }
             
-            $reaction = new \CharlotteDunois\Yasmin\Models\MessageReaction($this->client, $this, $emoji, array(
+            $reaction = new \CharlotteDunois\Yasmin\Models\MessageReaction($this->client->acquireReferencedInstance(), $this, $emoji, array(
                 'count' => 0,
                 'me' => ((bool) ($this->client->user->id === $data['user_id'])),
                 'emoji' => $emoji
@@ -515,8 +515,8 @@ class Message extends ClientBase {
         $this->system = (isset($message['type']) ? ($message['type'] > 0) : $this->system);
         $this->type = (isset($message['type']) ? self::MESSAGE_TYPES[$message['type']] : $this->type);
         $this->webhookID = \CharlotteDunois\Yasmin\Utils\DataHelpers::typecastVariable(($message['webhook_id'] ?? $this->webhookID), 'string');
-        $this->activity = (!empty($message['activity']) ? (new \CharlotteDunois\Yasmin\Models\MessageActivity($this->client, $message['activity'])) : $this->activity);
-        $this->application = (!empty($message['application']) ? (new \CharlotteDunois\Yasmin\Models\MessageApplication($this->client, $message['application'])) : $this->application);
+        $this->activity = (!empty($message['activity']) ? (new \CharlotteDunois\Yasmin\Models\MessageActivity($this->client->acquireReferencedInstance(), $message['activity'])) : $this->activity);
+        $this->application = (!empty($message['application']) ? (new \CharlotteDunois\Yasmin\Models\MessageApplication($this->client->acquireReferencedInstance(), $message['application'])) : $this->application);
         
         if(isset($message['embeds'])) {
             $this->embeds = array();
@@ -525,7 +525,7 @@ class Message extends ClientBase {
             }
         }
         
-        $this->mentions = new \CharlotteDunois\Yasmin\Models\MessageMentions($this->client, $this, $message);
+        $this->mentions = new \CharlotteDunois\Yasmin\Models\MessageMentions($this->client->acquireReferencedInstance(), $this, $message);
         $this->cleanContent = \CharlotteDunois\Yasmin\Utils\MessageHelpers::cleanContent($this, $this->content);
         
         if(!empty($message['member']) && $this->guild !== null && !$this->guild->members->has($this->author->id)) {

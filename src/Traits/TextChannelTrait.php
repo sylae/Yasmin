@@ -134,7 +134,7 @@ trait TextChannelTrait {
             return ($message->channel->getId() === $this->id && $filter($message));
         };
         
-        $collector = new \CharlotteDunois\Yasmin\Utils\Collector($this->client, 'message', $mhandler, $mfilter, $options);
+        $collector = new \CharlotteDunois\Yasmin\Utils\Collector($this->client->acquireReferencedInstance(), 'message', $mhandler, $mfilter, $options);
         return $collector->collect();
     }
     
@@ -390,7 +390,7 @@ trait TextChannelTrait {
             return $this->messages->get($message['id']);
         }
         
-        $msg = new \CharlotteDunois\Yasmin\Models\Message($this->client, $this, $message);
+        $msg = new \CharlotteDunois\Yasmin\Models\Message($this->client->acquireReferencedInstance(), $this, $message);
         $this->messages->set($msg->id, $msg);
         return $msg;
     }
@@ -408,7 +408,7 @@ trait TextChannelTrait {
         }
         
         $typing = $this->typings->get($user->id);
-        if($typing && ($typing['timer'] instanceof \React\EventLoop\Timer\TimerInterface || $typing['timer'] instanceof \React\EventLoop\TimerInterface)) {
+        if($typing && ($typing['timer'] instanceof \React\EventLoop\TimerInterface)) {
             $this->client->cancelTimer($typing['timer']);
         }
         

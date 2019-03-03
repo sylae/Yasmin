@@ -84,8 +84,8 @@ class Emoji extends ClientBase {
         $this->id = \CharlotteDunois\Yasmin\Utils\DataHelpers::typecastVariable(($emoji['id'] ?? null), 'string');
         $this->createdTimestamp = ($this->id ? ((int) \CharlotteDunois\Yasmin\Utils\Snowflake::deconstruct($this->id)->timestamp) : null);
         
-        $this->guild = ($this->id ? $guild : null);
-        $this->roles = new \CharlotteDunois\Collect\Collection();
+        $this->guild = ($this->id ? \CharlotteDunois\Yasmin\Reference::create($this, 'guild', $guild) : null);
+        $this->roles = \CharlotteDunois\Yasmin\Reference::create($this, 'roles', (new \CharlotteDunois\Collect\Collection()));
         
         $this->_patch($emoji);
     }

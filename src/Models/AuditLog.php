@@ -47,7 +47,7 @@ class AuditLog extends ClientBase {
      */
     function __construct(\CharlotteDunois\Yasmin\Client $client, \CharlotteDunois\Yasmin\Models\Guild $guild, array $audit) {
         parent::__construct($client);
-        $this->guild = $guild;
+        $this->guild = \CharlotteDunois\Yasmin\Reference::create($this, 'guild', $guild);
         
         $this->entries = new \CharlotteDunois\Collect\Collection();
         $this->users = new \CharlotteDunois\Collect\Collection();
@@ -59,12 +59,12 @@ class AuditLog extends ClientBase {
         }
         
         foreach($audit['webhooks'] as $webhook) {
-            $hook = new \CharlotteDunois\Yasmin\Models\Webhook($this->client, $webhook);
+            $hook = new \CharlotteDunois\Yasmin\Models\Webhook($client, $webhook);
             $this->webhooks->set($hook->id, $hook);
         }
         
         foreach($audit['audit_log_entries'] as $entry) {
-            $log = new \CharlotteDunois\Yasmin\Models\AuditLogEntry($this->client, $this, $entry);
+            $log = new \CharlotteDunois\Yasmin\Models\AuditLogEntry($client, $this, $entry);
             $this->entries->set($log->id, $log);
         }
     }
