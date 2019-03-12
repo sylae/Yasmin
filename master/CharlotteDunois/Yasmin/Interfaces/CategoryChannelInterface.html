@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="robots" content="index, follow, all" />
-    <title>CharlotteDunois\Yasmin\Models\VoiceChannel | Yasmin</title>
+    <title>CharlotteDunois\Yasmin\Interfaces\CategoryChannelInterface | Yasmin</title>
 
             <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
@@ -21,7 +21,7 @@
     
     </head>
 
-    <body id="class" data-name="class:CharlotteDunois_Yasmin_Models_VoiceChannel" data-root-path="../../../">
+    <body id="class" data-name="class:CharlotteDunois_Yasmin_Interfaces_CategoryChannelInterface" data-root-path="../../../">
             <div id="content">
         <div id="left-column">
                 <div id="control-panel">
@@ -74,188 +74,55 @@
 
                         <div class="namespace-breadcrumbs">
             <ol class="breadcrumb">
-                <li><span class="label label-default">class</span></li>
-                        <li><a href="../../../CharlotteDunois.html">CharlotteDunois</a></li><li class="backslash">\</li><li><a href="../../../CharlotteDunois/Yasmin.html">Yasmin</a></li><li class="backslash">\</li><li><a href="../../../CharlotteDunois/Yasmin/Models.html">Models</a></li><li class="backslash">\</li><li>VoiceChannel</li>
+                <li><span class="label label-default">interface</span></li>
+                        <li><a href="../../../CharlotteDunois.html">CharlotteDunois</a></li><li class="backslash">\</li><li><a href="../../../CharlotteDunois/Yasmin.html">Yasmin</a></li><li class="backslash">\</li><li><a href="../../../CharlotteDunois/Yasmin/Interfaces.html">Interfaces</a></li><li class="backslash">\</li><li>CategoryChannelInterface</li>
             </ol>
         </div>
                 <div id="page-content">
                 
     <div class="page-header">
         <h1>
-            VoiceChannel
+            CategoryChannelInterface
                 
         </h1>
     </div>
 
-    <p>    class
-    <strong>VoiceChannel</strong>        extends <a href="../../../CharlotteDunois/Yasmin/Models/ClientBase.html"><abbr title="CharlotteDunois\Yasmin\Models\ClientBase">ClientBase</abbr></a>        implements
-        <a href="../../../CharlotteDunois/Yasmin/Interfaces/GuildChannelInterface.html"><abbr title="CharlotteDunois\Yasmin\Interfaces\GuildChannelInterface">GuildChannelInterface</abbr></a>, <a href="../../../CharlotteDunois/Yasmin/Interfaces/VoiceChannelInterface.html"><abbr title="CharlotteDunois\Yasmin\Interfaces\VoiceChannelInterface">VoiceChannelInterface</abbr></a>        (<a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/VoiceChannel.php" target="_blank">View source</a>)
+    <p>    interface
+    <strong>CategoryChannelInterface</strong>        implements
+        <a href="../../../CharlotteDunois/Yasmin/Interfaces/GuildChannelInterface.html"><abbr title="CharlotteDunois\Yasmin\Interfaces\GuildChannelInterface">GuildChannelInterface</abbr></a>        (<a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/CategoryChannelInterface.php" target="_blank">View source</a>)
 </p>
 
         
     
 
             <div class="description">
-            <p>Represents a guild's voice channel.</p>                                </div>
-    
-            <h2>Traits</h2>
-
-        
-    <div class="container-fluid underlined">
-                    <div class="row">
-                <div class="col-md-6">
-                                            <a href="../../../CharlotteDunois/Yasmin/Traits/GuildChannelTrait.html"><abbr title="CharlotteDunois\Yasmin\Traits\GuildChannelTrait">GuildChannelTrait</abbr></a>
-                                            
-                </div>
-                <div class="col-md-6">
-                    The trait all guild channels use.
-                </div>
-            </div>
-            </div>
+            <p>Something all category channels implement.</p>                                </div>
     
     
-            <h2>Properties</h2>
-
-            <table class="table table-condensed">
-                    <tr>
-                <td class="type" id="property_bitrate">
-                                                                                int
-                </td>
-                <td><a name="property_bitrate" href="#property_bitrate">$bitrate</a></td>
-                <td class="last">The bitrate of the channel.</td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type" id="property_client">
-                                                                                <a href="../../../CharlotteDunois/Yasmin/Client.html"><abbr title="CharlotteDunois\Yasmin\Client">Client</abbr></a>
-                </td>
-                <td><a name="property_client" href="#property_client">$client</a></td>
-                <td class="last">The client which initiated the instance.</td>
-                <td><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Models/ClientBase.html#property_client"><abbr title="CharlotteDunois\Yasmin\Models\ClientBase">ClientBase</abbr></a></small></td>
-            </tr>
-                    <tr>
-                <td class="type" id="property_createdTimestamp">
-                                                                                int
-                </td>
-                <td><a name="property_createdTimestamp" href="#property_createdTimestamp">$createdTimestamp</a></td>
-                <td class="last">The timestamp of when this channel was created.</td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type" id="property_full">
-                                                                                bool
-                </td>
-                <td><a name="property_full" href="#property_full">$full</a></td>
-                <td class="last">Checks if the voice channel is full.</td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type" id="property_guild">
-                                                                                <a href="../../../CharlotteDunois/Yasmin/Models/Guild.html"><abbr title="CharlotteDunois\Yasmin\Models\Guild">Guild</abbr></a>
-                </td>
-                <td><a name="property_guild" href="#property_guild">$guild</a></td>
-                <td class="last">The guild the channel is in.</td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type" id="property_id">
-                                                                                string
-                </td>
-                <td><a name="property_id" href="#property_id">$id</a></td>
-                <td class="last">The ID of the channel.</td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type" id="property_members">
-                                                                                <abbr title="CharlotteDunois\Collect\Collection">Collection</abbr>
-                </td>
-                <td><a name="property_members" href="#property_members">$members</a></td>
-                <td class="last">Holds all members which currently are in the voice channel. (see \CharlotteDunois\Yasmin\Models\GuildMember)</td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type" id="property_name">
-                                                                                string
-                </td>
-                <td><a name="property_name" href="#property_name">$name</a></td>
-                <td class="last">The name of the channel.</td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type" id="property_parent">
-                                                                                <a href="../../../CharlotteDunois/Yasmin/Models/CategoryChannel.html"><abbr title="CharlotteDunois\Yasmin\Models\CategoryChannel">CategoryChannel</abbr></a>|null
-                </td>
-                <td><a name="property_parent" href="#property_parent">$parent</a></td>
-                <td class="last">Returns the channel's parent, or null.</td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type" id="property_parentID">
-                                                                                string|null
-                </td>
-                <td><a name="property_parentID" href="#property_parentID">$parentID</a></td>
-                <td class="last">The ID of the parent channel, or null.</td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type" id="property_permissionOverwrites">
-                                                                                <abbr title="CharlotteDunois\Collect\Collection">Collection</abbr>
-                </td>
-                <td><a name="property_permissionOverwrites" href="#property_permissionOverwrites">$permissionOverwrites</a></td>
-                <td class="last">A collection of PermissionOverwrite instances, mapped by their ID.</td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type" id="property_position">
-                                                                                int
-                </td>
-                <td><a name="property_position" href="#property_position">$position</a></td>
-                <td class="last">The position of the channel.</td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type" id="property_userLimit">
-                                                                                int
-                </td>
-                <td><a name="property_userLimit" href="#property_userLimit">$userLimit</a></td>
-                <td class="last">The maximum amount of users allowed in the channel - 0 means unlimited.</td>
-                <td></td>
-            </tr>
-            </table>
-
+    
     
             <h2>Methods</h2>
 
             <div class="container-fluid underlined">
                     <div class="row">
                 <div class="col-md-2 type">
-                    string
+                    
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method___toString">__toString</a>()
+                    <a href="#method__patch">_patch</a>(array $data)
         
-                                            <p>Automatically converts to the name.</p>                </div>
-                <div class="col-md-2"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    bool
-                </div>
-                <div class="col-md-8 type">
-                    <a href="#method_canSpeak">canSpeak</a>()
-        
-                                            <p>Whether the client user can speak in this channel.</p>                </div>
-                <div class="col-md-2"></div>
+                                            <p>Internally patches the instance.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Interfaces/ChannelInterface.html#method__patch"><abbr title="CharlotteDunois\Yasmin\Interfaces\ChannelInterface">ChannelInterface</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_clone">clone</a>(string $name = null, bool $withPermissions = true, bool $withTopic = true, string $reason = &#039;&#039;)
+                    <a href="#method_clone">clone</a>(string|null $name = null, bool $withPermissions = true, bool $withTopic = true, string $reason = &#039;&#039;)
         
                                             <p>Clones a guild channel. Resolves with an instance of GuildChannelInterface.</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Traits/GuildChannelTrait.html#method_clone"><abbr title="CharlotteDunois\Yasmin\Traits\GuildChannelTrait">GuildChannelTrait</abbr></a></small></div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Interfaces/GuildChannelInterface.html#method_clone"><abbr title="CharlotteDunois\Yasmin\Interfaces\GuildChannelInterface">GuildChannelInterface</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -265,7 +132,7 @@
                     <a href="#method_createInvite">createInvite</a>(array $options = array())
         
                                             <p>Creates an invite. Resolves with an instance of Invite.</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Traits/GuildChannelTrait.html#method_createInvite"><abbr title="CharlotteDunois\Yasmin\Traits\GuildChannelTrait">GuildChannelTrait</abbr></a></small></div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Interfaces/GuildChannelInterface.html#method_createInvite"><abbr title="CharlotteDunois\Yasmin\Interfaces\GuildChannelInterface">GuildChannelInterface</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -275,7 +142,7 @@
                     <a href="#method_delete">delete</a>(string $reason = &#039;&#039;)
         
                                             <p>Deletes the channel.</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Traits/GuildChannelTrait.html#method_delete"><abbr title="CharlotteDunois\Yasmin\Traits\GuildChannelTrait">GuildChannelTrait</abbr></a></small></div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Interfaces/GuildChannelInterface.html#method_delete"><abbr title="CharlotteDunois\Yasmin\Interfaces\GuildChannelInterface">GuildChannelInterface</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -285,7 +152,7 @@
                     <a href="#method_edit">edit</a>(array $options, string $reason = &#039;&#039;)
         
                                             <p>Edits the channel. Resolves with $this.</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Traits/GuildChannelTrait.html#method_edit"><abbr title="CharlotteDunois\Yasmin\Traits\GuildChannelTrait">GuildChannelTrait</abbr></a></small></div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Interfaces/GuildChannelInterface.html#method_edit"><abbr title="CharlotteDunois\Yasmin\Interfaces\GuildChannelInterface">GuildChannelInterface</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -295,17 +162,87 @@
                     <a href="#method_fetchInvites">fetchInvites</a>()
         
                                             <p>Fetches all invites of this channel. Resolves with a Collection of Invite instances, mapped by their code.</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Traits/GuildChannelTrait.html#method_fetchInvites"><abbr title="CharlotteDunois\Yasmin\Traits\GuildChannelTrait">GuildChannelTrait</abbr></a></small></div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Interfaces/GuildChannelInterface.html#method_fetchInvites"><abbr title="CharlotteDunois\Yasmin\Interfaces\GuildChannelInterface">GuildChannelInterface</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    bool
+                    int
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_isPermissionsLocked">isPermissionsLocked</a>()
+                    <a href="#method_getCreatedTimestamp">getCreatedTimestamp</a>()
         
-                                            <p>Whether the permission overwrites match the parent channel (permissions synced).</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Traits/GuildChannelTrait.html#method_isPermissionsLocked"><abbr title="CharlotteDunois\Yasmin\Traits\GuildChannelTrait">GuildChannelTrait</abbr></a></small></div>
+                                            <p>Gets the timestamp of when this channel was created.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Interfaces/ChannelInterface.html#method_getCreatedTimestamp"><abbr title="CharlotteDunois\Yasmin\Interfaces\ChannelInterface">ChannelInterface</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../CharlotteDunois/Yasmin/Models/Guild.html"><abbr title="CharlotteDunois\Yasmin\Models\Guild">Guild</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getGuild">getGuild</a>()
+        
+                                            <p>Gets the associated guild.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Interfaces/GuildChannelInterface.html#method_getGuild"><abbr title="CharlotteDunois\Yasmin\Interfaces\GuildChannelInterface">GuildChannelInterface</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getId">getId</a>()
+        
+                                            <p>Gets the channel's ID.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Interfaces/ChannelInterface.html#method_getId"><abbr title="CharlotteDunois\Yasmin\Interfaces\ChannelInterface">ChannelInterface</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getName">getName</a>()
+        
+                                            <p>Gets the channel's name.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Interfaces/GuildChannelInterface.html#method_getName"><abbr title="CharlotteDunois\Yasmin\Interfaces\GuildChannelInterface">GuildChannelInterface</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="CharlotteDunois\Yasmin\Models\CategoryChannel|null">CategoryChannel|null</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getParent">getParent</a>()
+        
+                                            <p>Gets the channel's parent, or null.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Interfaces/GuildChannelInterface.html#method_getParent"><abbr title="CharlotteDunois\Yasmin\Interfaces\GuildChannelInterface">GuildChannelInterface</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="CharlotteDunois\Collect\Collection">Collection</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getPermissionOverwrites">getPermissionOverwrites</a>()
+        
+                                            <p>Gets the channel's permission overwrites.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Interfaces/GuildChannelInterface.html#method_getPermissionOverwrites"><abbr title="CharlotteDunois\Yasmin\Interfaces\GuildChannelInterface">GuildChannelInterface</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getPosition">getPosition</a>()
+        
+                                            <p>Gets the channel's position.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Interfaces/GuildChannelInterface.html#method_getPosition"><abbr title="CharlotteDunois\Yasmin\Interfaces\GuildChannelInterface">GuildChannelInterface</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getType">getType</a>()
+        
+                                            <p>Gets the channel type. (see \CharlotteDunois\Yasmin\Models\ChannelStorage::CHANNEL_TYPES)</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Interfaces/ChannelInterface.html#method_getType"><abbr title="CharlotteDunois\Yasmin\Interfaces\ChannelInterface">ChannelInterface</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -315,7 +252,7 @@
                     <a href="#method_lockPermissions">lockPermissions</a>(string $reason = &#039;&#039;)
         
                                             <p>Locks in the permission overwrites from the parent channel. Resolves with $this.</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Traits/GuildChannelTrait.html#method_lockPermissions"><abbr title="CharlotteDunois\Yasmin\Traits\GuildChannelTrait">GuildChannelTrait</abbr></a></small></div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Interfaces/GuildChannelInterface.html#method_lockPermissions"><abbr title="CharlotteDunois\Yasmin\Interfaces\GuildChannelInterface">GuildChannelInterface</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -325,7 +262,7 @@
                     <a href="#method_overwritePermissions">overwritePermissions</a>(<a href="../../../CharlotteDunois/Yasmin/Models/GuildMember.html"><abbr title="CharlotteDunois\Yasmin\Models\GuildMember">GuildMember</abbr></a>|<a href="../../../CharlotteDunois/Yasmin/Models/Role.html"><abbr title="CharlotteDunois\Yasmin\Models\Role">Role</abbr></a>|string $memberOrRole, <a href="../../../CharlotteDunois/Yasmin/Models/Permissions.html"><abbr title="CharlotteDunois\Yasmin\Models\Permissions">Permissions</abbr></a>|int $allow, <a href="../../../CharlotteDunois/Yasmin/Models/Permissions.html"><abbr title="CharlotteDunois\Yasmin\Models\Permissions">Permissions</abbr></a>|int $deny = 0, string $reason = &#039;&#039;)
         
                                             <p>Overwrites the permissions for a member or role in this channel. Resolves with an instance of PermissionOverwrite.</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Traits/GuildChannelTrait.html#method_overwritePermissions"><abbr title="CharlotteDunois\Yasmin\Traits\GuildChannelTrait">GuildChannelTrait</abbr></a></small></div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Interfaces/GuildChannelInterface.html#method_overwritePermissions"><abbr title="CharlotteDunois\Yasmin\Interfaces\GuildChannelInterface">GuildChannelInterface</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -334,8 +271,8 @@
                 <div class="col-md-8 type">
                     <a href="#method_overwritesFor">overwritesFor</a>(<a href="../../../CharlotteDunois/Yasmin/Models/GuildMember.html"><abbr title="CharlotteDunois\Yasmin\Models\GuildMember">GuildMember</abbr></a>|string $member)
         
-                                            <p>Returns the permissions overwrites for the given member as an associative array.</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Traits/GuildChannelTrait.html#method_overwritesFor"><abbr title="CharlotteDunois\Yasmin\Traits\GuildChannelTrait">GuildChannelTrait</abbr></a></small></div>
+                                            <p>Returns the permissions overwrites for the given member.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Interfaces/GuildChannelInterface.html#method_overwritesFor"><abbr title="CharlotteDunois\Yasmin\Interfaces\GuildChannelInterface">GuildChannelInterface</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -345,17 +282,7 @@
                     <a href="#method_permissionsFor">permissionsFor</a>(<a href="../../../CharlotteDunois/Yasmin/Models/GuildMember.html"><abbr title="CharlotteDunois\Yasmin\Models\GuildMember">GuildMember</abbr></a>|string $member)
         
                                             <p>Returns the permissions for the given member.</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Traits/GuildChannelTrait.html#method_permissionsFor"><abbr title="CharlotteDunois\Yasmin\Traits\GuildChannelTrait">GuildChannelTrait</abbr></a></small></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
-                </div>
-                <div class="col-md-8 type">
-                    <a href="#method_setBitrate">setBitrate</a>(int $bitrate, string $reason = &#039;&#039;)
-        
-                                            <p>Sets the bitrate of the channel. Resolves with $this.</p>                </div>
-                <div class="col-md-2"></div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Interfaces/GuildChannelInterface.html#method_permissionsFor"><abbr title="CharlotteDunois\Yasmin\Interfaces\GuildChannelInterface">GuildChannelInterface</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -365,7 +292,7 @@
                     <a href="#method_setNSFW">setNSFW</a>(bool $nsfw, string $reason = &#039;&#039;)
         
                                             <p>Sets the nsfw flag of the channel. Resolves with $this.</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Traits/GuildChannelTrait.html#method_setNSFW"><abbr title="CharlotteDunois\Yasmin\Traits\GuildChannelTrait">GuildChannelTrait</abbr></a></small></div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Interfaces/GuildChannelInterface.html#method_setNSFW"><abbr title="CharlotteDunois\Yasmin\Interfaces\GuildChannelInterface">GuildChannelInterface</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -375,7 +302,7 @@
                     <a href="#method_setName">setName</a>(string $name, string $reason = &#039;&#039;)
         
                                             <p>Sets the name of the channel. Resolves with $this.</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Traits/GuildChannelTrait.html#method_setName"><abbr title="CharlotteDunois\Yasmin\Traits\GuildChannelTrait">GuildChannelTrait</abbr></a></small></div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Interfaces/GuildChannelInterface.html#method_setName"><abbr title="CharlotteDunois\Yasmin\Interfaces\GuildChannelInterface">GuildChannelInterface</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -385,7 +312,7 @@
                     <a href="#method_setParent">setParent</a>(<a href="../../../CharlotteDunois/Yasmin/Models/CategoryChannel.html"><abbr title="CharlotteDunois\Yasmin\Models\CategoryChannel">CategoryChannel</abbr></a>|string $parent, string $reason = &#039;&#039;)
         
                                             <p>Sets the parent of the channel. Resolves with $this.</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Traits/GuildChannelTrait.html#method_setParent"><abbr title="CharlotteDunois\Yasmin\Traits\GuildChannelTrait">GuildChannelTrait</abbr></a></small></div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Interfaces/GuildChannelInterface.html#method_setParent"><abbr title="CharlotteDunois\Yasmin\Interfaces\GuildChannelInterface">GuildChannelInterface</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -395,7 +322,7 @@
                     <a href="#method_setPermissionOverwrites">setPermissionOverwrites</a>(<abbr title="CharlotteDunois\Collect\Collection">Collection</abbr>|array $permissionOverwrites, string $reason = &#039;&#039;)
         
                                             <p>Sets the permission overwrites of the channel. Resolves with $this.</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Traits/GuildChannelTrait.html#method_setPermissionOverwrites"><abbr title="CharlotteDunois\Yasmin\Traits\GuildChannelTrait">GuildChannelTrait</abbr></a></small></div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Interfaces/GuildChannelInterface.html#method_setPermissionOverwrites"><abbr title="CharlotteDunois\Yasmin\Interfaces\GuildChannelInterface">GuildChannelInterface</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -405,7 +332,7 @@
                     <a href="#method_setPosition">setPosition</a>(int $position, string $reason = &#039;&#039;)
         
                                             <p>Sets the position of the channel. Resolves with $this.</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Traits/GuildChannelTrait.html#method_setPosition"><abbr title="CharlotteDunois\Yasmin\Traits\GuildChannelTrait">GuildChannelTrait</abbr></a></small></div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Interfaces/GuildChannelInterface.html#method_setPosition"><abbr title="CharlotteDunois\Yasmin\Interfaces\GuildChannelInterface">GuildChannelInterface</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -415,17 +342,7 @@
                     <a href="#method_setTopic">setTopic</a>(string $topic, string $reason = &#039;&#039;)
         
                                             <p>Sets the topic of the channel. Resolves with $this.</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Traits/GuildChannelTrait.html#method_setTopic"><abbr title="CharlotteDunois\Yasmin\Traits\GuildChannelTrait">GuildChannelTrait</abbr></a></small></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
-                </div>
-                <div class="col-md-8 type">
-                    <a href="#method_setUserLimit">setUserLimit</a>(int $userLimit, string $reason = &#039;&#039;)
-        
-                                            <p>Sets the user limit of the channel. Resolves with $this.</p>                </div>
-                <div class="col-md-2"></div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Interfaces/GuildChannelInterface.html#method_setTopic"><abbr title="CharlotteDunois\Yasmin\Interfaces\GuildChannelInterface">GuildChannelInterface</abbr></a></small></div>
             </div>
             </div>
 
@@ -434,10 +351,10 @@
 
             <div id="method-details">
                     <div class="method-item">
-                    <h3 id="method___toString">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/VoiceChannel.php#L167">line 167</a></div>
-        <code>                    string
-    <strong>__toString</strong>()
+                    <h3 id="method__patch">
+        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Interfaces/ChannelInterface.html#method__patch"><abbr title="CharlotteDunois\Yasmin\Interfaces\ChannelInterface">ChannelInterface</abbr></a> at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/ChannelInterface.php#L23">line 23</a></div>
+        <code>                    
+    <strong>_patch</strong>(array $data)
         </code>
     </h3>
     <div class="details">
@@ -445,50 +362,19 @@
     
 
                     <div class="method-description">
-                                    <p>Automatically converts to the name.</p>                                                </div>
+                                    <p>Internally patches the instance.</p>                                                </div>
                 <div class="tags">
-            
-                            <h4>Return Value</h4>
+                            <h4>Parameters</h4>
 
                     <table class="table table-condensed">
-        <tr>
-            <td>string</td>
-            <td></td>
-        </tr>
-    </table>
+                    <tr>
+                <td>array</td>
+                <td>$data</td>
+                <td></td>
+            </tr>
+            </table>
 
             
-            
-                        
-                        
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_canSpeak">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/VoiceChannel.php#L137">line 137</a></div>
-        <code>                    bool
-    <strong>canSpeak</strong>()
-        </code>
-    </h3>
-    <div class="details">
-            
-    
-
-                    <div class="method-description">
-                                    <p>Whether the client user can speak in this channel.</p>                                                </div>
-                <div class="tags">
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td>bool</td>
-            <td></td>
-        </tr>
-    </table>
-
             
             
                         
@@ -499,9 +385,9 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_clone">
-        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Traits/GuildChannelTrait.html#method_clone"><abbr title="CharlotteDunois\Yasmin\Traits\GuildChannelTrait">GuildChannelTrait</abbr></a> at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Traits/GuildChannelTrait.php#L62">line 62</a></div>
+        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Interfaces/GuildChannelInterface.html#method_clone"><abbr title="CharlotteDunois\Yasmin\Interfaces\GuildChannelInterface">GuildChannelInterface</abbr></a> at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/GuildChannelInterface.php#L49">line 49</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
-    <strong>clone</strong>(string $name = null, bool $withPermissions = true, bool $withTopic = true, string $reason = &#039;&#039;)
+    <strong>clone</strong>(string|null $name = null, bool $withPermissions = true, bool $withTopic = true, string $reason = &#039;&#039;)
         </code>
     </h3>
     <div class="details">
@@ -515,19 +401,19 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td>string</td>
+                <td>string|null</td>
                 <td>$name</td>
-                <td>Optional name for the new channel, otherwise it has the name of this channel.</td>
+                <td></td>
             </tr>
                     <tr>
                 <td>bool</td>
                 <td>$withPermissions</td>
-                <td>Whether to clone the channel with this channel's permission overwrites</td>
+                <td></td>
             </tr>
                     <tr>
                 <td>bool</td>
                 <td>$withTopic</td>
-                <td>Whether to clone the channel with this channel's topic.</td>
+                <td></td>
             </tr>
                     <tr>
                 <td>string</td>
@@ -548,17 +434,6 @@
 
             
             
-                            <h4>See also</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td>
-                                            <a href="../../../CharlotteDunois/Yasmin/Interfaces/GuildChannelInterface.html"><abbr title="CharlotteDunois\Yasmin\Interfaces\GuildChannelInterface">GuildChannelInterface</abbr></a>
-                                    </td>
-                <td></td>
-            </tr>
-            </table>
-
                         
                         
                     </div>
@@ -567,7 +442,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_createInvite">
-        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Traits/GuildChannelTrait.html#method_createInvite"><abbr title="CharlotteDunois\Yasmin\Traits\GuildChannelTrait">GuildChannelTrait</abbr></a> at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Traits/GuildChannelTrait.php#L34">line 34</a></div>
+        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Interfaces/GuildChannelInterface.html#method_createInvite"><abbr title="CharlotteDunois\Yasmin\Interfaces\GuildChannelInterface">GuildChannelInterface</abbr></a> at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/GuildChannelInterface.php#L39">line 39</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>createInvite</strong>(array $options = array())
         </code>
@@ -610,17 +485,6 @@
 
             
             
-                            <h4>See also</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td>
-                                            <a href="../../../CharlotteDunois/Yasmin/Models/Invite.html"><abbr title="CharlotteDunois\Yasmin\Models\Invite">Invite</abbr></a>
-                                    </td>
-                <td></td>
-            </tr>
-            </table>
-
                         
                         
                     </div>
@@ -629,7 +493,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_delete">
-        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Traits/GuildChannelTrait.html#method_delete"><abbr title="CharlotteDunois\Yasmin\Traits\GuildChannelTrait">GuildChannelTrait</abbr></a> at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Traits/GuildChannelTrait.php#L156">line 156</a></div>
+        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Interfaces/GuildChannelInterface.html#method_delete"><abbr title="CharlotteDunois\Yasmin\Interfaces\GuildChannelInterface">GuildChannelInterface</abbr></a> at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/GuildChannelInterface.php#L82">line 82</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>delete</strong>(string $reason = &#039;&#039;)
         </code>
@@ -671,7 +535,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_edit">
-        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Traits/GuildChannelTrait.html#method_edit"><abbr title="CharlotteDunois\Yasmin\Traits\GuildChannelTrait">GuildChannelTrait</abbr></a> at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Traits/GuildChannelTrait.php#L119">line 119</a></div>
+        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Interfaces/GuildChannelInterface.html#method_edit"><abbr title="CharlotteDunois\Yasmin\Interfaces\GuildChannelInterface">GuildChannelInterface</abbr></a> at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/GuildChannelInterface.php#L75">line 75</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>edit</strong>(array $options, string $reason = &#039;&#039;)
         </code>
@@ -741,7 +605,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_fetchInvites">
-        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Traits/GuildChannelTrait.html#method_fetchInvites"><abbr title="CharlotteDunois\Yasmin\Traits\GuildChannelTrait">GuildChannelTrait</abbr></a> at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Traits/GuildChannelTrait.php#L169">line 169</a></div>
+        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Interfaces/GuildChannelInterface.html#method_fetchInvites"><abbr title="CharlotteDunois\Yasmin\Interfaces\GuildChannelInterface">GuildChannelInterface</abbr></a> at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/GuildChannelInterface.php#L89">line 89</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>fetchInvites</strong>()
         </code>
@@ -783,10 +647,10 @@
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_isPermissionsLocked">
-        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Traits/GuildChannelTrait.html#method_isPermissionsLocked"><abbr title="CharlotteDunois\Yasmin\Traits\GuildChannelTrait">GuildChannelTrait</abbr></a> at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Traits/GuildChannelTrait.php#L189">line 189</a></div>
-        <code>                    bool
-    <strong>isPermissionsLocked</strong>()
+                    <h3 id="method_getCreatedTimestamp">
+        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Interfaces/ChannelInterface.html#method_getCreatedTimestamp"><abbr title="CharlotteDunois\Yasmin\Interfaces\ChannelInterface">ChannelInterface</abbr></a> at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/ChannelInterface.php#L19">line 19</a></div>
+        <code>                    int
+    <strong>getCreatedTimestamp</strong>()
         </code>
     </h3>
     <div class="details">
@@ -794,28 +658,243 @@
     
 
                     <div class="method-description">
-                                    <p>Whether the permission overwrites match the parent channel (permissions synced).</p>                                                </div>
+                                    <p>Gets the timestamp of when this channel was created.</p>                                                </div>
                 <div class="tags">
             
                             <h4>Return Value</h4>
 
                     <table class="table table-condensed">
         <tr>
-            <td>bool</td>
+            <td>int</td>
             <td></td>
         </tr>
     </table>
 
             
-                            <h4>Exceptions</h4>
+            
+                        
+                        
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getGuild">
+        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Interfaces/GuildChannelInterface.html#method_getGuild"><abbr title="CharlotteDunois\Yasmin\Interfaces\GuildChannelInterface">GuildChannelInterface</abbr></a> at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/GuildChannelInterface.php#L21">line 21</a></div>
+        <code>                    <a href="../../../CharlotteDunois/Yasmin/Models/Guild.html"><abbr title="CharlotteDunois\Yasmin\Models\Guild">Guild</abbr></a>
+    <strong>getGuild</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Gets the associated guild.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
 
                     <table class="table table-condensed">
-                    <tr>
-                <td><a href="https://secure.php.net/BadMethodCallException" target="_blank">BadMethodCallException</a></td>
-                <td></td>
-            </tr>
-            </table>
+        <tr>
+            <td><a href="../../../CharlotteDunois/Yasmin/Models/Guild.html"><abbr title="CharlotteDunois\Yasmin\Models\Guild">Guild</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
 
+            
+            
+                        
+                        
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getId">
+        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Interfaces/ChannelInterface.html#method_getId"><abbr title="CharlotteDunois\Yasmin\Interfaces\ChannelInterface">ChannelInterface</abbr></a> at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/ChannelInterface.php#L19">line 19</a></div>
+        <code>                    string
+    <strong>getId</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Gets the channel's ID.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                        
+                        
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getName">
+        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Interfaces/GuildChannelInterface.html#method_getName"><abbr title="CharlotteDunois\Yasmin\Interfaces\GuildChannelInterface">GuildChannelInterface</abbr></a> at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/GuildChannelInterface.php#L21">line 21</a></div>
+        <code>                    string
+    <strong>getName</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Gets the channel's name.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                        
+                        
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getParent">
+        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Interfaces/GuildChannelInterface.html#method_getParent"><abbr title="CharlotteDunois\Yasmin\Interfaces\GuildChannelInterface">GuildChannelInterface</abbr></a> at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/GuildChannelInterface.php#L21">line 21</a></div>
+        <code>                    <abbr title="CharlotteDunois\Yasmin\Models\CategoryChannel|null">CategoryChannel|null</abbr>
+    <strong>getParent</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Gets the channel's parent, or null.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="CharlotteDunois\Yasmin\Models\CategoryChannel|null">CategoryChannel|null</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                        
+                        
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPermissionOverwrites">
+        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Interfaces/GuildChannelInterface.html#method_getPermissionOverwrites"><abbr title="CharlotteDunois\Yasmin\Interfaces\GuildChannelInterface">GuildChannelInterface</abbr></a> at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/GuildChannelInterface.php#L21">line 21</a></div>
+        <code>                    <abbr title="CharlotteDunois\Collect\Collection">Collection</abbr>
+    <strong>getPermissionOverwrites</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Gets the channel's permission overwrites.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="CharlotteDunois\Collect\Collection">Collection</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                        
+                        
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPosition">
+        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Interfaces/GuildChannelInterface.html#method_getPosition"><abbr title="CharlotteDunois\Yasmin\Interfaces\GuildChannelInterface">GuildChannelInterface</abbr></a> at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/GuildChannelInterface.php#L21">line 21</a></div>
+        <code>                    int
+    <strong>getPosition</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Gets the channel's position.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                        
+                        
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getType">
+        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Interfaces/ChannelInterface.html#method_getType"><abbr title="CharlotteDunois\Yasmin\Interfaces\ChannelInterface">ChannelInterface</abbr></a> at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/ChannelInterface.php#L19">line 19</a></div>
+        <code>                    string
+    <strong>getType</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Gets the channel type. (see \CharlotteDunois\Yasmin\Models\ChannelStorage::CHANNEL_TYPES)</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
             
                         
                         
@@ -825,7 +904,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_lockPermissions">
-        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Traits/GuildChannelTrait.html#method_lockPermissions"><abbr title="CharlotteDunois\Yasmin\Traits\GuildChannelTrait">GuildChannelTrait</abbr></a> at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Traits/GuildChannelTrait.php#L332">line 332</a></div>
+        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Interfaces/GuildChannelInterface.html#method_lockPermissions"><abbr title="CharlotteDunois\Yasmin\Interfaces\GuildChannelInterface">GuildChannelInterface</abbr></a> at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/GuildChannelInterface.php#L133">line 133</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>lockPermissions</strong>(string $reason = &#039;&#039;)
         </code>
@@ -843,7 +922,7 @@
                     <tr>
                 <td>string</td>
                 <td>$reason</td>
-                <td>The reason for this.</td>
+                <td></td>
             </tr>
             </table>
 
@@ -876,7 +955,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_overwritePermissions">
-        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Traits/GuildChannelTrait.html#method_overwritePermissions"><abbr title="CharlotteDunois\Yasmin\Traits\GuildChannelTrait">GuildChannelTrait</abbr></a> at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Traits/GuildChannelTrait.php#L295">line 295</a></div>
+        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Interfaces/GuildChannelInterface.html#method_overwritePermissions"><abbr title="CharlotteDunois\Yasmin\Interfaces\GuildChannelInterface">GuildChannelInterface</abbr></a> at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/GuildChannelInterface.php#L125">line 125</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>overwritePermissions</strong>(<a href="../../../CharlotteDunois/Yasmin/Models/GuildMember.html"><abbr title="CharlotteDunois\Yasmin\Models\GuildMember">GuildMember</abbr></a>|<a href="../../../CharlotteDunois/Yasmin/Models/Role.html"><abbr title="CharlotteDunois\Yasmin\Models\Role">Role</abbr></a>|string $memberOrRole, <a href="../../../CharlotteDunois/Yasmin/Models/Permissions.html"><abbr title="CharlotteDunois\Yasmin\Models\Permissions">Permissions</abbr></a>|int $allow, <a href="../../../CharlotteDunois/Yasmin/Models/Permissions.html"><abbr title="CharlotteDunois\Yasmin\Models\Permissions">Permissions</abbr></a>|int $deny = 0, string $reason = &#039;&#039;)
         </code>
@@ -894,22 +973,22 @@
                     <tr>
                 <td><a href="../../../CharlotteDunois/Yasmin/Models/GuildMember.html"><abbr title="CharlotteDunois\Yasmin\Models\GuildMember">GuildMember</abbr></a>|<a href="../../../CharlotteDunois/Yasmin/Models/Role.html"><abbr title="CharlotteDunois\Yasmin\Models\Role">Role</abbr></a>|string</td>
                 <td>$memberOrRole</td>
-                <td>The member or role.</td>
+                <td></td>
             </tr>
                     <tr>
                 <td><a href="../../../CharlotteDunois/Yasmin/Models/Permissions.html"><abbr title="CharlotteDunois\Yasmin\Models\Permissions">Permissions</abbr></a>|int</td>
                 <td>$allow</td>
-                <td>Which permissions should be allowed?</td>
+                <td></td>
             </tr>
                     <tr>
                 <td><a href="../../../CharlotteDunois/Yasmin/Models/Permissions.html"><abbr title="CharlotteDunois\Yasmin\Models\Permissions">Permissions</abbr></a>|int</td>
                 <td>$deny</td>
-                <td>Which permissions should be denied?</td>
+                <td></td>
             </tr>
                     <tr>
                 <td>string</td>
                 <td>$reason</td>
-                <td>The reason for this.</td>
+                <td></td>
             </tr>
             </table>
 
@@ -934,17 +1013,6 @@
             </table>
 
             
-                            <h4>See also</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td>
-                                            <a href="../../../CharlotteDunois/Yasmin/Models/PermissionOverwrite.html"><abbr title="CharlotteDunois\Yasmin\Models\PermissionOverwrite">PermissionOverwrite</abbr></a>
-                                    </td>
-                <td></td>
-            </tr>
-            </table>
-
                         
                         
                     </div>
@@ -953,7 +1021,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_overwritesFor">
-        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Traits/GuildChannelTrait.html#method_overwritesFor"><abbr title="CharlotteDunois\Yasmin\Traits\GuildChannelTrait">GuildChannelTrait</abbr></a> at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Traits/GuildChannelTrait.php#L261">line 261</a></div>
+        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Interfaces/GuildChannelInterface.html#method_overwritesFor"><abbr title="CharlotteDunois\Yasmin\Interfaces\GuildChannelInterface">GuildChannelInterface</abbr></a> at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/GuildChannelInterface.php#L114">line 114</a></div>
         <code>                    array
     <strong>overwritesFor</strong>(<a href="../../../CharlotteDunois/Yasmin/Models/GuildMember.html"><abbr title="CharlotteDunois\Yasmin\Models\GuildMember">GuildMember</abbr></a>|string $member)
         </code>
@@ -963,7 +1031,7 @@
     
 
                     <div class="method-description">
-                                    <p>Returns the permissions overwrites for the given member as an associative array.</p>                    <p><pre><code>array(
+                                    <p>Returns the permissions overwrites for the given member.</p>                    <p><pre><code>array(
     'everyone' =&gt; \CharlotteDunois\Yasmin\Models\PermissionOverwrite|null,
     'member' =&gt; \CharlotteDunois\Yasmin\Models\PermissionOverwrite|null,
     'roles' =&gt; \CharlotteDunois\Yasmin\Models\PermissionOverwrite[]
@@ -1010,7 +1078,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_permissionsFor">
-        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Traits/GuildChannelTrait.html#method_permissionsFor"><abbr title="CharlotteDunois\Yasmin\Traits\GuildChannelTrait">GuildChannelTrait</abbr></a> at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Traits/GuildChannelTrait.php#L213">line 213</a></div>
+        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Interfaces/GuildChannelInterface.html#method_permissionsFor"><abbr title="CharlotteDunois\Yasmin\Interfaces\GuildChannelInterface">GuildChannelInterface</abbr></a> at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/GuildChannelInterface.php#L97">line 97</a></div>
         <code>                    <a href="../../../CharlotteDunois/Yasmin/Models/Permissions.html"><abbr title="CharlotteDunois\Yasmin\Models\Permissions">Permissions</abbr></a>
     <strong>permissionsFor</strong>(<a href="../../../CharlotteDunois/Yasmin/Models/GuildMember.html"><abbr title="CharlotteDunois\Yasmin\Models\GuildMember">GuildMember</abbr></a>|string $member)
         </code>
@@ -1053,73 +1121,6 @@
             </table>
 
             
-                            <h4>See also</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td>
-                                            <a href="https://discordapp.com/developers/docs/topics/permissions#permission-overwrites" target="_blank">https://discordapp.com/developers/docs/topics/permissions#permission-overwrites</a>
-                                    </td>
-                <td></td>
-            </tr>
-            </table>
-
-                        
-                        
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_setBitrate">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/VoiceChannel.php#L148">line 148</a></div>
-        <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
-    <strong>setBitrate</strong>(int $bitrate, string $reason = &#039;&#039;)
-        </code>
-    </h3>
-    <div class="details">
-            
-    
-
-                    <div class="method-description">
-                                    <p>Sets the bitrate of the channel. Resolves with $this.</p>                                                </div>
-                <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td>int</td>
-                <td>$bitrate</td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td>string</td>
-                <td>$reason</td>
-                <td></td>
-            </tr>
-            </table>
-
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td><abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr></td>
-            <td></td>
-        </tr>
-    </table>
-
-            
-                            <h4>Exceptions</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td><a href="https://secure.php.net/InvalidArgumentException" target="_blank">InvalidArgumentException</a></td>
-                <td></td>
-            </tr>
-            </table>
-
-            
                         
                         
                     </div>
@@ -1128,7 +1129,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setNSFW">
-        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Traits/GuildChannelTrait.html#method_setNSFW"><abbr title="CharlotteDunois\Yasmin\Traits\GuildChannelTrait">GuildChannelTrait</abbr></a> at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Traits/GuildChannelTrait.php#L384">line 384</a></div>
+        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Interfaces/GuildChannelInterface.html#method_setNSFW"><abbr title="CharlotteDunois\Yasmin\Interfaces\GuildChannelInterface">GuildChannelInterface</abbr></a> at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/GuildChannelInterface.php#L151">line 151</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>setNSFW</strong>(bool $nsfw, string $reason = &#039;&#039;)
         </code>
@@ -1184,7 +1185,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setName">
-        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Traits/GuildChannelTrait.html#method_setName"><abbr title="CharlotteDunois\Yasmin\Traits\GuildChannelTrait">GuildChannelTrait</abbr></a> at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Traits/GuildChannelTrait.php#L373">line 373</a></div>
+        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Interfaces/GuildChannelInterface.html#method_setName"><abbr title="CharlotteDunois\Yasmin\Interfaces\GuildChannelInterface">GuildChannelInterface</abbr></a> at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/GuildChannelInterface.php#L142">line 142</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>setName</strong>(string $name, string $reason = &#039;&#039;)
         </code>
@@ -1240,7 +1241,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setParent">
-        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Traits/GuildChannelTrait.html#method_setParent"><abbr title="CharlotteDunois\Yasmin\Traits\GuildChannelTrait">GuildChannelTrait</abbr></a> at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Traits/GuildChannelTrait.php#L395">line 395</a></div>
+        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Interfaces/GuildChannelInterface.html#method_setParent"><abbr title="CharlotteDunois\Yasmin\Interfaces\GuildChannelInterface">GuildChannelInterface</abbr></a> at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/GuildChannelInterface.php#L160">line 160</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>setParent</strong>(<a href="../../../CharlotteDunois/Yasmin/Models/CategoryChannel.html"><abbr title="CharlotteDunois\Yasmin\Models\CategoryChannel">CategoryChannel</abbr></a>|string $parent, string $reason = &#039;&#039;)
         </code>
@@ -1258,7 +1259,7 @@
                     <tr>
                 <td><a href="../../../CharlotteDunois/Yasmin/Models/CategoryChannel.html"><abbr title="CharlotteDunois\Yasmin\Models\CategoryChannel">CategoryChannel</abbr></a>|string</td>
                 <td>$parent</td>
-                <td>An instance of CategoryChannel or the channel ID.</td>
+                <td></td>
             </tr>
                     <tr>
                 <td>string</td>
@@ -1296,7 +1297,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setPermissionOverwrites">
-        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Traits/GuildChannelTrait.html#method_setPermissionOverwrites"><abbr title="CharlotteDunois\Yasmin\Traits\GuildChannelTrait">GuildChannelTrait</abbr></a> at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Traits/GuildChannelTrait.php#L406">line 406</a></div>
+        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Interfaces/GuildChannelInterface.html#method_setPermissionOverwrites"><abbr title="CharlotteDunois\Yasmin\Interfaces\GuildChannelInterface">GuildChannelInterface</abbr></a> at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/GuildChannelInterface.php#L169">line 169</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>setPermissionOverwrites</strong>(<abbr title="CharlotteDunois\Collect\Collection">Collection</abbr>|array $permissionOverwrites, string $reason = &#039;&#039;)
         </code>
@@ -1314,7 +1315,7 @@
                     <tr>
                 <td><abbr title="CharlotteDunois\Collect\Collection">Collection</abbr>|array</td>
                 <td>$permissionOverwrites</td>
-                <td>An array or Collection of PermissionOverwrite instances or permission overwrite arrays.</td>
+                <td></td>
             </tr>
                     <tr>
                 <td>string</td>
@@ -1352,7 +1353,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setPosition">
-        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Traits/GuildChannelTrait.html#method_setPosition"><abbr title="CharlotteDunois\Yasmin\Traits\GuildChannelTrait">GuildChannelTrait</abbr></a> at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Traits/GuildChannelTrait.php#L417">line 417</a></div>
+        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Interfaces/GuildChannelInterface.html#method_setPosition"><abbr title="CharlotteDunois\Yasmin\Interfaces\GuildChannelInterface">GuildChannelInterface</abbr></a> at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/GuildChannelInterface.php#L178">line 178</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>setPosition</strong>(int $position, string $reason = &#039;&#039;)
         </code>
@@ -1408,7 +1409,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setTopic">
-        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Traits/GuildChannelTrait.html#method_setTopic"><abbr title="CharlotteDunois\Yasmin\Traits\GuildChannelTrait">GuildChannelTrait</abbr></a> at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Traits/GuildChannelTrait.php#L464">line 464</a></div>
+        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Interfaces/GuildChannelInterface.html#method_setTopic"><abbr title="CharlotteDunois\Yasmin\Interfaces\GuildChannelInterface">GuildChannelInterface</abbr></a> at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/GuildChannelInterface.php#L187">line 187</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>setTopic</strong>(string $topic, string $reason = &#039;&#039;)
         </code>
@@ -1426,62 +1427,6 @@
                     <tr>
                 <td>string</td>
                 <td>$topic</td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td>string</td>
-                <td>$reason</td>
-                <td></td>
-            </tr>
-            </table>
-
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td><abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr></td>
-            <td></td>
-        </tr>
-    </table>
-
-            
-                            <h4>Exceptions</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td><a href="https://secure.php.net/InvalidArgumentException" target="_blank">InvalidArgumentException</a></td>
-                <td></td>
-            </tr>
-            </table>
-
-            
-                        
-                        
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_setUserLimit">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/VoiceChannel.php#L159">line 159</a></div>
-        <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
-    <strong>setUserLimit</strong>(int $userLimit, string $reason = &#039;&#039;)
-        </code>
-    </h3>
-    <div class="details">
-            
-    
-
-                    <div class="method-description">
-                                    <p>Sets the user limit of the channel. Resolves with $this.</p>                                                </div>
-                <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td>int</td>
-                <td>$userLimit</td>
                 <td></td>
             </tr>
                     <tr>
