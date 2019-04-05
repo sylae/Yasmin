@@ -113,12 +113,16 @@
     2 =&gt; &#039;voice&#039;,
     3 =&gt; &#039;group&#039;,
     4 =&gt; &#039;category&#039;,
+    5 =&gt; &#039;news&#039;,
+    6 =&gt; &#039;store&#039;,
     
     &#039;text&#039; =&gt; 0,
     &#039;dm&#039; =&gt; 1,
     &#039;voice&#039; =&gt; 2,
     &#039;group&#039; =&gt; 3,
-    &#039;category&#039; =&gt; 4
+    &#039;category&#039; =&gt; 4,
+    &#039;news&#039; =&gt; 5,
+    &#039;store&#039; =&gt; 6
 );</code></pre>
                                     </td>
             </tr>
@@ -267,7 +271,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method_clear">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/ChannelStorage.php#L108">line 108</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/ChannelStorage.php#L112">line 112</a></div>
         <code>                    $this
     <strong>clear</strong>()
         </code>
@@ -331,7 +335,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_delete">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/ChannelStorage.php#L95">line 95</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/ChannelStorage.php#L99">line 99</a></div>
         <code>                    $this
     <strong>delete</strong>(string $key)
         </code>
@@ -424,7 +428,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_get">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/ChannelStorage.php#L71">line 71</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/ChannelStorage.php#L75">line 75</a></div>
         <code>                    <a href="../../../CharlotteDunois/Yasmin/Interfaces/ChannelInterface.html"><abbr title="CharlotteDunois\Yasmin\Interfaces\ChannelInterface">ChannelInterface</abbr></a>|null
     <strong>get</strong>(string $key)
         </code>
@@ -475,7 +479,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getTypeForChannel">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/ChannelStorage.php#L186">line 186</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/ChannelStorage.php#L197">line 197</a></div>
         <code>        static            int
     <strong>getTypeForChannel</strong>(<a href="../../../CharlotteDunois/Yasmin/Interfaces/ChannelInterface.html"><abbr title="CharlotteDunois\Yasmin\Interfaces\ChannelInterface">ChannelInterface</abbr></a> $channel)
         </code>
@@ -517,7 +521,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_has">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/ChannelStorage.php#L62">line 62</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/ChannelStorage.php#L66">line 66</a></div>
         <code>                    bool
     <strong>has</strong>(string $key)
         </code>
@@ -568,7 +572,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_resolve">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/ChannelStorage.php#L41">line 41</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/ChannelStorage.php#L45">line 45</a></div>
         <code>                    <a href="../../../CharlotteDunois/Yasmin/Interfaces/ChannelInterface.html"><abbr title="CharlotteDunois\Yasmin\Interfaces\ChannelInterface">ChannelInterface</abbr></a>
     <strong>resolve</strong>(<a href="../../../CharlotteDunois/Yasmin/Interfaces/ChannelInterface.html"><abbr title="CharlotteDunois\Yasmin\Interfaces\ChannelInterface">ChannelInterface</abbr></a>|string|int $channel)
         </code>
@@ -619,7 +623,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_set">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/ChannelStorage.php#L81">line 81</a></div>
+        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/ChannelStorage.php#L85">line 85</a></div>
         <code>                    $this
     <strong>set</strong>(string $key, <a href="../../../CharlotteDunois/Yasmin/Interfaces/ChannelInterface.html"><abbr title="CharlotteDunois\Yasmin\Interfaces\ChannelInterface">ChannelInterface</abbr></a> $value)
         </code>

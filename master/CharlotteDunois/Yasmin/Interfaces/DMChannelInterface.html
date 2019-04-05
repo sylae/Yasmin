@@ -89,7 +89,7 @@
 
     <p>    interface
     <strong>DMChannelInterface</strong>        implements
-        <a href="../../../CharlotteDunois/Yasmin/Interfaces/ChannelInterface.html"><abbr title="CharlotteDunois\Yasmin\Interfaces\ChannelInterface">ChannelInterface</abbr></a>        (<a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/DMChannelInterface.php" target="_blank">View source</a>)
+        <a href="../../../CharlotteDunois/Yasmin/Interfaces/ChannelInterface.html"><abbr title="CharlotteDunois\Yasmin\Interfaces\ChannelInterface">ChannelInterface</abbr></a>, <a href="../../../CharlotteDunois/Yasmin/Interfaces/TextChannelInterface.html"><abbr title="CharlotteDunois\Yasmin\Interfaces\TextChannelInterface">TextChannelInterface</abbr></a>        (<a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/DMChannelInterface.php" target="_blank">View source</a>)
 </p>
 
         
@@ -116,6 +116,36 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
+                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_collectMessages">collectMessages</a>(callable $filter, array $options = array())
+        
+                                            <p>Collects messages during a specific duration (and max. amount). Resolves with a Collection of Message instances, mapped by their IDs.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Interfaces/TextChannelInterface.html#method_collectMessages"><abbr title="CharlotteDunois\Yasmin\Interfaces\TextChannelInterface">TextChannelInterface</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_fetchMessage">fetchMessage</a>(string $id)
+        
+                                            <p>Fetches a specific message using the ID. Resolves with an instance of Message.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Interfaces/TextChannelInterface.html#method_fetchMessage"><abbr title="CharlotteDunois\Yasmin\Interfaces\TextChannelInterface">TextChannelInterface</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_fetchMessages">fetchMessages</a>(array $options = array())
+        
+                                            <p>Fetches messages of this channel. Resolves with a Collection of Message instances, mapped by their ID.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Interfaces/TextChannelInterface.html#method_fetchMessages"><abbr title="CharlotteDunois\Yasmin\Interfaces\TextChannelInterface">TextChannelInterface</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     int
                 </div>
                 <div class="col-md-8 type">
@@ -139,10 +169,80 @@
                     string
                 </div>
                 <div class="col-md-8 type">
+                    <a href="#method_getLastMessageID">getLastMessageID</a>()
+        
+                                            <p>Gets the ID of the last sent message in this channel.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Interfaces/TextChannelInterface.html#method_getLastMessageID"><abbr title="CharlotteDunois\Yasmin\Interfaces\TextChannelInterface">TextChannelInterface</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../CharlotteDunois/Yasmin/Interfaces/MessageStorageInterface.html"><abbr title="CharlotteDunois\Yasmin\Interfaces\MessageStorageInterface">MessageStorageInterface</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getMessages">getMessages</a>()
+        
+                                            <p>Gets the storage with all cached messages.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Interfaces/TextChannelInterface.html#method_getMessages"><abbr title="CharlotteDunois\Yasmin\Interfaces\TextChannelInterface">TextChannelInterface</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_getType">getType</a>()
         
                                             <p>Gets the channel type. (see \CharlotteDunois\Yasmin\Models\ChannelStorage::CHANNEL_TYPES)</p>                </div>
                 <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Interfaces/ChannelInterface.html#method_getType"><abbr title="CharlotteDunois\Yasmin\Interfaces\ChannelInterface">ChannelInterface</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isTyping">isTyping</a>(<a href="../../../CharlotteDunois/Yasmin/Models/User.html"><abbr title="CharlotteDunois\Yasmin\Models\User">User</abbr></a> $user)
+        
+                                            <p>Determines whether the given user is typing in this channel or not.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Interfaces/TextChannelInterface.html#method_isTyping"><abbr title="CharlotteDunois\Yasmin\Interfaces\TextChannelInterface">TextChannelInterface</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_send">send</a>(string $content, array $options = array())
+        
+                                            <p>Sends a message to a channel. Resolves with an instance of Message, or a Collection of Message instances, mapped by their ID.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Interfaces/TextChannelInterface.html#method_send"><abbr title="CharlotteDunois\Yasmin\Interfaces\TextChannelInterface">TextChannelInterface</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_startTyping">startTyping</a>()
+        
+                                            <p>Starts sending the typing indicator in this channel. Counts up a triggered typing counter.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Interfaces/TextChannelInterface.html#method_startTyping"><abbr title="CharlotteDunois\Yasmin\Interfaces\TextChannelInterface">TextChannelInterface</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_stopTyping">stopTyping</a>(bool $force = false)
+        
+                                            <p>Stops sending the typing indicator in this channel. Counts down a triggered typing counter.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Interfaces/TextChannelInterface.html#method_stopTyping"><abbr title="CharlotteDunois\Yasmin\Interfaces\TextChannelInterface">TextChannelInterface</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_typingCount">typingCount</a>()
+        
+                                            <p>Returns the amount of user typing in this channel.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Interfaces/TextChannelInterface.html#method_typingCount"><abbr title="CharlotteDunois\Yasmin\Interfaces\TextChannelInterface">TextChannelInterface</abbr></a></small></div>
             </div>
             </div>
 
@@ -177,6 +277,206 @@
             
             
             
+                        
+                        
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_collectMessages">
+        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Interfaces/TextChannelInterface.html#method_collectMessages"><abbr title="CharlotteDunois\Yasmin\Interfaces\TextChannelInterface">TextChannelInterface</abbr></a> at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/TextChannelInterface.php#L40">line 40</a></div>
+        <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
+    <strong>collectMessages</strong>(callable $filter, array $options = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Collects messages during a specific duration (and max. amount). Resolves with a Collection of Message instances, mapped by their IDs.</p>                    <p>Options are as following (all are optional):</p>
+
+<pre><code>array(
+  'max' =&gt; int, (max. messages to collect)
+  'time' =&gt; int, (duration, in seconds, default 30)
+  'errors' =&gt; array, (optional, which failed "conditions" (max not reached in time ("time")) lead to a rejected promise, defaults to [])
+)
+</code></pre>
+</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>callable</td>
+                <td>$filter</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr></td>
+            <td>This promise is cancellable.</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="https://secure.php.net/RangeException" target="_blank">RangeException</a></td>
+                <td>The exception the promise gets rejected with, if waiting times out.</td>
+            </tr>
+                    <tr>
+                <td><a href="https://secure.php.net/OutOfBoundsException" target="_blank">OutOfBoundsException</a></td>
+                <td>The exception the promise gets rejected with, if the promise gets cancelled.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                            <a href="../../../CharlotteDunois/Yasmin/Models/Message.html"><abbr title="CharlotteDunois\Yasmin\Models\Message">Message</abbr></a>
+                                    </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>
+                                            <a href="../../../CharlotteDunois/Yasmin/Utils/Collector.html"><abbr title="CharlotteDunois\Yasmin\Utils\Collector">Collector</abbr></a>
+                                    </td>
+                <td></td>
+            </tr>
+            </table>
+
+                        
+                        
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_fetchMessage">
+        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Interfaces/TextChannelInterface.html#method_fetchMessage"><abbr title="CharlotteDunois\Yasmin\Interfaces\TextChannelInterface">TextChannelInterface</abbr></a> at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/TextChannelInterface.php#L48">line 48</a></div>
+        <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
+    <strong>fetchMessage</strong>(string $id)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Fetches a specific message using the ID. Resolves with an instance of Message.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$id</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                            <a href="../../../CharlotteDunois/Yasmin/Models/Message.html"><abbr title="CharlotteDunois\Yasmin\Models\Message">Message</abbr></a>
+                                    </td>
+                <td></td>
+            </tr>
+            </table>
+
+                        
+                        
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_fetchMessages">
+        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Interfaces/TextChannelInterface.html#method_fetchMessages"><abbr title="CharlotteDunois\Yasmin\Interfaces\TextChannelInterface">TextChannelInterface</abbr></a> at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/TextChannelInterface.php#L68">line 68</a></div>
+        <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
+    <strong>fetchMessages</strong>(array $options = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Fetches messages of this channel. Resolves with a Collection of Message instances, mapped by their ID.</p>                    <p>Options are as following:</p>
+
+<pre><code>array(
+  'after' =&gt; string, (message ID)
+  'around' =&gt; string, (message ID)
+  'before' =&gt; string, (message ID)
+  'limit' =&gt; int, (1-100, defaults to 50)
+)
+</code></pre>
+</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                            <a href="../../../CharlotteDunois/Yasmin/Models/Message.html"><abbr title="CharlotteDunois\Yasmin\Models\Message">Message</abbr></a>
+                                    </td>
+                <td></td>
+            </tr>
+            </table>
+
                         
                         
                     </div>
@@ -248,6 +548,70 @@
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_getLastMessageID">
+        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Interfaces/TextChannelInterface.html#method_getLastMessageID"><abbr title="CharlotteDunois\Yasmin\Interfaces\TextChannelInterface">TextChannelInterface</abbr></a> at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/TextChannelInterface.php#L18">line 18</a></div>
+        <code>                    string
+    <strong>getLastMessageID</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Gets the ID of the last sent message in this channel.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                        
+                        
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMessages">
+        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Interfaces/TextChannelInterface.html#method_getMessages"><abbr title="CharlotteDunois\Yasmin\Interfaces\TextChannelInterface">TextChannelInterface</abbr></a> at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/TextChannelInterface.php#L18">line 18</a></div>
+        <code>                    <a href="../../../CharlotteDunois/Yasmin/Interfaces/MessageStorageInterface.html"><abbr title="CharlotteDunois\Yasmin\Interfaces\MessageStorageInterface">MessageStorageInterface</abbr></a>
+    <strong>getMessages</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Gets the storage with all cached messages.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../CharlotteDunois/Yasmin/Interfaces/MessageStorageInterface.html"><abbr title="CharlotteDunois\Yasmin\Interfaces\MessageStorageInterface">MessageStorageInterface</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                        
+                        
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_getType">
         <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Interfaces/ChannelInterface.html#method_getType"><abbr title="CharlotteDunois\Yasmin\Interfaces\ChannelInterface">ChannelInterface</abbr></a> at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/ChannelInterface.php#L19">line 19</a></div>
         <code>                    string
@@ -267,6 +631,230 @@
                     <table class="table table-condensed">
         <tr>
             <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                        
+                        
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isTyping">
+        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Interfaces/TextChannelInterface.html#method_isTyping"><abbr title="CharlotteDunois\Yasmin\Interfaces\TextChannelInterface">TextChannelInterface</abbr></a> at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/TextChannelInterface.php#L124">line 124</a></div>
+        <code>                    bool
+    <strong>isTyping</strong>(<a href="../../../CharlotteDunois/Yasmin/Models/User.html"><abbr title="CharlotteDunois\Yasmin\Models\User">User</abbr></a> $user)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Determines whether the given user is typing in this channel or not.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../CharlotteDunois/Yasmin/Models/User.html"><abbr title="CharlotteDunois\Yasmin\Models\User">User</abbr></a></td>
+                <td>$user</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                        
+                        
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_send">
+        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Interfaces/TextChannelInterface.html#method_send"><abbr title="CharlotteDunois\Yasmin\Interfaces\TextChannelInterface">TextChannelInterface</abbr></a> at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/TextChannelInterface.php#L98">line 98</a></div>
+        <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
+    <strong>send</strong>(string $content, array $options = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sends a message to a channel. Resolves with an instance of Message, or a Collection of Message instances, mapped by their ID.</p>                    <p>Options are as following (all are optional):</p>
+
+<pre><code>array(
+   'embed' =&gt; array|\CharlotteDunois\Yasmin\Models\MessageEmbed, (an (embed) array/object or an instance of MessageEmbed)
+   'files' =&gt; array, (an array of `[ 'name' =&gt; string, 'data' =&gt; string || 'path' =&gt; string ]` or just plain file contents, file paths or URLs)
+   'nonce' =&gt; string, (a snowflake used for optimistic sending)
+   'disableEveryone' =&gt; bool, (whether @everyone and @here should be replaced with plaintext, defaults to client option disableEveryone)
+   'tts' =&gt; bool,
+   'split' =&gt; bool|array, (*)
+)
+
+  * array(
+  *   'before' =&gt; string, (The string to insert before the split)
+  *   'after' =&gt; string, (The string to insert after the split)
+  *   'char' =&gt; string, (The string to split on)
+  *   'maxLength' =&gt; int, (The max. length of each message)
+  * )
+</code></pre>
+</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$content</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                            <a href="../../../CharlotteDunois/Yasmin/Models/Message.html"><abbr title="CharlotteDunois\Yasmin\Models\Message">Message</abbr></a>
+                                    </td>
+                <td></td>
+            </tr>
+            </table>
+
+                        
+                        
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_startTyping">
+        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Interfaces/TextChannelInterface.html#method_startTyping"><abbr title="CharlotteDunois\Yasmin\Interfaces\TextChannelInterface">TextChannelInterface</abbr></a> at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/TextChannelInterface.php#L104">line 104</a></div>
+        <code>                    void
+    <strong>startTyping</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Starts sending the typing indicator in this channel. Counts up a triggered typing counter.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                        
+                        
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_stopTyping">
+        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Interfaces/TextChannelInterface.html#method_stopTyping"><abbr title="CharlotteDunois\Yasmin\Interfaces\TextChannelInterface">TextChannelInterface</abbr></a> at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/TextChannelInterface.php#L111">line 111</a></div>
+        <code>                    void
+    <strong>stopTyping</strong>(bool $force = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Stops sending the typing indicator in this channel. Counts down a triggered typing counter.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool</td>
+                <td>$force</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                        
+                        
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_typingCount">
+        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Interfaces/TextChannelInterface.html#method_typingCount"><abbr title="CharlotteDunois\Yasmin\Interfaces\TextChannelInterface">TextChannelInterface</abbr></a> at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/TextChannelInterface.php#L117">line 117</a></div>
+        <code>                    int
+    <strong>typingCount</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the amount of user typing in this channel.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
             <td></td>
         </tr>
     </table>
