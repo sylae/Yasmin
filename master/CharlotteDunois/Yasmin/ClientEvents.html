@@ -148,7 +148,7 @@
                     void
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_debug">debug</a>(string|<a href="https://secure.php.net/Exception" target="_blank">Exception</a> $message)
+                    <a href="#method_debug">debug</a>(string|mixed $message)
         
                                             <p>Debug messages.</p>                </div>
                 <div class="col-md-2"></div>
@@ -168,7 +168,7 @@
                     void
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_error">error</a>(<a href="https://secure.php.net/Exception" target="_blank">Exception</a> $error)
+                    <a href="#method_error">error</a>(<a href="https://secure.php.net/Throwable" target="_blank">Throwable</a> $error)
         
                                             <p>Emitted when an error happens (inside the library or any listeners). You should always listen on this event.</p>                </div>
                 <div class="col-md-2"></div>
@@ -691,7 +691,7 @@
                     <h3 id="method_debug">
         <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/ClientEvents.php#L74">line 74</a></div>
         <code>                    void
-    <strong>debug</strong>(string|<a href="https://secure.php.net/Exception" target="_blank">Exception</a> $message)
+    <strong>debug</strong>(string|mixed $message)
         </code>
     </h3>
     <div class="details">
@@ -705,7 +705,7 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td>string|<a href="https://secure.php.net/Exception" target="_blank">Exception</a></td>
+                <td>string|mixed</td>
                 <td>$message</td>
                 <td></td>
             </tr>
@@ -785,7 +785,7 @@
                     <h3 id="method_error">
         <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/ClientEvents.php#L67">line 67</a></div>
         <code>                    void
-    <strong>error</strong>(<a href="https://secure.php.net/Exception" target="_blank">Exception</a> $error)
+    <strong>error</strong>(<a href="https://secure.php.net/Throwable" target="_blank">Throwable</a> $error)
         </code>
     </h3>
     <div class="details">
@@ -799,7 +799,7 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td><a href="https://secure.php.net/Exception" target="_blank">Exception</a></td>
+                <td><a href="https://secure.php.net/Throwable" target="_blank">Throwable</a></td>
                 <td>$error</td>
                 <td></td>
             </tr>
