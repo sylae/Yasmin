@@ -993,7 +993,7 @@
    'nsfw' =&gt; bool, (text channels only)
    'bitrate' =&gt; int, (voice channels only)
    'userLimit' =&gt; int, (voice channels only)
-   'slowmode' =&gt; int, (text channels only)
+   'slowmode' =&gt; int, (text channels only, 0-21600)
    'parent' =&gt; \CharlotteDunois\Yasmin\Models\CategoryChannel|string, (string = channel ID)
    'permissionOverwrites' =&gt; \CharlotteDunois\Collect\Collection|array (an array or Collection of PermissionOverwrite instances or permission overwrite arrays)
 )
@@ -2023,7 +2023,7 @@
                     <tr>
                 <td>int</td>
                 <td>$slowmode</td>
-                <td></td>
+                <td>0-21600</td>
             </tr>
                     <tr>
                 <td>string</td>
