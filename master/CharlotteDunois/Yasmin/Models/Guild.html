@@ -696,7 +696,7 @@
                     string|null
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_getBannerURL">getBannerURL</a>(string $format = &#039;png&#039;, int|null $size = null)
+                    <a href="#method_getBannerURL">getBannerURL</a>(int|null $size = null, string $format = &#039;png&#039;)
         
                                             <p>Returns the guild's banner URL, or null.</p>                </div>
                 <div class="col-md-2"></div>
@@ -706,7 +706,7 @@
                     string|null
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_getIconURL">getIconURL</a>(string $format = &#039;png&#039;, int|null $size = null)
+                    <a href="#method_getIconURL">getIconURL</a>(int|null $size = null, string $format = &#039;png&#039;)
         
                                             <p>Returns the guild's icon URL, or null.</p>                </div>
                 <div class="col-md-2"></div>
@@ -726,7 +726,7 @@
                     string|null
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_getSplashURL">getSplashURL</a>(string $format = &#039;png&#039;, int|null $size = null)
+                    <a href="#method_getSplashURL">getSplashURL</a>(int|null $size = null, string $format = &#039;png&#039;)
         
                                             <p>Returns the guild's splash URL, or null.</p>                </div>
                 <div class="col-md-2"></div>
@@ -1816,7 +1816,7 @@
                     <h3 id="method_getBannerURL">
         <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L976">line 976</a></div>
         <code>                    string|null
-    <strong>getBannerURL</strong>(string $format = &#039;png&#039;, int|null $size = null)
+    <strong>getBannerURL</strong>(int|null $size = null, string $format = &#039;png&#039;)
         </code>
     </h3>
     <div class="details">
@@ -1830,14 +1830,14 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td>string</td>
-                <td>$format</td>
-                <td>One of png, jpg or webp.</td>
-            </tr>
-                    <tr>
                 <td>int|null</td>
                 <td>$size</td>
                 <td>One of 128, 256, 512, 1024 or 2048.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$format</td>
+                <td>One of png, jpg or webp.</td>
             </tr>
             </table>
 
@@ -1863,7 +1863,7 @@
                     <h3 id="method_getIconURL">
         <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L994">line 994</a></div>
         <code>                    string|null
-    <strong>getIconURL</strong>(string $format = &#039;png&#039;, int|null $size = null)
+    <strong>getIconURL</strong>(int|null $size = null, string $format = &#039;png&#039;)
         </code>
     </h3>
     <div class="details">
@@ -1877,14 +1877,14 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td>string</td>
-                <td>$format</td>
-                <td>One of png, jpg or webp.</td>
-            </tr>
-                    <tr>
                 <td>int|null</td>
                 <td>$size</td>
                 <td>One of 128, 256, 512, 1024 or 2048.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$format</td>
+                <td>One of png, jpg or webp.</td>
             </tr>
             </table>
 
@@ -1942,7 +1942,7 @@
                     <h3 id="method_getSplashURL">
         <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L1027">line 1027</a></div>
         <code>                    string|null
-    <strong>getSplashURL</strong>(string $format = &#039;png&#039;, int|null $size = null)
+    <strong>getSplashURL</strong>(int|null $size = null, string $format = &#039;png&#039;)
         </code>
     </h3>
     <div class="details">
@@ -1956,14 +1956,14 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td>string</td>
-                <td>$format</td>
-                <td>One of png, jpg or webp.</td>
-            </tr>
-                    <tr>
                 <td>int|null</td>
                 <td>$size</td>
                 <td>One of 128, 256, 512, 1024 or 2048.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$format</td>
+                <td>One of png, jpg or webp.</td>
             </tr>
             </table>
 
