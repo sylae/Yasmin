@@ -196,6 +196,12 @@ class Client implements \CharlotteDunois\Events\EventEmitterInterface, \Serializ
     protected $eventsQueue = array();
     
     /**
+     * @var static[]
+     * @internal
+     */
+    static $container = array();
+    
+    /**
      * What do you expect this to do? It makes a new Client instance. Available client options are as following (all are optional):
      *
      * ```
@@ -287,6 +293,7 @@ class Client implements \CharlotteDunois\Events\EventEmitterInterface, \Serializ
         }
         
         $this->checkOptionsStorages();
+        self::$container[\spl_object_hash($this)] = $this;
         
         $this->channels = new $this->options['internal.storages.channels']($this);
         $this->emojis = new $this->options['internal.storages.emojis']($this);

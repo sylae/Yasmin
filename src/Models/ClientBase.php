@@ -16,10 +16,10 @@ namespace CharlotteDunois\Yasmin\Models;
  */
 abstract class ClientBase extends Base {
     /**
-     * @var \CharlotteDunois\Yasmin\Client
+     * @var string
      * @internal
      */
-    protected $client;
+    protected $clientHash;
     
     /**
      * The client which will be used to unserialize.
@@ -31,7 +31,8 @@ abstract class ClientBase extends Base {
      * @internal
      */
     function __construct(\CharlotteDunois\Yasmin\Client $client) {
-        $this->client = $client;
+        parent::__construct();
+        $this->clientHash = \spl_object_hash($client);
     }
     
     /**
@@ -42,7 +43,7 @@ abstract class ClientBase extends Base {
     function __get($name) {
         switch($name) {
             case 'client':
-                return $this->client;
+                return \CharlotteDunois\Yasmin\Client::$container[$this->clientHash];
             break;
         }
         
@@ -93,6 +94,6 @@ abstract class ClientBase extends Base {
         
         parent::unserialize($data);
         
-        $this->client = self::$serializeClient;
+        $this->clientHash = \spl_object_hash(self::$serializeClient);
     }
 }
