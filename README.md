@@ -44,7 +44,7 @@ $client->on('ready', function () use ($client) {
 });
 
 $client->on('message', function ($message) {
-    echo 'Received Message from '.$message->author->tag.' in '.($message->channel->type === 'text' ? 'channel #'.$message->channel->name : 'DM').' with '.$message->attachments->count().' attachment(s) and '.\count($message->embeds).' embed(s)'.PHP_EOL;
+    echo 'Received Message from '.$message->author->tag.' in '.($message->channel instanceof \CharlotteDunois\Yasmin\Interfaces\DMChannelInterface ? 'DM' : 'channel #'.$message->channel->name ).' with '.$message->attachments->count().' attachment(s) and '.\count($message->embeds).' embed(s)'.PHP_EOL;
 });
 
 $client->login('YOUR_TOKEN')->done();
@@ -55,7 +55,7 @@ $loop->run();
 There is no voice support.
 
 # Documentation
-https://yasmin.neko.run
+https://charlottedunois.github.io/Yasmin/
 
 # Windows and SSL
 Unfortunately PHP on Windows does not have access to the Windows Certificate Store. This is an issue because TLS gets used and as such certificate verification gets applied (turning this off is **not** an option).

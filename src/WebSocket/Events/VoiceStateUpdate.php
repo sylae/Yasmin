@@ -98,8 +98,11 @@ class VoiceStateUpdate implements \CharlotteDunois\Yasmin\Interfaces\WSEventInte
                             $oldMember = clone $member;
                         }
                         
+                        if($member->voiceChannel) {
+                            $member->voiceChannel->members->delete($member->id);
+                        }
+                        
                         $member->_setVoiceState($data);
-                        $channel->members->delete($member->id);
                         $channel->members->set($member->id, $member);
                         
                         $this->client->queuedEmit('voiceStateUpdate', $member, $oldMember);
