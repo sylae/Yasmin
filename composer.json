@@ -1,5 +1,8 @@
 {
-    "name": "charlottedunois/yasmin",
+    "name": "sylae/yasmin",
+    "replace": {
+        "charlottedunois/yasmin": "self.version"
+    },
     "description": "Yasmin is a Discord API library for PHP.",
     "type": "library",
     "license": "Apache-2.0",
@@ -7,6 +10,11 @@
         {
             "name": "CharlotteDunois",
             "email": "github@charuru.moe"
+        },
+        {
+            "name": "Keira Dueck",
+            "email": "sylae@calref.net",
+            "role": "Maintainer"
         }
     ],
     "minimum-stability": "stable",
