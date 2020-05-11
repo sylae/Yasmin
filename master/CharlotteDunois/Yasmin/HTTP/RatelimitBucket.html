@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>CharlotteDunois\Yasmin\HTTP\RatelimitBucket | Yasmin</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/sami.css">
+        <script src="../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../js/bootstrap.min.js"></script>
+        <script src="../../../js/typeahead.min.js"></script>
+        <script src="../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:CharlotteDunois_Yasmin_HTTP_RatelimitBucket" data-root-path="../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#" method="GET">
+                <select id="version-switcher" name="version">
+                                            <option value="../../../../v0.4.0/index.html" data-version="v0.4.0">v0.4.0</option>
+                                            <option value="../../../../v0.4.1/index.html" data-version="v0.4.1">v0.4.1</option>
+                                            <option value="../../../../v0.4.2/index.html" data-version="v0.4.2">v0.4.2</option>
+                                            <option value="../../../../v0.5.0/index.html" data-version="v0.5.0">v0.5.0</option>
+                                            <option value="../../../../v0.5.1/index.html" data-version="v0.5.1">v0.5.1</option>
+                                            <option value="../../../../v0.6.0/index.html" data-version="v0.6.0">v0.6.0</option>
+                                            <option value="../../../../master/index.html" data-version="master">master branch</option>
+                                    </select>
+            </form>
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../index.html">Yasmin</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../classes.html">Classes</a></li>
+                                            <li><a href="../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../traits.html">Traits</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../../CharlotteDunois.html">CharlotteDunois</a></li><li class="backslash">\</li><li><a href="../../../CharlotteDunois/Yasmin.html">Yasmin</a></li><li class="backslash">\</li><li><a href="../../../CharlotteDunois/Yasmin/HTTP.html">HTTP</a></li><li class="backslash">\</li><li>RatelimitBucket</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            RatelimitBucket
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>RatelimitBucket</strong>        implements
+        <a href="../../../CharlotteDunois/Yasmin/Interfaces/RatelimitBucketInterface.html"><abbr title="CharlotteDunois\Yasmin\Interfaces\RatelimitBucketInterface">RatelimitBucketInterface</abbr></a>        (<a href="https://github.com/sylae/yasmin/blob/master/src/HTTP/RatelimitBucket.php">View source</a>)
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>Manages a route's ratelimit in memory.</p>                                </div>
+    
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_api">
+                                        protected                                        <a href="../../../CharlotteDunois/Yasmin/HTTP/APIManager.html"><abbr title="CharlotteDunois\Yasmin\HTTP\APIManager">APIManager</abbr></a>
+                </td>
+                <td>$api</td>
+                <td class="last">The API manager.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_endpoint">
+                                        protected                                        string
+                </td>
+                <td>$endpoint</td>
+                <td class="last">The endpoint.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_limit">
+                                        protected                                        int
+                </td>
+                <td>$limit</td>
+                <td class="last">The requests limit.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_remaining">
+                                        protected                                        int
+                </td>
+                <td>$remaining</td>
+                <td class="last">How many requests can be made.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_resetTime">
+                                        protected                                        float
+                </td>
+                <td>$resetTime</td>
+                <td class="last">When the ratelimit gets reset.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_queue">
+                                        protected                                        <a href="../../../CharlotteDunois/Yasmin/HTTP/APIRequest.html"><abbr title="CharlotteDunois\Yasmin\HTTP\APIRequest">APIRequest</abbr></a>[]
+                </td>
+                <td>$queue</td>
+                <td class="last">The request queue.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_busy">
+                                        protected                                        bool
+                </td>
+                <td>$busy</td>
+                <td class="last">Whether the bucket is busy.</td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(<a href="../../../CharlotteDunois/Yasmin/HTTP/APIManager.html"><abbr title="CharlotteDunois\Yasmin\HTTP\APIManager">APIManager</abbr></a> $api, string $endpoint)
+        
+                                            <p>DO NOT initialize this class yourself.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___destruct">__destruct</a>()
+        
+                                            <p>Destroys the bucket.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isBusy">isBusy</a>()
+        
+                                            <p>Whether we are busy.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setBusy">setBusy</a>(bool $busy)
+        
+                                            <p>Sets the busy flag (marking as running).</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>|void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_handleRatelimit">handleRatelimit</a>(int|null $limit, int|null $remaining, float|null $resetTime)
+        
+                                            <p>Sets the ratelimits from the response.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getEndpoint">getEndpoint</a>()
+        
+                                            <p>Returns the endpoint this bucket is for.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_size">size</a>()
+        
+                                            <p>Returns the size of the queue.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_push">push</a>(<a href="../../../CharlotteDunois/Yasmin/HTTP/APIRequest.html"><abbr title="CharlotteDunois\Yasmin\HTTP\APIRequest">APIRequest</abbr></a> $request)
+        
+                                            <p>Pushes a new request into the queue.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_unshift">unshift</a>(<a href="../../../CharlotteDunois/Yasmin/HTTP/APIRequest.html"><abbr title="CharlotteDunois\Yasmin\HTTP\APIRequest">APIRequest</abbr></a> $request)
+        
+                                            <p>Unshifts a new request into the queue. Modifies remaining ratelimit.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>|array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getMeta">getMeta</a>()
+        
+                                            <p>Retrieves ratelimit meta data.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../CharlotteDunois/Yasmin/HTTP/APIRequest.html"><abbr title="CharlotteDunois\Yasmin\HTTP\APIRequest">APIRequest</abbr></a>|false
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_shift">shift</a>()
+        
+                                            <p>Returns the first queue item or false. Modifies remaining ratelimit.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_clear">clear</a>()
+        
+                                            <p>Unsets all queue items.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/HTTP/RatelimitBucket.php#L64">line 64</a></div>
+        <code>                    
+    <strong>__construct</strong>(<a href="../../../CharlotteDunois/Yasmin/HTTP/APIManager.html"><abbr title="CharlotteDunois\Yasmin\HTTP\APIManager">APIManager</abbr></a> $api, string $endpoint)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>DO NOT initialize this class yourself.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../CharlotteDunois/Yasmin/HTTP/APIManager.html"><abbr title="CharlotteDunois\Yasmin\HTTP\APIManager">APIManager</abbr></a></td>
+                <td>$api</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$endpoint</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___destruct">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/HTTP/RatelimitBucket.php#L72">line 72</a></div>
+        <code>                    
+    <strong>__destruct</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Destroys the bucket.</p>                                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isBusy">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/HTTP/RatelimitBucket.php#L80">line 80</a></div>
+        <code>                    bool
+    <strong>isBusy</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Whether we are busy.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setBusy">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/HTTP/RatelimitBucket.php#L89">line 89</a></div>
+        <code>                    void
+    <strong>setBusy</strong>(bool $busy)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the busy flag (marking as running).</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool</td>
+                <td>$busy</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_handleRatelimit">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/HTTP/RatelimitBucket.php#L100">line 100</a></div>
+        <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>|void
+    <strong>handleRatelimit</strong>(int|null $limit, int|null $remaining, float|null $resetTime)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the ratelimits from the response.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int|null</td>
+                <td>$limit</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int|null</td>
+                <td>$remaining</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>float|null</td>
+                <td>$resetTime</td>
+                <td>Reset time in seconds with milliseconds.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>|void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getEndpoint">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/HTTP/RatelimitBucket.php#L119">line 119</a></div>
+        <code>                    string
+    <strong>getEndpoint</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the endpoint this bucket is for.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_size">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/HTTP/RatelimitBucket.php#L127">line 127</a></div>
+        <code>                    int
+    <strong>size</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the size of the queue.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_push">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/HTTP/RatelimitBucket.php#L136">line 136</a></div>
+        <code>                    $this
+    <strong>push</strong>(<a href="../../../CharlotteDunois/Yasmin/HTTP/APIRequest.html"><abbr title="CharlotteDunois\Yasmin\HTTP\APIRequest">APIRequest</abbr></a> $request)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Pushes a new request into the queue.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../CharlotteDunois/Yasmin/HTTP/APIRequest.html"><abbr title="CharlotteDunois\Yasmin\HTTP\APIRequest">APIRequest</abbr></a></td>
+                <td>$request</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_unshift">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/HTTP/RatelimitBucket.php#L146">line 146</a></div>
+        <code>                    $this
+    <strong>unshift</strong>(<a href="../../../CharlotteDunois/Yasmin/HTTP/APIRequest.html"><abbr title="CharlotteDunois\Yasmin\HTTP\APIRequest">APIRequest</abbr></a> $request)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Unshifts a new request into the queue. Modifies remaining ratelimit.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../CharlotteDunois/Yasmin/HTTP/APIRequest.html"><abbr title="CharlotteDunois\Yasmin\HTTP\APIRequest">APIRequest</abbr></a></td>
+                <td>$request</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMeta">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/HTTP/RatelimitBucket.php#L165">line 165</a></div>
+        <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>|array
+    <strong>getMeta</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieves ratelimit meta data.</p>                    <p>The resolved value must be:</p>
+
+<pre><code>array(
+    'limited' =&gt; bool,
+    'resetTime' =&gt; int|null
+)
+</code></pre>
+</p>                            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>|array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_shift">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/HTTP/RatelimitBucket.php#L182">line 182</a></div>
+        <code>                    <a href="../../../CharlotteDunois/Yasmin/HTTP/APIRequest.html"><abbr title="CharlotteDunois\Yasmin\HTTP\APIRequest">APIRequest</abbr></a>|false
+    <strong>shift</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the first queue item or false. Modifies remaining ratelimit.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../CharlotteDunois/Yasmin/HTTP/APIRequest.html"><abbr title="CharlotteDunois\Yasmin\HTTP\APIRequest">APIRequest</abbr></a>|false</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_clear">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/HTTP/RatelimitBucket.php#L197">line 197</a></div>
+        <code>                    void
+    <strong>clear</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Unsets all queue items.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

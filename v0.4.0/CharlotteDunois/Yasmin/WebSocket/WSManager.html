@@ -1,0 +1,1171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>CharlotteDunois\Yasmin\WebSocket\WSManager | Yasmin</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/sami.css">
+        <script src="../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../js/bootstrap.min.js"></script>
+        <script src="../../../js/typeahead.min.js"></script>
+        <script src="../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:CharlotteDunois_Yasmin_WebSocket_WSManager" data-root-path="../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#" method="GET">
+                <select id="version-switcher" name="version">
+                                            <option value="../../../../v0.4.0/index.html" data-version="v0.4.0">v0.4.0</option>
+                                            <option value="../../../../v0.4.1/index.html" data-version="v0.4.1">v0.4.1</option>
+                                            <option value="../../../../v0.4.2/index.html" data-version="v0.4.2">v0.4.2</option>
+                                            <option value="../../../../v0.5.0/index.html" data-version="v0.5.0">v0.5.0</option>
+                                            <option value="../../../../v0.5.1/index.html" data-version="v0.5.1">v0.5.1</option>
+                                            <option value="../../../../v0.6.0/index.html" data-version="v0.6.0">v0.6.0</option>
+                                            <option value="../../../../master/index.html" data-version="master">master branch</option>
+                                    </select>
+            </form>
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../index.html">Yasmin</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../classes.html">Classes</a></li>
+                                            <li><a href="../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../traits.html">Traits</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../../CharlotteDunois.html">CharlotteDunois</a></li><li class="backslash">\</li><li><a href="../../../CharlotteDunois/Yasmin.html">Yasmin</a></li><li class="backslash">\</li><li><a href="../../../CharlotteDunois/Yasmin/WebSocket.html">WebSocket</a></li><li class="backslash">\</li><li>WSManager</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            WSManager
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>WSManager</strong>        implements
+        <abbr title="CharlotteDunois\Events\EventEmitterInterface">EventEmitterInterface</abbr>        (<a href="https://github.com/sylae/yasmin/blob/v0.4.0/src/WebSocket/WSManager.php">View source</a>)
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>Handles the WS connection.</p>                                </div>
+    
+            <h2>Traits</h2>
+
+        
+    <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-6">
+                                            <abbr title="CharlotteDunois\Events\EventEmitterTrait">EventEmitterTrait</abbr>
+                                            
+                </div>
+                <div class="col-md-6">
+                    
+                </div>
+            </div>
+            </div>
+    
+            <h2>Constants</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td>OPCODES</td>
+                <td class="last">
+                    <p><em>WS OP codes.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>WS</td>
+                <td class="last">
+                    <p><em>WS constants. Query string parameters.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>WS_CLOSE_CODES</td>
+                <td class="last">
+                    <p><em>WS Close codes.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_client">
+                                                                                <a href="../../../CharlotteDunois/Yasmin/Client.html"><abbr title="CharlotteDunois\Yasmin\Client">Client</abbr></a>
+                </td>
+                <td>$client</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_connector">
+                                        protected                                        <abbr title="Ratchet\Client\Connector">Connector</abbr>
+                </td>
+                <td>$connector</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_wshandler">
+                                                                                <a href="../../../CharlotteDunois/Yasmin/WebSocket/WSHandler.html"><abbr title="CharlotteDunois\Yasmin\WebSocket\WSHandler">WSHandler</abbr></a>
+                </td>
+                <td>$wshandler</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_ws">
+                                        protected                                        <abbr title="Ratchet\Client\WebSocket">WebSocket</abbr>
+                </td>
+                <td>$ws</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_compressContext">
+                                        protected                                        <a href="../../../CharlotteDunois/Yasmin/Interfaces/WSCompressionInterface.html"><abbr title="CharlotteDunois\Yasmin\Interfaces\WSCompressionInterface">WSCompressionInterface</abbr></a>
+                </td>
+                <td>$compressContext</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_encoding">
+                                                                                <a href="../../../CharlotteDunois/Yasmin/Interfaces/WSEncodingInterface.html"><abbr title="CharlotteDunois\Yasmin\Interfaces\WSEncodingInterface">WSEncodingInterface</abbr></a>
+                </td>
+                <td>$encoding</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_ratelimits">
+                                                                                array
+                </td>
+                <td>$ratelimits</td>
+                <td class="last">The WS ratelimits.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_wsHeartbeat">
+                                                                                array
+                </td>
+                <td>$wsHeartbeat</td>
+                <td class="last">The WS heartbeat.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_authenticated">
+                                        protected                                        bool
+                </td>
+                <td>$authenticated</td>
+                <td class="last">The WS authentication state.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_queue">
+                                        protected                                        array
+                </td>
+                <td>$queue</td>
+                <td class="last">The WS queue.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_running">
+                                        protected                                        bool
+                </td>
+                <td>$running</td>
+                <td class="last">The WS queue processing status.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_expectedClose">
+                                        protected                                        bool
+                </td>
+                <td>$expectedClose</td>
+                <td class="last">If the connection gets closed, did we expect it?</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_gateway">
+                                        protected                                        string
+                </td>
+                <td>$gateway</td>
+                <td class="last">The WS gateway address.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_lastIdentify">
+                                        protected                                        int
+                </td>
+                <td>$lastIdentify</td>
+                <td class="last">The timestamp of the latest identify (Ratelimit 1/5s).</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_previous">
+                                        protected                                        bool
+                </td>
+                <td>$previous</td>
+                <td class="last">Whether we should use the previous sequence for RESUME (for after compress context failure).</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_wsCloseCodes">
+                                        protected                                        array
+                </td>
+                <td>$wsCloseCodes</td>
+                <td class="last">WS close codes, sorted by resumable session and ends everything.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_wsStatus">
+                                        protected                                        int
+                </td>
+                <td>$wsStatus</td>
+                <td class="last">The WS connection status</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_wsSessionID">
+                                        protected                                        string|null
+                </td>
+                <td>$wsSessionID</td>
+                <td class="last">The Discord Session ID.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_status">
+                                                                                int
+                </td>
+                <td>$status</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(<a href="../../../CharlotteDunois/Yasmin/Client.html"><abbr title="CharlotteDunois\Yasmin\Client">Client</abbr></a> $client)
+        
+                                            <p>DO NOT initialize this class yourself.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___get">__get</a>($name)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_destroy">destroy</a>()
+        
+                                            <p>Disconnects.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_connect">connect</a>(string|null $gateway = null, array $querystring = array())
+        
+                                            <p>Connects to the gateway url.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_disconnect">disconnect</a>(int $code = 1000, string $reason = &#039;&#039;)
+        
+                                            <p>Closes the WS connection.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_reconnect">reconnect</a>(bool $resumable = true)
+        
+                                            <p>Closes the WS connection.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_renewConnection">renewConnection</a>(bool $forceNewGateway = true)
+        
+                                            <p>Closes the WS connection.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_send">send</a>(array $packet)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_processQueue">processQueue</a>()
+        
+                                            <p>Processes the WS queue.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setAuthenticated">setAuthenticated</a>(bool $state)
+        
+                                            <p>Set authenticated.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getLastIdentified">getLastIdentified</a>()
+        
+                                            <p>Get last identified timestamp</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getSessionID">getSessionID</a>()
+        
+                                            <p>Get the session ID.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setSessionID">setSessionID</a>(string|null $id)
+        
+                                            <p>Set the session ID.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_sendIdentify">sendIdentify</a>()
+        
+                                            <p>Sends an IDENTIFY or RESUME payload, depending on ws session ID.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_heartbeat">heartbeat</a>()
+        
+                                            <p>Sends a heartbeat.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_heartFailure">heartFailure</a>()
+        
+                                            <p>Handles heart failures.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method__pong">_pong</a>($end)
+        
+                                            <p>Handles heartbeat ack.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method__send">_send</a>(array $packet)
+        
+                                            <p>Direct ws send method. DO NOT USE.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.4.0/src/WebSocket/WSManager.php#L202">line 202</a></div>
+        <code>                    
+    <strong>__construct</strong>(<a href="../../../CharlotteDunois/Yasmin/Client.html"><abbr title="CharlotteDunois\Yasmin\Client">Client</abbr></a> $client)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>DO NOT initialize this class yourself.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../CharlotteDunois/Yasmin/Client.html"><abbr title="CharlotteDunois\Yasmin\Client">Client</abbr></a></td>
+                <td>$client</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___get">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.4.0/src/WebSocket/WSManager.php#L235">line 235</a></div>
+        <code>                    
+    <strong>__get</strong>($name)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/RuntimeException">RuntimeException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_destroy">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.4.0/src/WebSocket/WSManager.php#L258">line 258</a></div>
+        <code>                    void
+    <strong>destroy</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Disconnects.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_connect">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.4.0/src/WebSocket/WSManager.php#L267">line 267</a></div>
+        <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
+    <strong>connect</strong>(string|null $gateway = null, array $querystring = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Connects to the gateway url.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|null</td>
+                <td>$gateway</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$querystring</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/Exception">Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_disconnect">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.4.0/src/WebSocket/WSManager.php#L478">line 478</a></div>
+        <code>                    void
+    <strong>disconnect</strong>(int $code = 1000, string $reason = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Closes the WS connection.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$code</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$reason</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_reconnect">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.4.0/src/WebSocket/WSManager.php#L495">line 495</a></div>
+        <code>                    void
+    <strong>reconnect</strong>(bool $resumable = true)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Closes the WS connection.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool</td>
+                <td>$resumable</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_renewConnection">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.4.0/src/WebSocket/WSManager.php#L512">line 512</a></div>
+        <code>            protected        <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
+    <strong>renewConnection</strong>(bool $forceNewGateway = true)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Closes the WS connection.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool</td>
+                <td>$forceNewGateway</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_send">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.4.0/src/WebSocket/WSManager.php#L529">line 529</a></div>
+        <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
+    <strong>send</strong>(array $packet)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$packet</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/RuntimeException">RuntimeException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_processQueue">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.4.0/src/WebSocket/WSManager.php#L547">line 547</a></div>
+        <code>                    void
+    <strong>processQueue</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Processes the WS queue.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setAuthenticated">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.4.0/src/WebSocket/WSManager.php#L578">line 578</a></div>
+        <code>                    void
+    <strong>setAuthenticated</strong>(bool $state)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set authenticated.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool</td>
+                <td>$state</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getLastIdentified">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.4.0/src/WebSocket/WSManager.php#L586">line 586</a></div>
+        <code>                    int
+    <strong>getLastIdentified</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get last identified timestamp</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSessionID">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.4.0/src/WebSocket/WSManager.php#L594">line 594</a></div>
+        <code>                    string|null
+    <strong>getSessionID</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the session ID.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setSessionID">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.4.0/src/WebSocket/WSManager.php#L602">line 602</a></div>
+        <code>                    void
+    <strong>setSessionID</strong>(string|null $id)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the session ID.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|null</td>
+                <td>$id</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sendIdentify">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.4.0/src/WebSocket/WSManager.php#L610">line 610</a></div>
+        <code>                    void
+    <strong>sendIdentify</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sends an IDENTIFY or RESUME payload, depending on ws session ID.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_heartbeat">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.4.0/src/WebSocket/WSManager.php#L660">line 660</a></div>
+        <code>                    void
+    <strong>heartbeat</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sends a heartbeat.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_heartFailure">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.4.0/src/WebSocket/WSManager.php#L684">line 684</a></div>
+        <code>                    void
+    <strong>heartFailure</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Handles heart failures.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__pong">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.4.0/src/WebSocket/WSManager.php#L693">line 693</a></div>
+        <code>                    void
+    <strong>_pong</strong>($end)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Handles heartbeat ack.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$end</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__send">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.4.0/src/WebSocket/WSManager.php#L712">line 712</a></div>
+        <code>                    void
+    <strong>_send</strong>(array $packet)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Direct ws send method. DO NOT USE.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$packet</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

@@ -1,0 +1,1876 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>CharlotteDunois\Yasmin\HTTP\Endpoints\Guild | Yasmin</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../css/sami.css">
+        <script src="../../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../../js/bootstrap.min.js"></script>
+        <script src="../../../../js/typeahead.min.js"></script>
+        <script src="../../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:CharlotteDunois_Yasmin_HTTP_Endpoints_Guild" data-root-path="../../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#" method="GET">
+                <select id="version-switcher" name="version">
+                                            <option value="../../../../../v0.4.0/index.html" data-version="v0.4.0">v0.4.0</option>
+                                            <option value="../../../../../v0.4.1/index.html" data-version="v0.4.1">v0.4.1</option>
+                                            <option value="../../../../../v0.4.2/index.html" data-version="v0.4.2">v0.4.2</option>
+                                            <option value="../../../../../v0.5.0/index.html" data-version="v0.5.0">v0.5.0</option>
+                                            <option value="../../../../../v0.5.1/index.html" data-version="v0.5.1">v0.5.1</option>
+                                            <option value="../../../../../v0.6.0/index.html" data-version="v0.6.0">v0.6.0</option>
+                                            <option value="../../../../../master/index.html" data-version="master">master branch</option>
+                                    </select>
+            </form>
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../../index.html">Yasmin</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../../classes.html">Classes</a></li>
+                                            <li><a href="../../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../../traits.html">Traits</a></li>
+                    <li><a href="../../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../../../CharlotteDunois.html">CharlotteDunois</a></li><li class="backslash">\</li><li><a href="../../../../CharlotteDunois/Yasmin.html">Yasmin</a></li><li class="backslash">\</li><li><a href="../../../../CharlotteDunois/Yasmin/HTTP.html">HTTP</a></li><li class="backslash">\</li><li><a href="../../../../CharlotteDunois/Yasmin/HTTP/Endpoints.html">Endpoints</a></li><li class="backslash">\</li><li>Guild</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Guild
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Guild</strong>        (<a href="https://github.com/sylae/yasmin/blob/v0.4.1/src/HTTP/Endpoints/Guild.php">View source</a>)
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>Handles the API endpoints "Guild".</p>                                </div>
+    
+    
+            <h2>Constants</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td>ENDPOINTS</td>
+                <td class="last">
+                    <p><em>Endpoints Guilds.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_api">
+                                        protected                                        <a href="../../../../CharlotteDunois/Yasmin/HTTP/APIManager.html"><abbr title="CharlotteDunois\Yasmin\HTTP\APIManager">APIManager</abbr></a>
+                </td>
+                <td>$api</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(<a href="../../../../CharlotteDunois/Yasmin/HTTP/APIManager.html"><abbr title="CharlotteDunois\Yasmin\HTTP\APIManager">APIManager</abbr></a> $api)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getGuild">getGuild</a>(string $guildid)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_createGuild">createGuild</a>(array $options)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_modifyGuild">modifyGuild</a>(string $guildid, array $options, string $reason = &#039;&#039;)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_deleteGuild">deleteGuild</a>(string $guildid)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getGuildChannels">getGuildChannels</a>(string $guildid)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_createGuildChannel">createGuildChannel</a>(string $guildid, array $options, string $reason = &#039;&#039;)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_modifyGuildChannelPositions">modifyGuildChannelPositions</a>(string $guildid, array $options, string $reason = &#039;&#039;)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getGuildMember">getGuildMember</a>(string $guildid, string $userid)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_listGuildMembers">listGuildMembers</a>(string $guildid)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addGuildMember">addGuildMember</a>(string $guildid, string $userid, array $options)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_modifyGuildMember">modifyGuildMember</a>(string $guildid, string $userid, array $options, string $reason = &#039;&#039;)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_removeGuildMember">removeGuildMember</a>(string $guildid, string $userid, string $reason = &#039;&#039;)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_modifyCurrentNick">modifyCurrentNick</a>(string $guildid, string $userid, string $nick)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addGuildMemberRole">addGuildMemberRole</a>(string $guildid, string $userid, string $roleid, string $reason = &#039;&#039;)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_removeGuildMemberRole">removeGuildMemberRole</a>(string $guildid, string $userid, string $roleid, string $reason = &#039;&#039;)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getGuildBans">getGuildBans</a>(string $guildid)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_createGuildBan">createGuildBan</a>(string $guildid, string $userid, int $daysDeleteMessages = 0, string $reason = &#039;&#039;)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_removeGuildBan">removeGuildBan</a>(string $guildid, string $userid, string $reason = &#039;&#039;)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getGuildRoles">getGuildRoles</a>(string $guildid)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_createGuildRole">createGuildRole</a>(string $guildid, array $options, string $reason = &#039;&#039;)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_modifyGuildRolePositions">modifyGuildRolePositions</a>(string $guildid, array $options, string $reason = &#039;&#039;)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_modifyGuildRole">modifyGuildRole</a>(string $guildid, string $roleid, array $options, string $reason = &#039;&#039;)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_deleteGuildRole">deleteGuildRole</a>(string $guildid, string $roleid, string $reason = &#039;&#039;)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getGuildPruneCount">getGuildPruneCount</a>(string $guildid, int $days)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_beginGuildPrune">beginGuildPrune</a>(string $guildid, int $days, string $reason = &#039;&#039;)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getGuildVoiceRegions">getGuildVoiceRegions</a>(string $guildid)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getGuildInvites">getGuildInvites</a>(string $guildid)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getGuildIntegrations">getGuildIntegrations</a>(string $guildid)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_createGuildIntegration">createGuildIntegration</a>(string $guildid, array $options)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_modifyGuildIntegration">modifyGuildIntegration</a>(string $guildid, string $integrationid, array $options, string $reason = &#039;&#039;)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_deleteGuildIntegration">deleteGuildIntegration</a>(string $guildid, string $integrationid, string $reason = &#039;&#039;)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_syncGuildIntegration">syncGuildIntegration</a>(string $guildid, string $integrationid)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getGuildEmbed">getGuildEmbed</a>(string $guildid)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_modifyGuildEmbed">modifyGuildEmbed</a>(string $guildid, array $options, string $reason = &#039;&#039;)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getGuildAuditLog">getGuildAuditLog</a>(string $guildid, array $query)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getGuildVanityURL">getGuildVanityURL</a>(string $guildid)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.4.1/src/HTTP/Endpoints/Guild.php#L86">line 86</a></div>
+        <code>                    
+    <strong>__construct</strong>(<a href="../../../../CharlotteDunois/Yasmin/HTTP/APIManager.html"><abbr title="CharlotteDunois\Yasmin\HTTP\APIManager">APIManager</abbr></a> $api)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../CharlotteDunois/Yasmin/HTTP/APIManager.html"><abbr title="CharlotteDunois\Yasmin\HTTP\APIManager">APIManager</abbr></a></td>
+                <td>$api</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getGuild">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.4.1/src/HTTP/Endpoints/Guild.php#L90">line 90</a></div>
+        <code>                    
+    <strong>getGuild</strong>(string $guildid)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$guildid</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createGuild">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.4.1/src/HTTP/Endpoints/Guild.php#L95">line 95</a></div>
+        <code>                    
+    <strong>createGuild</strong>(array $options)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_modifyGuild">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.4.1/src/HTTP/Endpoints/Guild.php#L100">line 100</a></div>
+        <code>                    
+    <strong>modifyGuild</strong>(string $guildid, array $options, string $reason = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$guildid</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$reason</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_deleteGuild">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.4.1/src/HTTP/Endpoints/Guild.php#L105">line 105</a></div>
+        <code>                    
+    <strong>deleteGuild</strong>(string $guildid)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$guildid</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getGuildChannels">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.4.1/src/HTTP/Endpoints/Guild.php#L110">line 110</a></div>
+        <code>                    
+    <strong>getGuildChannels</strong>(string $guildid)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$guildid</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createGuildChannel">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.4.1/src/HTTP/Endpoints/Guild.php#L115">line 115</a></div>
+        <code>                    
+    <strong>createGuildChannel</strong>(string $guildid, array $options, string $reason = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$guildid</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$reason</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_modifyGuildChannelPositions">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.4.1/src/HTTP/Endpoints/Guild.php#L120">line 120</a></div>
+        <code>                    
+    <strong>modifyGuildChannelPositions</strong>(string $guildid, array $options, string $reason = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$guildid</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$reason</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getGuildMember">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.4.1/src/HTTP/Endpoints/Guild.php#L125">line 125</a></div>
+        <code>                    
+    <strong>getGuildMember</strong>(string $guildid, string $userid)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$guildid</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$userid</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_listGuildMembers">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.4.1/src/HTTP/Endpoints/Guild.php#L130">line 130</a></div>
+        <code>                    
+    <strong>listGuildMembers</strong>(string $guildid)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$guildid</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addGuildMember">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.4.1/src/HTTP/Endpoints/Guild.php#L135">line 135</a></div>
+        <code>                    
+    <strong>addGuildMember</strong>(string $guildid, string $userid, array $options)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$guildid</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$userid</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_modifyGuildMember">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.4.1/src/HTTP/Endpoints/Guild.php#L140">line 140</a></div>
+        <code>                    
+    <strong>modifyGuildMember</strong>(string $guildid, string $userid, array $options, string $reason = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$guildid</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$userid</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$reason</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_removeGuildMember">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.4.1/src/HTTP/Endpoints/Guild.php#L145">line 145</a></div>
+        <code>                    
+    <strong>removeGuildMember</strong>(string $guildid, string $userid, string $reason = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$guildid</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$userid</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$reason</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_modifyCurrentNick">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.4.1/src/HTTP/Endpoints/Guild.php#L150">line 150</a></div>
+        <code>                    
+    <strong>modifyCurrentNick</strong>(string $guildid, string $userid, string $nick)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$guildid</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$userid</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$nick</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addGuildMemberRole">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.4.1/src/HTTP/Endpoints/Guild.php#L155">line 155</a></div>
+        <code>                    
+    <strong>addGuildMemberRole</strong>(string $guildid, string $userid, string $roleid, string $reason = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$guildid</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$userid</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$roleid</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$reason</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_removeGuildMemberRole">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.4.1/src/HTTP/Endpoints/Guild.php#L160">line 160</a></div>
+        <code>                    
+    <strong>removeGuildMemberRole</strong>(string $guildid, string $userid, string $roleid, string $reason = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$guildid</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$userid</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$roleid</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$reason</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getGuildBans">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.4.1/src/HTTP/Endpoints/Guild.php#L165">line 165</a></div>
+        <code>                    
+    <strong>getGuildBans</strong>(string $guildid)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$guildid</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createGuildBan">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.4.1/src/HTTP/Endpoints/Guild.php#L170">line 170</a></div>
+        <code>                    
+    <strong>createGuildBan</strong>(string $guildid, string $userid, int $daysDeleteMessages = 0, string $reason = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$guildid</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$userid</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$daysDeleteMessages</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$reason</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_removeGuildBan">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.4.1/src/HTTP/Endpoints/Guild.php#L181">line 181</a></div>
+        <code>                    
+    <strong>removeGuildBan</strong>(string $guildid, string $userid, string $reason = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$guildid</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$userid</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$reason</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getGuildRoles">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.4.1/src/HTTP/Endpoints/Guild.php#L186">line 186</a></div>
+        <code>                    
+    <strong>getGuildRoles</strong>(string $guildid)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$guildid</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createGuildRole">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.4.1/src/HTTP/Endpoints/Guild.php#L191">line 191</a></div>
+        <code>                    
+    <strong>createGuildRole</strong>(string $guildid, array $options, string $reason = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$guildid</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$reason</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_modifyGuildRolePositions">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.4.1/src/HTTP/Endpoints/Guild.php#L196">line 196</a></div>
+        <code>                    
+    <strong>modifyGuildRolePositions</strong>(string $guildid, array $options, string $reason = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$guildid</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$reason</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_modifyGuildRole">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.4.1/src/HTTP/Endpoints/Guild.php#L201">line 201</a></div>
+        <code>                    
+    <strong>modifyGuildRole</strong>(string $guildid, string $roleid, array $options, string $reason = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$guildid</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$roleid</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$reason</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_deleteGuildRole">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.4.1/src/HTTP/Endpoints/Guild.php#L206">line 206</a></div>
+        <code>                    
+    <strong>deleteGuildRole</strong>(string $guildid, string $roleid, string $reason = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$guildid</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$roleid</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$reason</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getGuildPruneCount">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.4.1/src/HTTP/Endpoints/Guild.php#L211">line 211</a></div>
+        <code>                    
+    <strong>getGuildPruneCount</strong>(string $guildid, int $days)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$guildid</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$days</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_beginGuildPrune">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.4.1/src/HTTP/Endpoints/Guild.php#L216">line 216</a></div>
+        <code>                    
+    <strong>beginGuildPrune</strong>(string $guildid, int $days, string $reason = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$guildid</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$days</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$reason</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getGuildVoiceRegions">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.4.1/src/HTTP/Endpoints/Guild.php#L221">line 221</a></div>
+        <code>                    
+    <strong>getGuildVoiceRegions</strong>(string $guildid)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$guildid</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getGuildInvites">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.4.1/src/HTTP/Endpoints/Guild.php#L226">line 226</a></div>
+        <code>                    
+    <strong>getGuildInvites</strong>(string $guildid)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$guildid</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getGuildIntegrations">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.4.1/src/HTTP/Endpoints/Guild.php#L231">line 231</a></div>
+        <code>                    
+    <strong>getGuildIntegrations</strong>(string $guildid)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$guildid</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createGuildIntegration">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.4.1/src/HTTP/Endpoints/Guild.php#L236">line 236</a></div>
+        <code>                    
+    <strong>createGuildIntegration</strong>(string $guildid, array $options)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$guildid</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_modifyGuildIntegration">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.4.1/src/HTTP/Endpoints/Guild.php#L241">line 241</a></div>
+        <code>                    
+    <strong>modifyGuildIntegration</strong>(string $guildid, string $integrationid, array $options, string $reason = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$guildid</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$integrationid</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$reason</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_deleteGuildIntegration">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.4.1/src/HTTP/Endpoints/Guild.php#L246">line 246</a></div>
+        <code>                    
+    <strong>deleteGuildIntegration</strong>(string $guildid, string $integrationid, string $reason = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$guildid</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$integrationid</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$reason</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_syncGuildIntegration">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.4.1/src/HTTP/Endpoints/Guild.php#L251">line 251</a></div>
+        <code>                    
+    <strong>syncGuildIntegration</strong>(string $guildid, string $integrationid)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$guildid</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$integrationid</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getGuildEmbed">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.4.1/src/HTTP/Endpoints/Guild.php#L256">line 256</a></div>
+        <code>                    
+    <strong>getGuildEmbed</strong>(string $guildid)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$guildid</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_modifyGuildEmbed">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.4.1/src/HTTP/Endpoints/Guild.php#L261">line 261</a></div>
+        <code>                    
+    <strong>modifyGuildEmbed</strong>(string $guildid, array $options, string $reason = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$guildid</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$reason</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getGuildAuditLog">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.4.1/src/HTTP/Endpoints/Guild.php#L266">line 266</a></div>
+        <code>                    
+    <strong>getGuildAuditLog</strong>(string $guildid, array $query)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$guildid</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$query</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getGuildVanityURL">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.4.1/src/HTTP/Endpoints/Guild.php#L271">line 271</a></div>
+        <code>                    
+    <strong>getGuildVanityURL</strong>(string $guildid)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$guildid</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>

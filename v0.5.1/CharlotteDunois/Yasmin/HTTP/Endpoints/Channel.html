@@ -1,0 +1,1282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>CharlotteDunois\Yasmin\HTTP\Endpoints\Channel | Yasmin</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../css/sami.css">
+        <script src="../../../../js/jquery-1.11.1.min.js"></script>
+        <script src="../../../../js/bootstrap.min.js"></script>
+        <script src="../../../../js/typeahead.min.js"></script>
+        <script src="../../../../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:CharlotteDunois_Yasmin_HTTP_Endpoints_Channel" data-root-path="../../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#" method="GET">
+                <select id="version-switcher" name="version">
+                                            <option value="../../../../../v0.4.0/index.html" data-version="v0.4.0">v0.4.0</option>
+                                            <option value="../../../../../v0.4.1/index.html" data-version="v0.4.1">v0.4.1</option>
+                                            <option value="../../../../../v0.4.2/index.html" data-version="v0.4.2">v0.4.2</option>
+                                            <option value="../../../../../v0.5.0/index.html" data-version="v0.5.0">v0.5.0</option>
+                                            <option value="../../../../../v0.5.1/index.html" data-version="v0.5.1">v0.5.1</option>
+                                            <option value="../../../../../v0.6.0/index.html" data-version="v0.6.0">v0.6.0</option>
+                                            <option value="../../../../../master/index.html" data-version="master">master branch</option>
+                                    </select>
+            </form>
+                <script>
+            $('option[data-version="'+window.projectVersion+'"]').prop('selected', true);
+        </script>
+        <form id="search-form" action="../../../../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../../index.html">Yasmin</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../../classes.html">Classes</a></li>
+                                            <li><a href="../../../../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../../traits.html">Traits</a></li>
+                    <li><a href="../../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../../../CharlotteDunois.html">CharlotteDunois</a></li><li class="backslash">\</li><li><a href="../../../../CharlotteDunois/Yasmin.html">Yasmin</a></li><li class="backslash">\</li><li><a href="../../../../CharlotteDunois/Yasmin/HTTP.html">HTTP</a></li><li class="backslash">\</li><li><a href="../../../../CharlotteDunois/Yasmin/HTTP/Endpoints.html">Endpoints</a></li><li class="backslash">\</li><li>Channel</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Channel
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Channel</strong>        (<a href="https://github.com/sylae/yasmin/blob/v0.5.1/src/HTTP/Endpoints/Channel.php">View source</a>)
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>Handles the API endpoints "Channel".</p>                                </div>
+    
+    
+            <h2>Constants</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td>ENDPOINTS</td>
+                <td class="last">
+                    <p><em>Endpoints Channels.</em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_api">
+                                        protected                                        <a href="../../../../CharlotteDunois/Yasmin/HTTP/APIManager.html"><abbr title="CharlotteDunois\Yasmin\HTTP\APIManager">APIManager</abbr></a>
+                </td>
+                <td>$api</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(<a href="../../../../CharlotteDunois/Yasmin/HTTP/APIManager.html"><abbr title="CharlotteDunois\Yasmin\HTTP\APIManager">APIManager</abbr></a> $api)
+        
+                                            <p>Constructor.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getChannel">getChannel</a>(string $channelid)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_modifyChannel">modifyChannel</a>(string $channelid, array $data, string $reason = &#039;&#039;)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_deleteChannel">deleteChannel</a>(string $channelid, string $reason = &#039;&#039;)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getChannelMessages">getChannelMessages</a>(string $channelid, array $options = array())
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getChannelMessage">getChannelMessage</a>(string $channelid, string $messageid)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_createMessage">createMessage</a>(string $channelid, array $options, array $files = array())
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_editMessage">editMessage</a>(string $channelid, string $messageid, array $options)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_deleteMessage">deleteMessage</a>(string $channelid, string $messageid, string $reason = &#039;&#039;)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_bulkDeleteMessages">bulkDeleteMessages</a>(string $channelid, array $snowflakes, string $reason = &#039;&#039;)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_createMessageReaction">createMessageReaction</a>(string $channelid, string $messageid, string $emoji)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_deleteMessageUserReaction">deleteMessageUserReaction</a>(string $channelid, string $messageid, string $emoji, string $userid)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getMessageReactions">getMessageReactions</a>(string $channelid, string $messageid, string $emoji, array $querystring = array())
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_deleteMessageReactions">deleteMessageReactions</a>(string $channelid, string $messageid)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_editChannelPermissions">editChannelPermissions</a>(string $channelid, string $overwriteid, array $options, string $reason = &#039;&#039;)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_deleteChannelPermission">deleteChannelPermission</a>(string $channelid, string $overwriteid, string $reason = &#039;&#039;)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getChannelInvites">getChannelInvites</a>(string $channelid)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_createChannelInvite">createChannelInvite</a>(string $channelid, array $options = array())
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_triggerChannelTyping">triggerChannelTyping</a>(string $channelid)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getPinnedChannelMessages">getPinnedChannelMessages</a>(string $channelid)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_pinChannelMessage">pinChannelMessage</a>(string $channelid, string $messageid)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_unpinChannelMessage">unpinChannelMessage</a>(string $channelid, string $messageid)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_groupDMAddRecipient">groupDMAddRecipient</a>(string $channelid, string $userid, string $accessToken, string $nick)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_groupDMRemoveRecipient">groupDMRemoveRecipient</a>(string $channelid, string $userid)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.5.1/src/HTTP/Endpoints/Channel.php#L68">line 68</a></div>
+        <code>                    
+    <strong>__construct</strong>(<a href="../../../../CharlotteDunois/Yasmin/HTTP/APIManager.html"><abbr title="CharlotteDunois\Yasmin\HTTP\APIManager">APIManager</abbr></a> $api)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Constructor.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../CharlotteDunois/Yasmin/HTTP/APIManager.html"><abbr title="CharlotteDunois\Yasmin\HTTP\APIManager">APIManager</abbr></a></td>
+                <td>$api</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getChannel">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.5.1/src/HTTP/Endpoints/Channel.php#L72">line 72</a></div>
+        <code>                    
+    <strong>getChannel</strong>(string $channelid)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$channelid</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_modifyChannel">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.5.1/src/HTTP/Endpoints/Channel.php#L77">line 77</a></div>
+        <code>                    
+    <strong>modifyChannel</strong>(string $channelid, array $data, string $reason = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$channelid</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$data</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$reason</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_deleteChannel">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.5.1/src/HTTP/Endpoints/Channel.php#L82">line 82</a></div>
+        <code>                    
+    <strong>deleteChannel</strong>(string $channelid, string $reason = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$channelid</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$reason</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getChannelMessages">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.5.1/src/HTTP/Endpoints/Channel.php#L87">line 87</a></div>
+        <code>                    
+    <strong>getChannelMessages</strong>(string $channelid, array $options = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$channelid</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getChannelMessage">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.5.1/src/HTTP/Endpoints/Channel.php#L92">line 92</a></div>
+        <code>                    
+    <strong>getChannelMessage</strong>(string $channelid, string $messageid)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$channelid</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$messageid</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createMessage">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.5.1/src/HTTP/Endpoints/Channel.php#L97">line 97</a></div>
+        <code>                    
+    <strong>createMessage</strong>(string $channelid, array $options, array $files = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$channelid</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$files</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_editMessage">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.5.1/src/HTTP/Endpoints/Channel.php#L102">line 102</a></div>
+        <code>                    
+    <strong>editMessage</strong>(string $channelid, string $messageid, array $options)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$channelid</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$messageid</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_deleteMessage">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.5.1/src/HTTP/Endpoints/Channel.php#L107">line 107</a></div>
+        <code>                    
+    <strong>deleteMessage</strong>(string $channelid, string $messageid, string $reason = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$channelid</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$messageid</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$reason</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_bulkDeleteMessages">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.5.1/src/HTTP/Endpoints/Channel.php#L112">line 112</a></div>
+        <code>                    
+    <strong>bulkDeleteMessages</strong>(string $channelid, array $snowflakes, string $reason = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$channelid</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$snowflakes</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$reason</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createMessageReaction">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.5.1/src/HTTP/Endpoints/Channel.php#L117">line 117</a></div>
+        <code>                    
+    <strong>createMessageReaction</strong>(string $channelid, string $messageid, string $emoji)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$channelid</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$messageid</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$emoji</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_deleteMessageUserReaction">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.5.1/src/HTTP/Endpoints/Channel.php#L122">line 122</a></div>
+        <code>                    
+    <strong>deleteMessageUserReaction</strong>(string $channelid, string $messageid, string $emoji, string $userid)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$channelid</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$messageid</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$emoji</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$userid</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMessageReactions">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.5.1/src/HTTP/Endpoints/Channel.php#L127">line 127</a></div>
+        <code>                    
+    <strong>getMessageReactions</strong>(string $channelid, string $messageid, string $emoji, array $querystring = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$channelid</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$messageid</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$emoji</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$querystring</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_deleteMessageReactions">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.5.1/src/HTTP/Endpoints/Channel.php#L132">line 132</a></div>
+        <code>                    
+    <strong>deleteMessageReactions</strong>(string $channelid, string $messageid)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$channelid</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$messageid</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_editChannelPermissions">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.5.1/src/HTTP/Endpoints/Channel.php#L137">line 137</a></div>
+        <code>                    
+    <strong>editChannelPermissions</strong>(string $channelid, string $overwriteid, array $options, string $reason = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$channelid</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$overwriteid</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$reason</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_deleteChannelPermission">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.5.1/src/HTTP/Endpoints/Channel.php#L142">line 142</a></div>
+        <code>                    
+    <strong>deleteChannelPermission</strong>(string $channelid, string $overwriteid, string $reason = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$channelid</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$overwriteid</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$reason</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getChannelInvites">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.5.1/src/HTTP/Endpoints/Channel.php#L147">line 147</a></div>
+        <code>                    
+    <strong>getChannelInvites</strong>(string $channelid)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$channelid</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createChannelInvite">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.5.1/src/HTTP/Endpoints/Channel.php#L152">line 152</a></div>
+        <code>                    
+    <strong>createChannelInvite</strong>(string $channelid, array $options = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$channelid</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_triggerChannelTyping">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.5.1/src/HTTP/Endpoints/Channel.php#L157">line 157</a></div>
+        <code>                    
+    <strong>triggerChannelTyping</strong>(string $channelid)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$channelid</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPinnedChannelMessages">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.5.1/src/HTTP/Endpoints/Channel.php#L162">line 162</a></div>
+        <code>                    
+    <strong>getPinnedChannelMessages</strong>(string $channelid)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$channelid</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_pinChannelMessage">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.5.1/src/HTTP/Endpoints/Channel.php#L167">line 167</a></div>
+        <code>                    
+    <strong>pinChannelMessage</strong>(string $channelid, string $messageid)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$channelid</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$messageid</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_unpinChannelMessage">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.5.1/src/HTTP/Endpoints/Channel.php#L172">line 172</a></div>
+        <code>                    
+    <strong>unpinChannelMessage</strong>(string $channelid, string $messageid)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$channelid</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$messageid</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_groupDMAddRecipient">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.5.1/src/HTTP/Endpoints/Channel.php#L177">line 177</a></div>
+        <code>                    
+    <strong>groupDMAddRecipient</strong>(string $channelid, string $userid, string $accessToken, string $nick)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$channelid</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$userid</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$accessToken</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$nick</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_groupDMRemoveRecipient">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.5.1/src/HTTP/Endpoints/Channel.php#L182">line 182</a></div>
+        <code>                    
+    <strong>groupDMRemoveRecipient</strong>(string $channelid, string $userid)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$channelid</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$userid</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>
