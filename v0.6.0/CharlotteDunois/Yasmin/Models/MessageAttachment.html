@@ -8,12 +8,10 @@
             <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
         <link rel="stylesheet" type="text/css" href="../../../css/sami.css">
-        <link rel="stylesheet" type="text/css" href="../../../css/prism.css">
         <script src="../../../js/jquery-1.11.1.min.js"></script>
         <script src="../../../js/bootstrap.min.js"></script>
         <script src="../../../js/typeahead.min.js"></script>
         <script src="../../../sami.js"></script>
-        <script src="../../../js/prism.js"></script>
         <meta name="MobileOptimized" content="width">
         <meta name="HandheldFriendly" content="true">
         <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
@@ -27,10 +25,13 @@
                 <div id="control-panel">
                     <form action="#" method="GET">
                 <select id="version-switcher" name="version">
+                                            <option value="../../../../v0.4.0/index.html" data-version="v0.4.0">v0.4.0</option>
+                                            <option value="../../../../v0.4.1/index.html" data-version="v0.4.1">v0.4.1</option>
+                                            <option value="../../../../v0.4.2/index.html" data-version="v0.4.2">v0.4.2</option>
                                             <option value="../../../../v0.5.0/index.html" data-version="v0.5.0">v0.5.0</option>
                                             <option value="../../../../v0.5.1/index.html" data-version="v0.5.1">v0.5.1</option>
                                             <option value="../../../../v0.6.0/index.html" data-version="v0.6.0">v0.6.0</option>
-                                            <option value="../../../../master/index.html" data-version="master">master</option>
+                                            <option value="../../../../master/index.html" data-version="master">master branch</option>
                                     </select>
             </form>
                 <script>
@@ -63,7 +64,7 @@
             <div class="collapse navbar-collapse" id="navbar-elements">
                 <ul class="nav navbar-nav">
                     <li><a href="../../../classes.html">Classes</a></li>
-                                                                <li><a href="../../../namespaces.html">Namespaces</a></li>
+                                            <li><a href="../../../namespaces.html">Namespaces</a></li>
                                         <li><a href="../../../interfaces.html">Interfaces</a></li>
                     <li><a href="../../../traits.html">Traits</a></li>
                     <li><a href="../../../doc-index.html">Index</a></li>
@@ -89,7 +90,7 @@
     </div>
 
     <p>    class
-    <strong>MessageAttachment</strong>        extends <a href="../../../CharlotteDunois/Yasmin/Models/Base.html"><abbr title="CharlotteDunois\Yasmin\Models\Base">Base</abbr></a>        (<a href="https://github.com/CharlotteDunois/Yasmin/blob/v0.6.0/src/Models/MessageAttachment.php" target="_blank">View source</a>)
+    <strong>MessageAttachment</strong>        extends <a href="../../../CharlotteDunois/Yasmin/Models/Base.html"><abbr title="CharlotteDunois\Yasmin\Models\Base">Base</abbr></a>        (<a href="https://github.com/sylae/yasmin/blob/v0.6.0/src/Models/MessageAttachment.php">View source</a>)
 </p>
 
         
@@ -104,50 +105,26 @@
 
             <table class="table table-condensed">
                     <tr>
-                <td class="type" id="property_createdAt">
-                                                                                <a href="https://secure.php.net/DateTime" target="_blank">DateTime</a>
+                <td class="type" id="property_id">
+                                                                                string
                 </td>
-                <td><a name="property_createdAt" href="#property_createdAt">$createdAt</a></td>
-                <td class="last">An DateTime instance of the createdTimestamp.</td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type" id="property_createdTimestamp">
-                                                                                int
-                </td>
-                <td><a name="property_createdTimestamp" href="#property_createdTimestamp">$createdTimestamp</a></td>
-                <td class="last">The timestamp of when this attachment was created.</td>
+                <td>$id</td>
+                <td class="last">The attachment ID.</td>
                 <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_filename">
                                                                                 string
                 </td>
-                <td><a name="property_filename" href="#property_filename">$filename</a></td>
+                <td>$filename</td>
                 <td class="last">The filename.</td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type" id="property_height">
-                                                                                int|null
-                </td>
-                <td><a name="property_height" href="#property_height">$height</a></td>
-                <td class="last">The height (if image), or null.</td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type" id="property_id">
-                                                                                string
-                </td>
-                <td><a name="property_id" href="#property_id">$id</a></td>
-                <td class="last">The attachment ID.</td>
                 <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_size">
                                                                                 int
                 </td>
-                <td><a name="property_size" href="#property_size">$size</a></td>
+                <td>$size</td>
                 <td class="last">The filesize in bytes.</td>
                 <td></td>
             </tr>
@@ -155,16 +132,48 @@
                 <td class="type" id="property_url">
                                                                                 string
                 </td>
-                <td><a name="property_url" href="#property_url">$url</a></td>
+                <td>$url</td>
                 <td class="last">The url to the file.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_height">
+                                                                                int|null
+                </td>
+                <td>$height</td>
+                <td class="last">The height (if image), or null.</td>
                 <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_width">
                                                                                 int|null
                 </td>
-                <td><a name="property_width" href="#property_width">$width</a></td>
+                <td>$width</td>
                 <td class="last">The width (if image), or null.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_createdTimestamp">
+                                                                                int
+                </td>
+                <td>$createdTimestamp</td>
+                <td class="last">The timestamp of when this attachment was created.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_attachment">
+                                        protected                                        string
+                </td>
+                <td>$attachment</td>
+                <td class="last">Used for sending attachments.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_createdAt">
+                                                                                <a target="_blank" href="http://php.net/DateTime">DateTime</a>
+                </td>
+                <td>$createdAt</td>
+                <td class="last">An DateTime instance of the createdTimestamp.</td>
                 <td></td>
             </tr>
             </table>
@@ -185,12 +194,131 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___destruct">__destruct</a>()
+        
+                                            <p>Default destructor.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Models/Base.html#method___destruct"><abbr title="CharlotteDunois\Yasmin\Models\Base">Base</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___isset">__isset</a>(string $name)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Models/Base.html#method___isset"><abbr title="CharlotteDunois\Yasmin\Models\Base">Base</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___get">__get</a>(string $name)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___call">__call</a>(string $name, array $args)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Models/Base.html#method___call"><abbr title="CharlotteDunois\Yasmin\Models\Base">Base</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_jsonSerialize">jsonSerialize</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Models/Base.html#method_jsonSerialize"><abbr title="CharlotteDunois\Yasmin\Models\Base">Base</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_serialize">serialize</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Models/Base.html#method_serialize"><abbr title="CharlotteDunois\Yasmin\Models\Base">Base</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_unserialize">unserialize</a>($data)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Models/Base.html#method_unserialize"><abbr title="CharlotteDunois\Yasmin\Models\Base">Base</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method__patch">_patch</a>(array $data)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Models/Base.html#method__patch"><abbr title="CharlotteDunois\Yasmin\Models\Base">Base</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method__shouldUpdate">_shouldUpdate</a>(array $data)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Models/Base.html#method__shouldUpdate"><abbr title="CharlotteDunois\Yasmin\Models\Base">Base</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method__markForDelete">_markForDelete</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Models/Base.html#method__markForDelete"><abbr title="CharlotteDunois\Yasmin\Models\Base">Base</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     $this
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_setAttachment">setAttachment</a>(string $attachment, string $filename = &#039;&#039;)
         
                                             <p>Sets the attachment.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method__getMessageFilesArray">_getMessageFilesArray</a>()
+        
+                                            <p>Returns a proper message files array.</p>                </div>
                 <div class="col-md-2"></div>
             </div>
             </div>
@@ -201,7 +329,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/v0.6.0/src/Models/MessageAttachment.php#L79">line 79</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.6.0/src/Models/MessageAttachment.php#L79">line 79</a></div>
         <code>                    
     <strong>__construct</strong>(array $attachment = array())
         </code>
@@ -226,15 +354,378 @@
             
             
             
-                        
-                        
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___destruct">
+        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Models/Base.html#method___destruct"><abbr title="CharlotteDunois\Yasmin\Models\Base">Base</abbr></a> at         <a href="https://github.com/sylae/yasmin/blob/v0.6.0/src/Models/Base.php#L28">line 28</a></div>
+        <code>                    
+    <strong>__destruct</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Default destructor.</p>                                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___isset">
+        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Models/Base.html#method___isset"><abbr title="CharlotteDunois\Yasmin\Models\Base">Base</abbr></a> at         <a href="https://github.com/sylae/yasmin/blob/v0.6.0/src/Models/Base.php#L38">line 38</a></div>
+        <code>                    bool
+    <strong>__isset</strong>(string $name)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/Exception">Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___get">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.6.0/src/Models/MessageAttachment.php#L98">line 98</a></div>
+        <code>                    mixed
+    <strong>__get</strong>(string $name)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/RuntimeException">RuntimeException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___call">
+        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Models/Base.html#method___call"><abbr title="CharlotteDunois\Yasmin\Models\Base">Base</abbr></a> at         <a href="https://github.com/sylae/yasmin/blob/v0.6.0/src/Models/Base.php#L67">line 67</a></div>
+        <code>                    mixed
+    <strong>__call</strong>(string $name, array $args)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$args</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/RuntimeException">RuntimeException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_jsonSerialize">
+        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Models/Base.html#method_jsonSerialize"><abbr title="CharlotteDunois\Yasmin\Models\Base">Base</abbr></a> at         <a href="https://github.com/sylae/yasmin/blob/v0.6.0/src/Models/Base.php#L84">line 84</a></div>
+        <code>                    mixed
+    <strong>jsonSerialize</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_serialize">
+        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Models/Base.html#method_serialize"><abbr title="CharlotteDunois\Yasmin\Models\Base">Base</abbr></a> at         <a href="https://github.com/sylae/yasmin/blob/v0.6.0/src/Models/Base.php#L92">line 92</a></div>
+        <code>                    string
+    <strong>serialize</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_unserialize">
+        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Models/Base.html#method_unserialize"><abbr title="CharlotteDunois\Yasmin\Models\Base">Base</abbr></a> at         <a href="https://github.com/sylae/yasmin/blob/v0.6.0/src/Models/Base.php#L101">line 101</a></div>
+        <code>                    void
+    <strong>unserialize</strong>($data)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$data</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__patch">
+        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Models/Base.html#method__patch"><abbr title="CharlotteDunois\Yasmin\Models\Base">Base</abbr></a> at         <a href="https://github.com/sylae/yasmin/blob/v0.6.0/src/Models/Base.php#L112">line 112</a></div>
+        <code>                    void
+    <strong>_patch</strong>(array $data)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$data</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__shouldUpdate">
+        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Models/Base.html#method__shouldUpdate"><abbr title="CharlotteDunois\Yasmin\Models\Base">Base</abbr></a> at         <a href="https://github.com/sylae/yasmin/blob/v0.6.0/src/Models/Base.php#L172">line 172</a></div>
+        <code>                    bool
+    <strong>_shouldUpdate</strong>(array $data)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$data</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__markForDelete">
+        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Models/Base.html#method__markForDelete"><abbr title="CharlotteDunois\Yasmin\Models\Base">Base</abbr></a> at         <a href="https://github.com/sylae/yasmin/blob/v0.6.0/src/Models/Base.php#L192">line 192</a></div>
+        <code>                    void
+    <strong>_markForDelete</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
                     </div>
     </div>
 
             </div>
                     <div class="method-item">
                     <h3 id="method_setAttachment">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/v0.6.0/src/Models/MessageAttachment.php#L118">line 118</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.6.0/src/Models/MessageAttachment.php#L118">line 118</a></div>
         <code>                    $this
     <strong>setAttachment</strong>(string $attachment, string $filename = &#039;&#039;)
         </code>
@@ -273,8 +764,36 @@
 
             
             
-                        
-                        
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__getMessageFilesArray">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.6.0/src/Models/MessageAttachment.php#L129">line 129</a></div>
+        <code>                    array
+    <strong>_getMessageFilesArray</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns a proper message files array.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
                     </div>
     </div>
 

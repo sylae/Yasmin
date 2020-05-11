@@ -8,12 +8,10 @@
             <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
         <link rel="stylesheet" type="text/css" href="../../../css/sami.css">
-        <link rel="stylesheet" type="text/css" href="../../../css/prism.css">
         <script src="../../../js/jquery-1.11.1.min.js"></script>
         <script src="../../../js/bootstrap.min.js"></script>
         <script src="../../../js/typeahead.min.js"></script>
         <script src="../../../sami.js"></script>
-        <script src="../../../js/prism.js"></script>
         <meta name="MobileOptimized" content="width">
         <meta name="HandheldFriendly" content="true">
         <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
@@ -27,10 +25,13 @@
                 <div id="control-panel">
                     <form action="#" method="GET">
                 <select id="version-switcher" name="version">
+                                            <option value="../../../../v0.4.0/index.html" data-version="v0.4.0">v0.4.0</option>
+                                            <option value="../../../../v0.4.1/index.html" data-version="v0.4.1">v0.4.1</option>
+                                            <option value="../../../../v0.4.2/index.html" data-version="v0.4.2">v0.4.2</option>
                                             <option value="../../../../v0.5.0/index.html" data-version="v0.5.0">v0.5.0</option>
                                             <option value="../../../../v0.5.1/index.html" data-version="v0.5.1">v0.5.1</option>
                                             <option value="../../../../v0.6.0/index.html" data-version="v0.6.0">v0.6.0</option>
-                                            <option value="../../../../master/index.html" data-version="master">master</option>
+                                            <option value="../../../../master/index.html" data-version="master">master branch</option>
                                     </select>
             </form>
                 <script>
@@ -63,7 +64,7 @@
             <div class="collapse navbar-collapse" id="navbar-elements">
                 <ul class="nav navbar-nav">
                     <li><a href="../../../classes.html">Classes</a></li>
-                                                                <li><a href="../../../namespaces.html">Namespaces</a></li>
+                                            <li><a href="../../../namespaces.html">Namespaces</a></li>
                                         <li><a href="../../../interfaces.html">Interfaces</a></li>
                     <li><a href="../../../traits.html">Traits</a></li>
                     <li><a href="../../../doc-index.html">Index</a></li>
@@ -89,7 +90,7 @@
     </div>
 
     <p>    class
-    <strong>Collector</strong>        (<a href="https://github.com/CharlotteDunois/Yasmin/blob/v0.5.1/src/Utils/Collector.php" target="_blank">View source</a>)
+    <strong>Collector</strong>        (<a href="https://github.com/sylae/yasmin/blob/v0.5.1/src/Utils/Collector.php">View source</a>)
 </p>
 
         
@@ -100,6 +101,99 @@
     
     
     
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_emitter">
+                                        protected                                        <abbr title="CharlotteDunois\Events\EventEmitterInterface">EventEmitterInterface</abbr>
+                </td>
+                <td>$emitter</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_event">
+                                        protected                                        string
+                </td>
+                <td>$event</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_handler">
+                                        protected                                        callable
+                </td>
+                <td>$handler</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_filter">
+                                        protected                                        callable|null
+                </td>
+                <td>$filter</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_options">
+                                        protected                                        array
+                </td>
+                <td>$options</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_listener">
+                                        protected                                        <a target="_blank" href="http://php.net/Closure">Closure</a>
+                </td>
+                <td>$listener</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_resolve">
+                                        protected                                        <a target="_blank" href="http://php.net/Closure">Closure</a>
+                </td>
+                <td>$resolve</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_reject">
+                                        protected                                        <a target="_blank" href="http://php.net/Closure">Closure</a>
+                </td>
+                <td>$reject</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_bucket">
+                                        protected                                        <a href="../../../CharlotteDunois/Yasmin/Utils/Collection.html"><abbr title="CharlotteDunois\Yasmin\Utils\Collection">Collection</abbr></a>
+                </td>
+                <td>$bucket</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_timer">
+                                        protected                                        <abbr title="React\EventLoop\TimerInterface">TimerInterface</abbr>|<abbr title="React\EventLoop\Timer\TimerInterface">TimerInterface</abbr>
+                </td>
+                <td>$timer</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_loop">
+                    static                    protected                                        <abbr title="React\EventLoop\LoopInterface">LoopInterface</abbr>
+                </td>
+                <td>$loop</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+            </table>
+
     
             <h2>Methods</h2>
 
@@ -112,6 +206,16 @@
                     <a href="#method___construct">__construct</a>(<abbr title="CharlotteDunois\Events\EventEmitterInterface">EventEmitterInterface</abbr> $emitter, string $event, callable $handler, callable|null $filter = null, array $options = array())
         
                                             <p>The handler gets invoked as `$handler(.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setLoop">setLoop</a>(<abbr title="React\EventLoop\LoopInterface">LoopInterface</abbr> $loop)
+        
+                                            <p>Sets the Event Loop.</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -142,7 +246,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/v0.5.1/src/Utils/Collector.php#L89">line 89</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.5.1/src/Utils/Collector.php#L89">line 89</a></div>
         <code>                    
     <strong>__construct</strong>(<abbr title="CharlotteDunois\Events\EventEmitterInterface">EventEmitterInterface</abbr> $emitter, string $event, callable $handler, callable|null $filter = null, array $options = array())
         </code>
@@ -197,15 +301,53 @@
             
             
             
-                        
-                        
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setLoop">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.5.1/src/Utils/Collector.php#L104">line 104</a></div>
+        <code>        static            void
+    <strong>setLoop</strong>(<abbr title="React\EventLoop\LoopInterface">LoopInterface</abbr> $loop)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the Event Loop.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="React\EventLoop\LoopInterface">LoopInterface</abbr></td>
+                <td>$loop</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
                     </div>
     </div>
 
             </div>
                     <div class="method-item">
                     <h3 id="method_collect">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/v0.5.1/src/Utils/Collector.php#L114">line 114</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.5.1/src/Utils/Collector.php#L114">line 114</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>collect</strong>()
         </code>
@@ -232,25 +374,23 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td><a href="https://secure.php.net/RangeException" target="_blank">RangeException</a></td>
+                <td><a target="_blank" href="http://php.net/RangeException">RangeException</a></td>
                 <td>The exception the promise gets rejected with, if collecting times out.</td>
             </tr>
                     <tr>
-                <td><a href="https://secure.php.net/OutOfBoundsException" target="_blank">OutOfBoundsException</a></td>
+                <td><a target="_blank" href="http://php.net/OutOfBoundsException">OutOfBoundsException</a></td>
                 <td>The exception the promise gets rejected with, if the promise gets cancelled.</td>
             </tr>
             </table>
 
             
-                        
-                        
                     </div>
     </div>
 
             </div>
                     <div class="method-item">
                     <h3 id="method_stop">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/v0.5.1/src/Utils/Collector.php#L155">line 155</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.5.1/src/Utils/Collector.php#L155">line 155</a></div>
         <code>                    void
     <strong>stop</strong>()
         </code>
@@ -274,8 +414,6 @@
 
             
             
-                        
-                        
                     </div>
     </div>
 

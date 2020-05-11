@@ -8,12 +8,10 @@
             <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
         <link rel="stylesheet" type="text/css" href="../../../css/sami.css">
-        <link rel="stylesheet" type="text/css" href="../../../css/prism.css">
         <script src="../../../js/jquery-1.11.1.min.js"></script>
         <script src="../../../js/bootstrap.min.js"></script>
         <script src="../../../js/typeahead.min.js"></script>
         <script src="../../../sami.js"></script>
-        <script src="../../../js/prism.js"></script>
         <meta name="MobileOptimized" content="width">
         <meta name="HandheldFriendly" content="true">
         <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
@@ -27,10 +25,13 @@
                 <div id="control-panel">
                     <form action="#" method="GET">
                 <select id="version-switcher" name="version">
+                                            <option value="../../../../v0.4.0/index.html" data-version="v0.4.0">v0.4.0</option>
+                                            <option value="../../../../v0.4.1/index.html" data-version="v0.4.1">v0.4.1</option>
+                                            <option value="../../../../v0.4.2/index.html" data-version="v0.4.2">v0.4.2</option>
                                             <option value="../../../../v0.5.0/index.html" data-version="v0.5.0">v0.5.0</option>
                                             <option value="../../../../v0.5.1/index.html" data-version="v0.5.1">v0.5.1</option>
                                             <option value="../../../../v0.6.0/index.html" data-version="v0.6.0">v0.6.0</option>
-                                            <option value="../../../../master/index.html" data-version="master">master</option>
+                                            <option value="../../../../master/index.html" data-version="master">master branch</option>
                                     </select>
             </form>
                 <script>
@@ -63,7 +64,7 @@
             <div class="collapse navbar-collapse" id="navbar-elements">
                 <ul class="nav navbar-nav">
                     <li><a href="../../../classes.html">Classes</a></li>
-                                                                <li><a href="../../../namespaces.html">Namespaces</a></li>
+                                            <li><a href="../../../namespaces.html">Namespaces</a></li>
                                         <li><a href="../../../interfaces.html">Interfaces</a></li>
                     <li><a href="../../../traits.html">Traits</a></li>
                     <li><a href="../../../doc-index.html">Index</a></li>
@@ -89,7 +90,7 @@
     </div>
 
     <p>    class
-    <strong>Permissions</strong>        extends <a href="../../../CharlotteDunois/Yasmin/Models/Base.html"><abbr title="CharlotteDunois\Yasmin\Models\Base">Base</abbr></a>        (<a href="https://github.com/CharlotteDunois/Yasmin/blob/v0.5.1/src/Models/Permissions.php" target="_blank">View source</a>)
+    <strong>Permissions</strong>        extends <a href="../../../CharlotteDunois/Yasmin/Models/Base.html"><abbr title="CharlotteDunois\Yasmin\Models\Base">Base</abbr></a>        (<a href="https://github.com/sylae/yasmin/blob/v0.5.1/src/Models/Permissions.php">View source</a>)
 </p>
 
         
@@ -107,56 +108,21 @@
                 <td class="last">
                     <p><em>The value of the bitfield with all permissions granted.</em></p>
                     <p></p>
-                                            <pre><code class="language-php">const ALL = 2146958847;</code></pre>
-                                    </td>
-            </tr>
-                    <tr>
-                <td>CHANNEL_UNACCESSIBLE_PERMISSIONS</td>
-                <td class="last">
-                    <p><em>The bitfield to remove from channel overwrites to prevent wrong calculated final permissions, as they do nothing.</em></p>
-                    <p></p>
-                                    </td>
+                </td>
             </tr>
                     <tr>
                 <td>PERMISSIONS</td>
                 <td class="last">
                     <p><em>Available Permissions in Discord.</em></p>
                     <p></p>
-                                            <pre><code class="language-php">const PERMISSIONS = array(
-    &#039;CREATE_INSTANT_INVITE&#039; =&gt; (1 &lt;&lt; 0),
-    &#039;KICK_MEMBERS&#039; =&gt; (1 &lt;&lt; 1),
-    &#039;BAN_MEMBERS&#039; =&gt; (1 &lt;&lt; 2),
-    &#039;ADMINISTRATOR&#039; =&gt; (1 &lt;&lt; 3),
-    &#039;MANAGE_CHANNELS&#039; =&gt; (1 &lt;&lt; 4),
-    &#039;MANAGE_GUILD&#039; =&gt; (1 &lt;&lt; 5),
-    &#039;ADD_REACTIONS&#039; =&gt; (1 &lt;&lt; 6),
-    &#039;VIEW_AUDIT_LOG&#039; =&gt; (1 &lt;&lt; 7),
-    &#039;PRIORITY_SPEAKER&#039; =&gt; (1 &lt;&lt; 8),
-
-    &#039;VIEW_CHANNEL&#039; =&gt; (1 &lt;&lt; 10),
-    &#039;SEND_MESSAGES&#039; =&gt; (1 &lt;&lt; 11),
-    &#039;SEND_TTS_MESSAGES&#039; =&gt; (1 &lt;&lt; 12),
-    &#039;MANAGE_MESSAGES&#039; =&gt; (1 &lt;&lt; 13),
-    &#039;EMBED_LINKS&#039; =&gt; (1 &lt;&lt; 14),
-    &#039;ATTACH_FILES&#039; =&gt; (1 &lt;&lt; 15),
-    &#039;READ_MESSAGE_HISTORY&#039; =&gt; (1 &lt;&lt; 16),
-    &#039;MENTION_EVERYONE&#039; =&gt; (1 &lt;&lt; 17),
-    &#039;USE_EXTERNAL_EMOJIS&#039; =&gt; (1 &lt;&lt; 18),
-
-    &#039;CONNECT&#039; =&gt; (1 &lt;&lt; 20),
-    &#039;SPEAK&#039; =&gt; (1 &lt;&lt; 21),
-    &#039;MUTE_MEMBERS&#039; =&gt; (1 &lt;&lt; 22),
-    &#039;DEAFEN_MEMBERS&#039; =&gt; (1 &lt;&lt; 23),
-    &#039;MOVE_MEMBERS&#039; =&gt; (1 &lt;&lt; 24),
-    &#039;USE_VAD&#039; =&gt; (1 &lt;&lt; 25),
-
-    &#039;CHANGE_NICKNAME&#039; =&gt; (1 &lt;&lt; 26),
-    &#039;MANAGE_NICKNAMES&#039; =&gt; (1 &lt;&lt; 27),
-    &#039;MANAGE_ROLES&#039; =&gt; (1 &lt;&lt; 28),
-    &#039;MANAGE_WEBHOOKS&#039; =&gt; (1 &lt;&lt; 29),
-    &#039;MANAGE_EMOJIS&#039; =&gt; (1 &lt;&lt; 30)
-);</code></pre>
-                                    </td>
+                </td>
+            </tr>
+                    <tr>
+                <td>CHANNEL_UNACCESSIBLE_PERMISSIONS</td>
+                <td class="last">
+                    <p><em>The bitfield to remove from channel overwrites to prevent wrong calculated final permissions, as they do nothing.</em></p>
+                    <p></p>
+                </td>
             </tr>
             </table>
 
@@ -168,7 +134,7 @@
                 <td class="type" id="property_bitfield">
                                                                                 int
                 </td>
-                <td><a name="property_bitfield" href="#property_bitfield">$bitfield</a></td>
+                <td>$bitfield</td>
                 <td class="last">The bitfield value.</td>
                 <td></td>
             </tr>
@@ -190,13 +156,112 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    $this
+                    
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_add">add</a>(int|string ...$permissions)
+                    <a href="#method___destruct">__destruct</a>()
         
-                                            <p>Adds permissions to these ones.</p>                </div>
+                                            <p>Default destructor.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Models/Base.html#method___destruct"><abbr title="CharlotteDunois\Yasmin\Models\Base">Base</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___isset">__isset</a>(string $name)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Models/Base.html#method___isset"><abbr title="CharlotteDunois\Yasmin\Models\Base">Base</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___get">__get</a>(string $name)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
                 <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___call">__call</a>(string $name, array $args)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Models/Base.html#method___call"><abbr title="CharlotteDunois\Yasmin\Models\Base">Base</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_jsonSerialize">jsonSerialize</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_serialize">serialize</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Models/Base.html#method_serialize"><abbr title="CharlotteDunois\Yasmin\Models\Base">Base</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_unserialize">unserialize</a>($data)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Models/Base.html#method_unserialize"><abbr title="CharlotteDunois\Yasmin\Models\Base">Base</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method__patch">_patch</a>(array $data)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Models/Base.html#method__patch"><abbr title="CharlotteDunois\Yasmin\Models\Base">Base</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method__shouldUpdate">_shouldUpdate</a>(array $data)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Models/Base.html#method__shouldUpdate"><abbr title="CharlotteDunois\Yasmin\Models\Base">Base</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method__markForDelete">_markForDelete</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Models/Base.html#method__markForDelete"><abbr title="CharlotteDunois\Yasmin\Models\Base">Base</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -216,6 +281,16 @@
                     <a href="#method_missing">missing</a>(array|int|string $permissions, bool $checkAdmin = true)
         
                                             <p>Checks if a given permission is missing.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    $this
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_add">add</a>(int|string ...$permissions)
+        
+                                            <p>Adds permissions to these ones.</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -256,7 +331,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/v0.5.1/src/Models/Permissions.php#L81">line 81</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.5.1/src/Models/Permissions.php#L81">line 81</a></div>
         <code>                    
     <strong>__construct</strong>(int $permission = 0)
         </code>
@@ -281,17 +356,15 @@
             
             
             
-                        
-                        
                     </div>
     </div>
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_add">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/v0.5.1/src/Models/Permissions.php#L150">line 150</a></div>
-        <code>                    $this
-    <strong>add</strong>(int|string ...$permissions)
+                    <h3 id="method___destruct">
+        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Models/Base.html#method___destruct"><abbr title="CharlotteDunois\Yasmin\Models\Base">Base</abbr></a> at         <a href="https://github.com/sylae/yasmin/blob/v0.5.1/src/Models/Base.php#L28">line 28</a></div>
+        <code>                    
+    <strong>__destruct</strong>()
         </code>
     </h3>
     <div class="details">
@@ -299,14 +372,33 @@
     
 
                     <div class="method-description">
-                                    <p>Adds permissions to these ones.</p>                                                </div>
+                                    <p>Default destructor.</p>                                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___isset">
+        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Models/Base.html#method___isset"><abbr title="CharlotteDunois\Yasmin\Models\Base">Base</abbr></a> at         <a href="https://github.com/sylae/yasmin/blob/v0.5.1/src/Models/Base.php#L38">line 38</a></div>
+        <code>                    bool
+    <strong>__isset</strong>(string $name)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
                 <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
-                <td>int|string</td>
-                <td>...$permissions</td>
+                <td>string</td>
+                <td>$name</td>
                 <td></td>
             </tr>
             </table>
@@ -316,7 +408,7 @@
 
                     <table class="table table-condensed">
         <tr>
-            <td>$this</td>
+            <td>bool</td>
             <td></td>
         </tr>
     </table>
@@ -326,21 +418,316 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td><a href="https://secure.php.net/InvalidArgumentException" target="_blank">InvalidArgumentException</a></td>
+                <td><a target="_blank" href="http://php.net/Exception">Exception</a></td>
                 <td></td>
             </tr>
             </table>
 
             
-                        
-                        
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___get">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.5.1/src/Models/Permissions.php#L91">line 91</a></div>
+        <code>                    mixed
+    <strong>__get</strong>(string $name)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/RuntimeException">RuntimeException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___call">
+        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Models/Base.html#method___call"><abbr title="CharlotteDunois\Yasmin\Models\Base">Base</abbr></a> at         <a href="https://github.com/sylae/yasmin/blob/v0.5.1/src/Models/Base.php#L67">line 67</a></div>
+        <code>                    mixed
+    <strong>__call</strong>(string $name, array $args)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$args</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/RuntimeException">RuntimeException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_jsonSerialize">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.5.1/src/Models/Permissions.php#L103">line 103</a></div>
+        <code>                    mixed
+    <strong>jsonSerialize</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_serialize">
+        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Models/Base.html#method_serialize"><abbr title="CharlotteDunois\Yasmin\Models\Base">Base</abbr></a> at         <a href="https://github.com/sylae/yasmin/blob/v0.5.1/src/Models/Base.php#L92">line 92</a></div>
+        <code>                    string
+    <strong>serialize</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_unserialize">
+        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Models/Base.html#method_unserialize"><abbr title="CharlotteDunois\Yasmin\Models\Base">Base</abbr></a> at         <a href="https://github.com/sylae/yasmin/blob/v0.5.1/src/Models/Base.php#L101">line 101</a></div>
+        <code>                    void
+    <strong>unserialize</strong>($data)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$data</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__patch">
+        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Models/Base.html#method__patch"><abbr title="CharlotteDunois\Yasmin\Models\Base">Base</abbr></a> at         <a href="https://github.com/sylae/yasmin/blob/v0.5.1/src/Models/Base.php#L112">line 112</a></div>
+        <code>                    void
+    <strong>_patch</strong>(array $data)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$data</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__shouldUpdate">
+        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Models/Base.html#method__shouldUpdate"><abbr title="CharlotteDunois\Yasmin\Models\Base">Base</abbr></a> at         <a href="https://github.com/sylae/yasmin/blob/v0.5.1/src/Models/Base.php#L172">line 172</a></div>
+        <code>                    bool
+    <strong>_shouldUpdate</strong>(array $data)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$data</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__markForDelete">
+        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Models/Base.html#method__markForDelete"><abbr title="CharlotteDunois\Yasmin\Models\Base">Base</abbr></a> at         <a href="https://github.com/sylae/yasmin/blob/v0.5.1/src/Models/Base.php#L192">line 192</a></div>
+        <code>                    void
+    <strong>_markForDelete</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
                     </div>
     </div>
 
             </div>
                     <div class="method-item">
                     <h3 id="method_has">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/v0.5.1/src/Models/Permissions.php#L114">line 114</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.5.1/src/Models/Permissions.php#L114">line 114</a></div>
         <code>                    bool
     <strong>has</strong>(array|int|string $permissions, bool $checkAdmin = true)
         </code>
@@ -382,21 +769,19 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td><a href="https://secure.php.net/InvalidArgumentException" target="_blank">InvalidArgumentException</a></td>
+                <td><a target="_blank" href="http://php.net/InvalidArgumentException">InvalidArgumentException</a></td>
                 <td></td>
             </tr>
             </table>
 
             
-                        
-                        
                     </div>
     </div>
 
             </div>
                     <div class="method-item">
                     <h3 id="method_missing">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/v0.5.1/src/Models/Permissions.php#L140">line 140</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.5.1/src/Models/Permissions.php#L140">line 140</a></div>
         <code>                    bool
     <strong>missing</strong>(array|int|string $permissions, bool $checkAdmin = true)
         </code>
@@ -438,21 +823,68 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td><a href="https://secure.php.net/InvalidArgumentException" target="_blank">InvalidArgumentException</a></td>
+                <td><a target="_blank" href="http://php.net/InvalidArgumentException">InvalidArgumentException</a></td>
                 <td></td>
             </tr>
             </table>
 
             
-                        
-                        
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_add">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.5.1/src/Models/Permissions.php#L150">line 150</a></div>
+        <code>                    $this
+    <strong>add</strong>(int|string ...$permissions)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Adds permissions to these ones.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int|string</td>
+                <td>...$permissions</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>$this</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/InvalidArgumentException">InvalidArgumentException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
                     </div>
     </div>
 
             </div>
                     <div class="method-item">
                     <h3 id="method_remove">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/v0.5.1/src/Models/Permissions.php#L167">line 167</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.5.1/src/Models/Permissions.php#L167">line 167</a></div>
         <code>                    $this
     <strong>remove</strong>(int|string ...$permissions)
         </code>
@@ -489,21 +921,19 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td><a href="https://secure.php.net/InvalidArgumentException" target="_blank">InvalidArgumentException</a></td>
+                <td><a target="_blank" href="http://php.net/InvalidArgumentException">InvalidArgumentException</a></td>
                 <td></td>
             </tr>
             </table>
 
             
-                        
-                        
                     </div>
     </div>
 
             </div>
                     <div class="method-item">
                     <h3 id="method_resolve">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/v0.5.1/src/Models/Permissions.php#L184">line 184</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.5.1/src/Models/Permissions.php#L184">line 184</a></div>
         <code>        static            int
     <strong>resolve</strong>(int|string $permission)
         </code>
@@ -540,21 +970,19 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td><a href="https://secure.php.net/InvalidArgumentException" target="_blank">InvalidArgumentException</a></td>
+                <td><a target="_blank" href="http://php.net/InvalidArgumentException">InvalidArgumentException</a></td>
                 <td></td>
             </tr>
             </table>
 
             
-                        
-                        
                     </div>
     </div>
 
             </div>
                     <div class="method-item">
                     <h3 id="method_resolveToName">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/v0.5.1/src/Models/Permissions.php#L200">line 200</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.5.1/src/Models/Permissions.php#L200">line 200</a></div>
         <code>        static            string
     <strong>resolveToName</strong>(int|string $permission)
         </code>
@@ -591,14 +1019,12 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td><a href="https://secure.php.net/InvalidArgumentException" target="_blank">InvalidArgumentException</a></td>
+                <td><a target="_blank" href="http://php.net/InvalidArgumentException">InvalidArgumentException</a></td>
                 <td></td>
             </tr>
             </table>
 
             
-                        
-                        
                     </div>
     </div>
 

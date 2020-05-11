@@ -376,19 +376,12 @@ code {
 }
 
 pre {
-    padding: 10px 10px 10px 15px;
+    padding: 16px;
     overflow: auto;
     font-size: 85%;
     line-height: 1.45;
     background-color: #f7f7f7;
     border-radius: 3px;
-}
-
-pre > code {
-    padding: 0px;
-    font-size: 100%;
-    line-height: 100%;
-    background-color: #f7f7f7;
 }
 
 h2 {
@@ -463,27 +456,4 @@ dd {
 
 .search-results .search-description {
     margin: 8px 0 0 30px;
-}
-
-/** Custom */
-.warn {
-    border-radius: 5px;
-    font-size: 14px;
-    font-weight: 300;
-    line-height: 22px;
-    margin: 20px 0;
-    padding: 10px;
-    background: rgba(250, 166, 26, 0.3);
-    border: 2px solid rgba(250, 166, 26, 0.75);
-}
-
-.danger {
-    border-radius: 5px;
-    font-size: 14px;
-    font-weight: 300;
-    line-height: 22px;
-    margin: 20px 0;
-    padding: 10px;
-    background: rgba(240, 71, 71, 0.3);
-    border: 2px solid rgba(240, 71, 71, 0.75);
 }

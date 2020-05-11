@@ -8,12 +8,10 @@
             <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
         <link rel="stylesheet" type="text/css" href="../../../css/sami.css">
-        <link rel="stylesheet" type="text/css" href="../../../css/prism.css">
         <script src="../../../js/jquery-1.11.1.min.js"></script>
         <script src="../../../js/bootstrap.min.js"></script>
         <script src="../../../js/typeahead.min.js"></script>
         <script src="../../../sami.js"></script>
-        <script src="../../../js/prism.js"></script>
         <meta name="MobileOptimized" content="width">
         <meta name="HandheldFriendly" content="true">
         <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
@@ -27,10 +25,13 @@
                 <div id="control-panel">
                     <form action="#" method="GET">
                 <select id="version-switcher" name="version">
+                                            <option value="../../../../v0.4.0/index.html" data-version="v0.4.0">v0.4.0</option>
+                                            <option value="../../../../v0.4.1/index.html" data-version="v0.4.1">v0.4.1</option>
+                                            <option value="../../../../v0.4.2/index.html" data-version="v0.4.2">v0.4.2</option>
                                             <option value="../../../../v0.5.0/index.html" data-version="v0.5.0">v0.5.0</option>
                                             <option value="../../../../v0.5.1/index.html" data-version="v0.5.1">v0.5.1</option>
                                             <option value="../../../../v0.6.0/index.html" data-version="v0.6.0">v0.6.0</option>
-                                            <option value="../../../../master/index.html" data-version="master">master</option>
+                                            <option value="../../../../master/index.html" data-version="master">master branch</option>
                                     </select>
             </form>
                 <script>
@@ -63,7 +64,7 @@
             <div class="collapse navbar-collapse" id="navbar-elements">
                 <ul class="nav navbar-nav">
                     <li><a href="../../../classes.html">Classes</a></li>
-                                                                <li><a href="../../../namespaces.html">Namespaces</a></li>
+                                            <li><a href="../../../namespaces.html">Namespaces</a></li>
                                         <li><a href="../../../interfaces.html">Interfaces</a></li>
                     <li><a href="../../../traits.html">Traits</a></li>
                     <li><a href="../../../doc-index.html">Index</a></li>
@@ -89,7 +90,7 @@
     </div>
 
     <p>    class
-    <strong>FileHelpers</strong>        (<a href="https://github.com/CharlotteDunois/Yasmin/blob/v0.6.0/src/Utils/FileHelpers.php" target="_blank">View source</a>)
+    <strong>FileHelpers</strong>        (<a href="https://github.com/sylae/yasmin/blob/v0.6.0/src/Utils/FileHelpers.php">View source</a>)
 </p>
 
         
@@ -100,10 +101,41 @@
     
     
     
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_loop">
+                    static                    protected                                        <abbr title="React\EventLoop\LoopInterface">LoopInterface</abbr>
+                </td>
+                <td>$loop</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_filesystem">
+                    static                    protected                                        <abbr title="React\Filesystem\FilesystemInterface">FilesystemInterface</abbr>|null
+                </td>
+                <td>$filesystem</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+            </table>
+
     
             <h2>Methods</h2>
 
             <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setLoop">setLoop</a>(<abbr title="React\EventLoop\LoopInterface">LoopInterface</abbr> $loop)
+        
+                                            <p>Sets the Event Loop.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     static&nbsp;<abbr title="React\Filesystem\FilesystemInterface">FilesystemInterface</abbr>|false|null
@@ -116,22 +148,22 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    static&nbsp;<abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
-                </div>
-                <div class="col-md-8 type">
-                    <a href="#method_resolveFileResolvable">resolveFileResolvable</a>(string $file)
-        
-                                            <p>Resolves filepath and URL into file data - returns it if it's neither. Resolves with a string.</p>                </div>
-                <div class="col-md-2"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
                     static&nbsp;void
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_setFilesystem">setFilesystem</a>(<abbr title="React\Filesystem\FilesystemInterface">FilesystemInterface</abbr>|null $filesystem)
         
                                             <p>Sets the React Filesystem instance, or disables it.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_resolveFileResolvable">resolveFileResolvable</a>(string $file)
+        
+                                            <p>Resolves filepath and URL into file data - returns it if it's neither. Resolves with a string.</p>                </div>
                 <div class="col-md-2"></div>
             </div>
             </div>
@@ -141,8 +173,48 @@
 
             <div id="method-details">
                     <div class="method-item">
+                    <h3 id="method_setLoop">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.6.0/src/Utils/FileHelpers.php#L32">line 32</a></div>
+        <code>        static            void
+    <strong>setLoop</strong>(<abbr title="React\EventLoop\LoopInterface">LoopInterface</abbr> $loop)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the Event Loop.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="React\EventLoop\LoopInterface">LoopInterface</abbr></td>
+                <td>$loop</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_getFilesystem">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/v0.6.0/src/Utils/FileHelpers.php#L47">line 47</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.6.0/src/Utils/FileHelpers.php#L47">line 47</a></div>
         <code>        static            <abbr title="React\Filesystem\FilesystemInterface">FilesystemInterface</abbr>|false|null
     <strong>getFilesystem</strong>()
         </code>
@@ -166,57 +238,13 @@
 
             
             
-                        
-                        
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_resolveFileResolvable">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/v0.6.0/src/Utils/FileHelpers.php#L69">line 69</a></div>
-        <code>        static            <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
-    <strong>resolveFileResolvable</strong>(string $file)
-        </code>
-    </h3>
-    <div class="details">
-            
-    
-
-                    <div class="method-description">
-                                    <p>Resolves filepath and URL into file data - returns it if it's neither. Resolves with a string.</p>                                                </div>
-                <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td>string</td>
-                <td>$file</td>
-                <td></td>
-            </tr>
-            </table>
-
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td><abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr></td>
-            <td></td>
-        </tr>
-    </table>
-
-            
-            
-                        
-                        
                     </div>
     </div>
 
             </div>
                     <div class="method-item">
                     <h3 id="method_setFilesystem">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/v0.6.0/src/Utils/FileHelpers.php#L56">line 56</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.6.0/src/Utils/FileHelpers.php#L56">line 56</a></div>
         <code>        static            void
     <strong>setFilesystem</strong>(<abbr title="React\Filesystem\FilesystemInterface">FilesystemInterface</abbr>|null $filesystem)
         </code>
@@ -250,8 +278,46 @@
 
             
             
-                        
-                        
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_resolveFileResolvable">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.6.0/src/Utils/FileHelpers.php#L69">line 69</a></div>
+        <code>        static            <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
+    <strong>resolveFileResolvable</strong>(string $file)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Resolves filepath and URL into file data - returns it if it's neither. Resolves with a string.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$file</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
                     </div>
     </div>
 

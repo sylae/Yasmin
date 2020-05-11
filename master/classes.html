@@ -8,12 +8,10 @@
             <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
         <link rel="stylesheet" type="text/css" href="css/sami.css">
-        <link rel="stylesheet" type="text/css" href="css/prism.css">
         <script src="js/jquery-1.11.1.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <script src="js/typeahead.min.js"></script>
         <script src="sami.js"></script>
-        <script src="js/prism.js"></script>
         <meta name="MobileOptimized" content="width">
         <meta name="HandheldFriendly" content="true">
         <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
@@ -27,10 +25,13 @@
                 <div id="control-panel">
                     <form action="#" method="GET">
                 <select id="version-switcher" name="version">
+                                            <option value="../v0.4.0/index.html" data-version="v0.4.0">v0.4.0</option>
+                                            <option value="../v0.4.1/index.html" data-version="v0.4.1">v0.4.1</option>
+                                            <option value="../v0.4.2/index.html" data-version="v0.4.2">v0.4.2</option>
                                             <option value="../v0.5.0/index.html" data-version="v0.5.0">v0.5.0</option>
                                             <option value="../v0.5.1/index.html" data-version="v0.5.1">v0.5.1</option>
                                             <option value="../v0.6.0/index.html" data-version="v0.6.0">v0.6.0</option>
-                                            <option value="../master/index.html" data-version="master">master</option>
+                                            <option value="../master/index.html" data-version="master">master branch</option>
                                     </select>
             </form>
                 <script>
@@ -63,7 +64,7 @@
             <div class="collapse navbar-collapse" id="navbar-elements">
                 <ul class="nav navbar-nav">
                     <li><a href="classes.html">Classes</a></li>
-                                                                <li><a href="namespaces.html">Namespaces</a></li>
+                                            <li><a href="namespaces.html">Namespaces</a></li>
                                         <li><a href="interfaces.html">Interfaces</a></li>
                     <li><a href="traits.html">Traits</a></li>
                     <li><a href="doc-index.html">Index</a></li>
@@ -109,11 +110,119 @@
             </div>
                     <div class="row">
                 <div class="col-md-6">
+                                            <a href="CharlotteDunois/Yasmin/HTTP/APIEndpoints.html"><abbr title="CharlotteDunois\Yasmin\HTTP\APIEndpoints">APIEndpoints</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    Handles the API endpoints.
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="CharlotteDunois/Yasmin/HTTP/APIManager.html"><abbr title="CharlotteDunois\Yasmin\HTTP\APIManager">APIManager</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    Handles the API.
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="CharlotteDunois/Yasmin/HTTP/APIRequest.html"><abbr title="CharlotteDunois\Yasmin\HTTP\APIRequest">APIRequest</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    Represents a single HTTP request.
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="CharlotteDunois/Yasmin/HTTP/AthenaRatelimitBucket.html"><abbr title="CharlotteDunois\Yasmin\HTTP\AthenaRatelimitBucket">AthenaRatelimitBucket</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    Manages a route's ratelimit in Redis, using Athena. Requires client option <code>http.ratelimitbucket.athena</code> to be set to an instance of <code>AthenaCache</code>.
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
                                             <a href="CharlotteDunois/Yasmin/HTTP/DiscordAPIException.html"><abbr title="CharlotteDunois\Yasmin\HTTP\DiscordAPIException">DiscordAPIException</abbr></a>
                                             
                 </div>
                 <div class="col-md-6">
                     Represents an error from the Discord HTTP API.
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="CharlotteDunois/Yasmin/HTTP/Endpoints/Channel.html"><abbr title="CharlotteDunois\Yasmin\HTTP\Endpoints\Channel">Channel</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    Handles the API endpoints "Channel".
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="CharlotteDunois/Yasmin/HTTP/Endpoints/Emoji.html"><abbr title="CharlotteDunois\Yasmin\HTTP\Endpoints\Emoji">Emoji</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    Handles the API endpoints "Emoji".
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="CharlotteDunois/Yasmin/HTTP/Endpoints/Guild.html"><abbr title="CharlotteDunois\Yasmin\HTTP\Endpoints\Guild">Guild</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    Handles the API endpoints "Guild".
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="CharlotteDunois/Yasmin/HTTP/Endpoints/Invite.html"><abbr title="CharlotteDunois\Yasmin\HTTP\Endpoints\Invite">Invite</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    Handles the API endpoints "Invite".
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="CharlotteDunois/Yasmin/HTTP/Endpoints/User.html"><abbr title="CharlotteDunois\Yasmin\HTTP\Endpoints\User">User</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    Handles the API endpoints "User".
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="CharlotteDunois/Yasmin/HTTP/Endpoints/Voice.html"><abbr title="CharlotteDunois\Yasmin\HTTP\Endpoints\Voice">Voice</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    Handles the API endpoints "Voice".
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="CharlotteDunois/Yasmin/HTTP/Endpoints/Webhook.html"><abbr title="CharlotteDunois\Yasmin\HTTP\Endpoints\Webhook">Webhook</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    Handles the API endpoints "Webhook".
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="CharlotteDunois/Yasmin/HTTP/RatelimitBucket.html"><abbr title="CharlotteDunois\Yasmin\HTTP\RatelimitBucket">RatelimitBucket</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    Manages a route's ratelimit in memory.
                 </div>
             </div>
                     <div class="row">
@@ -322,6 +431,24 @@ The ratelimit bucket queue is always managed in memory (as in belongs to that pr
                 </div>
                 <div class="col-md-6">
                     Interface for WS encodings. This is used internally.
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <em><a href="CharlotteDunois/Yasmin/Interfaces/WSEventInterface.html"><abbr title="CharlotteDunois\Yasmin\Interfaces\WSEventInterface">WSEventInterface</abbr></a></em>
+                                            
+                </div>
+                <div class="col-md-6">
+                    WS Event interface.
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <em><a href="CharlotteDunois/Yasmin/Interfaces/WSHandlerInterface.html"><abbr title="CharlotteDunois\Yasmin\Interfaces\WSHandlerInterface">WSHandlerInterface</abbr></a></em>
+                                            
+                </div>
+                <div class="col-md-6">
+                    WS Handler interface.
                 </div>
             </div>
                     <div class="row">
@@ -803,6 +930,15 @@ The ratelimit bucket queue is always managed in memory (as in belongs to that pr
             </div>
                     <div class="row">
                 <div class="col-md-6">
+                                            <a href="CharlotteDunois/Yasmin/Utils/ImageHelpers.html"><abbr title="CharlotteDunois\Yasmin\Utils\ImageHelpers">ImageHelpers</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    Image Helper utilities.
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
                                             <a href="CharlotteDunois/Yasmin/Utils/MessageHelpers.html"><abbr title="CharlotteDunois\Yasmin\Utils\MessageHelpers">MessageHelpers</abbr></a>
                                             
                 </div>
@@ -826,6 +962,411 @@ The ratelimit bucket queue is always managed in memory (as in belongs to that pr
                 </div>
                 <div class="col-md-6">
                     URL Helper methods.
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="CharlotteDunois/Yasmin/WebSocket/Compression/ZlibStream.html"><abbr title="CharlotteDunois\Yasmin\WebSocket\Compression\ZlibStream">ZlibStream</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    Handles WS compression.
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="CharlotteDunois/Yasmin/WebSocket/DiscordGatewayException.html"><abbr title="CharlotteDunois\Yasmin\WebSocket\DiscordGatewayException">DiscordGatewayException</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    Represents an exception of the Discord Gateway component.
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="CharlotteDunois/Yasmin/WebSocket/Encoding/Etf.html"><abbr title="CharlotteDunois\Yasmin\WebSocket\Encoding\Etf">Etf</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    Handles WS encoding.
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="CharlotteDunois/Yasmin/WebSocket/Encoding/Json.html"><abbr title="CharlotteDunois\Yasmin\WebSocket\Encoding\Json">Json</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    Handles WS encoding.
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="CharlotteDunois/Yasmin/WebSocket/Events/ChannelCreate.html"><abbr title="CharlotteDunois\Yasmin\WebSocket\Events\ChannelCreate">ChannelCreate</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    WS Event
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="CharlotteDunois/Yasmin/WebSocket/Events/ChannelDelete.html"><abbr title="CharlotteDunois\Yasmin\WebSocket\Events\ChannelDelete">ChannelDelete</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    WS Event
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="CharlotteDunois/Yasmin/WebSocket/Events/ChannelPinsUpdate.html"><abbr title="CharlotteDunois\Yasmin\WebSocket\Events\ChannelPinsUpdate">ChannelPinsUpdate</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    WS Event
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="CharlotteDunois/Yasmin/WebSocket/Events/ChannelUpdate.html"><abbr title="CharlotteDunois\Yasmin\WebSocket\Events\ChannelUpdate">ChannelUpdate</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    WS Event
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="CharlotteDunois/Yasmin/WebSocket/Events/GuildBanAdd.html"><abbr title="CharlotteDunois\Yasmin\WebSocket\Events\GuildBanAdd">GuildBanAdd</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    WS Event
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="CharlotteDunois/Yasmin/WebSocket/Events/GuildBanRemove.html"><abbr title="CharlotteDunois\Yasmin\WebSocket\Events\GuildBanRemove">GuildBanRemove</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    WS Event
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="CharlotteDunois/Yasmin/WebSocket/Events/GuildCreate.html"><abbr title="CharlotteDunois\Yasmin\WebSocket\Events\GuildCreate">GuildCreate</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    WS Event
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="CharlotteDunois/Yasmin/WebSocket/Events/GuildDelete.html"><abbr title="CharlotteDunois\Yasmin\WebSocket\Events\GuildDelete">GuildDelete</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    WS Event
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="CharlotteDunois/Yasmin/WebSocket/Events/GuildEmojisUpdate.html"><abbr title="CharlotteDunois\Yasmin\WebSocket\Events\GuildEmojisUpdate">GuildEmojisUpdate</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    WS Event
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="CharlotteDunois/Yasmin/WebSocket/Events/GuildIntegrationsUpdate.html"><abbr title="CharlotteDunois\Yasmin\WebSocket\Events\GuildIntegrationsUpdate">GuildIntegrationsUpdate</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    WS Event
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="CharlotteDunois/Yasmin/WebSocket/Events/GuildMemberAdd.html"><abbr title="CharlotteDunois\Yasmin\WebSocket\Events\GuildMemberAdd">GuildMemberAdd</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    WS Event
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="CharlotteDunois/Yasmin/WebSocket/Events/GuildMemberRemove.html"><abbr title="CharlotteDunois\Yasmin\WebSocket\Events\GuildMemberRemove">GuildMemberRemove</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    WS Event
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="CharlotteDunois/Yasmin/WebSocket/Events/GuildMemberUpdate.html"><abbr title="CharlotteDunois\Yasmin\WebSocket\Events\GuildMemberUpdate">GuildMemberUpdate</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    WS Event
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="CharlotteDunois/Yasmin/WebSocket/Events/GuildMembersChunk.html"><abbr title="CharlotteDunois\Yasmin\WebSocket\Events\GuildMembersChunk">GuildMembersChunk</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    WS Event
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="CharlotteDunois/Yasmin/WebSocket/Events/GuildRoleCreate.html"><abbr title="CharlotteDunois\Yasmin\WebSocket\Events\GuildRoleCreate">GuildRoleCreate</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    WS Event
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="CharlotteDunois/Yasmin/WebSocket/Events/GuildRoleDelete.html"><abbr title="CharlotteDunois\Yasmin\WebSocket\Events\GuildRoleDelete">GuildRoleDelete</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    WS Event
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="CharlotteDunois/Yasmin/WebSocket/Events/GuildRoleUpdate.html"><abbr title="CharlotteDunois\Yasmin\WebSocket\Events\GuildRoleUpdate">GuildRoleUpdate</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    WS Event
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="CharlotteDunois/Yasmin/WebSocket/Events/GuildUpdate.html"><abbr title="CharlotteDunois\Yasmin\WebSocket\Events\GuildUpdate">GuildUpdate</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    WS Event
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="CharlotteDunois/Yasmin/WebSocket/Events/MessageCreate.html"><abbr title="CharlotteDunois\Yasmin\WebSocket\Events\MessageCreate">MessageCreate</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    WS Event
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="CharlotteDunois/Yasmin/WebSocket/Events/MessageDelete.html"><abbr title="CharlotteDunois\Yasmin\WebSocket\Events\MessageDelete">MessageDelete</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    WS Event
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="CharlotteDunois/Yasmin/WebSocket/Events/MessageDeleteBulk.html"><abbr title="CharlotteDunois\Yasmin\WebSocket\Events\MessageDeleteBulk">MessageDeleteBulk</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    WS Event
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="CharlotteDunois/Yasmin/WebSocket/Events/MessageReactionAdd.html"><abbr title="CharlotteDunois\Yasmin\WebSocket\Events\MessageReactionAdd">MessageReactionAdd</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    WS Event
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="CharlotteDunois/Yasmin/WebSocket/Events/MessageReactionRemove.html"><abbr title="CharlotteDunois\Yasmin\WebSocket\Events\MessageReactionRemove">MessageReactionRemove</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    WS Event
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="CharlotteDunois/Yasmin/WebSocket/Events/MessageReactionRemoveAll.html"><abbr title="CharlotteDunois\Yasmin\WebSocket\Events\MessageReactionRemoveAll">MessageReactionRemoveAll</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    WS Event
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="CharlotteDunois/Yasmin/WebSocket/Events/MessageUpdate.html"><abbr title="CharlotteDunois\Yasmin\WebSocket\Events\MessageUpdate">MessageUpdate</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    WS Event
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="CharlotteDunois/Yasmin/WebSocket/Events/PresenceUpdate.html"><abbr title="CharlotteDunois\Yasmin\WebSocket\Events\PresenceUpdate">PresenceUpdate</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    WS Event
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="CharlotteDunois/Yasmin/WebSocket/Events/Ready.html"><abbr title="CharlotteDunois\Yasmin\WebSocket\Events\Ready">Ready</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    WS Event
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="CharlotteDunois/Yasmin/WebSocket/Events/Resumed.html"><abbr title="CharlotteDunois\Yasmin\WebSocket\Events\Resumed">Resumed</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    WS Event
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="CharlotteDunois/Yasmin/WebSocket/Events/TypingStart.html"><abbr title="CharlotteDunois\Yasmin\WebSocket\Events\TypingStart">TypingStart</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    WS Event
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="CharlotteDunois/Yasmin/WebSocket/Events/UserUpdate.html"><abbr title="CharlotteDunois\Yasmin\WebSocket\Events\UserUpdate">UserUpdate</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    WS Event
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="CharlotteDunois/Yasmin/WebSocket/Events/VoiceServerUpdate.html"><abbr title="CharlotteDunois\Yasmin\WebSocket\Events\VoiceServerUpdate">VoiceServerUpdate</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    WS Event
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="CharlotteDunois/Yasmin/WebSocket/Events/VoiceStateUpdate.html"><abbr title="CharlotteDunois\Yasmin\WebSocket\Events\VoiceStateUpdate">VoiceStateUpdate</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    WS Event
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="CharlotteDunois/Yasmin/WebSocket/Handlers/Dispatch.html"><abbr title="CharlotteDunois\Yasmin\WebSocket\Handlers\Dispatch">Dispatch</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    WS Event handler
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="CharlotteDunois/Yasmin/WebSocket/Handlers/Heartbeat.html"><abbr title="CharlotteDunois\Yasmin\WebSocket\Handlers\Heartbeat">Heartbeat</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    WS Event handler
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="CharlotteDunois/Yasmin/WebSocket/Handlers/HeartbeatAck.html"><abbr title="CharlotteDunois\Yasmin\WebSocket\Handlers\HeartbeatAck">HeartbeatAck</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    WS Event handler
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="CharlotteDunois/Yasmin/WebSocket/Handlers/Hello.html"><abbr title="CharlotteDunois\Yasmin\WebSocket\Handlers\Hello">Hello</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    WS Event handler
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="CharlotteDunois/Yasmin/WebSocket/Handlers/InvalidSession.html"><abbr title="CharlotteDunois\Yasmin\WebSocket\Handlers\InvalidSession">InvalidSession</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    WS Event handler
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="CharlotteDunois/Yasmin/WebSocket/Handlers/Reconnect.html"><abbr title="CharlotteDunois\Yasmin\WebSocket\Handlers\Reconnect">Reconnect</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    WS Event handler
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="CharlotteDunois/Yasmin/WebSocket/WSConnection.html"><abbr title="CharlotteDunois\Yasmin\WebSocket\WSConnection">WSConnection</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    Handles the WS connection.
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="CharlotteDunois/Yasmin/WebSocket/WSHandler.html"><abbr title="CharlotteDunois\Yasmin\WebSocket\WSHandler">WSHandler</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    Handles WS messages.
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                                            <a href="CharlotteDunois/Yasmin/WebSocket/WSManager.html"><abbr title="CharlotteDunois\Yasmin\WebSocket\WSManager">WSManager</abbr></a>
+                                            
+                </div>
+                <div class="col-md-6">
+                    Manages the WS connections.
                 </div>
             </div>
                     <div class="row">

@@ -8,12 +8,10 @@
             <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
         <link rel="stylesheet" type="text/css" href="../../../css/sami.css">
-        <link rel="stylesheet" type="text/css" href="../../../css/prism.css">
         <script src="../../../js/jquery-1.11.1.min.js"></script>
         <script src="../../../js/bootstrap.min.js"></script>
         <script src="../../../js/typeahead.min.js"></script>
         <script src="../../../sami.js"></script>
-        <script src="../../../js/prism.js"></script>
         <meta name="MobileOptimized" content="width">
         <meta name="HandheldFriendly" content="true">
         <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
@@ -27,10 +25,13 @@
                 <div id="control-panel">
                     <form action="#" method="GET">
                 <select id="version-switcher" name="version">
+                                            <option value="../../../../v0.4.0/index.html" data-version="v0.4.0">v0.4.0</option>
+                                            <option value="../../../../v0.4.1/index.html" data-version="v0.4.1">v0.4.1</option>
+                                            <option value="../../../../v0.4.2/index.html" data-version="v0.4.2">v0.4.2</option>
                                             <option value="../../../../v0.5.0/index.html" data-version="v0.5.0">v0.5.0</option>
                                             <option value="../../../../v0.5.1/index.html" data-version="v0.5.1">v0.5.1</option>
                                             <option value="../../../../v0.6.0/index.html" data-version="v0.6.0">v0.6.0</option>
-                                            <option value="../../../../master/index.html" data-version="master">master</option>
+                                            <option value="../../../../master/index.html" data-version="master">master branch</option>
                                     </select>
             </form>
                 <script>
@@ -63,7 +64,7 @@
             <div class="collapse navbar-collapse" id="navbar-elements">
                 <ul class="nav navbar-nav">
                     <li><a href="../../../classes.html">Classes</a></li>
-                                                                <li><a href="../../../namespaces.html">Namespaces</a></li>
+                                            <li><a href="../../../namespaces.html">Namespaces</a></li>
                                         <li><a href="../../../interfaces.html">Interfaces</a></li>
                     <li><a href="../../../traits.html">Traits</a></li>
                     <li><a href="../../../doc-index.html">Index</a></li>
@@ -89,7 +90,7 @@
     </div>
 
     <p>    class
-    <strong>Guild</strong>        extends <a href="../../../CharlotteDunois/Yasmin/Models/ClientBase.html"><abbr title="CharlotteDunois\Yasmin\Models\ClientBase">ClientBase</abbr></a>        (<a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php" target="_blank">View source</a>)
+    <strong>Guild</strong>        extends <a href="../../../CharlotteDunois/Yasmin/Models/ClientBase.html"><abbr title="CharlotteDunois\Yasmin\Models\ClientBase">ClientBase</abbr></a>        (<a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php">View source</a>)
 </p>
 
         
@@ -107,48 +108,28 @@
                 <td class="last">
                     <p><em>Guild default message notifications.</em></p>
                     <p></p>
-                                            <pre><code class="language-php">const DEFAULT_MESSAGE_NOTIFICATIONS = array(
-    0 =&gt; &#039;EVERYTHING&#039;,
-    1 =&gt; &#039;ONLY_MENTIONS&#039;
-);</code></pre>
-                                    </td>
+                </td>
             </tr>
                     <tr>
                 <td>EXPLICIT_CONTENT_FILTER</td>
                 <td class="last">
                     <p><em>Guild explicit content filter.</em></p>
                     <p></p>
-                                            <pre><code class="language-php">const EXPLICIT_CONTENT_FILTER = array(
-    0 =&gt; &#039;DISABLED&#039;,
-    1 =&gt; &#039;MEMBERS_WITHOUT_ROLES&#039;,
-    2 =&gt; &#039;ALL_MEMBERS&#039;
-);</code></pre>
-                                    </td>
+                </td>
             </tr>
                     <tr>
                 <td>MFA_LEVEL</td>
                 <td class="last">
                     <p><em>Guild MFA level.</em></p>
                     <p></p>
-                                            <pre><code class="language-php">const MFA_LEVEL = array(
-    0 =&gt; &#039;NONE&#039;,
-    1 =&gt; &#039;ELEVATED&#039;
-);</code></pre>
-                                    </td>
+                </td>
             </tr>
                     <tr>
                 <td>VERIFICATION_LEVEL</td>
                 <td class="last">
                     <p><em>Guild verification level.</em></p>
                     <p></p>
-                                            <pre><code class="language-php">const VERIFICATION_LEVEL = array(
-    0 =&gt; &#039;NONE&#039;,
-    1 =&gt; &#039;LOW&#039;,
-    2 =&gt; &#039;MEDIUM&#039;,
-    3 =&gt; &#039;HIGH&#039;,
-    4 =&gt; &#039;VERY_HIGH&#039;
-);</code></pre>
-                                    </td>
+                </td>
             </tr>
             </table>
 
@@ -157,178 +138,122 @@
 
             <table class="table table-condensed">
                     <tr>
-                <td class="type" id="property_afkChannel">
-                                                                                <a href="../../../CharlotteDunois/Yasmin/Models/VoiceChannel.html"><abbr title="CharlotteDunois\Yasmin\Models\VoiceChannel">VoiceChannel</abbr></a>|null
+                <td class="type" id="property_client">
+                                                                                <a href="../../../CharlotteDunois/Yasmin/Client.html"><abbr title="CharlotteDunois\Yasmin\Client">Client</abbr></a>
                 </td>
-                <td><a name="property_afkChannel" href="#property_afkChannel">$afkChannel</a></td>
-                <td class="last">The guild's afk channel, or null.</td>
-                <td></td>
+                <td>$client</td>
+                <td class="last">The client which initiated the instance.</td>
+                <td><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Models/ClientBase.html#property_client"><abbr title="CharlotteDunois\Yasmin\Models\ClientBase">ClientBase</abbr></a></small></td>
             </tr>
                     <tr>
-                <td class="type" id="property_afkChannelID">
-                                                                                string|null
+                <td class="type" id="property_serializeClient">
+                    static                                                            <a href="../../../CharlotteDunois/Yasmin/Client.html"><abbr title="CharlotteDunois\Yasmin\Client">Client</abbr></a>|null
                 </td>
-                <td><a name="property_afkChannelID" href="#property_afkChannelID">$afkChannelID</a></td>
-                <td class="last">The ID of the afk channel, or null.</td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type" id="property_afkTimeout">
-                                                                                int|null
-                </td>
-                <td><a name="property_afkTimeout" href="#property_afkTimeout">$afkTimeout</a></td>
-                <td class="last">The time in seconds before an user is counted as "away from keyboard".</td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type" id="property_applicationID">
-                                                                                string|null
-                </td>
-                <td><a name="property_applicationID" href="#property_applicationID">$applicationID</a></td>
-                <td class="last">Application ID of the guild creator, if it is bot-created.</td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type" id="property_available">
-                                                                                bool
-                </td>
-                <td><a name="property_available" href="#property_available">$available</a></td>
-                <td class="last">Whether the guild is available.</td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type" id="property_banner">
-                                                                                string|null
-                </td>
-                <td><a name="property_banner" href="#property_banner">$banner</a></td>
-                <td class="last">Guild banner hash used for Server Discovery, or null.</td>
-                <td></td>
+                <td>$serializeClient</td>
+                <td class="last">The client which will be used to unserialize.</td>
+                <td><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Models/ClientBase.html#property_serializeClient"><abbr title="CharlotteDunois\Yasmin\Models\ClientBase">ClientBase</abbr></a></small></td>
             </tr>
                     <tr>
                 <td class="type" id="property_channels">
                                                                                 <a href="../../../CharlotteDunois/Yasmin/Interfaces/ChannelStorageInterface.html"><abbr title="CharlotteDunois\Yasmin\Interfaces\ChannelStorageInterface">ChannelStorageInterface</abbr></a>
                 </td>
-                <td><a name="property_channels" href="#property_channels">$channels</a></td>
+                <td>$channels</td>
                 <td class="last">Holds a guild's channels, mapped by their ID.</td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type" id="property_client">
-                                                                                <a href="../../../CharlotteDunois/Yasmin/Client.html"><abbr title="CharlotteDunois\Yasmin\Client">Client</abbr></a>
-                </td>
-                <td><a name="property_client" href="#property_client">$client</a></td>
-                <td class="last">The client which initiated the instance.</td>
-                <td><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Models/ClientBase.html#property_client"><abbr title="CharlotteDunois\Yasmin\Models\ClientBase">ClientBase</abbr></a></small></td>
-            </tr>
-                    <tr>
-                <td class="type" id="property_createdAt">
-                                                                                <a href="https://secure.php.net/DateTime" target="_blank">DateTime</a>
-                </td>
-                <td><a name="property_createdAt" href="#property_createdAt">$createdAt</a></td>
-                <td class="last">The DateTime instance of createdTimestamp.</td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type" id="property_createdTimestamp">
-                                                                                int
-                </td>
-                <td><a name="property_createdTimestamp" href="#property_createdTimestamp">$createdTimestamp</a></td>
-                <td class="last">The timestamp when this guild was created.</td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type" id="property_defaultMessageNotifications">
-                                                                                string
-                </td>
-                <td><a name="property_defaultMessageNotifications" href="#property_defaultMessageNotifications">$defaultMessageNotifications</a></td>
-                <td class="last">The type of message that should notify you. (see Guild::DEFAULT_MESSAGE_NOTIFICATIONS)</td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type" id="property_defaultRole">
-                                                                                <a href="../../../CharlotteDunois/Yasmin/Models/Role.html"><abbr title="CharlotteDunois\Yasmin\Models\Role">Role</abbr></a>
-                </td>
-                <td><a name="property_defaultRole" href="#property_defaultRole">$defaultRole</a></td>
-                <td class="last">The guild's default role.</td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type" id="property_description">
-                                                                                string|null
-                </td>
-                <td><a name="property_description" href="#property_description">$description</a></td>
-                <td class="last">Guild description used for Server Discovery, or null.</td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type" id="property_embedChannel">
-                                                                                <a href="../../../CharlotteDunois/Yasmin/Interfaces/GuildChannelInterface.html"><abbr title="CharlotteDunois\Yasmin\Interfaces\GuildChannelInterface">GuildChannelInterface</abbr></a>|null
-                </td>
-                <td><a name="property_embedChannel" href="#property_embedChannel">$embedChannel</a></td>
-                <td class="last">The guild's embed channel, or null.</td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type" id="property_embedChannelID">
-                                                                                string|null
-                </td>
-                <td><a name="property_embedChannelID" href="#property_embedChannelID">$embedChannelID</a></td>
-                <td class="last">The ID of the embed channel, or null.</td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type" id="property_embedEnabled">
-                                                                                bool
-                </td>
-                <td><a name="property_embedEnabled" href="#property_embedEnabled">$embedEnabled</a></td>
-                <td class="last">Whether the guild is embeddable or not (e.g. widget).</td>
                 <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_emojis">
                                                                                 <a href="../../../CharlotteDunois/Yasmin/Interfaces/EmojiStorageInterface.html"><abbr title="CharlotteDunois\Yasmin\Interfaces\EmojiStorageInterface">EmojiStorageInterface</abbr></a>
                 </td>
-                <td><a name="property_emojis" href="#property_emojis">$emojis</a></td>
+                <td>$emojis</td>
                 <td class="last">Holds a guild's emojis, mapped by their ID.</td>
                 <td></td>
             </tr>
                     <tr>
-                <td class="type" id="property_explicitContentFilter">
-                                                                                string
+                <td class="type" id="property_members">
+                                                                                <a href="../../../CharlotteDunois/Yasmin/Interfaces/GuildMemberStorageInterface.html"><abbr title="CharlotteDunois\Yasmin\Interfaces\GuildMemberStorageInterface">GuildMemberStorageInterface</abbr></a>
                 </td>
-                <td><a name="property_explicitContentFilter" href="#property_explicitContentFilter">$explicitContentFilter</a></td>
-                <td class="last">The explicit content filter level of the guild. (see Guild::EXPLICIT_CONTENT_FILTER)</td>
+                <td>$members</td>
+                <td class="last">Holds a guild's cached members, mapped by their ID.</td>
                 <td></td>
             </tr>
                     <tr>
-                <td class="type" id="property_features">
-                                                                                string[]
+                <td class="type" id="property_presences">
+                                                                                <a href="../../../CharlotteDunois/Yasmin/Interfaces/PresenceStorageInterface.html"><abbr title="CharlotteDunois\Yasmin\Interfaces\PresenceStorageInterface">PresenceStorageInterface</abbr></a>
                 </td>
-                <td><a name="property_features" href="#property_features">$features</a></td>
-                <td class="last">An array of guild features.</td>
+                <td>$presences</td>
+                <td class="last">Holds a guild's presences of members, mapped by user ID.</td>
                 <td></td>
             </tr>
                     <tr>
-                <td class="type" id="property_icon">
-                                                                                string|null
+                <td class="type" id="property_roles">
+                                                                                <a href="../../../CharlotteDunois/Yasmin/Interfaces/RoleStorageInterface.html"><abbr title="CharlotteDunois\Yasmin\Interfaces\RoleStorageInterface">RoleStorageInterface</abbr></a>
                 </td>
-                <td><a name="property_icon" href="#property_icon">$icon</a></td>
-                <td class="last">The guild icon hash, or null.</td>
+                <td>$roles</td>
+                <td class="last">Holds a guild's roles, mapped by their ID.</td>
                 <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_id">
                                                                                 string
                 </td>
-                <td><a name="property_id" href="#property_id">$id</a></td>
+                <td>$id</td>
                 <td class="last">The guild ID.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_shardID">
+                                                                                int
+                </td>
+                <td>$shardID</td>
+                <td class="last">On which shard this guild is.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_available">
+                                                                                bool
+                </td>
+                <td>$available</td>
+                <td class="last">Whether the guild is available.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_name">
+                                                                                string
+                </td>
+                <td>$name</td>
+                <td class="last">The guild name.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_icon">
+                                                                                string|null
+                </td>
+                <td>$icon</td>
+                <td class="last">The guild icon hash, or null.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_splash">
+                                                                                string|null
+                </td>
+                <td>$splash</td>
+                <td class="last">The guild splash hash, or null.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_ownerID">
+                                                                                string
+                </td>
+                <td>$ownerID</td>
+                <td class="last">The ID of the owner.</td>
                 <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_large">
                                                                                 bool
                 </td>
-                <td><a name="property_large" href="#property_large">$large</a></td>
+                <td>$large</td>
                 <td class="last">Whether the guild is considered large.</td>
                 <td></td>
             </tr>
@@ -336,159 +261,239 @@
                 <td class="type" id="property_lazy">
                                                                                 bool
                 </td>
-                <td><a name="property_lazy" href="#property_lazy">$lazy</a></td>
+                <td>$lazy</td>
                 <td class="last">Whether this guild is run in lazy mode (on the Discord node).</td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type" id="property_maxMembers">
-                                                                                int|null
-                </td>
-                <td><a name="property_maxMembers" href="#property_maxMembers">$maxMembers</a></td>
-                <td class="last">The maximum amount of members the guild can have, or null.</td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type" id="property_maxPresences">
-                                                                                int|null
-                </td>
-                <td><a name="property_maxPresences" href="#property_maxPresences">$maxPresences</a></td>
-                <td class="last">The maximum amount of presences the guild can have, or null.</td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type" id="property_me">
-                                                                                <a href="../../../CharlotteDunois/Yasmin/Models/GuildMember.html"><abbr title="CharlotteDunois\Yasmin\Models\GuildMember">GuildMember</abbr></a>
-                </td>
-                <td><a name="property_me" href="#property_me">$me</a></td>
-                <td class="last">The guild member of the client user.</td>
                 <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_memberCount">
                                                                                 int
                 </td>
-                <td><a name="property_memberCount" href="#property_memberCount">$memberCount</a></td>
+                <td>$memberCount</td>
                 <td class="last">How many members the guild has.</td>
                 <td></td>
             </tr>
                     <tr>
-                <td class="type" id="property_members">
-                                                                                <a href="../../../CharlotteDunois/Yasmin/Interfaces/GuildMemberStorageInterface.html"><abbr title="CharlotteDunois\Yasmin\Interfaces\GuildMemberStorageInterface">GuildMemberStorageInterface</abbr></a>
-                </td>
-                <td><a name="property_members" href="#property_members">$members</a></td>
-                <td class="last">Holds a guild's cached members, mapped by their ID.</td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type" id="property_mfaLevel">
+                <td class="type" id="property_defaultMessageNotifications">
                                                                                 string
                 </td>
-                <td><a name="property_mfaLevel" href="#property_mfaLevel">$mfaLevel</a></td>
-                <td class="last">The required MFA level for the guild. (see Guild::MFA_LEVEL)</td>
+                <td>$defaultMessageNotifications</td>
+                <td class="last">The type of message that should notify you. ({see Guild::DEFAULT_MESSAGE_NOTIFICATIONS})</td>
                 <td></td>
             </tr>
                     <tr>
-                <td class="type" id="property_name">
+                <td class="type" id="property_explicitContentFilter">
                                                                                 string
                 </td>
-                <td><a name="property_name" href="#property_name">$name</a></td>
-                <td class="last">The guild name.</td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type" id="property_ownerID">
-                                                                                string
-                </td>
-                <td><a name="property_ownerID" href="#property_ownerID">$ownerID</a></td>
-                <td class="last">The ID of the owner.</td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type" id="property_presences">
-                                                                                <a href="../../../CharlotteDunois/Yasmin/Interfaces/PresenceStorageInterface.html"><abbr title="CharlotteDunois\Yasmin\Interfaces\PresenceStorageInterface">PresenceStorageInterface</abbr></a>
-                </td>
-                <td><a name="property_presences" href="#property_presences">$presences</a></td>
-                <td class="last">Holds a guild's presences of members, mapped by user ID.</td>
+                <td>$explicitContentFilter</td>
+                <td class="last">The explicit content filter level of the guild. ({see Guild::EXPLICIT_CONTENT_FILTER})</td>
                 <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_region">
                                                                                 string
                 </td>
-                <td><a name="property_region" href="#property_region">$region</a></td>
+                <td>$region</td>
                 <td class="last">The region the guild is located in.</td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type" id="property_roles">
-                                                                                <a href="../../../CharlotteDunois/Yasmin/Interfaces/RoleStorageInterface.html"><abbr title="CharlotteDunois\Yasmin\Interfaces\RoleStorageInterface">RoleStorageInterface</abbr></a>
-                </td>
-                <td><a name="property_roles" href="#property_roles">$roles</a></td>
-                <td class="last">Holds a guild's roles, mapped by their ID.</td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type" id="property_shardID">
-                                                                                int
-                </td>
-                <td><a name="property_shardID" href="#property_shardID">$shardID</a></td>
-                <td class="last">On which shard this guild is.</td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type" id="property_splash">
-                                                                                string|null
-                </td>
-                <td><a name="property_splash" href="#property_splash">$splash</a></td>
-                <td class="last">The guild splash hash, or null.</td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type" id="property_systemChannel">
-                                                                                <a href="../../../CharlotteDunois/Yasmin/Interfaces/GuildChannelInterface.html"><abbr title="CharlotteDunois\Yasmin\Interfaces\GuildChannelInterface">GuildChannelInterface</abbr></a>|null
-                </td>
-                <td><a name="property_systemChannel" href="#property_systemChannel">$systemChannel</a></td>
-                <td class="last">The guild's system channel, or null.</td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type" id="property_systemChannelID">
-                                                                                string|null
-                </td>
-                <td><a name="property_systemChannelID" href="#property_systemChannelID">$systemChannelID</a></td>
-                <td class="last">The ID of the system channel, or null.</td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type" id="property_vanityInviteCode">
-                                                                                string|null
-                </td>
-                <td><a name="property_vanityInviteCode" href="#property_vanityInviteCode">$vanityInviteCode</a></td>
-                <td class="last">The vanity invite code, or null.</td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type" id="property_vanityURL">
-                                                                                bool
-                </td>
-                <td><a name="property_vanityURL" href="#property_vanityURL">$vanityURL</a></td>
-                <td class="last">Whether the guild has a vanity invite url.</td>
                 <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_verificationLevel">
                                                                                 string
                 </td>
-                <td><a name="property_verificationLevel" href="#property_verificationLevel">$verificationLevel</a></td>
-                <td class="last">The verification level of the guild. (see Guild::VERIFICATION_LEVEL)</td>
+                <td>$verificationLevel</td>
+                <td class="last">The verification level of the guild. ({see Guild::VERIFICATION_LEVEL})</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_systemChannelID">
+                                                                                string|null
+                </td>
+                <td>$systemChannelID</td>
+                <td class="last">The ID of the system channel, or null.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_afkChannelID">
+                                                                                string|null
+                </td>
+                <td>$afkChannelID</td>
+                <td class="last">The ID of the afk channel, or null.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_afkTimeout">
+                                                                                int|null
+                </td>
+                <td>$afkTimeout</td>
+                <td class="last">The time in seconds before an user is counted as "away from keyboard".</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_features">
+                                                                                string[]
+                </td>
+                <td>$features</td>
+                <td class="last">An array of guild features.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_mfaLevel">
+                                                                                string
+                </td>
+                <td>$mfaLevel</td>
+                <td class="last">The required MFA level for the guild. ({see Guild::MFA_LEVEL})</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_applicationID">
+                                                                                string|null
+                </td>
+                <td>$applicationID</td>
+                <td class="last">Application ID of the guild creator, if it is bot-created.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_embedEnabled">
+                                                                                bool
+                </td>
+                <td>$embedEnabled</td>
+                <td class="last">Whether the guild is embeddable or not (e.g. widget).</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_embedChannelID">
+                                                                                string|null
+                </td>
+                <td>$embedChannelID</td>
+                <td class="last">The ID of the embed channel, or null.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_widgetEnabled">
+                                                                                bool
+                </td>
+                <td>$widgetEnabled</td>
+                <td class="last">Whether the guild widget is enabled or not.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_widgetChannelID">
+                                                                                string|null
+                </td>
+                <td>$widgetChannelID</td>
+                <td class="last">The ID of the widget channel, or null.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_maxPresences">
+                                                                                int|null
+                </td>
+                <td>$maxPresences</td>
+                <td class="last">The maximum amount of presences the guild can have, or null.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_maxMembers">
+                                                                                int|null
+                </td>
+                <td>$maxMembers</td>
+                <td class="last">The maximum amount of members the guild can have, or null.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_vanityInviteCode">
+                                                                                string|null
+                </td>
+                <td>$vanityInviteCode</td>
+                <td class="last">The vanity invite code, or null.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_description">
+                                                                                string|null
+                </td>
+                <td>$description</td>
+                <td class="last">Guild description used for Server Discovery, or null.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_banner">
+                                                                                string|null
+                </td>
+                <td>$banner</td>
+                <td class="last">Guild banner hash used for Server Discovery, or null.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_createdTimestamp">
+                                                                                int
+                </td>
+                <td>$createdTimestamp</td>
+                <td class="last">The timestamp when this guild was created.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_afkChannel">
+                                                                                <a href="../../../CharlotteDunois/Yasmin/Models/VoiceChannel.html"><abbr title="CharlotteDunois\Yasmin\Models\VoiceChannel">VoiceChannel</abbr></a>|null
+                </td>
+                <td>$afkChannel</td>
+                <td class="last">The guild's afk channel, or null.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_createdAt">
+                                                                                <a target="_blank" href="http://php.net/DateTime">DateTime</a>
+                </td>
+                <td>$createdAt</td>
+                <td class="last">The DateTime instance of createdTimestamp.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_defaultRole">
+                                                                                <a href="../../../CharlotteDunois/Yasmin/Models/Role.html"><abbr title="CharlotteDunois\Yasmin\Models\Role">Role</abbr></a>
+                </td>
+                <td>$defaultRole</td>
+                <td class="last">The guild's default role.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_embedChannel">
+                                                                                <a href="../../../CharlotteDunois/Yasmin/Interfaces/GuildChannelInterface.html"><abbr title="CharlotteDunois\Yasmin\Interfaces\GuildChannelInterface">GuildChannelInterface</abbr></a>|null
+                </td>
+                <td>$embedChannel</td>
+                <td class="last">The guild's embed channel, or null.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_me">
+                                                                                <a href="../../../CharlotteDunois/Yasmin/Models/GuildMember.html"><abbr title="CharlotteDunois\Yasmin\Models\GuildMember">GuildMember</abbr></a>
+                </td>
+                <td>$me</td>
+                <td class="last">The guild member of the client user.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_systemChannel">
+                                                                                <a href="../../../CharlotteDunois/Yasmin/Interfaces/GuildChannelInterface.html"><abbr title="CharlotteDunois\Yasmin\Interfaces\GuildChannelInterface">GuildChannelInterface</abbr></a>|null
+                </td>
+                <td>$systemChannel</td>
+                <td class="last">The guild's system channel, or null.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_vanityURL">
+                                                                                bool
+                </td>
+                <td>$vanityURL</td>
+                <td class="last">Whether the guild has a vanity invite url.</td>
                 <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_verified">
                                                                                 bool
                 </td>
-                <td><a name="property_verified" href="#property_verified">$verified</a></td>
+                <td>$verified</td>
                 <td class="last">Whether the guild is verified.</td>
                 <td></td>
             </tr>
@@ -496,24 +501,8 @@
                 <td class="type" id="property_widgetChannel">
                                                                                 <a href="../../../CharlotteDunois/Yasmin/Interfaces/GuildChannelInterface.html"><abbr title="CharlotteDunois\Yasmin\Interfaces\GuildChannelInterface">GuildChannelInterface</abbr></a>|null
                 </td>
-                <td><a name="property_widgetChannel" href="#property_widgetChannel">$widgetChannel</a></td>
+                <td>$widgetChannel</td>
                 <td class="last">The guild's widget channel, or null.</td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type" id="property_widgetChannelID">
-                                                                                string|null
-                </td>
-                <td><a name="property_widgetChannelID" href="#property_widgetChannelID">$widgetChannelID</a></td>
-                <td class="last">The ID of the widget channel, or null.</td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type" id="property_widgetEnabled">
-                                                                                bool
-                </td>
-                <td><a name="property_widgetEnabled" href="#property_widgetEnabled">$widgetEnabled</a></td>
-                <td class="last">Whether the guild widget is enabled or not.</td>
                 <td></td>
             </tr>
             </table>
@@ -522,6 +511,137 @@
             <h2>Methods</h2>
 
             <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(<a href="../../../CharlotteDunois/Yasmin/Client.html"><abbr title="CharlotteDunois\Yasmin\Client">Client</abbr></a> $client, array $guild, int|null $shardID = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___destruct">__destruct</a>()
+        
+                                            <p>Default destructor.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Models/Base.html#method___destruct"><abbr title="CharlotteDunois\Yasmin\Models\Base">Base</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___isset">__isset</a>(string $name)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Models/Base.html#method___isset"><abbr title="CharlotteDunois\Yasmin\Models\Base">Base</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___get">__get</a>(string $name)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___call">__call</a>(string $name, array $args)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Models/Base.html#method___call"><abbr title="CharlotteDunois\Yasmin\Models\Base">Base</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_jsonSerialize">jsonSerialize</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Models/ClientBase.html#method_jsonSerialize"><abbr title="CharlotteDunois\Yasmin\Models\ClientBase">ClientBase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_serialize">serialize</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Models/ClientBase.html#method_serialize"><abbr title="CharlotteDunois\Yasmin\Models\ClientBase">ClientBase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_unserialize">unserialize</a>($data)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Models/ClientBase.html#method_unserialize"><abbr title="CharlotteDunois\Yasmin\Models\ClientBase">ClientBase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method__patch">_patch</a>(array $guild)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method__shouldUpdate">_shouldUpdate</a>(array $data)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Models/Base.html#method__shouldUpdate"><abbr title="CharlotteDunois\Yasmin\Models\Base">Base</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method__markForDelete">_markForDelete</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Models/Base.html#method__markForDelete"><abbr title="CharlotteDunois\Yasmin\Models\Base">Base</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___debugInfo">__debugInfo</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Models/ClientBase.html#method___debugInfo"><abbr title="CharlotteDunois\Yasmin\Models\ClientBase">ClientBase</abbr></a></small></div>
+            </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
@@ -707,7 +827,7 @@
                     string|null
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_getIconURL">getIconURL</a>(int|null $size = null, string $format = &#039;png&#039;)
+                    <a href="#method_getIconURL">getIconURL</a>(int|null $size = null, string $format = &#039;&#039;)
         
                                             <p>Returns the guild's icon URL, or null.</p>                </div>
                 <div class="col-md-2"></div>
@@ -787,6 +907,16 @@
                     <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
                 </div>
                 <div class="col-md-8 type">
+                    <a href="#method_setRolePositions">setRolePositions</a>(array $roles, string $reason = &#039;&#039;)
+        
+                                            <p>Batch-updates the guild's roles positions. Roles is an array of <code>role ID (string)|Role =&gt; position (int)</code> pairs. Resolves with $this.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_setExplicitContentFilter">setExplicitContentFilter</a>(int $filter, string $reason = &#039;&#039;)
         
                                             <p>Edits the level of the explicit content filter. Resolves with $this.</p>                </div>
@@ -837,16 +967,6 @@
                     <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_setRolePositions">setRolePositions</a>(array $roles, string $reason = &#039;&#039;)
-        
-                                            <p>Batch-updates the guild's roles positions. Roles is an array of <code>role ID (string)|Role =&gt; position (int)</code> pairs. Resolves with $this.</p>                </div>
-                <div class="col-md-2"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
-                </div>
-                <div class="col-md-8 type">
                     <a href="#method_setSplash">setSplash</a>(string $splash, string $reason = &#039;&#039;)
         
                                             <p>Updates the guild splash. Resolves with $this.</p>                </div>
@@ -882,6 +1002,28 @@
                                             <p>Unbans the given user. Resolves with $this.</p>                </div>
                 <div class="col-md-2"></div>
             </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../CharlotteDunois/Yasmin/Models/GuildMember.html"><abbr title="CharlotteDunois\Yasmin\Models\GuildMember">GuildMember</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method__addMember">_addMember</a>(array $member, bool $initial = false)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../CharlotteDunois/Yasmin/Models/GuildMember.html"><abbr title="CharlotteDunois\Yasmin\Models\GuildMember">GuildMember</abbr></a>|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method__removeMember">_removeMember</a>(string $userid)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
             </div>
 
 
@@ -889,8 +1031,440 @@
 
             <div id="method-details">
                     <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L319">line 319</a></div>
+        <code>                    
+    <strong>__construct</strong>(<a href="../../../CharlotteDunois/Yasmin/Client.html"><abbr title="CharlotteDunois\Yasmin\Client">Client</abbr></a> $client, array $guild, int|null $shardID = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../CharlotteDunois/Yasmin/Client.html"><abbr title="CharlotteDunois\Yasmin\Client">Client</abbr></a></td>
+                <td>$client</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$guild</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int|null</td>
+                <td>$shardID</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___destruct">
+        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Models/Base.html#method___destruct"><abbr title="CharlotteDunois\Yasmin\Models\Base">Base</abbr></a> at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Base.php#L28">line 28</a></div>
+        <code>                    
+    <strong>__destruct</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Default destructor.</p>                                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___isset">
+        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Models/Base.html#method___isset"><abbr title="CharlotteDunois\Yasmin\Models\Base">Base</abbr></a> at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Base.php#L38">line 38</a></div>
+        <code>                    bool
+    <strong>__isset</strong>(string $name)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/Exception">Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___get">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L355">line 355</a></div>
+        <code>                    mixed
+    <strong>__get</strong>(string $name)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/RuntimeException">RuntimeException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___call">
+        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Models/Base.html#method___call"><abbr title="CharlotteDunois\Yasmin\Models\Base">Base</abbr></a> at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Base.php#L67">line 67</a></div>
+        <code>                    mixed
+    <strong>__call</strong>(string $name, array $args)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$args</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/RuntimeException">RuntimeException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_jsonSerialize">
+        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Models/ClientBase.html#method_jsonSerialize"><abbr title="CharlotteDunois\Yasmin\Models\ClientBase">ClientBase</abbr></a> at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/ClientBase.php#L67">line 67</a></div>
+        <code>                    mixed
+    <strong>jsonSerialize</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_serialize">
+        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Models/ClientBase.html#method_serialize"><abbr title="CharlotteDunois\Yasmin\Models\ClientBase">ClientBase</abbr></a> at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/ClientBase.php#L78">line 78</a></div>
+        <code>                    string
+    <strong>serialize</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_unserialize">
+        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Models/ClientBase.html#method_unserialize"><abbr title="CharlotteDunois\Yasmin\Models\ClientBase">ClientBase</abbr></a> at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/ClientBase.php#L89">line 89</a></div>
+        <code>                    void
+    <strong>unserialize</strong>($data)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$data</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__patch">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L1276">line 1276</a></div>
+        <code>                    void
+    <strong>_patch</strong>(array $guild)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$guild</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__shouldUpdate">
+        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Models/Base.html#method__shouldUpdate"><abbr title="CharlotteDunois\Yasmin\Models\Base">Base</abbr></a> at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Base.php#L172">line 172</a></div>
+        <code>                    bool
+    <strong>_shouldUpdate</strong>(array $data)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$data</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__markForDelete">
+        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Models/Base.html#method__markForDelete"><abbr title="CharlotteDunois\Yasmin\Models\Base">Base</abbr></a> at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Base.php#L192">line 192</a></div>
+        <code>                    void
+    <strong>_markForDelete</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___debugInfo">
+        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Models/ClientBase.html#method___debugInfo"><abbr title="CharlotteDunois\Yasmin\Models\ClientBase">ClientBase</abbr></a> at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/ClientBase.php#L56">line 56</a></div>
+        <code>                    mixed
+    <strong>__debugInfo</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_addMember">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L412">line 412</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L412">line 412</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>addMember</strong>(<a href="../../../CharlotteDunois/Yasmin/Models/User.html"><abbr title="CharlotteDunois\Yasmin\Models\User">User</abbr></a>|string $user, string $accessToken, array $options = array())
         </code>
@@ -943,15 +1517,13 @@
 
             
             
-                        
-                        
                     </div>
     </div>
 
             </div>
                     <div class="method-item">
                     <h3 id="method_ban">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L461">line 461</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L461">line 461</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>ban</strong>(<a href="../../../CharlotteDunois/Yasmin/Models/GuildMember.html"><abbr title="CharlotteDunois\Yasmin\Models\GuildMember">GuildMember</abbr></a>|<a href="../../../CharlotteDunois/Yasmin/Models/User.html"><abbr title="CharlotteDunois\Yasmin\Models\User">User</abbr></a>|string $user, int $days = 0, string $reason = &#039;&#039;)
         </code>
@@ -995,15 +1567,13 @@
 
             
             
-                        
-                        
                     </div>
     </div>
 
             </div>
                     <div class="method-item">
                     <h3 id="method_createChannel">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L506">line 506</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L506">line 506</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>createChannel</strong>(array $options, string $reason = &#039;&#039;)
         </code>
@@ -1067,7 +1637,7 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td><a href="https://secure.php.net/InvalidArgumentException" target="_blank">InvalidArgumentException</a></td>
+                <td><a target="_blank" href="http://php.net/InvalidArgumentException">InvalidArgumentException</a></td>
                 <td></td>
             </tr>
             </table>
@@ -1076,23 +1646,15 @@
                             <h4>See also</h4>
 
                     <table class="table table-condensed">
-                    <tr>
-                <td>
-                                            <a href="../../../CharlotteDunois/Yasmin/Interfaces/GuildChannelInterface.html"><abbr title="CharlotteDunois\Yasmin\Interfaces\GuildChannelInterface">GuildChannelInterface</abbr></a>
-                                    </td>
-                <td></td>
-            </tr>
             </table>
 
-                        
-                        
                     </div>
     </div>
 
             </div>
                     <div class="method-item">
                     <h3 id="method_createEmoji">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L555">line 555</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L555">line 555</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>createEmoji</strong>(string $file, string $name, array|<abbr title="CharlotteDunois\Collect\Collection">Collection</abbr> $roles = array(), string $reason = &#039;&#039;)
         </code>
@@ -1144,23 +1706,15 @@
                             <h4>See also</h4>
 
                     <table class="table table-condensed">
-                    <tr>
-                <td>
-                                            <a href="../../../CharlotteDunois/Yasmin/Models/Emoji.html"><abbr title="CharlotteDunois\Yasmin\Models\Emoji">Emoji</abbr></a>
-                                    </td>
-                <td></td>
-            </tr>
             </table>
 
-                        
-                        
                     </div>
     </div>
 
             </div>
                     <div class="method-item">
                     <h3 id="method_createRole">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L605">line 605</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L605">line 605</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>createRole</strong>(array $options, string $reason = &#039;&#039;)
         </code>
@@ -1212,7 +1766,7 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td><a href="https://secure.php.net/InvalidArgumentException" target="_blank">InvalidArgumentException</a></td>
+                <td><a target="_blank" href="http://php.net/InvalidArgumentException">InvalidArgumentException</a></td>
                 <td></td>
             </tr>
             </table>
@@ -1221,23 +1775,15 @@
                             <h4>See also</h4>
 
                     <table class="table table-condensed">
-                    <tr>
-                <td>
-                                            <a href="../../../CharlotteDunois/Yasmin/Models/Role.html"><abbr title="CharlotteDunois\Yasmin\Models\Role">Role</abbr></a>
-                                    </td>
-                <td></td>
-            </tr>
             </table>
 
-                        
-                        
                     </div>
     </div>
 
             </div>
                     <div class="method-item">
                     <h3 id="method_delete">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L622">line 622</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L622">line 622</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>delete</strong>()
         </code>
@@ -1261,15 +1807,13 @@
 
             
             
-                        
-                        
                     </div>
     </div>
 
             </div>
                     <div class="method-item">
                     <h3 id="method_edit">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L656">line 656</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L656">line 656</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>edit</strong>(array $options, string $reason = &#039;&#039;)
         </code>
@@ -1325,15 +1869,13 @@
 
             
             
-                        
-                        
                     </div>
     </div>
 
             </div>
                     <div class="method-item">
                     <h3 id="method_fetchAuditLog">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L722">line 722</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L722">line 722</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>fetchAuditLog</strong>(array $options = array())
         </code>
@@ -1380,23 +1922,15 @@
                             <h4>See also</h4>
 
                     <table class="table table-condensed">
-                    <tr>
-                <td>
-                                            <a href="../../../CharlotteDunois/Yasmin/Models/AuditLog.html"><abbr title="CharlotteDunois\Yasmin\Models\AuditLog">AuditLog</abbr></a>
-                                    </td>
-                <td></td>
-            </tr>
             </table>
 
-                        
-                        
                     </div>
     </div>
 
             </div>
                     <div class="method-item">
                     <h3 id="method_fetchBan">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L741">line 741</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L741">line 741</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>fetchBan</strong>(<a href="../../../CharlotteDunois/Yasmin/Models/User.html"><abbr title="CharlotteDunois\Yasmin\Models\User">User</abbr></a>|string $user)
         </code>
@@ -1433,23 +1967,15 @@
                             <h4>See also</h4>
 
                     <table class="table table-condensed">
-                    <tr>
-                <td>
-                                            <a href="../../../CharlotteDunois/Yasmin/Models/GuildBan.html"><abbr title="CharlotteDunois\Yasmin\Models\GuildBan">GuildBan</abbr></a>
-                                    </td>
-                <td></td>
-            </tr>
             </table>
 
-                        
-                        
                     </div>
     </div>
 
             </div>
                     <div class="method-item">
                     <h3 id="method_fetchBans">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L761">line 761</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L761">line 761</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>fetchBans</strong>()
         </code>
@@ -1476,23 +2002,15 @@
                             <h4>See also</h4>
 
                     <table class="table table-condensed">
-                    <tr>
-                <td>
-                                            <a href="../../../CharlotteDunois/Yasmin/Models/GuildBan.html"><abbr title="CharlotteDunois\Yasmin\Models\GuildBan">GuildBan</abbr></a>
-                                    </td>
-                <td></td>
-            </tr>
             </table>
 
-                        
-                        
                     </div>
     </div>
 
             </div>
                     <div class="method-item">
                     <h3 id="method_fetchInvites">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L783">line 783</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L783">line 783</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>fetchInvites</strong>()
         </code>
@@ -1519,23 +2037,15 @@
                             <h4>See also</h4>
 
                     <table class="table table-condensed">
-                    <tr>
-                <td>
-                                            <a href="../../../CharlotteDunois/Yasmin/Models/Invite.html"><abbr title="CharlotteDunois\Yasmin\Models\Invite">Invite</abbr></a>
-                                    </td>
-                <td></td>
-            </tr>
             </table>
 
-                        
-                        
                     </div>
     </div>
 
             </div>
                     <div class="method-item">
                     <h3 id="method_fetchMember">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L804">line 804</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L804">line 804</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>fetchMember</strong>(string $userid)
         </code>
@@ -1572,23 +2082,15 @@
                             <h4>See also</h4>
 
                     <table class="table table-condensed">
-                    <tr>
-                <td>
-                                            <a href="../../../CharlotteDunois/Yasmin/Models/GuildMember.html"><abbr title="CharlotteDunois\Yasmin\Models\GuildMember">GuildMember</abbr></a>
-                                    </td>
-                <td></td>
-            </tr>
             </table>
 
-                        
-                        
                     </div>
     </div>
 
             </div>
                     <div class="method-item">
                     <h3 id="method_fetchMembers">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L823">line 823</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L823">line 823</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>fetchMembers</strong>(string $query = &#039;&#039;, int $limit = 0)
         </code>
@@ -1630,21 +2132,19 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td><a href="https://secure.php.net/InvalidArgumentException" target="_blank">InvalidArgumentException</a></td>
+                <td><a target="_blank" href="http://php.net/InvalidArgumentException">InvalidArgumentException</a></td>
                 <td></td>
             </tr>
             </table>
 
             
-                        
-                        
                     </div>
     </div>
 
             </div>
                     <div class="method-item">
                     <h3 id="method_fetchPruneMembers">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L899">line 899</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L899">line 899</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>fetchPruneMembers</strong>(int $days)
         </code>
@@ -1678,15 +2178,13 @@
 
             
             
-                        
-                        
                     </div>
     </div>
 
             </div>
                     <div class="method-item">
                     <h3 id="method_fetchVanityInvite">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L912">line 912</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L912">line 912</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>fetchVanityInvite</strong>()
         </code>
@@ -1713,23 +2211,15 @@
                             <h4>See also</h4>
 
                     <table class="table table-condensed">
-                    <tr>
-                <td>
-                                            <a href="../../../CharlotteDunois/Yasmin/Models/Invite.html"><abbr title="CharlotteDunois\Yasmin\Models\Invite">Invite</abbr></a>
-                                    </td>
-                <td></td>
-            </tr>
             </table>
 
-                        
-                        
                     </div>
     </div>
 
             </div>
                     <div class="method-item">
                     <h3 id="method_fetchVoiceRegions">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L935">line 935</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L935">line 935</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>fetchVoiceRegions</strong>()
         </code>
@@ -1756,23 +2246,15 @@
                             <h4>See also</h4>
 
                     <table class="table table-condensed">
-                    <tr>
-                <td>
-                                            <a href="../../../CharlotteDunois/Yasmin/Models/VoiceRegion.html"><abbr title="CharlotteDunois\Yasmin\Models\VoiceRegion">VoiceRegion</abbr></a>
-                                    </td>
-                <td></td>
-            </tr>
             </table>
 
-                        
-                        
                     </div>
     </div>
 
             </div>
                     <div class="method-item">
                     <h3 id="method_fetchWebhooks">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L955">line 955</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L955">line 955</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>fetchWebhooks</strong>()
         </code>
@@ -1799,23 +2281,15 @@
                             <h4>See also</h4>
 
                     <table class="table table-condensed">
-                    <tr>
-                <td>
-                                            <a href="../../../CharlotteDunois/Yasmin/Models/Webhook.html"><abbr title="CharlotteDunois\Yasmin\Models\Webhook">Webhook</abbr></a>
-                                    </td>
-                <td></td>
-            </tr>
             </table>
 
-                        
-                        
                     </div>
     </div>
 
             </div>
                     <div class="method-item">
                     <h3 id="method_getBannerURL">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L976">line 976</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L977">line 977</a></div>
         <code>                    string|null
     <strong>getBannerURL</strong>(int|null $size = null, string $format = &#039;png&#039;)
         </code>
@@ -1853,18 +2327,25 @@
     </table>
 
             
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/InvalidArgumentException">InvalidArgumentException</a></td>
+                <td>Thrown if $size is not a power of 2</td>
+            </tr>
+            </table>
+
             
-                        
-                        
                     </div>
     </div>
 
             </div>
                     <div class="method-item">
                     <h3 id="method_getIconURL">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L994">line 994</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L996">line 996</a></div>
         <code>                    string|null
-    <strong>getIconURL</strong>(int|null $size = null, string $format = &#039;png&#039;)
+    <strong>getIconURL</strong>(int|null $size = null, string $format = &#039;&#039;)
         </code>
     </h3>
     <div class="details">
@@ -1900,16 +2381,23 @@
     </table>
 
             
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/InvalidArgumentException">InvalidArgumentException</a></td>
+                <td>Thrown if $size is not a power of 2</td>
+            </tr>
+            </table>
+
             
-                        
-                        
                     </div>
     </div>
 
             </div>
                     <div class="method-item">
                     <h3 id="method_getNameAcronym">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L1010">line 1010</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L1016">line 1016</a></div>
         <code>                    string
     <strong>getNameAcronym</strong>()
         </code>
@@ -1933,15 +2421,13 @@
 
             
             
-                        
-                        
                     </div>
     </div>
 
             </div>
                     <div class="method-item">
                     <h3 id="method_getSplashURL">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L1027">line 1027</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L1033">line 1033</a></div>
         <code>                    string|null
     <strong>getSplashURL</strong>(int|null $size = null, string $format = &#039;png&#039;)
         </code>
@@ -1980,15 +2466,13 @@
 
             
             
-                        
-                        
                     </div>
     </div>
 
             </div>
                     <div class="method-item">
                     <h3 id="method_leave">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L1043">line 1043</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L1049">line 1049</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>leave</strong>()
         </code>
@@ -2012,15 +2496,13 @@
 
             
             
-                        
-                        
                     </div>
     </div>
 
             </div>
                     <div class="method-item">
                     <h3 id="method_pruneMembers">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L1058">line 1058</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L1064">line 1064</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>pruneMembers</strong>(int $days, bool $withCount = false, string $reason = &#039;&#039;)
         </code>
@@ -2064,15 +2546,13 @@
 
             
             
-                        
-                        
                     </div>
     </div>
 
             </div>
                     <div class="method-item">
                     <h3 id="method_setAFKChannel">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L1072">line 1072</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L1078">line 1078</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>setAFKChannel</strong>(string|<a href="../../../CharlotteDunois/Yasmin/Models/VoiceChannel.html"><abbr title="CharlotteDunois\Yasmin\Models\VoiceChannel">VoiceChannel</abbr></a>|null $channel, string $reason = &#039;&#039;)
         </code>
@@ -2111,15 +2591,13 @@
 
             
             
-                        
-                        
                     </div>
     </div>
 
             </div>
                     <div class="method-item">
                     <h3 id="method_setAFKTimeout">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L1082">line 1082</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L1088">line 1088</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>setAFKTimeout</strong>(int|null $timeout, string $reason = &#039;&#039;)
         </code>
@@ -2158,15 +2636,13 @@
 
             
             
-                        
-                        
                     </div>
     </div>
 
             </div>
                     <div class="method-item">
                     <h3 id="method_setChannelPositions">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L1092">line 1092</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L1098">line 1098</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>setChannelPositions</strong>(array $channels, string $reason = &#039;&#039;)
         </code>
@@ -2205,250 +2681,13 @@
 
             
             
-                        
-                        
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_setExplicitContentFilter">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L1140">line 1140</a></div>
-        <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
-    <strong>setExplicitContentFilter</strong>(int $filter, string $reason = &#039;&#039;)
-        </code>
-    </h3>
-    <div class="details">
-            
-    
-
-                    <div class="method-description">
-                                    <p>Edits the level of the explicit content filter. Resolves with $this.</p>                                                </div>
-                <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td>int</td>
-                <td>$filter</td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td>string</td>
-                <td>$reason</td>
-                <td></td>
-            </tr>
-            </table>
-
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td><abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr></td>
-            <td></td>
-        </tr>
-    </table>
-
-            
-            
-                        
-                        
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_setIcon">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L1150">line 1150</a></div>
-        <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
-    <strong>setIcon</strong>(string $icon, string $reason = &#039;&#039;)
-        </code>
-    </h3>
-    <div class="details">
-            
-    
-
-                    <div class="method-description">
-                                    <p>Updates the guild icon. Resolves with $this.</p>                                                </div>
-                <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td>string</td>
-                <td>$icon</td>
-                <td>A filepath or URL, or data.</td>
-            </tr>
-                    <tr>
-                <td>string</td>
-                <td>$reason</td>
-                <td></td>
-            </tr>
-            </table>
-
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td><abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr></td>
-            <td></td>
-        </tr>
-    </table>
-
-            
-            
-                        
-                        
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_setName">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L1160">line 1160</a></div>
-        <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
-    <strong>setName</strong>(string $name, string $reason = &#039;&#039;)
-        </code>
-    </h3>
-    <div class="details">
-            
-    
-
-                    <div class="method-description">
-                                    <p>Edits the name of the guild. Resolves with $this.</p>                                                </div>
-                <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td>string</td>
-                <td>$name</td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td>string</td>
-                <td>$reason</td>
-                <td></td>
-            </tr>
-            </table>
-
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td><abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr></td>
-            <td></td>
-        </tr>
-    </table>
-
-            
-            
-                        
-                        
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_setOwner">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L1170">line 1170</a></div>
-        <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
-    <strong>setOwner</strong>(string|<a href="../../../CharlotteDunois/Yasmin/Models/GuildMember.html"><abbr title="CharlotteDunois\Yasmin\Models\GuildMember">GuildMember</abbr></a> $owner, string $reason = &#039;&#039;)
-        </code>
-    </h3>
-    <div class="details">
-            
-    
-
-                    <div class="method-description">
-                                    <p>Sets a new owner for the guild. Resolves with $this.</p>                                                </div>
-                <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td>string|<a href="../../../CharlotteDunois/Yasmin/Models/GuildMember.html"><abbr title="CharlotteDunois\Yasmin\Models\GuildMember">GuildMember</abbr></a></td>
-                <td>$owner</td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td>string</td>
-                <td>$reason</td>
-                <td></td>
-            </tr>
-            </table>
-
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td><abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr></td>
-            <td></td>
-        </tr>
-    </table>
-
-            
-            
-                        
-                        
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_setRegion">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L1180">line 1180</a></div>
-        <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
-    <strong>setRegion</strong>(string|<a href="../../../CharlotteDunois/Yasmin/Models/VoiceRegion.html"><abbr title="CharlotteDunois\Yasmin\Models\VoiceRegion">VoiceRegion</abbr></a> $region, string $reason = &#039;&#039;)
-        </code>
-    </h3>
-    <div class="details">
-            
-    
-
-                    <div class="method-description">
-                                    <p>Edits the region of the guild. Resolves with $this.</p>                                                </div>
-                <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td>string|<a href="../../../CharlotteDunois/Yasmin/Models/VoiceRegion.html"><abbr title="CharlotteDunois\Yasmin\Models\VoiceRegion">VoiceRegion</abbr></a></td>
-                <td>$region</td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td>string</td>
-                <td>$reason</td>
-                <td></td>
-            </tr>
-            </table>
-
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td><abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr></td>
-            <td></td>
-        </tr>
-    </table>
-
-            
-            
-                        
-                        
                     </div>
     </div>
 
             </div>
                     <div class="method-item">
                     <h3 id="method_setRolePositions">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L1116">line 1116</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L1122">line 1122</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>setRolePositions</strong>(array $roles, string $reason = &#039;&#039;)
         </code>
@@ -2487,15 +2726,238 @@
 
             
             
-                        
-                        
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setExplicitContentFilter">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L1146">line 1146</a></div>
+        <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
+    <strong>setExplicitContentFilter</strong>(int $filter, string $reason = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Edits the level of the explicit content filter. Resolves with $this.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$filter</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$reason</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setIcon">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L1156">line 1156</a></div>
+        <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
+    <strong>setIcon</strong>(string $icon, string $reason = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Updates the guild icon. Resolves with $this.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$icon</td>
+                <td>A filepath or URL, or data.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$reason</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setName">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L1166">line 1166</a></div>
+        <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
+    <strong>setName</strong>(string $name, string $reason = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Edits the name of the guild. Resolves with $this.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$reason</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setOwner">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L1176">line 1176</a></div>
+        <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
+    <strong>setOwner</strong>(string|<a href="../../../CharlotteDunois/Yasmin/Models/GuildMember.html"><abbr title="CharlotteDunois\Yasmin\Models\GuildMember">GuildMember</abbr></a> $owner, string $reason = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets a new owner for the guild. Resolves with $this.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|<a href="../../../CharlotteDunois/Yasmin/Models/GuildMember.html"><abbr title="CharlotteDunois\Yasmin\Models\GuildMember">GuildMember</abbr></a></td>
+                <td>$owner</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$reason</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setRegion">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L1186">line 1186</a></div>
+        <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
+    <strong>setRegion</strong>(string|<a href="../../../CharlotteDunois/Yasmin/Models/VoiceRegion.html"><abbr title="CharlotteDunois\Yasmin\Models\VoiceRegion">VoiceRegion</abbr></a> $region, string $reason = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Edits the region of the guild. Resolves with $this.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|<a href="../../../CharlotteDunois/Yasmin/Models/VoiceRegion.html"><abbr title="CharlotteDunois\Yasmin\Models\VoiceRegion">VoiceRegion</abbr></a></td>
+                <td>$region</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$reason</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
                     </div>
     </div>
 
             </div>
                     <div class="method-item">
                     <h3 id="method_setSplash">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L1190">line 1190</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L1196">line 1196</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>setSplash</strong>(string $splash, string $reason = &#039;&#039;)
         </code>
@@ -2534,15 +2996,13 @@
 
             
             
-                        
-                        
                     </div>
     </div>
 
             </div>
                     <div class="method-item">
                     <h3 id="method_setSystemChannel">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L1200">line 1200</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L1206">line 1206</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>setSystemChannel</strong>(string|<a href="../../../CharlotteDunois/Yasmin/Models/TextChannel.html"><abbr title="CharlotteDunois\Yasmin\Models\TextChannel">TextChannel</abbr></a>|null $channel, string $reason = &#039;&#039;)
         </code>
@@ -2581,15 +3041,13 @@
 
             
             
-                        
-                        
                     </div>
     </div>
 
             </div>
                     <div class="method-item">
                     <h3 id="method_setVerificationLevel">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L1210">line 1210</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L1216">line 1216</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>setVerificationLevel</strong>(int $level, string $reason = &#039;&#039;)
         </code>
@@ -2628,15 +3086,13 @@
 
             
             
-                        
-                        
                     </div>
     </div>
 
             </div>
                     <div class="method-item">
                     <h3 id="method_unban">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Guild.php#L1220">line 1220</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L1226">line 1226</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>unban</strong>(<a href="../../../CharlotteDunois/Yasmin/Models/User.html"><abbr title="CharlotteDunois\Yasmin\Models\User">User</abbr></a>|string $user, string $reason = &#039;&#039;)
         </code>
@@ -2675,8 +3131,87 @@
 
             
             
-                        
-                        
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__addMember">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L1242">line 1242</a></div>
+        <code>                    <a href="../../../CharlotteDunois/Yasmin/Models/GuildMember.html"><abbr title="CharlotteDunois\Yasmin\Models\GuildMember">GuildMember</abbr></a>
+    <strong>_addMember</strong>(array $member, bool $initial = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$member</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$initial</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../CharlotteDunois/Yasmin/Models/GuildMember.html"><abbr title="CharlotteDunois\Yasmin\Models\GuildMember">GuildMember</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__removeMember">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L1256">line 1256</a></div>
+        <code>                    <a href="../../../CharlotteDunois/Yasmin/Models/GuildMember.html"><abbr title="CharlotteDunois\Yasmin\Models\GuildMember">GuildMember</abbr></a>|null
+    <strong>_removeMember</strong>(string $userid)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$userid</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../CharlotteDunois/Yasmin/Models/GuildMember.html"><abbr title="CharlotteDunois\Yasmin\Models\GuildMember">GuildMember</abbr></a>|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
                     </div>
     </div>
 

@@ -8,12 +8,10 @@
             <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
         <link rel="stylesheet" type="text/css" href="../../../css/sami.css">
-        <link rel="stylesheet" type="text/css" href="../../../css/prism.css">
         <script src="../../../js/jquery-1.11.1.min.js"></script>
         <script src="../../../js/bootstrap.min.js"></script>
         <script src="../../../js/typeahead.min.js"></script>
         <script src="../../../sami.js"></script>
-        <script src="../../../js/prism.js"></script>
         <meta name="MobileOptimized" content="width">
         <meta name="HandheldFriendly" content="true">
         <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
@@ -27,10 +25,13 @@
                 <div id="control-panel">
                     <form action="#" method="GET">
                 <select id="version-switcher" name="version">
+                                            <option value="../../../../v0.4.0/index.html" data-version="v0.4.0">v0.4.0</option>
+                                            <option value="../../../../v0.4.1/index.html" data-version="v0.4.1">v0.4.1</option>
+                                            <option value="../../../../v0.4.2/index.html" data-version="v0.4.2">v0.4.2</option>
                                             <option value="../../../../v0.5.0/index.html" data-version="v0.5.0">v0.5.0</option>
                                             <option value="../../../../v0.5.1/index.html" data-version="v0.5.1">v0.5.1</option>
                                             <option value="../../../../v0.6.0/index.html" data-version="v0.6.0">v0.6.0</option>
-                                            <option value="../../../../master/index.html" data-version="master">master</option>
+                                            <option value="../../../../master/index.html" data-version="master">master branch</option>
                                     </select>
             </form>
                 <script>
@@ -63,7 +64,7 @@
             <div class="collapse navbar-collapse" id="navbar-elements">
                 <ul class="nav navbar-nav">
                     <li><a href="../../../classes.html">Classes</a></li>
-                                                                <li><a href="../../../namespaces.html">Namespaces</a></li>
+                                            <li><a href="../../../namespaces.html">Namespaces</a></li>
                                         <li><a href="../../../interfaces.html">Interfaces</a></li>
                     <li><a href="../../../traits.html">Traits</a></li>
                     <li><a href="../../../doc-index.html">Index</a></li>
@@ -89,7 +90,7 @@
     </div>
 
     <p>    class
-    <strong>Activity</strong>        extends <a href="../../../CharlotteDunois/Yasmin/Models/ClientBase.html"><abbr title="CharlotteDunois\Yasmin\Models\ClientBase">ClientBase</abbr></a>        (<a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Activity.php" target="_blank">View source</a>)
+    <strong>Activity</strong>        extends <a href="../../../CharlotteDunois/Yasmin/Models/ClientBase.html"><abbr title="CharlotteDunois\Yasmin\Models\ClientBase">ClientBase</abbr></a>        (<a href="https://github.com/sylae/yasmin/blob/master/src/Models/Activity.php">View source</a>)
 </p>
 
         
@@ -107,28 +108,14 @@
                 <td class="last">
                     <p><em>The Activity flags.</em></p>
                     <p></p>
-                                            <pre><code class="language-php">const FLAGS = array(
-    &#039;INSTANCE&#039; =&gt; 1,
-    &#039;JOIN&#039; =&gt; 2,
-    &#039;SPECTATE&#039; =&gt; 4,
-    &#039;JOIN_REQUEST&#039; =&gt; 8,
-    &#039;SYNC&#039; =&gt; 16,
-    &#039;PLAY&#039; =&gt; 32
-);</code></pre>
-                                    </td>
+                </td>
             </tr>
                     <tr>
                 <td>TYPES</td>
                 <td class="last">
                     <p><em>The Activity types.</em></p>
                     <p></p>
-                                            <pre><code class="language-php">const TYPES = array(
-    0 =&gt; &#039;playing&#039;,
-    1 =&gt; &#039;streaming&#039;,
-    2 =&gt; &#039;listening&#039;,
-    3 =&gt; &#039;watching&#039;
-);</code></pre>
-                                    </td>
+                </td>
             </tr>
             </table>
 
@@ -137,106 +124,34 @@
 
             <table class="table table-condensed">
                     <tr>
-                <td class="type" id="property_applicationID">
-                                                                                string|null
-                </td>
-                <td><a name="property_applicationID" href="#property_applicationID">$applicationID</a></td>
-                <td class="last">The application ID associated with the activity, or null.</td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type" id="property_assets">
-                                                                                <a href="../../../CharlotteDunois/Yasmin/Models/RichPresenceAssets.html"><abbr title="CharlotteDunois\Yasmin\Models\RichPresenceAssets">RichPresenceAssets</abbr></a>|null
-                </td>
-                <td><a name="property_assets" href="#property_assets">$assets</a></td>
-                <td class="last">Assets for rich presence, or null.</td>
-                <td></td>
-            </tr>
-                    <tr>
                 <td class="type" id="property_client">
                                                                                 <a href="../../../CharlotteDunois/Yasmin/Client.html"><abbr title="CharlotteDunois\Yasmin\Client">Client</abbr></a>
                 </td>
-                <td><a name="property_client" href="#property_client">$client</a></td>
+                <td>$client</td>
                 <td class="last">The client which initiated the instance.</td>
                 <td><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Models/ClientBase.html#property_client"><abbr title="CharlotteDunois\Yasmin\Models\ClientBase">ClientBase</abbr></a></small></td>
             </tr>
                     <tr>
-                <td class="type" id="property_details">
-                                                                                string|null
+                <td class="type" id="property_serializeClient">
+                    static                                                            <a href="../../../CharlotteDunois/Yasmin/Client.html"><abbr title="CharlotteDunois\Yasmin\Client">Client</abbr></a>|null
                 </td>
-                <td><a name="property_details" href="#property_details">$details</a></td>
-                <td class="last">Details about the activity, or null.</td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type" id="property_flags">
-                                                                                int|null
-                </td>
-                <td><a name="property_flags" href="#property_flags">$flags</a></td>
-                <td class="last">The activity flags (as bitfield), like if an activity is a spectate activity.</td>
-                <td></td>
+                <td>$serializeClient</td>
+                <td class="last">The client which will be used to unserialize.</td>
+                <td><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Models/ClientBase.html#property_serializeClient"><abbr title="CharlotteDunois\Yasmin\Models\ClientBase">ClientBase</abbr></a></small></td>
             </tr>
                     <tr>
                 <td class="type" id="property_name">
                                                                                 string
                 </td>
-                <td><a name="property_name" href="#property_name">$name</a></td>
+                <td>$name</td>
                 <td class="last">The name of the activity.</td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type" id="property_party">
-                                                                                array|null
-                </td>
-                <td><a name="property_party" href="#property_party">$party</a></td>
-                <td class="last">Party of the activity, an array in the format <code>[ 'id' =&gt; string, 'size' =&gt; [ size (int), max (int|null) ]|null ]</code>, or null.</td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type" id="property_sessionID">
-                                                                                string|null
-                </td>
-                <td><a name="property_sessionID" href="#property_sessionID">$sessionID</a></td>
-                <td class="last">The ID that links to the activity session.</td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type" id="property_state">
-                                                                                string|null
-                </td>
-                <td><a name="property_state" href="#property_state">$state</a></td>
-                <td class="last">State of the activity, or null.</td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type" id="property_streaming">
-                                                                                bool
-                </td>
-                <td><a name="property_streaming" href="#property_streaming">$streaming</a></td>
-                <td class="last">Whether or not the activity is being streamed.</td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type" id="property_syncID">
-                                                                                string|null
-                </td>
-                <td><a name="property_syncID" href="#property_syncID">$syncID</a></td>
-                <td class="last">The sync ID. For spotify, this is the spotify track ID.</td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type" id="property_timestamps">
-                                                                                array|null
-                </td>
-                <td><a name="property_timestamps" href="#property_timestamps">$timestamps</a></td>
-                <td class="last">Timestamps for the activity, an array in the format <code>[ 'start' =&gt; \DateTime|null, 'end' =&gt; \DateTime|null ]</code>, or null.</td>
                 <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_type">
                                                                                 int
                 </td>
-                <td><a name="property_type" href="#property_type">$type</a></td>
+                <td>$type</td>
                 <td class="last">The activity type.</td>
                 <td></td>
             </tr>
@@ -244,8 +159,88 @@
                 <td class="type" id="property_url">
                                                                                 string|null
                 </td>
-                <td><a name="property_url" href="#property_url">$url</a></td>
+                <td>$url</td>
                 <td class="last">The stream url, if streaming.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_applicationID">
+                                                                                string|null
+                </td>
+                <td>$applicationID</td>
+                <td class="last">The application ID associated with the activity, or null.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_assets">
+                                                                                <a href="../../../CharlotteDunois/Yasmin/Models/RichPresenceAssets.html"><abbr title="CharlotteDunois\Yasmin\Models\RichPresenceAssets">RichPresenceAssets</abbr></a>|null
+                </td>
+                <td>$assets</td>
+                <td class="last">Assets for rich presence, or null.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_details">
+                                                                                string|null
+                </td>
+                <td>$details</td>
+                <td class="last">Details about the activity, or null.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_party">
+                                                                                array|null
+                </td>
+                <td>$party</td>
+                <td class="last">Party of the activity, an array in the format <code>[ 'id' =&gt; string, 'size' =&gt; [ size (int), max (int|null) ]|null ]</code>, or null.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_state">
+                                                                                string|null
+                </td>
+                <td>$state</td>
+                <td class="last">State of the activity, or null.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_timestamps">
+                                                                                array|null
+                </td>
+                <td>$timestamps</td>
+                <td class="last">Timestamps for the activity, an array in the format <code>[ 'start' =&gt; \DateTime|null, 'end' =&gt; \DateTime|null ]</code>, or null.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_flags">
+                                                                                int|null
+                </td>
+                <td>$flags</td>
+                <td class="last">The activity flags (as bitfield), like if an activity is a spectate activity.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_sessionID">
+                                                                                string|null
+                </td>
+                <td>$sessionID</td>
+                <td class="last">The ID that links to the activity session.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_syncID">
+                                                                                string|null
+                </td>
+                <td>$syncID</td>
+                <td class="last">The sync ID. For spotify, this is the spotify track ID.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_streaming">
+                                                                                bool
+                </td>
+                <td>$streaming</td>
+                <td class="last">Whether or not the activity is being streamed.</td>
                 <td></td>
             </tr>
             </table>
@@ -266,6 +261,126 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___destruct">__destruct</a>()
+        
+                                            <p>Default destructor.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Models/Base.html#method___destruct"><abbr title="CharlotteDunois\Yasmin\Models\Base">Base</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___isset">__isset</a>(string $name)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Models/Base.html#method___isset"><abbr title="CharlotteDunois\Yasmin\Models\Base">Base</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___get">__get</a>(string $name)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___call">__call</a>(string $name, array $args)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Models/Base.html#method___call"><abbr title="CharlotteDunois\Yasmin\Models\Base">Base</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_jsonSerialize">jsonSerialize</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_serialize">serialize</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Models/ClientBase.html#method_serialize"><abbr title="CharlotteDunois\Yasmin\Models\ClientBase">ClientBase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_unserialize">unserialize</a>($data)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Models/ClientBase.html#method_unserialize"><abbr title="CharlotteDunois\Yasmin\Models\ClientBase">ClientBase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method__patch">_patch</a>(array $data)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Models/Base.html#method__patch"><abbr title="CharlotteDunois\Yasmin\Models\Base">Base</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method__shouldUpdate">_shouldUpdate</a>(array $data)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Models/Base.html#method__shouldUpdate"><abbr title="CharlotteDunois\Yasmin\Models\Base">Base</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method__markForDelete">_markForDelete</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Models/Base.html#method__markForDelete"><abbr title="CharlotteDunois\Yasmin\Models\Base">Base</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___debugInfo">__debugInfo</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Models/ClientBase.html#method___debugInfo"><abbr title="CharlotteDunois\Yasmin\Models\ClientBase">ClientBase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     bool
                 </div>
                 <div class="col-md-8 type">
@@ -282,7 +397,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Activity.php#L135">line 135</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Activity.php#L135">line 135</a></div>
         <code>                    
     <strong>__construct</strong>(<a href="../../../CharlotteDunois/Yasmin/Client.html"><abbr title="CharlotteDunois\Yasmin\Client">Client</abbr></a> $client, array $activity)
         </code>
@@ -300,7 +415,7 @@
                     <tr>
                 <td><a href="../../../CharlotteDunois/Yasmin/Client.html"><abbr title="CharlotteDunois\Yasmin\Client">Client</abbr></a></td>
                 <td>$client</td>
-                <td>The client this instance is for.</td>
+                <td></td>
             </tr>
                     <tr>
                 <td>array</td>
@@ -312,15 +427,406 @@
             
             
             
-                        
-                        
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___destruct">
+        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Models/Base.html#method___destruct"><abbr title="CharlotteDunois\Yasmin\Models\Base">Base</abbr></a> at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Base.php#L28">line 28</a></div>
+        <code>                    
+    <strong>__destruct</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Default destructor.</p>                                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___isset">
+        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Models/Base.html#method___isset"><abbr title="CharlotteDunois\Yasmin\Models\Base">Base</abbr></a> at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Base.php#L38">line 38</a></div>
+        <code>                    bool
+    <strong>__isset</strong>(string $name)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/Exception">Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___get">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Activity.php#L172">line 172</a></div>
+        <code>                    mixed
+    <strong>__get</strong>(string $name)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/RuntimeException">RuntimeException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___call">
+        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Models/Base.html#method___call"><abbr title="CharlotteDunois\Yasmin\Models\Base">Base</abbr></a> at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Base.php#L67">line 67</a></div>
+        <code>                    mixed
+    <strong>__call</strong>(string $name, array $args)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$args</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/RuntimeException">RuntimeException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_jsonSerialize">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Activity.php#L198">line 198</a></div>
+        <code>                    mixed
+    <strong>jsonSerialize</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_serialize">
+        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Models/ClientBase.html#method_serialize"><abbr title="CharlotteDunois\Yasmin\Models\ClientBase">ClientBase</abbr></a> at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/ClientBase.php#L78">line 78</a></div>
+        <code>                    string
+    <strong>serialize</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_unserialize">
+        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Models/ClientBase.html#method_unserialize"><abbr title="CharlotteDunois\Yasmin\Models\ClientBase">ClientBase</abbr></a> at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/ClientBase.php#L89">line 89</a></div>
+        <code>                    void
+    <strong>unserialize</strong>($data)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$data</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__patch">
+        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Models/Base.html#method__patch"><abbr title="CharlotteDunois\Yasmin\Models\Base">Base</abbr></a> at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Base.php#L112">line 112</a></div>
+        <code>                    void
+    <strong>_patch</strong>(array $data)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$data</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__shouldUpdate">
+        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Models/Base.html#method__shouldUpdate"><abbr title="CharlotteDunois\Yasmin\Models\Base">Base</abbr></a> at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Base.php#L172">line 172</a></div>
+        <code>                    bool
+    <strong>_shouldUpdate</strong>(array $data)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$data</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__markForDelete">
+        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Models/Base.html#method__markForDelete"><abbr title="CharlotteDunois\Yasmin\Models\Base">Base</abbr></a> at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Base.php#L192">line 192</a></div>
+        <code>                    void
+    <strong>_markForDelete</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___debugInfo">
+        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Models/ClientBase.html#method___debugInfo"><abbr title="CharlotteDunois\Yasmin\Models\ClientBase">ClientBase</abbr></a> at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/ClientBase.php#L56">line 56</a></div>
+        <code>                    mixed
+    <strong>__debugInfo</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
                     </div>
     </div>
 
             </div>
                     <div class="method-item">
                     <h3 id="method_isRichPresence">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Models/Activity.php#L190">line 190</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Activity.php#L190">line 190</a></div>
         <code>                    bool
     <strong>isRichPresence</strong>()
         </code>
@@ -344,8 +850,6 @@
 
             
             
-                        
-                        
                     </div>
     </div>
 

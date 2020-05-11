@@ -8,12 +8,10 @@
             <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
         <link rel="stylesheet" type="text/css" href="../../css/sami.css">
-        <link rel="stylesheet" type="text/css" href="../../css/prism.css">
         <script src="../../js/jquery-1.11.1.min.js"></script>
         <script src="../../js/bootstrap.min.js"></script>
         <script src="../../js/typeahead.min.js"></script>
         <script src="../../sami.js"></script>
-        <script src="../../js/prism.js"></script>
         <meta name="MobileOptimized" content="width">
         <meta name="HandheldFriendly" content="true">
         <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
@@ -27,10 +25,13 @@
                 <div id="control-panel">
                     <form action="#" method="GET">
                 <select id="version-switcher" name="version">
+                                            <option value="../../../v0.4.0/index.html" data-version="v0.4.0">v0.4.0</option>
+                                            <option value="../../../v0.4.1/index.html" data-version="v0.4.1">v0.4.1</option>
+                                            <option value="../../../v0.4.2/index.html" data-version="v0.4.2">v0.4.2</option>
                                             <option value="../../../v0.5.0/index.html" data-version="v0.5.0">v0.5.0</option>
                                             <option value="../../../v0.5.1/index.html" data-version="v0.5.1">v0.5.1</option>
                                             <option value="../../../v0.6.0/index.html" data-version="v0.6.0">v0.6.0</option>
-                                            <option value="../../../master/index.html" data-version="master">master</option>
+                                            <option value="../../../master/index.html" data-version="master">master branch</option>
                                     </select>
             </form>
                 <script>
@@ -63,7 +64,7 @@
             <div class="collapse navbar-collapse" id="navbar-elements">
                 <ul class="nav navbar-nav">
                     <li><a href="../../classes.html">Classes</a></li>
-                                                                <li><a href="../../namespaces.html">Namespaces</a></li>
+                                            <li><a href="../../namespaces.html">Namespaces</a></li>
                                         <li><a href="../../interfaces.html">Interfaces</a></li>
                     <li><a href="../../traits.html">Traits</a></li>
                     <li><a href="../../doc-index.html">Index</a></li>
@@ -90,7 +91,7 @@
 
     <p>    class
     <strong>Client</strong>        implements
-        <abbr title="CharlotteDunois\Events\EventEmitterInterface">EventEmitterInterface</abbr>, <a href="https://secure.php.net/Serializable" target="_blank">Serializable</a>        (<a href="https://github.com/CharlotteDunois/Yasmin/blob/v0.5.0/src/Client.php" target="_blank">View source</a>)
+        <abbr title="CharlotteDunois\Events\EventEmitterInterface">EventEmitterInterface</abbr>, <a target="_blank" href="http://php.net/Serializable">Serializable</a>        (<a href="https://github.com/sylae/yasmin/blob/v0.5.0/src/Client.php">View source</a>)
 </p>
 
         
@@ -122,56 +123,56 @@
                 <td class="last">
                     <p><em>The version of Yasmin.</em></p>
                     <p></p>
-                                    </td>
-            </tr>
-                    <tr>
-                <td>WS_DEFAULT_COMPRESSION</td>
-                <td class="last">
-                    <p><em>WS default compression.</em></p>
-                    <p></p>
-                                    </td>
-            </tr>
-                    <tr>
-                <td>WS_STATUS_CONNECTED</td>
-                <td class="last">
-                    <p><em>WS connection status: Connected (ready).</em></p>
-                    <p></p>
-                                    </td>
-            </tr>
-                    <tr>
-                <td>WS_STATUS_CONNECTING</td>
-                <td class="last">
-                    <p><em>WS connection status: Connecting.</em></p>
-                    <p></p>
-                                    </td>
+                </td>
             </tr>
                     <tr>
                 <td>WS_STATUS_DISCONNECTED</td>
                 <td class="last">
                     <p><em>WS connection status: Disconnected.</em></p>
                     <p></p>
-                                    </td>
+                </td>
             </tr>
                     <tr>
-                <td>WS_STATUS_IDLE</td>
+                <td>WS_STATUS_CONNECTING</td>
                 <td class="last">
-                    <p><em>WS connection status: Idling (disconnected and no reconnect planned).</em></p>
+                    <p><em>WS connection status: Connecting.</em></p>
                     <p></p>
-                                    </td>
-            </tr>
-                    <tr>
-                <td>WS_STATUS_NEARLY</td>
-                <td class="last">
-                    <p><em>WS connection status: Connected (not ready yet - nearly).</em></p>
-                    <p></p>
-                                    </td>
+                </td>
             </tr>
                     <tr>
                 <td>WS_STATUS_RECONNECTING</td>
                 <td class="last">
                     <p><em>WS connection status: Reconnecting.</em></p>
                     <p></p>
-                                    </td>
+                </td>
+            </tr>
+                    <tr>
+                <td>WS_STATUS_NEARLY</td>
+                <td class="last">
+                    <p><em>WS connection status: Connected (not ready yet - nearly).</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>WS_STATUS_CONNECTED</td>
+                <td class="last">
+                    <p><em>WS connection status: Connected (ready).</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>WS_STATUS_IDLE</td>
+                <td class="last">
+                    <p><em>WS connection status: Idling (disconnected and no reconnect planned).</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>WS_DEFAULT_COMPRESSION</td>
+                <td class="last">
+                    <p><em>WS default compression.</em></p>
+                    <p></p>
+                </td>
             </tr>
             </table>
 
@@ -183,7 +184,7 @@
                 <td class="type" id="property_channels">
                                                                                 <a href="../../CharlotteDunois/Yasmin/Interfaces/ChannelStorageInterface.html"><abbr title="CharlotteDunois\Yasmin\Interfaces\ChannelStorageInterface">ChannelStorageInterface</abbr></a>
                 </td>
-                <td><a name="property_channels" href="#property_channels">$channels</a></td>
+                <td>$channels</td>
                 <td class="last">Holds all cached channels, mapped by ID.</td>
                 <td></td>
             </tr>
@@ -191,7 +192,7 @@
                 <td class="type" id="property_emojis">
                                                                                 <a href="../../CharlotteDunois/Yasmin/Interfaces/EmojiStorageInterface.html"><abbr title="CharlotteDunois\Yasmin\Interfaces\EmojiStorageInterface">EmojiStorageInterface</abbr></a>
                 </td>
-                <td><a name="property_emojis" href="#property_emojis">$emojis</a></td>
+                <td>$emojis</td>
                 <td class="last">Holds all emojis, mapped by ID (custom emojis) and/or name (unicode emojis).</td>
                 <td></td>
             </tr>
@@ -199,72 +200,128 @@
                 <td class="type" id="property_guilds">
                                                                                 <a href="../../CharlotteDunois/Yasmin/Interfaces/GuildStorageInterface.html"><abbr title="CharlotteDunois\Yasmin\Interfaces\GuildStorageInterface">GuildStorageInterface</abbr></a>
                 </td>
-                <td><a name="property_guilds" href="#property_guilds">$guilds</a></td>
+                <td>$guilds</td>
                 <td class="last">Holds all guilds, mapped by ID.</td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type" id="property_loop">
-                                                                                <abbr title="React\EventLoop\LoopInterface">LoopInterface</abbr>
-                </td>
-                <td><a name="property_loop" href="#property_loop">$loop</a></td>
-                <td class="last">The event loop.</td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type" id="property_pings">
-                                                                                int[]
-                </td>
-                <td><a name="property_pings" href="#property_pings">$pings</a></td>
-                <td class="last">The last 3 websocket pings of each shard.</td>
                 <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_presences">
                                                                                 <a href="../../CharlotteDunois/Yasmin/Interfaces/PresenceStorageInterface.html"><abbr title="CharlotteDunois\Yasmin\Interfaces\PresenceStorageInterface">PresenceStorageInterface</abbr></a>
                 </td>
-                <td><a name="property_presences" href="#property_presences">$presences</a></td>
+                <td>$presences</td>
                 <td class="last">Holds all cached presences (latest ones), mapped by user ID.</td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type" id="property_readyTimestamp">
-                                                                                int|null
-                </td>
-                <td><a name="property_readyTimestamp" href="#property_readyTimestamp">$readyTimestamp</a></td>
-                <td class="last">The UNIX timestamp of the last emitted ready event (or null if none yet).</td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type" id="property_shards">
-                                                                                <a href="../../CharlotteDunois/Yasmin/Utils/Collection.html"><abbr title="CharlotteDunois\Yasmin\Utils\Collection">Collection</abbr></a>
-                </td>
-                <td><a name="property_shards" href="#property_shards">$shards</a></td>
-                <td class="last">Holds all shards, mapped by shard ID.</td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type" id="property_token">
-                                                                                string|null
-                </td>
-                <td><a name="property_token" href="#property_token">$token</a></td>
-                <td class="last">The token.</td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type" id="property_user">
-                                                                                <a href="../../CharlotteDunois/Yasmin/Models/ClientUser.html"><abbr title="CharlotteDunois\Yasmin\Models\ClientUser">ClientUser</abbr></a>|null
-                </td>
-                <td><a name="property_user" href="#property_user">$user</a></td>
-                <td class="last">User that the client is logged in as. The instance gets created when the client turns ready.</td>
                 <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_users">
                                                                                 <a href="../../CharlotteDunois/Yasmin/Interfaces/UserStorageInterface.html"><abbr title="CharlotteDunois\Yasmin\Interfaces\UserStorageInterface">UserStorageInterface</abbr></a>
                 </td>
-                <td><a name="property_users" href="#property_users">$users</a></td>
+                <td>$users</td>
                 <td class="last">Holds all cached users, mapped by ID.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_shards">
+                                                                                <a href="../../CharlotteDunois/Yasmin/Utils/Collection.html"><abbr title="CharlotteDunois\Yasmin\Utils\Collection">Collection</abbr></a>
+                </td>
+                <td>$shards</td>
+                <td class="last">Holds all shards, mapped by shard ID.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_readyTimestamp">
+                                                                                int|null
+                </td>
+                <td>$readyTimestamp</td>
+                <td class="last">The UNIX timestamp of the last emitted ready event (or null if none yet).</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_token">
+                                                                                string|null
+                </td>
+                <td>$token</td>
+                <td class="last">The token.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_loop">
+                                                                                <abbr title="React\EventLoop\LoopInterface">LoopInterface</abbr>
+                </td>
+                <td>$loop</td>
+                <td class="last">The event loop.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_options">
+                                        protected                                        array
+                </td>
+                <td>$options</td>
+                <td class="last">Client Options.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_user">
+                                                                                <a href="../../CharlotteDunois/Yasmin/Models/ClientUser.html"><abbr title="CharlotteDunois\Yasmin\Models\ClientUser">ClientUser</abbr></a>|null
+                </td>
+                <td>$user</td>
+                <td class="last">User that the client is logged in as. The instance gets created when the client turns ready.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_api">
+                                        protected                                        <a href="../../CharlotteDunois/Yasmin/HTTP/APIManager.html"><abbr title="CharlotteDunois\Yasmin\HTTP\APIManager">APIManager</abbr></a>
+                </td>
+                <td>$api</td>
+                <td class="last">The API manager.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_ws">
+                                        protected                                        <a href="../../CharlotteDunois/Yasmin/WebSocket/WSManager.html"><abbr title="CharlotteDunois\Yasmin\WebSocket\WSManager">WSManager</abbr></a>|null
+                </td>
+                <td>$ws</td>
+                <td class="last">The WS manager.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_gateway">
+                                        protected                                        array
+                </td>
+                <td>$gateway</td>
+                <td class="last">Gateway address information.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_timers">
+                                        protected                                        array
+                </td>
+                <td>$timers</td>
+                <td class="last">Timers which automatically get cancelled on destroy and only get run when we have a WS connection.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_utils">
+                                        protected                                        array
+                </td>
+                <td>$utils</td>
+                <td class="last">Loaded Utils with a loop instance.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_eventsQueue">
+                                        protected                                        array
+                </td>
+                <td>$eventsQueue</td>
+                <td class="last">Events queue, until client turns ready.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_pings">
+                                                                                int[]
+                </td>
+                <td>$pings</td>
+                <td class="last">The last 3 websocket pings of each shard.</td>
                 <td></td>
             </tr>
             </table>
@@ -285,32 +342,34 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    <abbr title="React\EventLoop\Timer\Timer">Timer</abbr>
-                </div>
-                <div class="col-md-8 type">
-                    <a href="#method_addPeriodicTimer">addPeriodicTimer</a>(float|int $interval, callable $callback)
-        
-                                            <p>Adds a "client-dependant" periodic timer. The timer gets automatically cancelled on destroy. The callback can only accept one argument, the client.</p>                </div>
-                <div class="col-md-2"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    <abbr title="React\EventLoop\Timer\Timer">Timer</abbr>
-                </div>
-                <div class="col-md-8 type">
-                    <a href="#method_addTimer">addTimer</a>(float|int $timeout, callable $callback)
-        
-                                            <p>Adds a "client-dependant" timer. The timer gets automatically cancelled on destroy. The callback can only accept one argument, the client.</p>                </div>
-                <div class="col-md-2"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
                     bool
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_cancelTimer">cancelTimer</a>(<abbr title="React\EventLoop\TimerInterface">TimerInterface</abbr>|<abbr title="React\EventLoop\Timer\TimerInterface">TimerInterface</abbr> $timer)
+                    <a href="#method___isset">__isset</a>(string $name)
         
-                                            <p>Cancels a timer.</p>                </div>
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___get">__get</a>(string $name)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_serialize">serialize</a>()
+        
+                                            <p>Serializes the class.</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -318,9 +377,69 @@
                     void
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_cancelTimers">cancelTimers</a>()
+                    <a href="#method_unserialize">unserialize</a>(string $vars)
         
-                                            <p>Cancels all timers.</p>                </div>
+                                            <p>Unserializes the class and re-registers utils. Automatically creates an event loop.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../CharlotteDunois/Yasmin/HTTP/APIManager.html"><abbr title="CharlotteDunois\Yasmin\HTTP\APIManager">APIManager</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_apimanager">apimanager</a>()
+        
+                                            <p>You don't need to know.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../CharlotteDunois/Yasmin/WebSocket/WSManager.html"><abbr title="CharlotteDunois\Yasmin\WebSocket\WSManager">WSManager</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_wsmanager">wsmanager</a>()
+        
+                                            <p>You don't need to know.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="React\EventLoop\LoopInterface">LoopInterface</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getLoop">getLoop</a>()
+        
+                                            <p>Get the React Event Loop that is stored in this class.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getOption">getOption</a>(string $name, mixed $default = null)
+        
+                                            <p>Get a specific option, or the default value.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int|float
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getPing">getPing</a>()
+        
+                                            <p>Calculates the average ping. Or NAN.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getWSstatus">getWSstatus</a>()
+        
+                                            <p>Returns the computed WS status across all shards.</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -328,9 +447,9 @@
                     <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_createGuild">createGuild</a>(array $options)
+                    <a href="#method_login">login</a>(string $token, bool $force = false)
         
-                                            <p>Creates a new guild. Resolves with an instance of Guild. Options is as following, everything is optional unless specified:</p>                </div>
+                                            <p>Login into Discord. Opens a WebSocket Gateway connection. Resolves once a WebSocket connection has been successfully established (does not mean the client is ready).</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -345,12 +464,12 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    void
+                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_destroyUtil">destroyUtil</a>(string $name)
+                    <a href="#method_createGuild">createGuild</a>(array $options)
         
-                                            <p>Destroys an Util and calls <code>destroy</code> (requires that it is registered as such).</p>                </div>
+                                            <p>Creates a new guild. Resolves with an instance of Guild. Options is as following, everything is optional unless specified:</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -415,32 +534,52 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    <abbr title="React\EventLoop\LoopInterface">LoopInterface</abbr>
+                    <abbr title="React\EventLoop\Timer\Timer">Timer</abbr>
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_getLoop">getLoop</a>()
+                    <a href="#method_addTimer">addTimer</a>(float|int $timeout, callable $callback)
         
-                                            <p>Get the React Event Loop that is stored in this class.</p>                </div>
+                                            <p>Adds a "client-dependant" timer. The timer gets automatically cancelled on destroy. The callback can only accept one argument, the client.</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    mixed
+                    <abbr title="React\EventLoop\Timer\Timer">Timer</abbr>
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_getOption">getOption</a>(string $name, mixed $default = null)
+                    <a href="#method_addPeriodicTimer">addPeriodicTimer</a>(float|int $interval, callable $callback)
         
-                                            <p>Get a specific option, or the default value.</p>                </div>
+                                            <p>Adds a "client-dependant" periodic timer. The timer gets automatically cancelled on destroy. The callback can only accept one argument, the client.</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    int|float
+                    bool
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_getPing">getPing</a>()
+                    <a href="#method_cancelTimer">cancelTimer</a>(<abbr title="React\EventLoop\TimerInterface">TimerInterface</abbr>|<abbr title="React\EventLoop\Timer\TimerInterface">TimerInterface</abbr> $timer)
         
-                                            <p>Calculates the average ping. Or NAN.</p>                </div>
+                                            <p>Cancels a timer.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_cancelTimers">cancelTimers</a>()
+        
+                                            <p>Cancels all timers.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setClientUser">setClientUser</a>(array $user)
+        
+                                            <p>Make an instance of {ClientUser} and store it.</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -455,22 +594,82 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    int
+                    void
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_getWSstatus">getWSstatus</a>()
+                    <a href="#method_registerUtil">registerUtil</a>(string $name)
         
-                                            <p>Returns the computed WS status across all shards.</p>                </div>
+                                            <p>Registers an Util, if it has a setLoop method. All methods used need to be static.</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
+                    void
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_login">login</a>(string $token, bool $force = false)
+                    <a href="#method_destroyUtil">destroyUtil</a>(string $name)
         
-                                            <p>Login into Discord. Opens a WebSocket Gateway connection. Resolves once a WebSocket connection has been successfully established (does not mean the client is ready).</p>                </div>
+                                            <p>Destroys an Util and calls <code>destroy</code> (requires that it is registered as such).</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_registerUtils">registerUtils</a>()
+        
+                                            <p>Registers Utils which have a setLoop method.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_destroyUtils">destroyUtils</a>()
+        
+                                            <p>Destroys or stops all timers from Utils (requires that they are registered as such).</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_handlePromiseRejection">handlePromiseRejection</a>($error)
+        
+                                            <p>Emits an error for an unhandled promise rejection.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_validateClientOptions">validateClientOptions</a>(array $options)
+        
+                                            <p>Validates the passed client options.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_checkOptionsStorages">checkOptionsStorages</a>()
+        
+                                            <p>Validates the passed client options storages.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_queuedEmit">queuedEmit</a>(string $event, ...$args)
+        
+                                            <p>Puts events into a queue, if the client is not ready yet.</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -495,12 +694,12 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    void
+                    
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_registerUtil">registerUtil</a>(string $name)
+                    <a href="#method_removeListener">removeListener</a>(string  $event, callable  $listener)
         
-                                            <p>Registers an Util, if it has a setLoop method. All methods used need to be static.</p>                </div>
+                                            <p>Remove specified listener from an event. The method is from the trait - only for documentation purpose here.</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -513,36 +712,6 @@
                                             <p>Remove all listeners from an event (or all listeners).</p>                </div>
                 <div class="col-md-2"></div>
             </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    
-                </div>
-                <div class="col-md-8 type">
-                    <a href="#method_removeListener">removeListener</a>(string  $event, callable  $listener)
-        
-                                            <p>Remove specified listener from an event. The method is from the trait - only for documentation purpose here.</p>                </div>
-                <div class="col-md-2"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    string
-                </div>
-                <div class="col-md-8 type">
-                    <a href="#method_serialize">serialize</a>()
-        
-                                            <p>Serializes the class.</p>                </div>
-                <div class="col-md-2"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    void
-                </div>
-                <div class="col-md-8 type">
-                    <a href="#method_unserialize">unserialize</a>(string $vars)
-        
-                                            <p>Unserializes the class and re-registers utils. Automatically creates an event loop.</p>                </div>
-                <div class="col-md-2"></div>
-            </div>
             </div>
 
 
@@ -551,7 +720,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/v0.5.0/src/Client.php#L235">line 235</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.5.0/src/Client.php#L235">line 235</a></div>
         <code>                    
     <strong>__construct</strong>(array $options = array(), <abbr title="React\EventLoop\LoopInterface">LoopInterface</abbr>|null $loop = null)
         </code>
@@ -608,15 +777,15 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td><a href="https://secure.php.net/Exception" target="_blank">Exception</a></td>
+                <td><a target="_blank" href="http://php.net/Exception">Exception</a></td>
                 <td></td>
             </tr>
                     <tr>
-                <td><a href="https://secure.php.net/RuntimeException" target="_blank">RuntimeException</a></td>
+                <td><a target="_blank" href="http://php.net/RuntimeException">RuntimeException</a></td>
                 <td></td>
             </tr>
                     <tr>
-                <td><a href="https://secure.php.net/InvalidArgumentException" target="_blank">InvalidArgumentException</a></td>
+                <td><a target="_blank" href="http://php.net/InvalidArgumentException">InvalidArgumentException</a></td>
                 <td></td>
             </tr>
             </table>
@@ -625,134 +794,30 @@
                             <h4>See also</h4>
 
                     <table class="table table-condensed">
-                    <tr>
-                <td>
-                                            <a href="../../CharlotteDunois/Yasmin/ClientEvents.html"><abbr title="CharlotteDunois\Yasmin\ClientEvents">ClientEvents</abbr></a>
-                                    </td>
-                <td></td>
-            </tr>
             </table>
 
-                        
-                        
                     </div>
     </div>
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_addPeriodicTimer">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/v0.5.0/src/Client.php#L884">line 884</a></div>
-        <code>                    <abbr title="React\EventLoop\Timer\Timer">Timer</abbr>
-    <strong>addPeriodicTimer</strong>(float|int $interval, callable $callback)
-        </code>
-    </h3>
-    <div class="details">
-            
-    
-
-                    <div class="method-description">
-                                    <p>Adds a "client-dependant" periodic timer. The timer gets automatically cancelled on destroy. The callback can only accept one argument, the client.</p>                                                </div>
-                <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td>float|int</td>
-                <td>$interval</td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td>callable</td>
-                <td>$callback</td>
-                <td></td>
-            </tr>
-            </table>
-
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td><abbr title="React\EventLoop\Timer\Timer">Timer</abbr></td>
-            <td></td>
-        </tr>
-    </table>
-
-            
-            
-                        
-                        
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_addTimer">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/v0.5.0/src/Client.php#L868">line 868</a></div>
-        <code>                    <abbr title="React\EventLoop\Timer\Timer">Timer</abbr>
-    <strong>addTimer</strong>(float|int $timeout, callable $callback)
-        </code>
-    </h3>
-    <div class="details">
-            
-    
-
-                    <div class="method-description">
-                                    <p>Adds a "client-dependant" timer. The timer gets automatically cancelled on destroy. The callback can only accept one argument, the client.</p>                                                </div>
-                <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td>float|int</td>
-                <td>$timeout</td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td>callable</td>
-                <td>$callback</td>
-                <td></td>
-            </tr>
-            </table>
-
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td><abbr title="React\EventLoop\Timer\Timer">Timer</abbr></td>
-            <td></td>
-        </tr>
-    </table>
-
-            
-            
-                        
-                        
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_cancelTimer">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/v0.5.0/src/Client.php#L898">line 898</a></div>
+                    <h3 id="method___isset">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.5.0/src/Client.php#L308">line 308</a></div>
         <code>                    bool
-    <strong>cancelTimer</strong>(<abbr title="React\EventLoop\TimerInterface">TimerInterface</abbr>|<abbr title="React\EventLoop\Timer\TimerInterface">TimerInterface</abbr> $timer)
+    <strong>__isset</strong>(string $name)
         </code>
     </h3>
     <div class="details">
             
     
 
-                    <div class="method-description">
-                                    <p>Cancels a timer.</p>                                                </div>
                 <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
-                <td><abbr title="React\EventLoop\TimerInterface">TimerInterface</abbr>|<abbr title="React\EventLoop\Timer\TimerInterface">TimerInterface</abbr></td>
-                <td>$timer</td>
+                <td>string</td>
+                <td>$name</td>
                 <td></td>
             </tr>
             </table>
@@ -768,18 +833,72 @@
     </table>
 
             
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/Exception">Exception</a></td>
+                <td></td>
+            </tr>
+            </table>
+
             
-                        
-                        
                     </div>
     </div>
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_cancelTimers">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/v0.5.0/src/Client.php#L913">line 913</a></div>
-        <code>                    void
-    <strong>cancelTimers</strong>()
+                    <h3 id="method___get">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.5.0/src/Client.php#L326">line 326</a></div>
+        <code>                    mixed
+    <strong>__get</strong>(string $name)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/RuntimeException">RuntimeException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_serialize">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.5.0/src/Client.php#L352">line 352</a></div>
+        <code>                    string
+    <strong>serialize</strong>()
         </code>
     </h3>
     <div class="details">
@@ -787,8 +906,48 @@
     
 
                     <div class="method-description">
-                                    <p>Cancels all timers.</p>                                                </div>
+                                    <p>Serializes the class.</p>                                                </div>
                 <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_unserialize">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.5.0/src/Client.php#L371">line 371</a></div>
+        <code>                    void
+    <strong>unserialize</strong>(string $vars)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Unserializes the class and re-registers utils. Automatically creates an event loop.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$vars</td>
+                <td></td>
+            </tr>
+            </table>
+
             
                             <h4>Return Value</h4>
 
@@ -800,16 +959,312 @@
     </table>
 
             
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/RuntimeException">RuntimeException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
             
-                        
-                        
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_apimanager">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.5.0/src/Client.php#L416">line 416</a></div>
+        <code>                    <a href="../../CharlotteDunois/Yasmin/HTTP/APIManager.html"><abbr title="CharlotteDunois\Yasmin\HTTP\APIManager">APIManager</abbr></a>
+    <strong>apimanager</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>You don't need to know.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../CharlotteDunois/Yasmin/HTTP/APIManager.html"><abbr title="CharlotteDunois\Yasmin\HTTP\APIManager">APIManager</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_wsmanager">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.5.0/src/Client.php#L425">line 425</a></div>
+        <code>                    <a href="../../CharlotteDunois/Yasmin/WebSocket/WSManager.html"><abbr title="CharlotteDunois\Yasmin\WebSocket\WSManager">WSManager</abbr></a>
+    <strong>wsmanager</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>You don't need to know.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../CharlotteDunois/Yasmin/WebSocket/WSManager.html"><abbr title="CharlotteDunois\Yasmin\WebSocket\WSManager">WSManager</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getLoop">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.5.0/src/Client.php#L433">line 433</a></div>
+        <code>                    <abbr title="React\EventLoop\LoopInterface">LoopInterface</abbr>
+    <strong>getLoop</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the React Event Loop that is stored in this class.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="React\EventLoop\LoopInterface">LoopInterface</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getOption">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.5.0/src/Client.php#L443">line 443</a></div>
+        <code>                    mixed
+    <strong>getOption</strong>(string $name, mixed $default = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get a specific option, or the default value.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$default</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPing">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.5.0/src/Client.php#L455">line 455</a></div>
+        <code>                    int|float
+    <strong>getPing</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Calculates the average ping. Or NAN.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int|float</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getWSstatus">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.5.0/src/Client.php#L470">line 470</a></div>
+        <code>                    int
+    <strong>getWSstatus</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the computed WS status across all shards.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_login">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.5.0/src/Client.php#L491">line 491</a></div>
+        <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
+    <strong>login</strong>(string $token, bool $force = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Login into Discord. Opens a WebSocket Gateway connection. Resolves once a WebSocket connection has been successfully established (does not mean the client is ready).</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$token</td>
+                <td>Your token.</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$force</td>
+                <td>Forces the client to get the gateway address from Discord.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/RuntimeException">RuntimeException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_destroy">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.5.0/src/Client.php#L577">line 577</a></div>
+        <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
+    <strong>destroy</strong>(bool $destroyUtils = true)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Cleanly logs out of Discord.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool</td>
+                <td>$destroyUtils</td>
+                <td>Stop timers of utils which have an instance of the event loop.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
                     </div>
     </div>
 
             </div>
                     <div class="method-item">
                     <h3 id="method_createGuild">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/v0.5.0/src/Client.php#L639">line 639</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.5.0/src/Client.php#L639">line 639</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>createGuild</strong>(array $options)
         </code>
@@ -880,7 +1335,7 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td><a href="https://secure.php.net/InvalidArgumentException" target="_blank">InvalidArgumentException</a></td>
+                <td><a target="_blank" href="http://php.net/InvalidArgumentException">InvalidArgumentException</a></td>
                 <td></td>
             </tr>
             </table>
@@ -889,107 +1344,15 @@
                             <h4>See also</h4>
 
                     <table class="table table-condensed">
-                    <tr>
-                <td>
-                                            <a href="../../CharlotteDunois/Yasmin/Models/Guild.html"><abbr title="CharlotteDunois\Yasmin\Models\Guild">Guild</abbr></a>
-                                    </td>
-                <td></td>
-            </tr>
             </table>
 
-                        
-                        
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_destroy">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/v0.5.0/src/Client.php#L577">line 577</a></div>
-        <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
-    <strong>destroy</strong>(bool $destroyUtils = true)
-        </code>
-    </h3>
-    <div class="details">
-            
-    
-
-                    <div class="method-description">
-                                    <p>Cleanly logs out of Discord.</p>                                                </div>
-                <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td>bool</td>
-                <td>$destroyUtils</td>
-                <td>Stop timers of utils which have an instance of the event loop.</td>
-            </tr>
-            </table>
-
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td><abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr></td>
-            <td></td>
-        </tr>
-    </table>
-
-            
-            
-                        
-                        
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_destroyUtil">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/v0.5.0/src/Client.php#L956">line 956</a></div>
-        <code>                    void
-    <strong>destroyUtil</strong>(string $name)
-        </code>
-    </h3>
-    <div class="details">
-            
-    
-
-                    <div class="method-description">
-                                    <p>Destroys an Util and calls <code>destroy</code> (requires that it is registered as such).</p>                                                </div>
-                <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td>string</td>
-                <td>$name</td>
-                <td></td>
-            </tr>
-            </table>
-
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td>void</td>
-            <td></td>
-        </tr>
-    </table>
-
-            
-            
-                        
-                        
                     </div>
     </div>
 
             </div>
                     <div class="method-item">
                     <h3 id="method_fetchApplication">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/v0.5.0/src/Client.php#L758">line 758</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.5.0/src/Client.php#L758">line 758</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>fetchApplication</strong>()
         </code>
@@ -1016,23 +1379,15 @@
                             <h4>See also</h4>
 
                     <table class="table table-condensed">
-                    <tr>
-                <td>
-                                            <a href="../../CharlotteDunois/Yasmin/Models/OAuthApplication.html"><abbr title="CharlotteDunois\Yasmin\Models\OAuthApplication">OAuthApplication</abbr></a>
-                                    </td>
-                <td></td>
-            </tr>
             </table>
 
-                        
-                        
                     </div>
     </div>
 
             </div>
                     <div class="method-item">
                     <h3 id="method_fetchInvite">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/v0.5.0/src/Client.php#L774">line 774</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.5.0/src/Client.php#L774">line 774</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>fetchInvite</strong>(string $invite, bool $withCounts = false)
         </code>
@@ -1074,23 +1429,15 @@
                             <h4>See also</h4>
 
                     <table class="table table-condensed">
-                    <tr>
-                <td>
-                                            <a href="../../CharlotteDunois/Yasmin/Models/Invite.html"><abbr title="CharlotteDunois\Yasmin\Models\Invite">Invite</abbr></a>
-                                    </td>
-                <td></td>
-            </tr>
             </table>
 
-                        
-                        
                     </div>
     </div>
 
             </div>
                     <div class="method-item">
                     <h3 id="method_fetchUser">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/v0.5.0/src/Client.php#L794">line 794</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.5.0/src/Client.php#L794">line 794</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>fetchUser</strong>(string $userid)
         </code>
@@ -1127,23 +1474,15 @@
                             <h4>See also</h4>
 
                     <table class="table table-condensed">
-                    <tr>
-                <td>
-                                            <a href="../../CharlotteDunois/Yasmin/Models/User.html"><abbr title="CharlotteDunois\Yasmin\Models\User">User</abbr></a>
-                                    </td>
-                <td></td>
-            </tr>
             </table>
 
-                        
-                        
                     </div>
     </div>
 
             </div>
                     <div class="method-item">
                     <h3 id="method_fetchVoiceRegions">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/v0.5.0/src/Client.php#L812">line 812</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.5.0/src/Client.php#L812">line 812</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>fetchVoiceRegions</strong>()
         </code>
@@ -1170,23 +1509,15 @@
                             <h4>See also</h4>
 
                     <table class="table table-condensed">
-                    <tr>
-                <td>
-                                            <a href="../../CharlotteDunois/Yasmin/Models/VoiceRegion.html"><abbr title="CharlotteDunois\Yasmin\Models\VoiceRegion">VoiceRegion</abbr></a>
-                                    </td>
-                <td></td>
-            </tr>
             </table>
 
-                        
-                        
                     </div>
     </div>
 
             </div>
                     <div class="method-item">
                     <h3 id="method_fetchWebhook">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/v0.5.0/src/Client.php#L834">line 834</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.5.0/src/Client.php#L834">line 834</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>fetchWebhook</strong>(string $id, string|null $token = null)
         </code>
@@ -1228,23 +1559,15 @@
                             <h4>See also</h4>
 
                     <table class="table table-condensed">
-                    <tr>
-                <td>
-                                            <a href="../../CharlotteDunois/Yasmin/Models/Webhook.html"><abbr title="CharlotteDunois\Yasmin\Models\Webhook">Webhook</abbr></a>
-                                    </td>
-                <td></td>
-            </tr>
             </table>
 
-                        
-                        
                     </div>
     </div>
 
             </div>
                     <div class="method-item">
                     <h3 id="method_generateOAuthInvite">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/v0.5.0/src/Client.php#L851">line 851</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.5.0/src/Client.php#L851">line 851</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>generateOAuthInvite</strong>(string|int ...$permissions)
         </code>
@@ -1281,23 +1604,21 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td><a href="https://secure.php.net/InvalidArgumentException" target="_blank">InvalidArgumentException</a></td>
+                <td><a target="_blank" href="http://php.net/InvalidArgumentException">InvalidArgumentException</a></td>
                 <td></td>
             </tr>
             </table>
 
             
-                        
-                        
                     </div>
     </div>
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_getLoop">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/v0.5.0/src/Client.php#L433">line 433</a></div>
-        <code>                    <abbr title="React\EventLoop\LoopInterface">LoopInterface</abbr>
-    <strong>getLoop</strong>()
+                    <h3 id="method_addTimer">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.5.0/src/Client.php#L868">line 868</a></div>
+        <code>                    <abbr title="React\EventLoop\Timer\Timer">Timer</abbr>
+    <strong>addTimer</strong>(float|int $timeout, callable $callback)
         </code>
     </h3>
     <div class="details">
@@ -1305,51 +1626,19 @@
     
 
                     <div class="method-description">
-                                    <p>Get the React Event Loop that is stored in this class.</p>                                                </div>
-                <div class="tags">
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td><abbr title="React\EventLoop\LoopInterface">LoopInterface</abbr></td>
-            <td></td>
-        </tr>
-    </table>
-
-            
-            
-                        
-                        
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_getOption">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/v0.5.0/src/Client.php#L443">line 443</a></div>
-        <code>                    mixed
-    <strong>getOption</strong>(string $name, mixed $default = null)
-        </code>
-    </h3>
-    <div class="details">
-            
-    
-
-                    <div class="method-description">
-                                    <p>Get a specific option, or the default value.</p>                                                </div>
+                                    <p>Adds a "client-dependant" timer. The timer gets automatically cancelled on destroy. The callback can only accept one argument, the client.</p>                                                </div>
                 <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
-                <td>string</td>
-                <td>$name</td>
+                <td>float|int</td>
+                <td>$timeout</td>
                 <td></td>
             </tr>
                     <tr>
-                <td>mixed</td>
-                <td>$default</td>
+                <td>callable</td>
+                <td>$callback</td>
                 <td></td>
             </tr>
             </table>
@@ -1359,24 +1648,22 @@
 
                     <table class="table table-condensed">
         <tr>
-            <td>mixed</td>
+            <td><abbr title="React\EventLoop\Timer\Timer">Timer</abbr></td>
             <td></td>
         </tr>
     </table>
 
             
             
-                        
-                        
                     </div>
     </div>
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_getPing">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/v0.5.0/src/Client.php#L455">line 455</a></div>
-        <code>                    int|float
-    <strong>getPing</strong>()
+                    <h3 id="method_addPeriodicTimer">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.5.0/src/Client.php#L884">line 884</a></div>
+        <code>                    <abbr title="React\EventLoop\Timer\Timer">Timer</abbr>
+    <strong>addPeriodicTimer</strong>(float|int $interval, callable $callback)
         </code>
     </h3>
     <div class="details">
@@ -1384,29 +1671,152 @@
     
 
                     <div class="method-description">
-                                    <p>Calculates the average ping. Or NAN.</p>                                                </div>
+                                    <p>Adds a "client-dependant" periodic timer. The timer gets automatically cancelled on destroy. The callback can only accept one argument, the client.</p>                                                </div>
                 <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>float|int</td>
+                <td>$interval</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>callable</td>
+                <td>$callback</td>
+                <td></td>
+            </tr>
+            </table>
+
             
                             <h4>Return Value</h4>
 
                     <table class="table table-condensed">
         <tr>
-            <td>int|float</td>
+            <td><abbr title="React\EventLoop\Timer\Timer">Timer</abbr></td>
             <td></td>
         </tr>
     </table>
 
             
             
-                        
-                        
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_cancelTimer">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.5.0/src/Client.php#L898">line 898</a></div>
+        <code>                    bool
+    <strong>cancelTimer</strong>(<abbr title="React\EventLoop\TimerInterface">TimerInterface</abbr>|<abbr title="React\EventLoop\Timer\TimerInterface">TimerInterface</abbr> $timer)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Cancels a timer.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="React\EventLoop\TimerInterface">TimerInterface</abbr>|<abbr title="React\EventLoop\Timer\TimerInterface">TimerInterface</abbr></td>
+                <td>$timer</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_cancelTimers">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.5.0/src/Client.php#L913">line 913</a></div>
+        <code>                    void
+    <strong>cancelTimers</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Cancels all timers.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setClientUser">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.5.0/src/Client.php#L925">line 925</a></div>
+        <code>                    void
+    <strong>setClientUser</strong>(array $user)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Make an instance of {ClientUser} and store it.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$user</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
                     </div>
     </div>
 
             </div>
                     <div class="method-item">
                     <h3 id="method_getUtils">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/v0.5.0/src/Client.php#L934">line 934</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.5.0/src/Client.php#L934">line 934</a></div>
         <code>                    string[]
     <strong>getUtils</strong>()
         </code>
@@ -1430,179 +1840,13 @@
 
             
             
-                        
-                        
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_getWSstatus">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/v0.5.0/src/Client.php#L470">line 470</a></div>
-        <code>                    int
-    <strong>getWSstatus</strong>()
-        </code>
-    </h3>
-    <div class="details">
-            
-    
-
-                    <div class="method-description">
-                                    <p>Returns the computed WS status across all shards.</p>                                                </div>
-                <div class="tags">
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td>int</td>
-            <td></td>
-        </tr>
-    </table>
-
-            
-            
-                        
-                        
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_login">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/v0.5.0/src/Client.php#L491">line 491</a></div>
-        <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
-    <strong>login</strong>(string $token, bool $force = false)
-        </code>
-    </h3>
-    <div class="details">
-            
-    
-
-                    <div class="method-description">
-                                    <p>Login into Discord. Opens a WebSocket Gateway connection. Resolves once a WebSocket connection has been successfully established (does not mean the client is ready).</p>                                                </div>
-                <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td>string</td>
-                <td>$token</td>
-                <td>Your token.</td>
-            </tr>
-                    <tr>
-                <td>bool</td>
-                <td>$force</td>
-                <td>Forces the client to get the gateway address from Discord.</td>
-            </tr>
-            </table>
-
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td><abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr></td>
-            <td></td>
-        </tr>
-    </table>
-
-            
-                            <h4>Exceptions</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td><a href="https://secure.php.net/RuntimeException" target="_blank">RuntimeException</a></td>
-                <td></td>
-            </tr>
-            </table>
-
-            
-                        
-                        
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_on">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/v0.5.0/src/Client.php#L30">line 30</a></div>
-        <code>                    
-    <strong>on</strong>(string  $event, callable  $listener)
-        </code>
-    </h3>
-    <div class="details">
-            
-    
-
-                    <div class="method-description">
-                                    <p>Attach a listener to an event. The method is from the trait - only for documentation purpose here.</p>                                                </div>
-                <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td>string </td>
-                <td>$event</td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td>callable </td>
-                <td>$listener</td>
-                <td></td>
-            </tr>
-            </table>
-
-            
-            
-            
-                        
-                        
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_once">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/v0.5.0/src/Client.php#L30">line 30</a></div>
-        <code>                    
-    <strong>once</strong>(string  $event, callable  $listener)
-        </code>
-    </h3>
-    <div class="details">
-            
-    
-
-                    <div class="method-description">
-                                    <p>Attach a listener to an event, for exactly once. The method is from the trait - only for documentation purpose here.</p>                                                </div>
-                <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td>string </td>
-                <td>$event</td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td>callable </td>
-                <td>$listener</td>
-                <td></td>
-            </tr>
-            </table>
-
-            
-            
-            
-                        
-                        
                     </div>
     </div>
 
             </div>
                     <div class="method-item">
                     <h3 id="method_registerUtil">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/v0.5.0/src/Client.php#L944">line 944</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.5.0/src/Client.php#L944">line 944</a></div>
         <code>                    void
     <strong>registerUtil</strong>(string $name)
         </code>
@@ -1636,17 +1880,15 @@
 
             
             
-                        
-                        
                     </div>
     </div>
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_removeAllListeners">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/v0.5.0/src/Client.php#L30">line 30</a></div>
-        <code>                    
-    <strong>removeAllListeners</strong>($event = null)
+                    <h3 id="method_destroyUtil">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.5.0/src/Client.php#L956">line 956</a></div>
+        <code>                    void
+    <strong>destroyUtil</strong>(string $name)
         </code>
     </h3>
     <div class="details">
@@ -1654,14 +1896,292 @@
     
 
                     <div class="method-description">
-                                    <p>Remove all listeners from an event (or all listeners).</p>                                                </div>
+                                    <p>Destroys an Util and calls <code>destroy</code> (requires that it is registered as such).</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_registerUtils">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.5.0/src/Client.php#L972">line 972</a></div>
+        <code>                    void
+    <strong>registerUtils</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Registers Utils which have a setLoop method.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_destroyUtils">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.5.0/src/Client.php#L991">line 991</a></div>
+        <code>                    void
+    <strong>destroyUtils</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Destroys or stops all timers from Utils (requires that they are registered as such).</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_handlePromiseRejection">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.5.0/src/Client.php#L1004">line 1004</a></div>
+        <code>                    void
+    <strong>handlePromiseRejection</strong>($error)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Emits an error for an unhandled promise rejection.</p>                                                </div>
                 <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
                 <td></td>
+                <td>$error</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_validateClientOptions">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.5.0/src/Client.php#L1014">line 1014</a></div>
+        <code>            protected        void
+    <strong>validateClientOptions</strong>(array $options)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Validates the passed client options.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/InvalidArgumentException">InvalidArgumentException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkOptionsStorages">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.5.0/src/Client.php#L1064">line 1064</a></div>
+        <code>            protected        void
+    <strong>checkOptionsStorages</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Validates the passed client options storages.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/RuntimeException">RuntimeException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_queuedEmit">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.5.0/src/Client.php#L1088">line 1088</a></div>
+        <code>                    void
+    <strong>queuedEmit</strong>(string $event, ...$args)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Puts events into a queue, if the client is not ready yet.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
                 <td>$event</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>...$args</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_on">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.5.0/src/Client.php#L30">line 30</a></div>
+        <code>                    
+    <strong>on</strong>(string  $event, callable  $listener)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Attach a listener to an event. The method is from the trait - only for documentation purpose here.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string </td>
+                <td>$event</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>callable </td>
+                <td>$listener</td>
                 <td></td>
             </tr>
             </table>
@@ -1669,15 +2189,49 @@
             
             
             
-                        
-                        
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_once">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.5.0/src/Client.php#L30">line 30</a></div>
+        <code>                    
+    <strong>once</strong>(string  $event, callable  $listener)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Attach a listener to an event, for exactly once. The method is from the trait - only for documentation purpose here.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string </td>
+                <td>$event</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>callable </td>
+                <td>$listener</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
                     </div>
     </div>
 
             </div>
                     <div class="method-item">
                     <h3 id="method_removeListener">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/v0.5.0/src/Client.php#L30">line 30</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.5.0/src/Client.php#L30">line 30</a></div>
         <code>                    
     <strong>removeListener</strong>(string  $event, callable  $listener)
         </code>
@@ -1707,17 +2261,15 @@
             
             
             
-                        
-                        
                     </div>
     </div>
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_serialize">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/v0.5.0/src/Client.php#L352">line 352</a></div>
-        <code>                    string
-    <strong>serialize</strong>()
+                    <h3 id="method_removeAllListeners">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.5.0/src/Client.php#L30">line 30</a></div>
+        <code>                    
+    <strong>removeAllListeners</strong>($event = null)
         </code>
     </h3>
     <div class="details">
@@ -1725,73 +2277,21 @@
     
 
                     <div class="method-description">
-                                    <p>Serializes the class.</p>                                                </div>
-                <div class="tags">
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td>string</td>
-            <td></td>
-        </tr>
-    </table>
-
-            
-            
-                        
-                        
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_unserialize">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/v0.5.0/src/Client.php#L371">line 371</a></div>
-        <code>                    void
-    <strong>unserialize</strong>(string $vars)
-        </code>
-    </h3>
-    <div class="details">
-            
-    
-
-                    <div class="method-description">
-                                    <p>Unserializes the class and re-registers utils. Automatically creates an event loop.</p>                                                </div>
+                                    <p>Remove all listeners from an event (or all listeners).</p>                                                </div>
                 <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
-                <td>string</td>
-                <td>$vars</td>
+                <td></td>
+                <td>$event</td>
                 <td></td>
             </tr>
             </table>
 
             
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td>void</td>
-            <td></td>
-        </tr>
-    </table>
-
             
-                            <h4>Exceptions</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td><a href="https://secure.php.net/RuntimeException" target="_blank">RuntimeException</a></td>
-                <td></td>
-            </tr>
-            </table>
-
             
-                        
-                        
                     </div>
     </div>
 

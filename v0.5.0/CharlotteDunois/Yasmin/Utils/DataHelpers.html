@@ -8,12 +8,10 @@
             <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
         <link rel="stylesheet" type="text/css" href="../../../css/sami.css">
-        <link rel="stylesheet" type="text/css" href="../../../css/prism.css">
         <script src="../../../js/jquery-1.11.1.min.js"></script>
         <script src="../../../js/bootstrap.min.js"></script>
         <script src="../../../js/typeahead.min.js"></script>
         <script src="../../../sami.js"></script>
-        <script src="../../../js/prism.js"></script>
         <meta name="MobileOptimized" content="width">
         <meta name="HandheldFriendly" content="true">
         <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
@@ -27,10 +25,13 @@
                 <div id="control-panel">
                     <form action="#" method="GET">
                 <select id="version-switcher" name="version">
+                                            <option value="../../../../v0.4.0/index.html" data-version="v0.4.0">v0.4.0</option>
+                                            <option value="../../../../v0.4.1/index.html" data-version="v0.4.1">v0.4.1</option>
+                                            <option value="../../../../v0.4.2/index.html" data-version="v0.4.2">v0.4.2</option>
                                             <option value="../../../../v0.5.0/index.html" data-version="v0.5.0">v0.5.0</option>
                                             <option value="../../../../v0.5.1/index.html" data-version="v0.5.1">v0.5.1</option>
                                             <option value="../../../../v0.6.0/index.html" data-version="v0.6.0">v0.6.0</option>
-                                            <option value="../../../../master/index.html" data-version="master">master</option>
+                                            <option value="../../../../master/index.html" data-version="master">master branch</option>
                                     </select>
             </form>
                 <script>
@@ -63,7 +64,7 @@
             <div class="collapse navbar-collapse" id="navbar-elements">
                 <ul class="nav navbar-nav">
                     <li><a href="../../../classes.html">Classes</a></li>
-                                                                <li><a href="../../../namespaces.html">Namespaces</a></li>
+                                            <li><a href="../../../namespaces.html">Namespaces</a></li>
                                         <li><a href="../../../interfaces.html">Interfaces</a></li>
                     <li><a href="../../../traits.html">Traits</a></li>
                     <li><a href="../../../doc-index.html">Index</a></li>
@@ -89,7 +90,7 @@
     </div>
 
     <p>    class
-    <strong>DataHelpers</strong>        (<a href="https://github.com/CharlotteDunois/Yasmin/blob/v0.5.0/src/Utils/DataHelpers.php" target="_blank">View source</a>)
+    <strong>DataHelpers</strong>        (<a href="https://github.com/sylae/yasmin/blob/v0.5.0/src/Utils/DataHelpers.php">View source</a>)
 </p>
 
         
@@ -100,10 +101,93 @@
     
     
     
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_loop">
+                    static                    protected                                        <abbr title="React\EventLoop\LoopInterface">LoopInterface</abbr>
+                </td>
+                <td>$loop</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+            </table>
+
     
             <h2>Methods</h2>
 
             <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setLoop">setLoop</a>(<abbr title="React\EventLoop\LoopInterface">LoopInterface</abbr> $loop)
+        
+                                            <p>Sets the Event Loop.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<abbr title="React\Filesystem\FilesystemInterface">FilesystemInterface</abbr>|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getFilesystem">getFilesystem</a>()
+        
+                                            <p>Returns the stored React Filesystem instance, or null.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setFilesystem">setFilesystem</a>(<abbr title="React\Filesystem\FilesystemInterface">FilesystemInterface</abbr> $filesystem)
+        
+                                            <p>Sets the React Filesystem instance.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_resolveColor">resolveColor</a>(array|int|string $color)
+        
+                                            <p>Resolves a color to an integer.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a target="_blank" href="http://php.net/DateTime">DateTime</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_makeDateTime">makeDateTime</a>(int $timestamp)
+        
+                                            <p>Makes a DateTime instance from an UNIX timestamp and applies the default timezone.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_makeBase64URI">makeBase64URI</a>(string $data)
+        
+                                            <p>Turns input into a base64-encoded data URI.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_resolveFileResolvable">resolveFileResolvable</a>(string $file)
+        
+                                            <p>Resolves filepath and URL into file data - returns it if it's neither. Resolves with a string.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     static&nbsp;string
@@ -126,36 +210,6 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    static&nbsp;<abbr title="React\Filesystem\FilesystemInterface">FilesystemInterface</abbr>|null
-                </div>
-                <div class="col-md-8 type">
-                    <a href="#method_getFilesystem">getFilesystem</a>()
-        
-                                            <p>Returns the stored React Filesystem instance, or null.</p>                </div>
-                <div class="col-md-2"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    static&nbsp;string
-                </div>
-                <div class="col-md-8 type">
-                    <a href="#method_makeBase64URI">makeBase64URI</a>(string $data)
-        
-                                            <p>Turns input into a base64-encoded data URI.</p>                </div>
-                <div class="col-md-2"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    static&nbsp;<a href="https://secure.php.net/DateTime" target="_blank">DateTime</a>
-                </div>
-                <div class="col-md-8 type">
-                    <a href="#method_makeDateTime">makeDateTime</a>(int $timestamp)
-        
-                                            <p>Makes a DateTime instance from an UNIX timestamp and applies the default timezone.</p>                </div>
-                <div class="col-md-2"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
                     static&nbsp;<abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
                 </div>
                 <div class="col-md-8 type">
@@ -166,42 +220,12 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    static&nbsp;int
-                </div>
-                <div class="col-md-8 type">
-                    <a href="#method_resolveColor">resolveColor</a>(array|int|string $color)
-        
-                                            <p>Resolves a color to an integer.</p>                </div>
-                <div class="col-md-2"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    static&nbsp;<abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
-                </div>
-                <div class="col-md-8 type">
-                    <a href="#method_resolveFileResolvable">resolveFileResolvable</a>(string $file)
-        
-                                            <p>Resolves filepath and URL into file data - returns it if it's neither. Resolves with a string.</p>                </div>
-                <div class="col-md-2"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
                     static&nbsp;<abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_resolveMessageOptionsFiles">resolveMessageOptionsFiles</a>(array $options)
         
                                             <p>Resolves files of Message Options.</p>                </div>
-                <div class="col-md-2"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    static&nbsp;void
-                </div>
-                <div class="col-md-8 type">
-                    <a href="#method_setFilesystem">setFilesystem</a>(<abbr title="React\Filesystem\FilesystemInterface">FilesystemInterface</abbr> $filesystem)
-        
-                                            <p>Sets the React Filesystem instance.</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -241,8 +265,296 @@
 
             <div id="method-details">
                     <div class="method-item">
+                    <h3 id="method_setLoop">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.5.0/src/Utils/DataHelpers.php#L32">line 32</a></div>
+        <code>        static            void
+    <strong>setLoop</strong>(<abbr title="React\EventLoop\LoopInterface">LoopInterface</abbr> $loop)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the Event Loop.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="React\EventLoop\LoopInterface">LoopInterface</abbr></td>
+                <td>$loop</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFilesystem">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.5.0/src/Utils/DataHelpers.php#L47">line 47</a></div>
+        <code>        static            <abbr title="React\Filesystem\FilesystemInterface">FilesystemInterface</abbr>|null
+    <strong>getFilesystem</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the stored React Filesystem instance, or null.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="React\Filesystem\FilesystemInterface">FilesystemInterface</abbr>|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setFilesystem">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.5.0/src/Utils/DataHelpers.php#L56">line 56</a></div>
+        <code>        static            void
+    <strong>setFilesystem</strong>(<abbr title="React\Filesystem\FilesystemInterface">FilesystemInterface</abbr> $filesystem)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the React Filesystem instance.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="React\Filesystem\FilesystemInterface">FilesystemInterface</abbr></td>
+                <td>$filesystem</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_resolveColor">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.5.0/src/Utils/DataHelpers.php#L66">line 66</a></div>
+        <code>        static            int
+    <strong>resolveColor</strong>(array|int|string $color)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Resolves a color to an integer.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array|int|string</td>
+                <td>$color</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/InvalidArgumentException">InvalidArgumentException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_makeDateTime">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.5.0/src/Utils/DataHelpers.php#L87">line 87</a></div>
+        <code>        static            <a target="_blank" href="http://php.net/DateTime">DateTime</a>
+    <strong>makeDateTime</strong>(int $timestamp)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Makes a DateTime instance from an UNIX timestamp and applies the default timezone.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$timestamp</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a target="_blank" href="http://php.net/DateTime">DateTime</a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_makeBase64URI">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.5.0/src/Utils/DataHelpers.php#L98">line 98</a></div>
+        <code>        static            string
+    <strong>makeBase64URI</strong>(string $data)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Turns input into a base64-encoded data URI.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$data</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/BadMethodCallException">BadMethodCallException</a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_resolveFileResolvable">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.5.0/src/Utils/DataHelpers.php#L112">line 112</a></div>
+        <code>        static            <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
+    <strong>resolveFileResolvable</strong>(string $file)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Resolves filepath and URL into file data - returns it if it's neither. Resolves with a string.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$file</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_cleanContent">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/v0.5.0/src/Utils/DataHelpers.php#L133">line 133</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.5.0/src/Utils/DataHelpers.php#L133">line 133</a></div>
         <code>        static            string
     <strong>cleanContent</strong>(<a href="../../../CharlotteDunois/Yasmin/Models/Message.html"><abbr title="CharlotteDunois\Yasmin\Models\Message">Message</abbr></a> $message, string $text)
         </code>
@@ -281,15 +593,13 @@
 
             
             
-                        
-                        
                     </div>
     </div>
 
             </div>
                     <div class="method-item">
                     <h3 id="method_escapeMarkdown">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/v0.5.0/src/Utils/DataHelpers.php#L160">line 160</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.5.0/src/Utils/DataHelpers.php#L160">line 160</a></div>
         <code>        static            string
     <strong>escapeMarkdown</strong>(string $text, bool $onlyCodeBlock = false, bool $onlyInlineCode = false)
         </code>
@@ -333,140 +643,13 @@
 
             
             
-                        
-                        
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_getFilesystem">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/v0.5.0/src/Utils/DataHelpers.php#L47">line 47</a></div>
-        <code>        static            <abbr title="React\Filesystem\FilesystemInterface">FilesystemInterface</abbr>|null
-    <strong>getFilesystem</strong>()
-        </code>
-    </h3>
-    <div class="details">
-            
-    
-
-                    <div class="method-description">
-                                    <p>Returns the stored React Filesystem instance, or null.</p>                                                </div>
-                <div class="tags">
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td><abbr title="React\Filesystem\FilesystemInterface">FilesystemInterface</abbr>|null</td>
-            <td></td>
-        </tr>
-    </table>
-
-            
-            
-                        
-                        
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_makeBase64URI">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/v0.5.0/src/Utils/DataHelpers.php#L98">line 98</a></div>
-        <code>        static            string
-    <strong>makeBase64URI</strong>(string $data)
-        </code>
-    </h3>
-    <div class="details">
-            
-    
-
-                    <div class="method-description">
-                                    <p>Turns input into a base64-encoded data URI.</p>                                                </div>
-                <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td>string</td>
-                <td>$data</td>
-                <td></td>
-            </tr>
-            </table>
-
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td>string</td>
-            <td></td>
-        </tr>
-    </table>
-
-            
-                            <h4>Exceptions</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td><a href="https://secure.php.net/BadMethodCallException" target="_blank">BadMethodCallException</a></td>
-                <td></td>
-            </tr>
-            </table>
-
-            
-                        
-                        
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_makeDateTime">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/v0.5.0/src/Utils/DataHelpers.php#L87">line 87</a></div>
-        <code>        static            <a href="https://secure.php.net/DateTime" target="_blank">DateTime</a>
-    <strong>makeDateTime</strong>(int $timestamp)
-        </code>
-    </h3>
-    <div class="details">
-            
-    
-
-                    <div class="method-description">
-                                    <p>Makes a DateTime instance from an UNIX timestamp and applies the default timezone.</p>                                                </div>
-                <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td>int</td>
-                <td>$timestamp</td>
-                <td></td>
-            </tr>
-            </table>
-
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td><a href="https://secure.php.net/DateTime" target="_blank">DateTime</a></td>
-            <td></td>
-        </tr>
-    </table>
-
-            
-            
-                        
-                        
                     </div>
     </div>
 
             </div>
                     <div class="method-item">
                     <h3 id="method_parseMentions">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/v0.5.0/src/Utils/DataHelpers.php#L181">line 181</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.5.0/src/Utils/DataHelpers.php#L181">line 181</a></div>
         <code>        static            <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>parseMentions</strong>(<a href="../../../CharlotteDunois/Yasmin/Client.html"><abbr title="CharlotteDunois\Yasmin\Client">Client</abbr></a>|null $client, string $content)
         </code>
@@ -506,108 +689,13 @@ Includes everyone and here mentions.</p>                            </div>
 
             
             
-                        
-                        
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_resolveColor">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/v0.5.0/src/Utils/DataHelpers.php#L66">line 66</a></div>
-        <code>        static            int
-    <strong>resolveColor</strong>(array|int|string $color)
-        </code>
-    </h3>
-    <div class="details">
-            
-    
-
-                    <div class="method-description">
-                                    <p>Resolves a color to an integer.</p>                                                </div>
-                <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td>array|int|string</td>
-                <td>$color</td>
-                <td></td>
-            </tr>
-            </table>
-
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td>int</td>
-            <td></td>
-        </tr>
-    </table>
-
-            
-                            <h4>Exceptions</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td><a href="https://secure.php.net/InvalidArgumentException" target="_blank">InvalidArgumentException</a></td>
-                <td></td>
-            </tr>
-            </table>
-
-            
-                        
-                        
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_resolveFileResolvable">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/v0.5.0/src/Utils/DataHelpers.php#L112">line 112</a></div>
-        <code>        static            <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
-    <strong>resolveFileResolvable</strong>(string $file)
-        </code>
-    </h3>
-    <div class="details">
-            
-    
-
-                    <div class="method-description">
-                                    <p>Resolves filepath and URL into file data - returns it if it's neither. Resolves with a string.</p>                                                </div>
-                <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td>string</td>
-                <td>$file</td>
-                <td></td>
-            </tr>
-            </table>
-
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td><abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr></td>
-            <td></td>
-        </tr>
-    </table>
-
-            
-            
-                        
-                        
                     </div>
     </div>
 
             </div>
                     <div class="method-item">
                     <h3 id="method_resolveMessageOptionsFiles">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/v0.5.0/src/Utils/DataHelpers.php#L267">line 267</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.5.0/src/Utils/DataHelpers.php#L267">line 267</a></div>
         <code>        static            <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>resolveMessageOptionsFiles</strong>(array $options)
         </code>
@@ -644,63 +732,19 @@ Includes everyone and here mentions.</p>                            </div>
 
                     <table class="table table-condensed">
                     <tr>
-                <td><a href="https://secure.php.net/InvalidArgumentException" target="_blank">InvalidArgumentException</a></td>
+                <td><a target="_blank" href="http://php.net/InvalidArgumentException">InvalidArgumentException</a></td>
                 <td></td>
             </tr>
             </table>
 
             
-                        
-                        
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_setFilesystem">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/v0.5.0/src/Utils/DataHelpers.php#L56">line 56</a></div>
-        <code>        static            void
-    <strong>setFilesystem</strong>(<abbr title="React\Filesystem\FilesystemInterface">FilesystemInterface</abbr> $filesystem)
-        </code>
-    </h3>
-    <div class="details">
-            
-    
-
-                    <div class="method-description">
-                                    <p>Sets the React Filesystem instance.</p>                                                </div>
-                <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td><abbr title="React\Filesystem\FilesystemInterface">FilesystemInterface</abbr></td>
-                <td>$filesystem</td>
-                <td></td>
-            </tr>
-            </table>
-
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td>void</td>
-            <td></td>
-        </tr>
-    </table>
-
-            
-            
-                        
-                        
                     </div>
     </div>
 
             </div>
                     <div class="method-item">
                     <h3 id="method_splitMessage">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/v0.5.0/src/Utils/DataHelpers.php#L351">line 351</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.5.0/src/Utils/DataHelpers.php#L351">line 351</a></div>
         <code>        static            string[]
     <strong>splitMessage</strong>(string $text, array $options = array())
         </code>
@@ -751,23 +795,15 @@ Includes everyone and here mentions.</p>                            </div>
                             <h4>See also</h4>
 
                     <table class="table table-condensed">
-                    <tr>
-                <td>
-                                            <a href="../../../CharlotteDunois/Yasmin/Models/Message.html"><abbr title="CharlotteDunois\Yasmin\Models\Message">Message</abbr></a>
-                                    </td>
-                <td></td>
-            </tr>
             </table>
 
-                        
-                        
                     </div>
     </div>
 
             </div>
                     <div class="method-item">
                     <h3 id="method_typecastVariable">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/v0.5.0/src/Utils/DataHelpers.php#L385">line 385</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.5.0/src/Utils/DataHelpers.php#L385">line 385</a></div>
         <code>        static            mixed|null
     <strong>typecastVariable</strong>(mixed $variable, string $type)
         </code>
@@ -809,21 +845,19 @@ Includes everyone and here mentions.</p>                            </div>
 
                     <table class="table table-condensed">
                     <tr>
-                <td><a href="https://secure.php.net/InvalidArgumentException" target="_blank">InvalidArgumentException</a></td>
+                <td><a target="_blank" href="http://php.net/InvalidArgumentException">InvalidArgumentException</a></td>
                 <td></td>
             </tr>
             </table>
 
             
-                        
-                        
                     </div>
     </div>
 
             </div>
                     <div class="method-item">
                     <h3 id="method_waitForEvent">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/v0.5.0/src/Utils/DataHelpers.php#L432">line 432</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.5.0/src/Utils/DataHelpers.php#L432">line 432</a></div>
         <code>        static            <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>waitForEvent</strong>(<abbr title="CharlotteDunois\Events\EventEmitterInterface">EventEmitterInterface</abbr> $emitter, string $event, callable|null $filter = null, array $options = array())
         </code>
@@ -883,18 +917,16 @@ Includes everyone and here mentions.</p>                            </div>
 
                     <table class="table table-condensed">
                     <tr>
-                <td><a href="https://secure.php.net/RangeException" target="_blank">RangeException</a></td>
+                <td><a target="_blank" href="http://php.net/RangeException">RangeException</a></td>
                 <td>The exception the promise gets rejected with, if waiting times out.</td>
             </tr>
                     <tr>
-                <td><a href="https://secure.php.net/OutOfBoundsException" target="_blank">OutOfBoundsException</a></td>
+                <td><a target="_blank" href="http://php.net/OutOfBoundsException">OutOfBoundsException</a></td>
                 <td>The exception the promise gets rejected with, if the promise gets cancelled.</td>
             </tr>
             </table>
 
             
-                        
-                        
                     </div>
     </div>
 

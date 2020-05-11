@@ -8,12 +8,10 @@
             <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
         <link rel="stylesheet" type="text/css" href="../../../css/sami.css">
-        <link rel="stylesheet" type="text/css" href="../../../css/prism.css">
         <script src="../../../js/jquery-1.11.1.min.js"></script>
         <script src="../../../js/bootstrap.min.js"></script>
         <script src="../../../js/typeahead.min.js"></script>
         <script src="../../../sami.js"></script>
-        <script src="../../../js/prism.js"></script>
         <meta name="MobileOptimized" content="width">
         <meta name="HandheldFriendly" content="true">
         <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
@@ -27,10 +25,13 @@
                 <div id="control-panel">
                     <form action="#" method="GET">
                 <select id="version-switcher" name="version">
+                                            <option value="../../../../v0.4.0/index.html" data-version="v0.4.0">v0.4.0</option>
+                                            <option value="../../../../v0.4.1/index.html" data-version="v0.4.1">v0.4.1</option>
+                                            <option value="../../../../v0.4.2/index.html" data-version="v0.4.2">v0.4.2</option>
                                             <option value="../../../../v0.5.0/index.html" data-version="v0.5.0">v0.5.0</option>
                                             <option value="../../../../v0.5.1/index.html" data-version="v0.5.1">v0.5.1</option>
                                             <option value="../../../../v0.6.0/index.html" data-version="v0.6.0">v0.6.0</option>
-                                            <option value="../../../../master/index.html" data-version="master">master</option>
+                                            <option value="../../../../master/index.html" data-version="master">master branch</option>
                                     </select>
             </form>
                 <script>
@@ -63,7 +64,7 @@
             <div class="collapse navbar-collapse" id="navbar-elements">
                 <ul class="nav navbar-nav">
                     <li><a href="../../../classes.html">Classes</a></li>
-                                                                <li><a href="../../../namespaces.html">Namespaces</a></li>
+                                            <li><a href="../../../namespaces.html">Namespaces</a></li>
                                         <li><a href="../../../interfaces.html">Interfaces</a></li>
                     <li><a href="../../../traits.html">Traits</a></li>
                     <li><a href="../../../doc-index.html">Index</a></li>
@@ -90,7 +91,7 @@
 
     <p>    interface
     <strong>TextChannelInterface</strong>        implements
-        <a href="../../../CharlotteDunois/Yasmin/Interfaces/ChannelInterface.html"><abbr title="CharlotteDunois\Yasmin\Interfaces\ChannelInterface">ChannelInterface</abbr></a>        (<a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/TextChannelInterface.php" target="_blank">View source</a>)
+        <a href="../../../CharlotteDunois/Yasmin/Interfaces/ChannelInterface.html"><abbr title="CharlotteDunois\Yasmin\Interfaces\ChannelInterface">ChannelInterface</abbr></a>        (<a href="https://github.com/sylae/yasmin/blob/master/src/Interfaces/TextChannelInterface.php">View source</a>)
 </p>
 
         
@@ -114,6 +115,26 @@
         
                                             <p>Internally patches the instance.</p>                </div>
                 <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Interfaces/ChannelInterface.html#method__patch"><abbr title="CharlotteDunois\Yasmin\Interfaces\ChannelInterface">ChannelInterface</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getId">getId</a>()
+        
+                                            <p>Gets the channel's ID.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Interfaces/ChannelInterface.html#method_getId"><abbr title="CharlotteDunois\Yasmin\Interfaces\ChannelInterface">ChannelInterface</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCreatedTimestamp">getCreatedTimestamp</a>()
+        
+                                            <p>Gets the timestamp of when this channel was created.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Interfaces/ChannelInterface.html#method_getCreatedTimestamp"><abbr title="CharlotteDunois\Yasmin\Interfaces\ChannelInterface">ChannelInterface</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -143,56 +164,6 @@
                     <a href="#method_fetchMessages">fetchMessages</a>(array $options = array())
         
                                             <p>Fetches messages of this channel. Resolves with a Collection of Message instances, mapped by their ID.</p>                </div>
-                <div class="col-md-2"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    int
-                </div>
-                <div class="col-md-8 type">
-                    <a href="#method_getCreatedTimestamp">getCreatedTimestamp</a>()
-        
-                                            <p>Gets the timestamp of when this channel was created.</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Interfaces/ChannelInterface.html#method_getCreatedTimestamp"><abbr title="CharlotteDunois\Yasmin\Interfaces\ChannelInterface">ChannelInterface</abbr></a></small></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    string
-                </div>
-                <div class="col-md-8 type">
-                    <a href="#method_getId">getId</a>()
-        
-                                            <p>Gets the channel's ID.</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../CharlotteDunois/Yasmin/Interfaces/ChannelInterface.html#method_getId"><abbr title="CharlotteDunois\Yasmin\Interfaces\ChannelInterface">ChannelInterface</abbr></a></small></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    string
-                </div>
-                <div class="col-md-8 type">
-                    <a href="#method_getLastMessageID">getLastMessageID</a>()
-        
-                                            <p>Gets the ID of the last sent message in this channel.</p>                </div>
-                <div class="col-md-2"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    <a href="../../../CharlotteDunois/Yasmin/Interfaces/MessageStorageInterface.html"><abbr title="CharlotteDunois\Yasmin\Interfaces\MessageStorageInterface">MessageStorageInterface</abbr></a>
-                </div>
-                <div class="col-md-8 type">
-                    <a href="#method_getMessages">getMessages</a>()
-        
-                                            <p>Gets the storage with all cached messages.</p>                </div>
-                <div class="col-md-2"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    bool
-                </div>
-                <div class="col-md-8 type">
-                    <a href="#method_isTyping">isTyping</a>(<a href="../../../CharlotteDunois/Yasmin/Models/User.html"><abbr title="CharlotteDunois\Yasmin\Models\User">User</abbr></a> $user)
-        
-                                            <p>Determines whether the given user is typing in this channel or not.</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -235,6 +206,58 @@
                                             <p>Returns the amount of user typing in this channel.</p>                </div>
                 <div class="col-md-2"></div>
             </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isTyping">isTyping</a>(<a href="../../../CharlotteDunois/Yasmin/Models/User.html"><abbr title="CharlotteDunois\Yasmin\Models\User">User</abbr></a> $user)
+        
+                                            <p>Determines whether the given user is typing in this channel or not.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../CharlotteDunois/Yasmin/Models/Message.html"><abbr title="CharlotteDunois\Yasmin\Models\Message">Message</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method__createMessage">_createMessage</a>(array $message)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method__updateTyping">_updateTyping</a>(<a href="../../../CharlotteDunois/Yasmin/Models/User.html"><abbr title="CharlotteDunois\Yasmin\Models\User">User</abbr></a> $user, int|null $timestamp = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../CharlotteDunois/Yasmin/Interfaces/MessageStorageInterface.html"><abbr title="CharlotteDunois\Yasmin\Interfaces\MessageStorageInterface">MessageStorageInterface</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getMessages">getMessages</a>()
+        
+                                            <p>Gets the storage with all cached messages.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getLastMessageID">getLastMessageID</a>()
+        
+                                            <p>Gets the ID of the last sent message in this channel.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
             </div>
 
 
@@ -243,7 +266,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method__patch">
-        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Interfaces/ChannelInterface.html#method__patch"><abbr title="CharlotteDunois\Yasmin\Interfaces\ChannelInterface">ChannelInterface</abbr></a> at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/ChannelInterface.php#L22">line 22</a></div>
+        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Interfaces/ChannelInterface.html#method__patch"><abbr title="CharlotteDunois\Yasmin\Interfaces\ChannelInterface">ChannelInterface</abbr></a> at         <a href="https://github.com/sylae/yasmin/blob/master/src/Interfaces/ChannelInterface.php#L22">line 22</a></div>
         <code>                    
     <strong>_patch</strong>(array $data)
         </code>
@@ -268,15 +291,73 @@
             
             
             
-                        
-                        
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getId">
+        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Interfaces/ChannelInterface.html#method_getId"><abbr title="CharlotteDunois\Yasmin\Interfaces\ChannelInterface">ChannelInterface</abbr></a> at         <a href="https://github.com/sylae/yasmin/blob/master/src/Interfaces/ChannelInterface.php#L18">line 18</a></div>
+        <code>                    string
+    <strong>getId</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Gets the channel's ID.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCreatedTimestamp">
+        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Interfaces/ChannelInterface.html#method_getCreatedTimestamp"><abbr title="CharlotteDunois\Yasmin\Interfaces\ChannelInterface">ChannelInterface</abbr></a> at         <a href="https://github.com/sylae/yasmin/blob/master/src/Interfaces/ChannelInterface.php#L18">line 18</a></div>
+        <code>                    int
+    <strong>getCreatedTimestamp</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Gets the timestamp of when this channel was created.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
                     </div>
     </div>
 
             </div>
                     <div class="method-item">
                     <h3 id="method_collectMessages">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/TextChannelInterface.php#L40">line 40</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Interfaces/TextChannelInterface.php#L40">line 40</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>collectMessages</strong>(callable $filter, array $options = array())
         </code>
@@ -326,11 +407,11 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td><a href="https://secure.php.net/RangeException" target="_blank">RangeException</a></td>
+                <td><a target="_blank" href="http://php.net/RangeException">RangeException</a></td>
                 <td>The exception the promise gets rejected with, if waiting times out.</td>
             </tr>
                     <tr>
-                <td><a href="https://secure.php.net/OutOfBoundsException" target="_blank">OutOfBoundsException</a></td>
+                <td><a target="_blank" href="http://php.net/OutOfBoundsException">OutOfBoundsException</a></td>
                 <td>The exception the promise gets rejected with, if the promise gets cancelled.</td>
             </tr>
             </table>
@@ -339,29 +420,15 @@
                             <h4>See also</h4>
 
                     <table class="table table-condensed">
-                    <tr>
-                <td>
-                                            <a href="../../../CharlotteDunois/Yasmin/Models/Message.html"><abbr title="CharlotteDunois\Yasmin\Models\Message">Message</abbr></a>
-                                    </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td>
-                                            <a href="../../../CharlotteDunois/Yasmin/Utils/Collector.html"><abbr title="CharlotteDunois\Yasmin\Utils\Collector">Collector</abbr></a>
-                                    </td>
-                <td></td>
-            </tr>
             </table>
 
-                        
-                        
                     </div>
     </div>
 
             </div>
                     <div class="method-item">
                     <h3 id="method_fetchMessage">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/TextChannelInterface.php#L48">line 48</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Interfaces/TextChannelInterface.php#L48">line 48</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>fetchMessage</strong>(string $id)
         </code>
@@ -398,23 +465,15 @@
                             <h4>See also</h4>
 
                     <table class="table table-condensed">
-                    <tr>
-                <td>
-                                            <a href="../../../CharlotteDunois/Yasmin/Models/Message.html"><abbr title="CharlotteDunois\Yasmin\Models\Message">Message</abbr></a>
-                                    </td>
-                <td></td>
-            </tr>
             </table>
 
-                        
-                        
                     </div>
     </div>
 
             </div>
                     <div class="method-item">
                     <h3 id="method_fetchMessages">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/TextChannelInterface.php#L68">line 68</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Interfaces/TextChannelInterface.php#L68">line 68</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>fetchMessages</strong>(array $options = array())
         </code>
@@ -460,193 +519,15 @@
                             <h4>See also</h4>
 
                     <table class="table table-condensed">
-                    <tr>
-                <td>
-                                            <a href="../../../CharlotteDunois/Yasmin/Models/Message.html"><abbr title="CharlotteDunois\Yasmin\Models\Message">Message</abbr></a>
-                                    </td>
-                <td></td>
-            </tr>
             </table>
 
-                        
-                        
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_getCreatedTimestamp">
-        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Interfaces/ChannelInterface.html#method_getCreatedTimestamp"><abbr title="CharlotteDunois\Yasmin\Interfaces\ChannelInterface">ChannelInterface</abbr></a> at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/ChannelInterface.php#L18">line 18</a></div>
-        <code>                    int
-    <strong>getCreatedTimestamp</strong>()
-        </code>
-    </h3>
-    <div class="details">
-            
-    
-
-                    <div class="method-description">
-                                    <p>Gets the timestamp of when this channel was created.</p>                                                </div>
-                <div class="tags">
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td>int</td>
-            <td></td>
-        </tr>
-    </table>
-
-            
-            
-                        
-                        
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_getId">
-        <div class="location">in <a href="../../../CharlotteDunois/Yasmin/Interfaces/ChannelInterface.html#method_getId"><abbr title="CharlotteDunois\Yasmin\Interfaces\ChannelInterface">ChannelInterface</abbr></a> at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/ChannelInterface.php#L18">line 18</a></div>
-        <code>                    string
-    <strong>getId</strong>()
-        </code>
-    </h3>
-    <div class="details">
-            
-    
-
-                    <div class="method-description">
-                                    <p>Gets the channel's ID.</p>                                                </div>
-                <div class="tags">
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td>string</td>
-            <td></td>
-        </tr>
-    </table>
-
-            
-            
-                        
-                        
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_getLastMessageID">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/TextChannelInterface.php#L18">line 18</a></div>
-        <code>                    string
-    <strong>getLastMessageID</strong>()
-        </code>
-    </h3>
-    <div class="details">
-            
-    
-
-                    <div class="method-description">
-                                    <p>Gets the ID of the last sent message in this channel.</p>                                                </div>
-                <div class="tags">
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td>string</td>
-            <td></td>
-        </tr>
-    </table>
-
-            
-            
-                        
-                        
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_getMessages">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/TextChannelInterface.php#L18">line 18</a></div>
-        <code>                    <a href="../../../CharlotteDunois/Yasmin/Interfaces/MessageStorageInterface.html"><abbr title="CharlotteDunois\Yasmin\Interfaces\MessageStorageInterface">MessageStorageInterface</abbr></a>
-    <strong>getMessages</strong>()
-        </code>
-    </h3>
-    <div class="details">
-            
-    
-
-                    <div class="method-description">
-                                    <p>Gets the storage with all cached messages.</p>                                                </div>
-                <div class="tags">
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td><a href="../../../CharlotteDunois/Yasmin/Interfaces/MessageStorageInterface.html"><abbr title="CharlotteDunois\Yasmin\Interfaces\MessageStorageInterface">MessageStorageInterface</abbr></a></td>
-            <td></td>
-        </tr>
-    </table>
-
-            
-            
-                        
-                        
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_isTyping">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/TextChannelInterface.php#L124">line 124</a></div>
-        <code>                    bool
-    <strong>isTyping</strong>(<a href="../../../CharlotteDunois/Yasmin/Models/User.html"><abbr title="CharlotteDunois\Yasmin\Models\User">User</abbr></a> $user)
-        </code>
-    </h3>
-    <div class="details">
-            
-    
-
-                    <div class="method-description">
-                                    <p>Determines whether the given user is typing in this channel or not.</p>                                                </div>
-                <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td><a href="../../../CharlotteDunois/Yasmin/Models/User.html"><abbr title="CharlotteDunois\Yasmin\Models\User">User</abbr></a></td>
-                <td>$user</td>
-                <td></td>
-            </tr>
-            </table>
-
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td>bool</td>
-            <td></td>
-        </tr>
-    </table>
-
-            
-            
-                        
-                        
                     </div>
     </div>
 
             </div>
                     <div class="method-item">
                     <h3 id="method_send">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/TextChannelInterface.php#L98">line 98</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Interfaces/TextChannelInterface.php#L98">line 98</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>send</strong>(string $content, array $options = array())
         </code>
@@ -706,23 +587,15 @@
                             <h4>See also</h4>
 
                     <table class="table table-condensed">
-                    <tr>
-                <td>
-                                            <a href="../../../CharlotteDunois/Yasmin/Models/Message.html"><abbr title="CharlotteDunois\Yasmin\Models\Message">Message</abbr></a>
-                                    </td>
-                <td></td>
-            </tr>
             </table>
 
-                        
-                        
                     </div>
     </div>
 
             </div>
                     <div class="method-item">
                     <h3 id="method_startTyping">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/TextChannelInterface.php#L104">line 104</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Interfaces/TextChannelInterface.php#L104">line 104</a></div>
         <code>                    void
     <strong>startTyping</strong>()
         </code>
@@ -746,15 +619,13 @@
 
             
             
-                        
-                        
                     </div>
     </div>
 
             </div>
                     <div class="method-item">
                     <h3 id="method_stopTyping">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/TextChannelInterface.php#L111">line 111</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Interfaces/TextChannelInterface.php#L111">line 111</a></div>
         <code>                    void
     <strong>stopTyping</strong>(bool $force = false)
         </code>
@@ -788,15 +659,13 @@
 
             
             
-                        
-                        
                     </div>
     </div>
 
             </div>
                     <div class="method-item">
                     <h3 id="method_typingCount">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/master/src/Interfaces/TextChannelInterface.php#L117">line 117</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Interfaces/TextChannelInterface.php#L117">line 117</a></div>
         <code>                    int
     <strong>typingCount</strong>()
         </code>
@@ -820,8 +689,187 @@
 
             
             
-                        
-                        
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isTyping">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Interfaces/TextChannelInterface.php#L124">line 124</a></div>
+        <code>                    bool
+    <strong>isTyping</strong>(<a href="../../../CharlotteDunois/Yasmin/Models/User.html"><abbr title="CharlotteDunois\Yasmin\Models\User">User</abbr></a> $user)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Determines whether the given user is typing in this channel or not.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../CharlotteDunois/Yasmin/Models/User.html"><abbr title="CharlotteDunois\Yasmin\Models\User">User</abbr></a></td>
+                <td>$user</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__createMessage">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Interfaces/TextChannelInterface.php#L131">line 131</a></div>
+        <code>                    <a href="../../../CharlotteDunois/Yasmin/Models/Message.html"><abbr title="CharlotteDunois\Yasmin\Models\Message">Message</abbr></a>
+    <strong>_createMessage</strong>(array $message)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$message</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../CharlotteDunois/Yasmin/Models/Message.html"><abbr title="CharlotteDunois\Yasmin\Models\Message">Message</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__updateTyping">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Interfaces/TextChannelInterface.php#L139">line 139</a></div>
+        <code>                    bool
+    <strong>_updateTyping</strong>(<a href="../../../CharlotteDunois/Yasmin/Models/User.html"><abbr title="CharlotteDunois\Yasmin\Models\User">User</abbr></a> $user, int|null $timestamp = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../CharlotteDunois/Yasmin/Models/User.html"><abbr title="CharlotteDunois\Yasmin\Models\User">User</abbr></a></td>
+                <td>$user</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int|null</td>
+                <td>$timestamp</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMessages">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Interfaces/TextChannelInterface.php#L18">line 18</a></div>
+        <code>                    <a href="../../../CharlotteDunois/Yasmin/Interfaces/MessageStorageInterface.html"><abbr title="CharlotteDunois\Yasmin\Interfaces\MessageStorageInterface">MessageStorageInterface</abbr></a>
+    <strong>getMessages</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Gets the storage with all cached messages.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../CharlotteDunois/Yasmin/Interfaces/MessageStorageInterface.html"><abbr title="CharlotteDunois\Yasmin\Interfaces\MessageStorageInterface">MessageStorageInterface</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getLastMessageID">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Interfaces/TextChannelInterface.php#L18">line 18</a></div>
+        <code>                    string
+    <strong>getLastMessageID</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Gets the ID of the last sent message in this channel.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
                     </div>
     </div>
 

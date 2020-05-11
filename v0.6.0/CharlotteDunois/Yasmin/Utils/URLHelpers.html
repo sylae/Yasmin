@@ -8,12 +8,10 @@
             <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
         <link rel="stylesheet" type="text/css" href="../../../css/sami.css">
-        <link rel="stylesheet" type="text/css" href="../../../css/prism.css">
         <script src="../../../js/jquery-1.11.1.min.js"></script>
         <script src="../../../js/bootstrap.min.js"></script>
         <script src="../../../js/typeahead.min.js"></script>
         <script src="../../../sami.js"></script>
-        <script src="../../../js/prism.js"></script>
         <meta name="MobileOptimized" content="width">
         <meta name="HandheldFriendly" content="true">
         <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
@@ -27,10 +25,13 @@
                 <div id="control-panel">
                     <form action="#" method="GET">
                 <select id="version-switcher" name="version">
+                                            <option value="../../../../v0.4.0/index.html" data-version="v0.4.0">v0.4.0</option>
+                                            <option value="../../../../v0.4.1/index.html" data-version="v0.4.1">v0.4.1</option>
+                                            <option value="../../../../v0.4.2/index.html" data-version="v0.4.2">v0.4.2</option>
                                             <option value="../../../../v0.5.0/index.html" data-version="v0.5.0">v0.5.0</option>
                                             <option value="../../../../v0.5.1/index.html" data-version="v0.5.1">v0.5.1</option>
                                             <option value="../../../../v0.6.0/index.html" data-version="v0.6.0">v0.6.0</option>
-                                            <option value="../../../../master/index.html" data-version="master">master</option>
+                                            <option value="../../../../master/index.html" data-version="master">master branch</option>
                                     </select>
             </form>
                 <script>
@@ -63,7 +64,7 @@
             <div class="collapse navbar-collapse" id="navbar-elements">
                 <ul class="nav navbar-nav">
                     <li><a href="../../../classes.html">Classes</a></li>
-                                                                <li><a href="../../../namespaces.html">Namespaces</a></li>
+                                            <li><a href="../../../namespaces.html">Namespaces</a></li>
                                         <li><a href="../../../interfaces.html">Interfaces</a></li>
                     <li><a href="../../../traits.html">Traits</a></li>
                     <li><a href="../../../doc-index.html">Index</a></li>
@@ -89,7 +90,7 @@
     </div>
 
     <p>    class
-    <strong>URLHelpers</strong>        (<a href="https://github.com/CharlotteDunois/Yasmin/blob/v0.6.0/src/Utils/URLHelpers.php" target="_blank">View source</a>)
+    <strong>URLHelpers</strong>        (<a href="https://github.com/sylae/yasmin/blob/v0.6.0/src/Utils/URLHelpers.php">View source</a>)
 </p>
 
         
@@ -107,23 +108,64 @@
                 <td class="last">
                     <p><em>The default HTTP user agent.</em></p>
                     <p></p>
-                                    </td>
+                </td>
             </tr>
             </table>
 
     
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_loop">
+                    static                    protected                                        <abbr title="React\EventLoop\LoopInterface">LoopInterface</abbr>
+                </td>
+                <td>$loop</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_http">
+                    static                    protected                                        <abbr title="Clue\React\Buzz\Browser">Browser</abbr>
+                </td>
+                <td>$http</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+            </table>
+
     
             <h2>Methods</h2>
 
             <div class="container-fluid underlined">
                     <div class="row">
                 <div class="col-md-2 type">
-                    static&nbsp;<abbr title="Psr\Http\Message\RequestInterface">RequestInterface</abbr>
+                    static&nbsp;void
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_applyRequestOptions">applyRequestOptions</a>(<abbr title="Psr\Http\Message\RequestInterface">RequestInterface</abbr> $request, array $requestOptions)
+                    <a href="#method_setLoop">setLoop</a>(<abbr title="React\EventLoop\LoopInterface">LoopInterface</abbr> $loop)
         
-                                            <p>Applies request options to the request.</p>                </div>
+                                            <p>Sets the Event Loop.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setHTTPClient">setHTTPClient</a>(<abbr title="Clue\React\Buzz\Browser">Browser</abbr> $client)
+        
+                                            <p>Set the HTTP client used in Yasmin (and in this utility).</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_internalSetClient">internalSetClient</a>()
+        
+                                            <p>Sets the client.</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -158,12 +200,12 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    static&nbsp;void
+                    static&nbsp;<abbr title="Psr\Http\Message\RequestInterface">RequestInterface</abbr>
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_setHTTPClient">setHTTPClient</a>(<abbr title="Clue\React\Buzz\Browser">Browser</abbr> $client)
+                    <a href="#method_applyRequestOptions">applyRequestOptions</a>(<abbr title="Psr\Http\Message\RequestInterface">RequestInterface</abbr> $request, array $requestOptions)
         
-                                            <p>Set the HTTP client used in Yasmin (and in this utility).</p>                </div>
+                                            <p>Applies request options to the request.</p>                </div>
                 <div class="col-md-2"></div>
             </div>
             </div>
@@ -173,10 +215,10 @@
 
             <div id="method-details">
                     <div class="method-item">
-                    <h3 id="method_applyRequestOptions">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/v0.6.0/src/Utils/URLHelpers.php#L179">line 179</a></div>
-        <code>        static            <abbr title="Psr\Http\Message\RequestInterface">RequestInterface</abbr>
-    <strong>applyRequestOptions</strong>(<abbr title="Psr\Http\Message\RequestInterface">RequestInterface</abbr> $request, array $requestOptions)
+                    <h3 id="method_setLoop">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.6.0/src/Utils/URLHelpers.php#L39">line 39</a></div>
+        <code>        static            void
+    <strong>setLoop</strong>(<abbr title="React\EventLoop\LoopInterface">LoopInterface</abbr> $loop)
         </code>
     </h3>
     <div class="details">
@@ -184,28 +226,14 @@
     
 
                     <div class="method-description">
-                                    <p>Applies request options to the request.</p>                    <p>The following request options are supported:</p>
-
-<pre><code>array(
-    'multipart' =&gt; array, (multipart form data, an array of `[ 'name' =&gt; string, 'contents' =&gt; string|resource, 'filename' =&gt; string ]`)
-    'json' =&gt; mixed, (any JSON serializable type to send with the request as body payload)
-    'query' =&gt; string, (the URL query string to set to)
-    'headers' =&gt; string[], (HTTP headers to set)
-)
-</code></pre>
-</p>                            </div>
+                                    <p>Sets the Event Loop.</p>                                                </div>
                 <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
-                <td><abbr title="Psr\Http\Message\RequestInterface">RequestInterface</abbr></td>
-                <td>$request</td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td>array</td>
-                <td>$requestOptions</td>
+                <td><abbr title="React\EventLoop\LoopInterface">LoopInterface</abbr></td>
+                <td>$loop</td>
                 <td></td>
             </tr>
             </table>
@@ -215,7 +243,52 @@
 
                     <table class="table table-condensed">
         <tr>
-            <td><abbr title="Psr\Http\Message\RequestInterface">RequestInterface</abbr></td>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setHTTPClient">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.6.0/src/Utils/URLHelpers.php#L58">line 58</a></div>
+        <code>        static            void
+    <strong>setHTTPClient</strong>(<abbr title="Clue\React\Buzz\Browser">Browser</abbr> $client)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the HTTP client used in Yasmin (and in this utility).</p>                    <p>Be aware that this method can be changed at any time.</p>
+
+<p>If you want to set the HTTP client, then you need to set it
+before the utilities get initialized by the Client!</p>
+
+<p>The HTTP client is after setting <strong>immutable</strong>.</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Clue\React\Buzz\Browser">Browser</abbr></td>
+                <td>$client</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
             <td></td>
         </tr>
     </table>
@@ -225,21 +298,49 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td><a href="https://secure.php.net/RuntimeException" target="_blank">RuntimeException</a></td>
+                <td><a target="_blank" href="http://php.net/LogicException">LogicException</a></td>
                 <td></td>
             </tr>
             </table>
 
             
-                        
-                        
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_internalSetClient">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.6.0/src/Utils/URLHelpers.php#L70">line 70</a></div>
+        <code>        static    protected        void
+    <strong>internalSetClient</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the client.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
                     </div>
     </div>
 
             </div>
                     <div class="method-item">
                     <h3 id="method_getHTTPClient">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/v0.6.0/src/Utils/URLHelpers.php#L78">line 78</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.6.0/src/Utils/URLHelpers.php#L78">line 78</a></div>
         <code>        static            <abbr title="Clue\React\Buzz\Browser">Browser</abbr>
     <strong>getHTTPClient</strong>()
         </code>
@@ -263,15 +364,13 @@
 
             
             
-                        
-                        
                     </div>
     </div>
 
             </div>
                     <div class="method-item">
                     <h3 id="method_makeRequest">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/v0.6.0/src/Utils/URLHelpers.php#L106">line 106</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.6.0/src/Utils/URLHelpers.php#L106">line 106</a></div>
         <code>        static            <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>makeRequest</strong>(<abbr title="Psr\Http\Message\RequestInterface">RequestInterface</abbr> $request, array|null $requestOptions = null)
         </code>
@@ -324,23 +423,15 @@
                             <h4>See also</h4>
 
                     <table class="table table-condensed">
-                    <tr>
-                <td>
-                                            <abbr title="Psr\Http\Message\ResponseInterface">ResponseInterface</abbr>
-                                    </td>
-                <td></td>
-            </tr>
             </table>
 
-                        
-                        
                     </div>
     </div>
 
             </div>
                     <div class="method-item">
                     <h3 id="method_resolveURLToData">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/v0.6.0/src/Utils/URLHelpers.php#L138">line 138</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.6.0/src/Utils/URLHelpers.php#L138">line 138</a></div>
         <code>        static            <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>resolveURLToData</strong>(string $url, array|null $requestHeaders = null)
         </code>
@@ -379,17 +470,15 @@
 
             
             
-                        
-                        
                     </div>
     </div>
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_setHTTPClient">
-        <div class="location">at         <a href="https://github.com/CharlotteDunois/Yasmin/blob/v0.6.0/src/Utils/URLHelpers.php#L58">line 58</a></div>
-        <code>        static            void
-    <strong>setHTTPClient</strong>(<abbr title="Clue\React\Buzz\Browser">Browser</abbr> $client)
+                    <h3 id="method_applyRequestOptions">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/v0.6.0/src/Utils/URLHelpers.php#L179">line 179</a></div>
+        <code>        static            <abbr title="Psr\Http\Message\RequestInterface">RequestInterface</abbr>
+    <strong>applyRequestOptions</strong>(<abbr title="Psr\Http\Message\RequestInterface">RequestInterface</abbr> $request, array $requestOptions)
         </code>
     </h3>
     <div class="details">
@@ -397,19 +486,28 @@
     
 
                     <div class="method-description">
-                                    <p>Set the HTTP client used in Yasmin (and in this utility).</p>                    <p>Be aware that this method can be changed at any time.</p>
+                                    <p>Applies request options to the request.</p>                    <p>The following request options are supported:</p>
 
-<p>If you want to set the HTTP client, then you need to set it
-before the utilities get initialized by the Client!</p>
-
-<p>The HTTP client is after setting <strong>immutable</strong>.</p>                            </div>
+<pre><code>array(
+    'multipart' =&gt; array, (multipart form data, an array of `[ 'name' =&gt; string, 'contents' =&gt; string|resource, 'filename' =&gt; string ]`)
+    'json' =&gt; mixed, (any JSON serializable type to send with the request as body payload)
+    'query' =&gt; string, (the URL query string to set to)
+    'headers' =&gt; string[], (HTTP headers to set)
+)
+</code></pre>
+</p>                            </div>
                 <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
-                <td><abbr title="Clue\React\Buzz\Browser">Browser</abbr></td>
-                <td>$client</td>
+                <td><abbr title="Psr\Http\Message\RequestInterface">RequestInterface</abbr></td>
+                <td>$request</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$requestOptions</td>
                 <td></td>
             </tr>
             </table>
@@ -419,7 +517,7 @@ before the utilities get initialized by the Client!</p>
 
                     <table class="table table-condensed">
         <tr>
-            <td>void</td>
+            <td><abbr title="Psr\Http\Message\RequestInterface">RequestInterface</abbr></td>
             <td></td>
         </tr>
     </table>
@@ -429,14 +527,12 @@ before the utilities get initialized by the Client!</p>
 
                     <table class="table table-condensed">
                     <tr>
-                <td><a href="https://secure.php.net/LogicException" target="_blank">LogicException</a></td>
+                <td><a target="_blank" href="http://php.net/RuntimeException">RuntimeException</a></td>
                 <td></td>
             </tr>
             </table>
 
             
-                        
-                        
                     </div>
     </div>
 
