@@ -1,4 +1,4 @@
-# Yasmin [![Build Status](https://scrutinizer-ci.com/g/CharlotteDunois/Yasmin/badges/build.png?b=master)](https://scrutinizer-ci.com/g/CharlotteDunois/Yasmin/build-status/master)
+# Yasmin
 
 Yasmin is a Discord API library for PHP. Yasmin connects to the Gateway and interacts with the REST API.
 
@@ -10,10 +10,10 @@ Before you start using this Library, you **need** to know how PHP works, you nee
 See https://github.com/elazar/asynchronous-php for resources.
 
 # Getting Started
-Getting started with Yasmin is pretty straight forward. All you need to do is to use [composer](https://packagist.org/packages/charlottedunois/yasmin) to install Yasmin and its dependencies. After that, you can include composer's autoloader into your file and start interacting with Discord and Yasmin!
+Getting started with Yasmin is pretty straight forward. All you need to do is to use [composer](https://packagist.org/packages/sylae/yasmin) to install Yasmin and its dependencies. After that, you can include composer's autoloader into your file and start interacting with Discord and Yasmin!
 
 ```
-composer require charlottedunois/yasmin
+composer require sylae/yasmin
 ```
 
 <br>
@@ -55,7 +55,7 @@ $loop->run();
 There is no voice support.
 
 # Documentation
-https://charlottedunois.github.io/Yasmin/
+https://sylae.github.io/Yasmin/
 
 # Windows and SSL
 Unfortunately PHP on Windows does not have access to the Windows Certificate Store. This is an issue because TLS gets used and as such certificate verification gets applied (turning this off is **not** an option).
