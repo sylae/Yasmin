@@ -18,7 +18,7 @@ trait TextChannelTrait {
      * @var \CharlotteDunois\Collect\Collection
      */
     protected $typings;
-    
+
     /**
      * Triggered typings in this channel.
      * @var array
@@ -28,13 +28,13 @@ trait TextChannelTrait {
         'count' => 0,
         'timer' => null
     );
-    
+
     /**
      * The last message's ID, or null.
      * @var string|null
      */
     protected $lastMessageID;
-    
+
     /**
      * @return string
      * @internal
@@ -42,22 +42,22 @@ trait TextChannelTrait {
     function serialize() {
         $triggers = $this->typingTriggered;
         $typings = clone $this->typings;
-        
+
         foreach($this->typings as $id => $type) {
             $type['timer'] = null;
             $this->typings->set($id, $type);
         }
-        
+
         $this->typingTriggered['timer'] = null;
-        
+
         $str = parent::serialize();
-        
+
         $this->typingTriggered = $triggers;
         $this->typings = $typings;
-        
+
         return $str;
     }
-    
+
     /**
      * Deletes multiple messages at once. Resolves with $this.
      * @param \CharlotteDunois\Collect\Collection|array|int  $messages           A collection or array of Message instances, or the number of messages to delete (2-100).
@@ -72,12 +72,12 @@ trait TextChannelTrait {
             } else {
                 $messages = \React\Promise\resolve($messages);
             }
-            
+
             $messages->done(function ($messages) use ($reason, $filterOldMessages, $resolve, $reject) {
                 if($messages instanceof \CharlotteDunois\Collect\Collection) {
                     $messages = $messages->all();
                 }
-                
+
                 if($filterOldMessages) {
                     $messages = \array_filter($messages, function ($message) {
                         if($message instanceof \CharlotteDunois\Yasmin\Models\Message) {
@@ -85,26 +85,26 @@ trait TextChannelTrait {
                         } else {
                             $timestamp = (int) \CharlotteDunois\Yasmin\Utils\Snowflake::deconstruct($message)->timestamp;
                         }
-                        
+
                         return ((\time() - $timestamp) < 1209600);
                     });
                 }
-                
+
                 $messages = \array_map(function ($message) {
                     return $message->id;
                 }, $messages);
-                
+
                 if(\count($messages) < 2 || \count($messages) > 100) {
                     return $reject(new \InvalidArgumentException('Unable to bulk delete less than 2 or more than 100 messages'));
                 }
-                
+
                 $this->client->apimanager()->endpoints->channel->bulkDeleteMessages($this->id, $messages, $reason)->done(function () use ($resolve) {
                     $resolve($this);
                 }, $reject);
             }, $reject);
         }));
     }
-    
+
     /**
      * Collects messages during a specific duration (and max. amount). Resolves with a Collection of Message instances, mapped by their IDs.
      *
@@ -133,11 +133,11 @@ trait TextChannelTrait {
         $mfilter = function (\CharlotteDunois\Yasmin\Models\Message $message) use ($filter) {
             return ($message->channel->getId() === $this->id && $filter($message));
         };
-        
+
         $collector = new \CharlotteDunois\Yasmin\Utils\Collector($this->client, 'message', $mhandler, $mfilter, $options);
         return $collector->collect();
     }
-    
+
     /**
      * Fetches a specific message using the ID. Resolves with an instance of Message.
      * @param string  $id
@@ -152,7 +152,7 @@ trait TextChannelTrait {
             }, $reject);
         }));
     }
-    
+
     /**
      * Fetches messages of this channel. Resolves with a Collection of Message instances, mapped by their ID.
      *
@@ -175,17 +175,17 @@ trait TextChannelTrait {
         return (new \React\Promise\Promise(function (callable $resolve, callable $reject) use ($options) {
             $this->client->apimanager()->endpoints->channel->getChannelMessages($this->id, $options)->done(function ($data) use ($resolve) {
                 $collect = new \CharlotteDunois\Collect\Collection();
-                
+
                 foreach($data as $m) {
                     $message = $this->_createMessage($m);
                     $collect->set($message->id, $message);
                 }
-                
+
                 $resolve($collect);
             }, $reject);
         }));
     }
-    
+
     /**
      * Gets the last message in this channel if cached, or null.
      * @return \CharlotteDunois\Yasmin\Models\Message|null
@@ -194,10 +194,10 @@ trait TextChannelTrait {
         if(!empty($this->lastMessageID) && $this->messages->has($this->lastMessageID)) {
             return $this->messages->get($this->lastMessageID);
         }
-        
+
         return null;
     }
-    
+
     /**
      * Sends a message to a channel. Resolves with an instance of Message, or a Collection of Message instances, mapped by their ID.
      *
@@ -211,6 +211,7 @@ trait TextChannelTrait {
      *    'disableEveryone' => bool, (whether @everyone and @here should be replaced with plaintext, defaults to client option disableEveryone)
      *    'tts' => bool,
      *    'split' => bool|array, (*)
+     *    'reply' => Message
      * )
      *
      *   * array(
@@ -223,48 +224,65 @@ trait TextChannelTrait {
      *
      * @param string  $content  The message content.
      * @param array   $options  Any message options.
+     *
      * @return \React\Promise\ExtendedPromiseInterface
      * @see \CharlotteDunois\Yasmin\Models\Message
      */
     function send(string $content, array $options = array()) {
         return (new \React\Promise\Promise(function (callable $resolve, callable $reject) use ($content, $options) {
             \CharlotteDunois\Yasmin\Utils\MessageHelpers::resolveMessageOptionsFiles($options)->done(function ($files) use ($content, $options, $resolve, $reject) {
-                $msg = array(
-                    'content' => $content
-                );
-                
-                if(!empty($options['embed'])) {
+                $msg = [
+                    'content' => $content,
+                ];
+
+                if (!empty($options['embed'])) {
                     $msg['embed'] = $options['embed'];
                 }
-                
-                if(!empty($options['nonce'])) {
+
+                if (!empty($options['nonce'])) {
                     $msg['nonce'] = $options['nonce'];
                 }
-                
-                $disableEveryone = (isset($options['disableEveryone']) ? ((bool) $options['disableEveryone']) : $this->client->getOption('disableEveryone', true));
-                if($disableEveryone) {
-                    $msg['content'] = \str_replace(array('@everyone', '@here'), array("@\u{200b}everyone", "@\u{200b}here"), $msg['content']);
+
+                if (!empty($options['reply'])) {
+                    $msg['message_reference'] = [
+                        'message_id' => $options['reply']->id,
+                        'channel_id' => $options['reply']->channel->id,
+                        'fail_if_not_exists' => false, // todo make this an option
+                    ];
+                    if (isset($options['reply']->guild)) {
+                        $msg['message_reference']['guild_id'] = $options['reply']->guild->id;
+                    }
                 }
-                
-                if(!empty($options['tts'])) {
+
+                $disableEveryone = (isset($options['disableEveryone']) ? ((bool)$options['disableEveryone']) : $this->client->getOption('disableEveryone',
+                    true));
+                if ($disableEveryone) {
+                    $msg['content'] = \str_replace(['@everyone', '@here'], ["@\u{200b}everyone", "@\u{200b}here"],
+                        $msg['content']);
+                }
+
+                if (!empty($options['tts'])) {
                     $msg['tts'] = true;
                 }
-                
-                if(isset($options['split'])) {
-                    $options['split'] = $split = \array_merge(\CharlotteDunois\Yasmin\Models\Message::DEFAULT_SPLIT_OPTIONS, (\is_array($options['split']) ? $options['split'] : array()));
-                    $messages = \CharlotteDunois\Yasmin\Utils\MessageHelpers::splitMessage($msg['content'], $options['split']);
-                    
-                    if(\count($messages) > 1) {
+
+                if (isset($options['split'])) {
+                    $options['split'] = $split = \array_merge(\CharlotteDunois\Yasmin\Models\Message::DEFAULT_SPLIT_OPTIONS,
+                        (\is_array($options['split']) ? $options['split'] : []));
+                    $messages = \CharlotteDunois\Yasmin\Utils\MessageHelpers::splitMessage($msg['content'],
+                        $options['split']);
+
+                    if (\count($messages) > 1) {
                         $collection = new \CharlotteDunois\Collect\Collection();
                         $i = \count($messages);
-                        
+
                         $chunkedSend = function ($msg, $files = null) use ($collection, $reject) {
-                            return $this->client->apimanager()->endpoints->channel->createMessage($this->id, $msg, ($files ?? array()))->then(function ($response) use ($collection) {
+                            return $this->client->apimanager()->endpoints->channel->createMessage($this->id, $msg,
+                                ($files ?? []))->then(function ($response) use ($collection) {
                                 $msg = $this->_createMessage($response);
                                 $collection->set($msg->id, $msg);
                             }, $reject);
                         };
-                        
+
                         $promise = \React\Promise\resolve();
                         foreach($messages as $key => $message) {
                             $promise = $promise->then(function () use ($chunkedSend, &$files, $key, $i, $message, &$msg, $split) {
@@ -273,33 +291,33 @@ trait TextChannelTrait {
                                     $fs = $files;
                                     $files = null;
                                 }
-                                
+
                                 $message = array(
                                     'content' => ($key > 0 ? $split['before'] : '').$message.($key < $i ? $split['after'] : '')
                                 );
-                                
+
                                 if(!empty($msg['embed'])) {
                                     $message['embed'] = $msg['embed'];
                                     $msg['embed'] = null;
                                 }
-                                
+
                                 return $chunkedSend($message, $fs);
                             }, $reject);
                         }
-                        
+
                         return $promise->done(function () use ($collection, $resolve) {
                             $resolve($collection);
                         }, $reject);
                     }
                 }
-                
+
                 $this->client->apimanager()->endpoints->channel->createMessage($this->id, $msg, ($files ?? array()))->done(function ($response) use ($resolve) {
                     $resolve($this->_createMessage($response));
                 }, $reject);
             }, $reject);
         }));
     }
-    
+
     /**
      * Starts sending the typing indicator in this channel. Counts up a triggered typing counter.
      * @return void
@@ -312,36 +330,38 @@ trait TextChannelTrait {
                 }, function () {
                     $this->_updateTyping($this->client->user);
                     $this->typingTriggered['count'] = 0;
-                    
+
                     if($this->typingTriggered['timer']) {
                         $this->client->cancelTimer($this->typingTriggered['timer']);
                         $this->typingTriggered['timer'] = null;
                     }
                 });
             };
-            
+
             $this->typingTriggered['timer'] = $this->client->addPeriodicTimer(7, $fn);
             $fn();
         }
-        
+
         $this->typingTriggered['count']++;
     }
-    
+
     /**
      * Stops sending the typing indicator in this channel. Counts down a triggered typing counter.
-     * @param bool  $force  Reset typing counter and stop sending the indicator.
+     *
+     * @param bool $force Reset typing counter and stop sending the indicator.
+     *
      * @return void
      */
     function stopTyping(bool $force = false) {
         if($this->typingTriggered['count'] === 0) {
             return;
         }
-        
+
         $this->typingTriggered['count']--;
         if($force) {
             $this->typingTriggered['count'] = 0;
         }
-        
+
         if($this->typingTriggered['count'] === 0) {
             if($this->typingTriggered['timer']) {
                 $this->client->cancelTimer($this->typingTriggered['timer']);
@@ -349,7 +369,7 @@ trait TextChannelTrait {
             }
         }
     }
-    
+
     /**
      * Returns the amount of user typing in this channel.
      * @return int
@@ -357,16 +377,18 @@ trait TextChannelTrait {
     function typingCount() {
         return $this->typings->count();
     }
-    
+
     /**
      * Determines whether the given user is typing in this channel or not.
+     *
      * @param \CharlotteDunois\Yasmin\Models\User  $user
+     *
      * @return bool
      */
     function isTyping(\CharlotteDunois\Yasmin\Models\User $user) {
         return $this->typings->has($user->id);
     }
-    
+
     /**
      * Determines whether how long the given user has been typing in this channel. Returns -1 if the user is not typing.
      * @param \CharlotteDunois\Yasmin\Models\User  $user
@@ -376,10 +398,10 @@ trait TextChannelTrait {
         if(!$this->isTyping($user)) {
             return -1;
         }
-        
+
         return (\time() - $this->typings->get($user->id)['timestamp']);
     }
-    
+
     /**
      * @param array  $message
      * @return \CharlotteDunois\Yasmin\Models\Message
@@ -389,12 +411,12 @@ trait TextChannelTrait {
         if($this->messages->has($message['id'])) {
             return $this->messages->get($message['id']);
         }
-        
+
         $msg = new \CharlotteDunois\Yasmin\Models\Message($this->client, $this, $message);
         $this->messages->set($msg->id, $msg);
         return $msg;
     }
-    
+
     /**
      * @param \CharlotteDunois\Yasmin\Models\User  $user
      * @param int|null                             $timestamp
@@ -406,22 +428,22 @@ trait TextChannelTrait {
             $this->typings->delete($user->id);
             return false;
         }
-        
+
         $typing = $this->typings->get($user->id);
         if($typing && ($typing['timer'] instanceof \React\EventLoop\Timer\TimerInterface || $typing['timer'] instanceof \React\EventLoop\TimerInterface)) {
             $this->client->cancelTimer($typing['timer']);
         }
-        
+
         $timer = $this->client->addTimer(9, function () use ($user) {
             $this->typings->delete($user->id);
             $this->client->emit('typingStop', $this, $user);
         });
-        
+
         $this->typings->set($user->id, array(
             'timestamp' => (int) $timestamp,
             'timer' => $timer
         ));
-        
+
         return ($typing === null);
     }
 }

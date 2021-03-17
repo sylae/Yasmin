@@ -12,30 +12,55 @@ namespace CharlotteDunois\Yasmin\Models;
 /**
  * Represents a message.
  *
- * @property string                                                   $id                 The message ID.
- * @property \CharlotteDunois\Yasmin\Models\User                      $author             The user that created the message.
- * @property \CharlotteDunois\Yasmin\Interfaces\TextChannelInterface  $channel            The channel this message was created in.
- * @property int                                                      $createdTimestamp   The timestamp of when this message was created.
- * @property int|null                                                 $editedTimestamp    The timestamp of when this message was edited, or null.
- * @property string                                                   $content            The message content.
- * @property string                                                   $cleanContent       The message content with all mentions replaced.
- * @property \CharlotteDunois\Collect\Collection                      $attachments        A collection of attachments in the message - mapped by their ID. ({@see \CharlotteDunois\Yasmin\Models\MessageAttachment})
- * @property \CharlotteDunois\Yasmin\Models\MessageEmbed[]            $embeds             An array of embeds in the message.
- * @property \CharlotteDunois\Yasmin\Models\MessageMentions           $mentions           All valid mentions that the message contains.
- * @property bool                                                     $tts                Whether or not the message is Text-To-Speech.
- * @property string|null                                              $nonce              A snowflake used for checking message delivery, or null.
- * @property bool                                                     $pinned             Whether the message is pinned or not.
- * @property bool                                                     $system             Whether the message is a system message.
- * @property string                                                   $type               The type of the message. ({@see Message::MESSAGE_TYPES})
- * @property \CharlotteDunois\Collect\Collection                      $reactions          A collection of message reactions, mapped by ID (or name). ({@see \CharlotteDunois\Yasmin\Models\MessageReaction})
- * @property string|null                                              $webhookID          ID of the webhook that sent the message, if applicable, or null.
- * @property \CharlotteDunois\Yasmin\Models\MessageActivity|null      $activity           The activity attached to this message. Sent with Rich Presence-related chat embeds.
- * @property \CharlotteDunois\Yasmin\Models\MessageApplication|null   $application        The application attached to this message. Sent with Rich Presence-related chat embeds.
+ * @property string                                                  $id                  The message ID.
+ * @property \CharlotteDunois\Yasmin\Models\User                     $author              The user that created the
+ *           message.
+ * @property \CharlotteDunois\Yasmin\Interfaces\TextChannelInterface $channel             The channel this message was
+ *           created in.
+ * @property int                                                     $createdTimestamp    The timestamp of when this
+ *           message was created.
+ * @property int|null                                                $editedTimestamp     The timestamp of when this
+ *           message was edited, or null.
+ * @property string                                                  $content             The message content.
+ * @property string                                                  $cleanContent        The message content with all
+ *           mentions replaced.
+ * @property \CharlotteDunois\Collect\Collection                     $attachments         A collection of attachments
+ *           in the message - mapped by their ID. ({@see \CharlotteDunois\Yasmin\Models\MessageAttachment})
+ * @property \CharlotteDunois\Yasmin\Models\MessageEmbed[]           $embeds              An array of embeds in the
+ *           message.
+ * @property \CharlotteDunois\Yasmin\Models\MessageMentions          $mentions            All valid mentions that the
+ *           message contains.
+ * @property bool                                                    $tts                 Whether or not the message is
+ *           Text-To-Speech.
+ * @property string|null                                             $nonce               A snowflake used for checking
+ *           message delivery, or null.
+ * @property bool                                                    $pinned              Whether the message is pinned
+ *           or not.
+ * @property bool                                                    $system              Whether the message is a
+ *           system message.
+ * @property string                                                  $type                The type of the message.
+ *           ({@see Message::MESSAGE_TYPES})
+ * @property \CharlotteDunois\Collect\Collection                     $reactions           A collection of message
+ *           reactions, mapped by ID (or name). ({@see \CharlotteDunois\Yasmin\Models\MessageReaction})
+ * @property string|null                                             $webhookID           ID of the webhook that sent
+ *           the message, if applicable, or null.
+ * @property \CharlotteDunois\Yasmin\Models\MessageActivity|null     $activity            The activity attached to this
+ *           message. Sent with Rich Presence-related chat embeds.
+ * @property \CharlotteDunois\Yasmin\Models\MessageApplication|null  $application         The application attached to
+ *           this message. Sent with Rich Presence-related chat embeds.
  *
- * @property \DateTime                                                $createdAt          An DateTime instance of the createdTimestamp.
- * @property \DateTime|null                                           $editedAt           An DateTime instance of the editedTimestamp, or null.
- * @property \CharlotteDunois\Yasmin\Models\Guild|null                $guild              The correspondending guild (if message posted in a guild), or null.
- * @property \CharlotteDunois\Yasmin\Models\GuildMember|null          $member             The correspondending guildmember of the author (if message posted in a guild), or null.
+ * @property \DateTime                                               $createdAt           An DateTime instance of the
+ *           createdTimestamp.
+ * @property \DateTime|null                                          $editedAt            An DateTime instance of the
+ *           editedTimestamp, or null.
+ * @property \CharlotteDunois\Yasmin\Models\Guild|null               $guild               The correspondending guild
+ *           (if message posted in a guild), or null.
+ * @property \CharlotteDunois\Yasmin\Models\GuildMember|null         $member              The correspondending
+ *           guildmember of the author (if message posted in a guild), or null.
+ * @property \CharlotteDunois\Yasmin\Models\Message|null             $replyTo             The message being replied to,
+ *           or null.
+ * @property int|null                                                $replyToID           he message ID being replied
+ *           to, or null.
  */
 class Message extends ClientBase {
     /**
@@ -196,30 +221,57 @@ class Message extends ClientBase {
     protected $reactions;
 
     /**
+     * If this is a reply, the Message it is in response to
+     * @var Message|null
+     */
+    protected $replyTo;
+
+    /**
+     * If this is a reply, the id of the Message it is in response to
+     * @var int|null
+     */
+    protected $replyToID;
+
+    /**
      * @internal
      */
-    function __construct(\CharlotteDunois\Yasmin\Client $client, \CharlotteDunois\Yasmin\Interfaces\TextChannelInterface $channel, array $message) {
+    function __construct(
+        \CharlotteDunois\Yasmin\Client $client,
+        \CharlotteDunois\Yasmin\Interfaces\TextChannelInterface $channel,
+        array $message
+    ) {
         parent::__construct($client);
         $this->channel = $channel;
 
         $this->id = $message['id'];
-        $this->author = (empty($message['webhook_id']) ? $this->client->users->patch($message['author']) : new \CharlotteDunois\Yasmin\Models\User($this->client, $message['author'], true));
+        $this->author = (empty($message['webhook_id']) ? $this->client->users->patch($message['author']) : new \CharlotteDunois\Yasmin\Models\User($this->client,
+            $message['author'], true));
 
-        $this->createdTimestamp = (int) \CharlotteDunois\Yasmin\Utils\Snowflake::deconstruct($this->id)->timestamp;
+        $this->createdTimestamp = (int)\CharlotteDunois\Yasmin\Utils\Snowflake::deconstruct($this->id)->timestamp;
 
         $this->attachments = new \CharlotteDunois\Collect\Collection();
-        foreach($message['attachments'] as $attachment) {
+        foreach ($message['attachments'] as $attachment) {
             $atm = new \CharlotteDunois\Yasmin\Models\MessageAttachment($attachment);
             $this->attachments->set($atm->id, $atm);
         }
 
         $this->reactions = new \CharlotteDunois\Collect\Collection();
-        if(!empty($message['reactions'])) {
-            foreach($message['reactions'] as $reaction) {
+        if (!empty($message['reactions'])) {
+            foreach ($message['reactions'] as $reaction) {
                 $guild = ($this->channel instanceof \CharlotteDunois\Yasmin\Models\TextChannel ? $this->channel->getGuild() : null);
 
-                $emoji = ($this->client->emojis->get($reaction['emoji']['id'] ?? $reaction['emoji']['name']) ?? (new \CharlotteDunois\Yasmin\Models\Emoji($this->client, $guild, $reaction['emoji'])));
-                $this->reactions->set($emoji->uid, (new \CharlotteDunois\Yasmin\Models\MessageReaction($this->client, $this, $emoji, $reaction)));
+                $emoji = ($this->client->emojis->get($reaction['emoji']['id'] ?? $reaction['emoji']['name']) ?? (new \CharlotteDunois\Yasmin\Models\Emoji($this->client,
+                        $guild, $reaction['emoji'])));
+                $this->reactions->set($emoji->uid,
+                    (new \CharlotteDunois\Yasmin\Models\MessageReaction($this->client, $this, $emoji, $reaction)));
+            }
+        }
+
+        if (array_key_exists('referenced_message', $message) && is_array($message['referenced_message'])) {
+            $this->replyToID = $message['referenced_message']['id'];
+            $repChannel = $this->client->channels->get($message['referenced_message']['channel_id']);
+            if ($repChannel instanceof TextChannel || $repChannel instanceof DMChannel) {
+                $this->replyTo = $repChannel->messages->get($this->replyToID);
             }
         }
 
@@ -448,23 +500,30 @@ class Message extends ClientBase {
     }
 
     /**
-     * Replies to the message. Resolves with an instance of Message, or with a Collection of Message instances, mapped by their ID.
-     * @param string  $content
-     * @param array   $options
+     * Replies to the message. Resolves with an instance of Message, or with a Collection of Message instances, mapped
+     * by their ID.
+     *
+     * @param string $content
+     * @param array  $options
+     *
      * @return \React\Promise\ExtendedPromiseInterface
      * @see \CharlotteDunois\Yasmin\Traits\TextChannelTrait::send()
      */
-    function reply(string $content, array $options = array()) {
-        return $this->channel->send($this->author->__toString().self::$replySeparator.$content, $options);
+    function reply(string $content, array $options = [])
+    {
+        $options['reply'] = $this;
+        return $this->channel->send($content, $options);
     }
 
     /**
      * Unpins the message. Resolves with $this.
      * @return \React\Promise\ExtendedPromiseInterface
      */
-    function unpin() {
+    function unpin()
+    {
         return (new \React\Promise\Promise(function (callable $resolve, callable $reject) {
-            $this->client->apimanager()->endpoints->channel->unpinChannelMessage($this->channel->getId(), $this->id)->done(function () use ($resolve) {
+            $this->client->apimanager()->endpoints->channel->unpinChannelMessage($this->channel->getId(),
+                $this->id)->done(function () use ($resolve) {
                 $resolve($this);
             }, $reject);
         }));
