@@ -29,172 +29,193 @@ namespace CharlotteDunois\Yasmin;
  */
 class Client implements \CharlotteDunois\Events\EventEmitterInterface {
     use \CharlotteDunois\Events\EventEmitterErrorTrait;
-    
+
     /**
      * The version of Yasmin.
      * @var string
      */
     const VERSION = '0.7.0';
-    
+
     /**
      * WS connection status: Disconnected.
      * @var int
      */
     const WS_STATUS_DISCONNECTED = 0;
-    
+
     /**
      * WS connection status: Connecting.
      * @var int
      */
     const WS_STATUS_CONNECTING = 1;
-    
+
     /**
      * WS connection status: Reconnecting.
      * @var int
      */
     const WS_STATUS_RECONNECTING = 2;
-    
+
     /**
      * WS connection status: Connected (not ready yet - nearly).
      * @var int
      */
     const WS_STATUS_NEARLY = 3;
-    
+
     /**
      * WS connection status: Connected (ready).
      * @var int
      */
     const WS_STATUS_CONNECTED = 4;
-    
+
     /**
      * WS connection status: Idling (disconnected and no reconnect planned).
      * @var int
      */
     const WS_STATUS_IDLE = 5;
-    
+
     /**
      * WS default compression.
      * @var string
      */
     const WS_DEFAULT_COMPRESSION = 'zlib-stream';
-    
+
+    /**
+     * WS available intents.
+     */
+    const WS_INTENTS = [
+        'GUILDS' => 1 << 0,
+        'GUILD_MEMBERS' => 1 << 1,
+        'GUILD_BANS' => 1 << 2,
+        'GUILD_EMOJIS' => 1 << 3,
+        'GUILD_INTEGRATIONS' => 1 << 4,
+        'GUILD_WEBHOOKS' => 1 << 5,
+        'GUILD_INVITES' => 1 << 6,
+        'GUILD_VOICE_STATES' => 1 << 7,
+        'GUILD_PRESENCES' => 1 << 8,
+        'GUILD_MESSAGES' => 1 << 9,
+        'GUILD_MESSAGE_REACTIONS' => 1 << 10,
+        'GUILD_MESSAGE_TYPING' => 1 << 11,
+        'DIRECT_MESSAGES' => 1 << 12,
+        'DIRECT_MESSAGE_REACTIONS' => 1 << 13,
+        'DIRECT_MESSAGE_TYPING' => 1 << 14,
+    ];
+
     /**
      * It holds all cached channels, mapped by ID.
      * @var \CharlotteDunois\Yasmin\Models\ChannelStorage
      * @internal
      */
     protected $channels;
-    
+
     /**
      * It holds all emojis, mapped by ID (custom emojis) and/or name (unicode emojis).
      * @var \CharlotteDunois\Yasmin\Models\EmojiStorage
      * @internal
      */
     protected $emojis;
-    
+
     /**
      * It holds all guilds, mapped by ID.
      * @var \CharlotteDunois\Yasmin\Models\GuildStorage
      * @internal
      */
     protected $guilds;
-    
+
     /**
      * It holds all cached presences (latest ones), mapped by user ID.
      * @var \CharlotteDunois\Yasmin\Models\PresenceStorage
      * @internal
      */
     protected $presences;
-    
+
     /**
      * It holds all cached users, mapped by ID.
      * @var \CharlotteDunois\Yasmin\Models\UserStorage
      * @internal
      */
     protected $users;
-    
+
     /**
      * Holds all shards, mapped by shard ID.
      * @var \CharlotteDunois\Collect\Collection
      * @internal
      */
     protected $shards;
-    
+
     /**
      * The UNIX timestamp of the last emitted ready event (or null if none yet).
      * @var int|null
      */
     public $readyTimestamp = null;
-    
+
     /**
      * The token.
      * @var string|null
      */
     public $token;
-    
+
     /**
      * The event loop.
      * @var \React\EventLoop\LoopInterface
      * @internal
      */
     protected $loop;
-    
+
     /**
      * Client Options.
      * @var array
      * @internal
      */
     protected $options = array();
-    
+
     /**
      * The Client User.
      * @var \CharlotteDunois\Yasmin\Models\ClientUser|null
      * @internal
      */
     protected $user;
-    
+
     /**
      * The API manager.
      * @var \CharlotteDunois\Yasmin\HTTP\APIManager
      * @internal
      */
     protected $api;
-    
+
     /**
      * The WS manager.
      * @var \CharlotteDunois\Yasmin\WebSocket\WSManager|null
      * @internal
      */
     protected $ws;
-    
+
     /**
      * Gateway address information.
      * @var array
      * @internal
      */
     protected $gateway;
-    
+
     /**
      * Timers which automatically get cancelled on destroy and only get run when we have a WS connection.
      * @var array
      * @internal
      */
     protected $timers = array();
-    
+
     /**
      * Loaded Utils with a loop instance.
      * @var array
      * @internal
      */
     protected $utils = array();
-    
+
     /**
      * Events queue, until client turns ready.
      * @var array
      * @internal
      */
     protected $eventsQueue = array();
-    
+
     /**
      * What do you expect this to do? It makes a new Client instance. Available client options are as following (all are optional):
      *
@@ -215,6 +236,7 @@ class Client implements \CharlotteDunois\Events\EventEmitterInterface {
      *   'http.restTimeOffset' => int|float, (specifies how many seconds should be waited after one REST request before the next REST request should be done)
      *   'http.requestErrorDelay' => int, (specifies how many seconds should be waited after a HTTP 5XX error before queueing the request again, after two retries the time will be doubled, defaults to 30 - minimum 15)
      *   'http.requestMaxRetries' => int, (specifies how many times the request should be retried on HTTP 5XX until we give up, defaults to 0 (never give up))
+     *   'ws.intents' => int, (which server intents to register to. defaults to all. OR together Client::WS_INTENTS)
      *   'ws.compression' => string, (Enables a specific one, defaults to zlib-stream, which is currently the only available compression)
      *   'ws.encoding' => string, (use a specific websocket encoding, JSON or ETF (if suggested package installed), recommended is JSON for now)
      *   'ws.disabledEvents' => string[], (disables specific websocket events (e.g. TYPING_START), only disable websocket events if you know what they do)
@@ -226,6 +248,7 @@ class Client implements \CharlotteDunois\Events\EventEmitterInterface {
      *
      * @param array                            $options  Any client options.
      * @param \React\EventLoop\LoopInterface   $loop     You can pass an event loop to the class, or it will automatically create one (you still need to make it run yourself).
+     *
      * @throws \Exception
      * @throws \RuntimeException
      * @throws \InvalidArgumentException
@@ -236,18 +259,18 @@ class Client implements \CharlotteDunois\Events\EventEmitterInterface {
         if(\PHP_SAPI !== 'cli') {
             throw new \Exception('Yasmin can only be used in the CLI SAPI. Please use PHP CLI to run Yasmin.');
         }
-        
+
         if(!empty($options)) {
             $this->validateClientOptions($options);
             $this->options = \array_merge($this->options, $options);
         }
-        
+
         if(!$loop) {
             $loop = \React\EventLoop\Factory::create();
         }
-        
+
         $this->loop = $loop;
-        
+
         // ONLY use this if you know to 100% the consequences and know what you are doing
         if(!empty($options['internal.api.instance'])) {
             if(\is_string($options['internal.api.instance'])) {
@@ -259,7 +282,7 @@ class Client implements \CharlotteDunois\Events\EventEmitterInterface {
         } else {
             $this->api = new \CharlotteDunois\Yasmin\HTTP\APIManager($this);
         }
-        
+
         // ONLY use this if you know to 100% the consequences and know what you are doing
         if(($options['internal.ws.disable'] ?? false) !== true) {
             // ONLY use this if you know to 100% the consequences and know what you are doing
@@ -273,32 +296,33 @@ class Client implements \CharlotteDunois\Events\EventEmitterInterface {
             } else {
                 $this->ws = new \CharlotteDunois\Yasmin\WebSocket\WSManager($this);
             }
-            
+
             $this->ws->on('ready', function () {
                 $this->readyTimestamp = \time();
                 $this->emit('ready');
             });
-            
+
             $this->ws->once('ready', function () {
-                while([ $event, $args ] = \array_shift($this->eventsQueue)) {
+                while ([$event, $args] = \array_shift($this->eventsQueue)) {
                     $this->emit($event, ...$args);
                 }
             });
         }
-        
+
+
         $this->checkOptionsStorages();
-        
+
         $this->channels = new $this->options['internal.storages.channels']($this);
         $this->emojis = new $this->options['internal.storages.emojis']($this);
         $this->guilds = new $this->options['internal.storages.guilds']($this);
         $this->presences = new $this->options['internal.storages.presences']($this);
         $this->users = new $this->options['internal.storages.users']($this);
-        
+
         $this->shards = new \CharlotteDunois\Collect\Collection();
-        
+
         $this->registerUtils();
     }
-    
+
     /**
      * @param string  $name
      * @return bool
@@ -312,11 +336,11 @@ class Client implements \CharlotteDunois\Events\EventEmitterInterface {
             if($e->getTrace()[0]['function'] === '__get') {
                 return false;
             }
-            
+
             throw $e;
         }
     }
-    
+
     /**
      * @param string  $name
      * @return mixed
@@ -325,26 +349,26 @@ class Client implements \CharlotteDunois\Events\EventEmitterInterface {
      */
     function __get($name) {
         $props = array('loop', 'channels', 'emojis', 'guilds', 'presences', 'users', 'shards', 'user');
-        
+
         if(\in_array($name, $props)) {
             return $this->$name;
         }
-        
+
         switch($name) {
             case 'pings':
                 $pings = array();
-                
+
                 foreach($this->shards as $shard) {
                     $pings = \array_merge($pings, $shard->ws->pings);
                 }
-                
+
                 return $pings;
             break;
         }
-        
+
         throw new \RuntimeException('Unknown property '.\get_class($this).'::$'.$name);
     }
-    
+
     /**
      * You don't need to know.
      * @return \CharlotteDunois\Yasmin\HTTP\APIManager
@@ -353,7 +377,7 @@ class Client implements \CharlotteDunois\Events\EventEmitterInterface {
     function apimanager() {
         return $this->api;
     }
-    
+
     /**
      * You don't need to know.
      * @return \CharlotteDunois\Yasmin\WebSocket\WSManager
@@ -362,7 +386,7 @@ class Client implements \CharlotteDunois\Events\EventEmitterInterface {
     function wsmanager() {
         return $this->ws;
     }
-    
+
     /**
      * Get the React Event Loop that is stored in this class.
      * @return \React\EventLoop\LoopInterface
@@ -370,7 +394,7 @@ class Client implements \CharlotteDunois\Events\EventEmitterInterface {
     function getLoop() {
         return $this->loop;
     }
-    
+
     /**
      * Get a specific option, or the default value.
      * @param string  $name
@@ -381,10 +405,10 @@ class Client implements \CharlotteDunois\Events\EventEmitterInterface {
         if(isset($this->options[$name])) {
             return $this->options[$name];
         }
-        
+
         return $default;
     }
-    
+
     /**
      * Calculates the average ping. Or NAN.
      * @return int|float
@@ -392,32 +416,32 @@ class Client implements \CharlotteDunois\Events\EventEmitterInterface {
     function getPing() {
         $pings = $this->pings;
         $cpings = \count($pings);
-        
+
         if($cpings === 0) {
             return \NAN;
         }
-        
+
         return ((int) \ceil(\array_sum($pings) / $cpings));
     }
-    
+
     /**
      * Returns the computed WS status across all shards.
      * @return int
      */
     function getWSstatus() {
         $largest = 0;
-        
+
         foreach($this->shards as $shard) {
             $largest = ($shard->ws->status > $largest ? $shard->ws->status : $largest);
-            
+
             if($shard->ws->status === self::WS_STATUS_CONNECTED) {
                 return self::WS_STATUS_CONNECTED;
             }
         }
-        
+
         return $largest;
     }
-    
+
     /**
      * Login into Discord. Opens a WebSocket Gateway connection. Resolves once a WebSocket connection has been successfully established (does not mean the client is ready).
      * @param string $token  Your token.
@@ -427,83 +451,83 @@ class Client implements \CharlotteDunois\Events\EventEmitterInterface {
      */
     function login(string $token, bool $force = false) {
         $token = \trim($token);
-        
+
         if(empty($token)) {
             throw new \RuntimeException('Token can not be empty');
         }
-        
+
         $this->token = $token;
-        
+
         return (new \React\Promise\Promise(function (callable $resolve, callable $reject) use ($force) {
             if($this->ws === null) {
                 return $resolve();
             }
-            
+
             if(!empty($this->gateway) && !$force) {
                 $gateway = \React\Promise\resolve($this->gateway);
             } else {
                 $gateway = $this->api->getGateway(true);
             }
-            
+
             $gateway->then(function (array $url) {
                 $this->gateway = $url;
-                
+
                 $wsquery = \CharlotteDunois\Yasmin\WebSocket\WSManager::WS;
                 $encoding = $this->getOption('ws.encoding');
-                
+
                 if(!empty($encoding) && \is_string($encoding)) {
                     $wsquery['encoding'] = $encoding;
                 }
-                
+
                 $minShard = $this->getOption('minShardID');
                 $maxShard = $this->getOption('maxShardID');
-                
+
                 if($minShard === null || $maxShard === null || $this->getOption('shardCount') === null) {
                     $minShard = 0;
                     $maxShard = $url['shards'] - 1;
                     $this->options['shardCount'] = (int) $url['shards'];
                 }
-                
+
                 $this->options['numShards'] = $maxShard - $minShard + 1;
-                
+
                 $remlogin = ($url['remaining'] ?? \INF);
                 if($remlogin < $this->options['numShards']) {
                     throw new \RangeException('Remaining gateway identify limit is not sufficient ('.$remlogin.' - '.$this->options['numShards'].' shards)');
                 }
-                
+
                 $prom = \React\Promise\resolve();
-                
+
                 for($shard = $minShard; $shard <= $maxShard; $shard++) {
                     $prom = $prom->then(function () use ($shard, $url, $wsquery) {
                         $prom = $this->ws->connectShard($shard, $url['url'], $wsquery);
-                        
+
                         if(!$this->shards->has($shard)) {
                             $prom = $prom->then(function (\CharlotteDunois\Yasmin\WebSocket\WSConnection $ws) use ($shard) {
                                 $shard = new \CharlotteDunois\Yasmin\Models\Shard($this, $shard, $ws);
                                 $this->shards->set($shard->id, $shard);
                             });
                         }
-                        
+
                         return $prom;
                     });
                 }
-                
+
                 return $prom->then(function () {
                     return null;
                 });
             })->done($resolve, function ($error) use ($reject) {
                 $this->api->clear();
                 $this->ws->destroy();
-                
+
                 $this->cancelTimers();
                 $this->destroyUtils();
-                
+
                 $this->emit('error', $error);
                 $reject($error);
             });
         }));
     }
-    
+
     /**
      * Cleanly logs out of Discord.
      * @param bool  $destroyUtils  Stop timers of utils which have an instance of the event loop.
@@ -514,21 +538,21 @@ class Client implements \CharlotteDunois\Events\EventEmitterInterface {
             if($this->api !== null) {
                 $this->api->clear();
             }
-            
+
             if($this->ws !== null) {
                 $this->ws->destroy();
             }
-            
+
             $this->cancelTimers();
-            
+
             if($destroyUtils) {
                 $this->destroyUtils();
             }
-            
+
             $resolve();
         }));
     }
-    
+
     /**
      * Creates a new guild. Resolves with an instance of Guild. Options is as following, everything is optional unless specified:
      *
@@ -577,11 +601,11 @@ class Client implements \CharlotteDunois\Events\EventEmitterInterface {
         if(empty($options['name'])) {
             throw new \InvalidArgumentException('Guild name can not be empty');
         }
-        
+
         if(empty($options['region'])) {
             throw new \InvalidArgumentException('Guild region can not be empty');
         }
-        
+
         return (new \React\Promise\Promise(function (callable $resolve, callable $reject) use ($options) {
             $data = array(
                 'name' => $options['name'],
@@ -601,12 +625,12 @@ class Client implements \CharlotteDunois\Events\EventEmitterInterface {
                 ),
                 'channels' => array()
             );
-            
+
             $rolemap = array(
                 '@everyone' => 0
             );
             $roleint = 1;
-            
+
             if(!empty($options['roles'])) {
                 foreach($options['roles'] as $role) {
                     $role = array(
@@ -617,7 +641,7 @@ class Client implements \CharlotteDunois\Events\EventEmitterInterface {
                         'hoist' => ((bool) ($role['hoist'] ?? false)),
                         'mentionable' => ((bool) ($role['mentionable'] ?? false))
                     );
-                    
+
                     if($role['name'] === '@everyone') {
                         $data['roles'][0] = $role;
                     } else {
@@ -626,28 +650,28 @@ class Client implements \CharlotteDunois\Events\EventEmitterInterface {
                     }
                 }
             }
-            
+
             if(!empty($options['channels'])) {
                 foreach($options['channels'] as $channel) {
                     $cdata = array(
                         'name' => ((string) $channel['name']),
                         'type' => (\CharlotteDunois\Yasmin\Models\ChannelStorage::CHANNEL_TYPES[($channel['type'] ?? 'text')] ?? 0),
                     );
-                    
+
                     if(isset($channel['bitrate'])) {
                         $cdata['bitrate'] = (int) $channel['bitrate'];
                     }
-                    
+
                     if(isset($channel['userLimit'])) {
                         $cdata['user_limit'] = $channel['userLimit'];
                     }
-                    
+
                     if(isset($channel['permissionOverwrites'])) {
                         $overwrites = array();
-                        
+
                         foreach($channel['permissionOverwrites'] as $overwrite) {
                             $id = ($overwrite['id'] instanceof \CharlotteDunois\Yasmin\Models\User ? $overwrite['id']->id : ($rolemap[$overwrite['id']] ?? $overwrite['id']));
-                            
+
                             $overwrites[] = array(
                                 'id' => $id,
                                 'type' => (isset($rolemap[$overwrite['id']]) ? 'role' : 'member'),
@@ -655,22 +679,22 @@ class Client implements \CharlotteDunois\Events\EventEmitterInterface {
                                 'deny' => ($overwrite['deny'] ?? 0)
                             );
                         }
-                        
+
                         $cdata['permission_overwrites'] = $overwrites;
                     }
-                    
+
                     if(isset($channel['parent'])) {
                         $cdata['parent_id'] = ($channel['parent'] instanceof \CharlotteDunois\Yasmin\Models\CategoryChannel ? $channel['parent']->id : $channel['parent']);
                     }
-                    
+
                     if(isset($channel['nsfw'])) {
                         $cdata['nsfw'] = $channel['nsfw'];
                     }
-                    
+
                     $data['channels'][] = $cdata;
                 }
             }
-            
+
             if(!empty($options['icon'])) {
                 $pr = \CharlotteDunois\Yasmin\Utils\FileHelpers::resolveFileResolvable($options['icon'])->then(function ($icon) use (&$data) {
                     $data['icon'] = $icon;
@@ -678,7 +702,7 @@ class Client implements \CharlotteDunois\Events\EventEmitterInterface {
             } else {
                 $pr = \React\Promise\resolve(null);
             }
-            
+
             $pr->then(function () use (&$data) {
                 return $this->api->endpoints->guild->createGuild($data)->then(function ($gdata) {
                     return $this->guilds->factory($gdata);
@@ -686,7 +710,7 @@ class Client implements \CharlotteDunois\Events\EventEmitterInterface {
             })->done($resolve, $reject);
         }));
     }
-    
+
     /**
      * Obtains the OAuth Application of the bot from Discord.
      * @return \React\Promise\ExtendedPromiseInterface
@@ -700,7 +724,7 @@ class Client implements \CharlotteDunois\Events\EventEmitterInterface {
             }, $reject);
         }));
     }
-    
+
     /**
      * Obtains an invite from Discord. Resolves with an instance of Invite.
      * @param string  $invite      The invite code or an invite URL.
@@ -714,14 +738,14 @@ class Client implements \CharlotteDunois\Events\EventEmitterInterface {
             if(!empty($matches[1])) {
                 $invite = $matches[1];
             }
-            
+
             $this->api->endpoints->invite->getInvite($invite, $withCounts)->done(function ($data) use ($resolve) {
                 $invite = new \CharlotteDunois\Yasmin\Models\Invite($this, $data);
                 $resolve($invite);
             }, $reject);
         }));
     }
-    
+
     /**
      * Fetches an User from the API. Resolves with an User.
      * @param string  $userid  The User ID to fetch.
@@ -733,14 +757,14 @@ class Client implements \CharlotteDunois\Events\EventEmitterInterface {
             if($this->users->has($userid)) {
                 return $resolve($this->users->get($userid));
             }
-            
+
             $this->api->endpoints->user->getUser($userid)->then(function ($user) use ($resolve) {
                 $user = $this->users->factory($user, true);
                 $resolve($user);
             }, $reject);
         }));
     }
-    
+
     /**
      * Obtains the available voice regions from Discord. Resolves with a Collection of Voice Region instances, mapped by their ID.
      * @return \React\Promise\ExtendedPromiseInterface
@@ -750,17 +774,17 @@ class Client implements \CharlotteDunois\Events\EventEmitterInterface {
         return (new \React\Promise\Promise(function (callable $resolve, callable $reject) {
             $this->api->endpoints->voice->listVoiceRegions()->done(function ($data) use ($resolve) {
                 $collect = new \CharlotteDunois\Collect\Collection();
-                
+
                 foreach($data as $region) {
                     $voice = new \CharlotteDunois\Yasmin\Models\VoiceRegion($this, $region);
                     $collect->set($voice->id, $voice);
                 }
-                
+
                 $resolve($collect);
             }, $reject);
         }));
     }
-    
+
     /**
      * Fetches a webhook from Discord. Resolves with an instance of Webhook.
      * @param string       $id
@@ -771,14 +795,14 @@ class Client implements \CharlotteDunois\Events\EventEmitterInterface {
     function fetchWebhook(string $id, ?string $token = null) {
         return (new \React\Promise\Promise(function (callable $resolve, callable $reject) use ($id, $token) {
             $method = (!empty($token) ? 'getWebhookToken' : 'getWebhook');
-            
+
             $this->api->endpoints->webhook->$method($id, $token)->done(function ($data) use ($resolve) {
                 $hook = new \CharlotteDunois\Yasmin\Models\Webhook($this, $data);
                 $resolve($hook);
             }, $reject);
         }));
     }
-    
+
     /**
      * Generates a link that can be used to invite the bot to a guild. Resolves with a string.
      * @param string|int  ...$permissions
@@ -790,12 +814,12 @@ class Client implements \CharlotteDunois\Events\EventEmitterInterface {
         if(!empty($permissions)) {
             $perm->add(...$permissions);
         }
-        
+
         return $this->fetchApplication()->then(function ($app) use ($perm) {
             return 'https://discordapp.com/oauth2/authorize?client_id='.$app->id.'&permissions='.$perm->bitfield.'&scope=bot';
         });
     }
-    
+
     /**
      * Adds a "client-dependant" timer. The timer gets automatically cancelled on destroy. The callback can only accept one argument, the client.
      * @param float|int  $timeout
@@ -807,11 +831,11 @@ class Client implements \CharlotteDunois\Events\EventEmitterInterface {
             $callback($this);
             $this->cancelTimer($timer);
         });
-        
+
         $this->timers[] = $timer;
         return $timer;
     }
-    
+
     /**
      * Adds a "client-dependant" periodic timer. The timer gets automatically cancelled on destroy. The callback can only accept one argument, the client.
      * @param float|int  $interval
@@ -822,11 +846,11 @@ class Client implements \CharlotteDunois\Events\EventEmitterInterface {
         $timer = $this->loop->addPeriodicTimer($interval, function () use ($callback) {
             $callback($this);
         });
-        
+
         $this->timers[] = $timer;
         return $timer;
     }
-    
+
     /**
      * Cancels a timer.
      * @param \React\EventLoop\TimerInterface  $timer
@@ -834,15 +858,15 @@ class Client implements \CharlotteDunois\Events\EventEmitterInterface {
      */
     function cancelTimer($timer) {
         $this->loop->cancelTimer($timer);
-        
+
         $key = \array_search($timer, $this->timers, true);
         if($key !== false) {
             unset($this->timers[$key]);
         }
-        
+
         return true;
     }
-    
+
     /**
      * Cancels all timers.
      * @return void
@@ -853,25 +877,36 @@ class Client implements \CharlotteDunois\Events\EventEmitterInterface {
             unset($this->timers[$key]);
         }
     }
-    
+
     /**
      * Make an instance of {ClientUser} and store it.
      * @return void
      * @internal
      */
-    function setClientUser(array $user) {
+    function setClientUser(array $user)
+    {
         $this->user = new \CharlotteDunois\Yasmin\Models\ClientUser($this, $user);
         $this->users->set($this->user->id, $this->user);
     }
-    
+
+    public function getAllIntents(): int
+    {
+        $intent = 0;
+        foreach (self::WS_INTENTS as $val) {
+            $intent |= $val;
+        }
+        return $intent;
+    }
+
     /**
      * Returns an array of classes with are registered as Util.
      * @return string[]
      */
-    function getUtils() {
+    function getUtils()
+    {
         return $this->utils;
     }
-    
+
     /**
      * Registers an Util, if it has a setLoop method. All methods used need to be static.
      * It will set the event loop through `setLoop` and on destroy will call `destroy`.
@@ -884,7 +919,7 @@ class Client implements \CharlotteDunois\Events\EventEmitterInterface {
             $this->utils[] = $name;
         }
     }
-    
+
     /**
      * Destroys an Util and calls `destroy` (requires that it is registered as such).
      * @param string $name
@@ -896,11 +931,11 @@ class Client implements \CharlotteDunois\Events\EventEmitterInterface {
             if(\method_exists($name, 'destroy')) {
                 $name::destroy();
             }
-            
+
             unset($this->utils[$pos]);
         }
     }
-    
+
     /**
      * Registers Utils which have a setLoop method.
      * @return void
@@ -912,14 +947,14 @@ class Client implements \CharlotteDunois\Events\EventEmitterInterface {
             $parts = \explode('/', \str_replace('\\', '/', $util));
             $name = \substr(\array_pop($parts), 0, -4);
             $fqn = '\\CharlotteDunois\\Yasmin\\Utils\\'.$name;
-            
+
             if(\method_exists($fqn, 'setLoop')) {
                 $fqn::setLoop($this->loop);
                 $this->utils[] = $fqn;
             }
         }
     }
-    
+
     /**
      * Destroys or stops all timers from Utils (requires that they are registered as such).
      * @return void
@@ -932,7 +967,7 @@ class Client implements \CharlotteDunois\Events\EventEmitterInterface {
             }
         }
     }
-    
+
     /**
      * Emits an error for an unhandled promise rejection.
      * @return void
@@ -941,7 +976,7 @@ class Client implements \CharlotteDunois\Events\EventEmitterInterface {
     function handlePromiseRejection($error) {
         $this->emit('error', $error);
     }
-    
+
     /**
      * Validates the passed client options.
      * @param array  $options
@@ -961,7 +996,7 @@ class Client implements \CharlotteDunois\Events\EventEmitterInterface {
             'maxShardID' => 'integer|min:0',
             'shardCount' => 'integer|min:1',
             'userSweepInterval' => 'integer|min:0',
-            'http.ratelimitbucket.name' => 'class:'.\CharlotteDunois\Yasmin\Interfaces\RatelimitBucketInterface::class.'=string',
+            'http.ratelimitbucket.name' => 'class:' . \CharlotteDunois\Yasmin\Interfaces\RatelimitBucketInterface::class . '=string',
             'http.ratelimitbucket.athena' => 'class:CharlotteDunois\\Athena\\AthenaCache=object',
             'http.requestErrorDelay' => 'integer|min:15',
             'http.requestMaxRetries' => 'integer|min:0',
@@ -969,22 +1004,23 @@ class Client implements \CharlotteDunois\Events\EventEmitterInterface {
             'ws.compression' => 'string',
             'ws.disabledEvents' => 'array:string',
             'ws.encoding' => 'string',
+            'ws.intents' => 'integer|min:0',
             'ws.largeThreshold' => 'integer|min:50|max:250',
             'ws.presence' => 'array',
             'ws.presenceUpdate.ignoreUnknownUsers' => 'boolean',
-            'internal.api.instance' => 'class:'.\CharlotteDunois\Yasmin\HTTP\APIManager::class,
-            'internal.storages.channels' => 'class:'.\CharlotteDunois\Yasmin\Interfaces\ChannelStorageInterface::class.'=string',
-            'internal.storages.emojis' => 'class:'.\CharlotteDunois\Yasmin\Interfaces\EmojiStorageInterface::class.'=string',
-            'internal.storages.guilds' => 'class:'.\CharlotteDunois\Yasmin\Interfaces\GuildStorageInterface::class.'=string',
-            'internal.storages.messages' => 'class:'.\CharlotteDunois\Yasmin\Interfaces\MessageStorageInterface::class.'=string',
-            'internal.storages.members' => 'class:'.\CharlotteDunois\Yasmin\Interfaces\GuildMemberStorageInterface::class.'=string',
-            'internal.storages.presences' => 'class:'.\CharlotteDunois\Yasmin\Interfaces\PresenceStorageInterface::class.'=string',
-            'internal.storages.roles' => 'class:'.\CharlotteDunois\Yasmin\Interfaces\RoleStorageInterface::class.'=string',
-            'internal.storages.users' => 'class:'.\CharlotteDunois\Yasmin\Interfaces\UserStorageInterface::class.'=string',
-            'internal.ws.instance' => 'class:'.\CharlotteDunois\Yasmin\WebSocket\WSManager::class
+            'internal.api.instance' => 'class:' . \CharlotteDunois\Yasmin\HTTP\APIManager::class,
+            'internal.storages.channels' => 'class:' . \CharlotteDunois\Yasmin\Interfaces\ChannelStorageInterface::class . '=string',
+            'internal.storages.emojis' => 'class:' . \CharlotteDunois\Yasmin\Interfaces\EmojiStorageInterface::class . '=string',
+            'internal.storages.guilds' => 'class:' . \CharlotteDunois\Yasmin\Interfaces\GuildStorageInterface::class . '=string',
+            'internal.storages.messages' => 'class:' . \CharlotteDunois\Yasmin\Interfaces\MessageStorageInterface::class . '=string',
+            'internal.storages.members' => 'class:' . \CharlotteDunois\Yasmin\Interfaces\GuildMemberStorageInterface::class . '=string',
+            'internal.storages.presences' => 'class:' . \CharlotteDunois\Yasmin\Interfaces\PresenceStorageInterface::class . '=string',
+            'internal.storages.roles' => 'class:' . \CharlotteDunois\Yasmin\Interfaces\RoleStorageInterface::class . '=string',
+            'internal.storages.users' => 'class:' . \CharlotteDunois\Yasmin\Interfaces\UserStorageInterface::class . '=string',
+            'internal.ws.instance' => 'class:' . \CharlotteDunois\Yasmin\WebSocket\WSManager::class,
         ))->throw(\InvalidArgumentException::class);
     }
-    
+
     /**
      * Validates the passed client options storages.
      * @return void
@@ -1001,14 +1037,14 @@ class Client implements \CharlotteDunois\Events\EventEmitterInterface {
             'roles' => \CharlotteDunois\Yasmin\Models\RoleStorage::class,
             'users' => \CharlotteDunois\Yasmin\Models\UserStorage::class
         );
-        
+
         foreach($storages as $name => $base) {
             if(empty($this->options['internal.storages.'.$name])) {
                 $this->options['internal.storages.'.$name] = $base;
             }
         }
     }
-    
+
     /**
      * Puts events into a queue, if the client is not ready yet.
      * @return void
@@ -1019,7 +1055,7 @@ class Client implements \CharlotteDunois\Events\EventEmitterInterface {
             $this->eventsQueue[] = array($event, $args);
             return;
         }
-        
+
         return $this->emit($event, ...$args);
     }
 }
