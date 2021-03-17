@@ -27,7 +27,6 @@ class InviteDelete implements \CharlotteDunois\Yasmin\Interfaces\WSEventInterfac
 
     function handle(\CharlotteDunois\Yasmin\WebSocket\WSConnection $ws, $data): void {
         $channel = $this->client->channels->get($data['channel_id']);
-
-        // TODO finish this
+        $this->client->queuedEmit('inviteDelete', $channel, $data['code']);
     }
 }
