@@ -33,88 +33,103 @@ class Invite extends ClientBase {
      * @var string
      */
     protected $code;
-    
+
     /**
      * The guild this invite belongs to.
      * @var \CharlotteDunois\Yasmin\Models\Guild
      */
     protected $guild;
-    
+
     /**
      * The channel which this invite belongs to.
      * @var \CharlotteDunois\Yasmin\Interfaces\GuildChannelInterface|\CharlotteDunois\Yasmin\Models\PartialChannel
      */
     protected $channel;
-    
+
     /**
      * When this invite was created, or null.
      * @var int
      */
     protected $createdTimestamp;
-    
+
     /**
      * The inviter, or null.
      * @var \CharlotteDunois\Yasmin\Models\User|null
      */
     protected $inviter;
-    
+
     /**
      * Maximum uses until the invite expires, or null.
      * @var int|null
      */
     protected $maxUses;
-    
+
     /**
      * Duration (in seconds) until the invite expires, or null.
      * @var int|null
      */
     protected $maxAge;
-    
+
     /**
      * If this invite grants temporary membership, or null.
      * @var bool
      */
     protected $temporary;
-    
+
     /**
      * Number of times this invite has been used, or null.
      * @var int|null
      */
     protected $uses;
-    
+
     /**
      * Approximate amount of presences, or null.
      * @var int|null
      */
     protected $presenceCount;
-    
+
     /**
      * Approximate amount of members, or null.
      * @var int|null
      */
     protected $memberCount;
-    
+
     /**
      * @internal
      */
-    function __construct(\CharlotteDunois\Yasmin\Client $client, array $invite) {
+    function __construct(\CharlotteDunois\Yasmin\Client $client, array $invite)
+    {
         parent::__construct($client);
-        
+
         $this->code = $invite['code'];
-        $this->guild = (!empty($invite['guild']) ? ($client->guilds->get($invite['guild']['id']) ?? (new \CharlotteDunois\Yasmin\Models\PartialGuild($client, $invite['guild']))) : null);
-        $this->channel = ($client->channels->get($invite['channel']['id']) ?? (new \CharlotteDunois\Yasmin\Models\PartialChannel($client, $invite['channel'])));
-        
+
+        if (array_key_exists('channel_id', $invite)) {
+            $this->channel = ($client->channels->get($invite['channel_id']) ?? (new \CharlotteDunois\Yasmin\Models\PartialChannel($client,
+                    $invite['channel_id'])));
+        } else {
+            $this->channel = ($client->channels->get($invite['channel']['id']) ?? (new \CharlotteDunois\Yasmin\Models\PartialChannel($client,
+                    $invite['channel'])));
+        }
+
+        if (array_key_exists('guild_id', $invite)) {
+            $this->guild = (!empty($invite['guild_id']) ? ($client->guilds->get($invite['guild_id']) ?? (new \CharlotteDunois\Yasmin\Models\PartialGuild($client,
+                    $invite['guild_id']))) : null);
+        } else {
+            $this->guild = (!empty($invite['guild']) ? ($client->guilds->get($invite['guild']['id']) ?? (new \CharlotteDunois\Yasmin\Models\PartialGuild($client,
+                    $invite['guild']))) : null);
+        }
+
         $this->createdTimestamp = (!empty($invite['created_at']) ? (new \DateTime($invite['created_at']))->getTimestamp() : null);
         $this->inviter = (!empty($invite['inviter']) ? $client->users->patch($invite['inviter']) : null);
         $this->maxUses = $invite['max_uses'] ?? null;
         $this->maxAge = $invite['max_age'] ?? null;
         $this->temporary = $invite['temporary'] ?? null;
         $this->uses = $invite['uses'] ?? null;
-        
-        $this->presenceCount = (isset($invite['approximate_presence_count']) ? ((int) $invite['approximate_presence_count']) : $this->presenceCount);
-        $this->memberCount = (isset($invite['approximate_member_count']) ? ((int) $invite['approximate_member_count']) : $this->memberCount);
+
+        $this->presenceCount = (isset($invite['approximate_presence_count']) ? ((int)$invite['approximate_presence_count']) : $this->presenceCount);
+        $this->memberCount = (isset($invite['approximate_member_count']) ? ((int)$invite['approximate_member_count']) : $this->memberCount);
     }
-    
+
     /**
      * {@inheritdoc}
      * @return mixed
@@ -125,23 +140,23 @@ class Invite extends ClientBase {
         if(\property_exists($this, $name)) {
             return $this->$name;
         }
-        
+
         switch($name) {
             case 'createdAt':
                 if($this->createdTimestamp !== null) {
                     return \CharlotteDunois\Yasmin\Utils\DataHelpers::makeDateTime($this->createdTimestamp);
                 }
-                
+
                 return null;
             break;
             case 'url':
                 return \CharlotteDunois\Yasmin\HTTP\APIEndpoints::HTTP['invite'].$this->code;
             break;
         }
-        
+
         return parent::__get($name);
     }
-    
+
     /**
      * Deletes the invite.
      * @param string  $reason

@@ -16,10 +16,10 @@ namespace CharlotteDunois\Yasmin\WebSocket\Handlers;
 class Dispatch implements \CharlotteDunois\Yasmin\Interfaces\WSHandlerInterface {
     private $wsevents = array();
     protected $wshandler;
-    
+
     function __construct(\CharlotteDunois\Yasmin\WebSocket\WSHandler $wshandler) {
         $this->wshandler = $wshandler;
-        
+
         $allEvents = array(
             'RESUMED' => \CharlotteDunois\Yasmin\WebSocket\Events\Resumed::class,
             'READY' => \CharlotteDunois\Yasmin\WebSocket\Events\Ready::class,
@@ -41,6 +41,8 @@ class Dispatch implements \CharlotteDunois\Yasmin\Interfaces\WSHandlerInterface 
             'GUILD_ROLE_CREATE' => \CharlotteDunois\Yasmin\WebSocket\Events\GuildRoleCreate::class,
             'GUILD_ROLE_UPDATE' => \CharlotteDunois\Yasmin\WebSocket\Events\GuildRoleUpdate::class,
             'GUILD_ROLE_DELETE' => \CharlotteDunois\Yasmin\WebSocket\Events\GuildRoleDelete::class,
+            'INVITE_CREATE' => \CharlotteDunois\Yasmin\WebSocket\Events\InviteCreate::class,
+            'INVITE_DELETE' => \CharlotteDunois\Yasmin\WebSocket\Events\InviteDelete::class,
             'MESSAGE_CREATE' => \CharlotteDunois\Yasmin\WebSocket\Events\MessageCreate::class,
             'MESSAGE_UPDATE' => \CharlotteDunois\Yasmin\WebSocket\Events\MessageUpdate::class,
             'MESSAGE_DELETE' => \CharlotteDunois\Yasmin\WebSocket\Events\MessageDelete::class,
@@ -54,13 +56,13 @@ class Dispatch implements \CharlotteDunois\Yasmin\Interfaces\WSHandlerInterface 
             'VOICE_STATE_UPDATE' => \CharlotteDunois\Yasmin\WebSocket\Events\VoiceStateUpdate::class,
             'VOICE_SERVER_UPDATE' => \CharlotteDunois\Yasmin\WebSocket\Events\VoiceServerUpdate::class
         );
-        
+
         $events = \array_diff_key($allEvents, \array_flip((array) $this->wshandler->wsmanager->client->getOption('ws.disabledEvents', array())));
         foreach($events as $name => $class) {
             $this->register($name, $class);
         }
     }
-    
+
     /**
      * Returns a WS event.
      * @return \CharlotteDunois\Yasmin\Interfaces\WSEventInterface
@@ -69,10 +71,10 @@ class Dispatch implements \CharlotteDunois\Yasmin\Interfaces\WSHandlerInterface 
         if(isset($this->wsevents[$name])) {
             return $this->wsevents[$name];
         }
-        
+
         throw new \Exception('Unable to find WS event');
     }
-    
+
     function handle(\CharlotteDunois\Yasmin\WebSocket\WSConnection $ws, $packet): void {
         if(isset($this->wsevents[$packet['t']])) {
             $this->wshandler->wsmanager->emit('debug', 'Shard '.$ws->shardID.' handling WS event '.$packet['t']);
@@ -81,7 +83,7 @@ class Dispatch implements \CharlotteDunois\Yasmin\Interfaces\WSHandlerInterface 
             $this->wshandler->wsmanager->emit('debug', 'Shard '.$ws->shardID.' received WS event '.$packet['t']);
         }
     }
-    
+
     /**
      * Registers an event.
      * @return void
@@ -91,7 +93,7 @@ class Dispatch implements \CharlotteDunois\Yasmin\Interfaces\WSHandlerInterface 
         if(!\in_array('CharlotteDunois\Yasmin\Interfaces\WSEventInterface', \class_implements($class))) {
             throw new \RuntimeException('Specified event class does not implement interface');
         }
-        
+
         $this->wsevents[$name] = new $class($this->wshandler->wsmanager->client, $this->wshandler->wsmanager);
     }
 }
