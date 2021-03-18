@@ -38,8 +38,6 @@ namespace CharlotteDunois\Yasmin\Models;
  * @property string[]                                                        $features                     An array of guild features.
  * @property string                                                          $mfaLevel                     The required MFA level for the guild. ({@see Guild::MFA_LEVEL})
  * @property string|null                                                     $applicationID                Application ID of the guild creator, if it is bot-created.
- * @property bool                                                            $embedEnabled                 Whether the guild is embeddable or not (e.g. widget).
- * @property string|null                                                     $embedChannelID               The ID of the embed channel, or null.
  * @property bool                                                            $widgetEnabled                Whether the guild widget is enabled or not.
  * @property string|null                                                     $widgetChannelID              The ID of the widget channel, or null.
  * @property int|null                                                        $maxPresences                 The maximum amount of presences the guild can have, or null.
@@ -51,7 +49,6 @@ namespace CharlotteDunois\Yasmin\Models;
  * @property \CharlotteDunois\Yasmin\Models\VoiceChannel|null                $afkChannel                   The guild's afk channel, or null.
  * @property \DateTime                                                       $createdAt                    The DateTime instance of createdTimestamp.
  * @property \CharlotteDunois\Yasmin\Models\Role                             $defaultRole                  The guild's default role.
- * @property \CharlotteDunois\Yasmin\Interfaces\GuildChannelInterface|null   $embedChannel                 The guild's embed channel, or null.
  * @property \CharlotteDunois\Yasmin\Models\GuildMember                      $me                           The guild member of the client user.
  * @property \CharlotteDunois\Yasmin\Interfaces\GuildChannelInterface|null   $systemChannel                The guild's system channel, or null.
  * @property bool                                                            $vanityURL                    Whether the guild has a vanity invite url.
@@ -272,18 +269,6 @@ class Guild extends ClientBase {
     protected $applicationID;
 
     /**
-     * Whether the guild is embeddable or not (e.g. widget).
-     * @var bool
-     */
-    protected $embedEnabled;
-
-    /**
-     * The ID of the embed channel, or null.
-     * @var string|null
-     */
-    protected $embedChannelID;
-
-    /**
      * Whether the widget is enabled.
      * @var bool
      */
@@ -384,9 +369,6 @@ class Guild extends ClientBase {
             break;
             case 'defaultRole':
                 return $this->roles->get($this->id);
-            break;
-            case 'embedChannel':
-                return $this->channels->get($this->embedChannelID);
             break;
             case 'me':
                 return $this->members->get($this->client->user->id);
@@ -1324,9 +1306,6 @@ class Guild extends ClientBase {
         $this->applicationID = \CharlotteDunois\Yasmin\Utils\DataHelpers::typecastVariable(($guild['application_id'] ?? $this->applicationID),
             'string');
 
-        $this->embedEnabled = (bool)($guild['embed_enabled'] ?? $this->embedEnabled);
-        $this->embedChannelID = \CharlotteDunois\Yasmin\Utils\DataHelpers::typecastVariable(($guild['embed_channel_id'] ?? $this->embedChannelID),
-            'string');
         $this->widgetEnabled = (bool)($guild['widget_enabled'] ?? $this->widgetEnabled);
         $this->widgetChannelID = \CharlotteDunois\Yasmin\Utils\DataHelpers::typecastVariable(($guild['widget_channel_id'] ?? $this->widgetChannelID),
             'string');
