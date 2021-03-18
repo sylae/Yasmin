@@ -36,7 +36,7 @@ class Channel {
             'edit' => 'channels/%s/messages/%s',
             'crosspost' => 'channels/%s/messages/%s/crosspost',
             'delete' => 'channels/%s/messages/%s',
-            'bulkDelete' => 'channels/%s/messages/bulk-delete',
+            'bulkDelete' => 'channels/%s/messages/bulk_delete',
         ),
         'permissions' => array(
             'edit' => 'channels/%s/permissions/%s',

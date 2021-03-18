@@ -59,21 +59,21 @@ class Guild {
             'regions' => 'guilds/%s/regions'
         ),
         'invites' => array(
-            'list' => 'guilds/%s/invites'
+            'list' => 'guilds/%s/invites',
         ),
         'integrations' => array(
             'list' => 'guilds/%s/integrations',
             'create' => 'guilds/%s/integrations',
             'modify' => 'guilds/%s/integrations/%s',
             'delete' => 'guilds/%s/integrations/%s',
-            'sync' => 'guilds/%s/integrations/%s'
+            'sync' => 'guilds/%s/integrations/%s',
         ),
-        'embed' => array(
-            'get' => 'guilds/%s/embed',
-            'modify' => 'guilds/%s/embed'
+        'widget' => array(
+            'get' => 'guilds/%s/widget',
+            'modify' => 'guilds/%s/widget',
         ),
         'audit-logs' => 'guilds/%s/audit-logs',
-        'vanity-url' => 'guilds/%s/vanity-url'
+        'vanity-url' => 'guilds/%s/vanity-url',
     );
 
     /**
