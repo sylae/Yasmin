@@ -161,7 +161,8 @@ class Activity extends ClientBase {
         $this->state = \CharlotteDunois\Yasmin\Utils\DataHelpers::typecastVariable(($activity['state'] ?? null),
             'string');
 
-        $this->emoji = (!empty($activity['emoji']) ? ($this->client->emojis->factory($activity['emoji'])) : null);
+        $this->emoji = (!empty($activity['emoji']) ? ($this->client->emojis->get($activity['emoji']['id'] ?? $activity['emoji']['name']) ?? (new \CharlotteDunois\Yasmin\Models\Emoji($this->client,
+                null, $activity['emoji']))) : null);
         $this->assets = (!empty($activity['assets']) ? (new \CharlotteDunois\Yasmin\Models\RichPresenceAssets($this->client,
             $this, $activity['assets'])) : null);
         $this->timestamps = (!empty($activity['timestamps']) ? [
