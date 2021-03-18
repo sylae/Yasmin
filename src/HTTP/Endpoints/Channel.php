@@ -34,6 +34,7 @@ class Channel {
                 'deleteAll' => 'channels/%s/messages/%s/reactions',
             ],
             'edit' => 'channels/%s/messages/%s',
+            'crosspost' => 'channels/%s/messages/%s/crosspost',
             'delete' => 'channels/%s/messages/%s',
             'bulkDelete' => 'channels/%s/messages/bulk-delete',
         ),
@@ -165,38 +166,56 @@ class Channel {
         return $this->api->makeRequest('GET', $url, array());
     }
 
-    function createChannelInvite(string $channelid, array $options = array()) {
+    function createChannelInvite(string $channelid, array $options = [])
+    {
         $url = \CharlotteDunois\Yasmin\HTTP\APIEndpoints::format(self::ENDPOINTS['invites']['create'], $channelid);
-        return $this->api->makeRequest('POST', $url, array('data' => $options));
+        return $this->api->makeRequest('POST', $url, ['data' => $options]);
     }
 
-    function triggerChannelTyping(string $channelid) {
+    function triggerChannelTyping(string $channelid)
+    {
         $url = \CharlotteDunois\Yasmin\HTTP\APIEndpoints::format(self::ENDPOINTS['typing'], $channelid);
-        return $this->api->makeRequest('POST', $url, array());
+        return $this->api->makeRequest('POST', $url, []);
     }
 
-    function getPinnedChannelMessages(string $channelid) {
+    function getPinnedChannelMessages(string $channelid)
+    {
         $url = \CharlotteDunois\Yasmin\HTTP\APIEndpoints::format(self::ENDPOINTS['pins']['list'], $channelid);
-        return $this->api->makeRequest('GET', $url, array());
+        return $this->api->makeRequest('GET', $url, []);
     }
 
-    function pinChannelMessage(string $channelid, string $messageid) {
-        $url = \CharlotteDunois\Yasmin\HTTP\APIEndpoints::format(self::ENDPOINTS['pins']['add'], $channelid, $messageid);
-        return $this->api->makeRequest('PUT', $url, array());
+    function pinChannelMessage(string $channelid, string $messageid)
+    {
+        $url = \CharlotteDunois\Yasmin\HTTP\APIEndpoints::format(self::ENDPOINTS['pins']['add'], $channelid,
+            $messageid);
+        return $this->api->makeRequest('PUT', $url, []);
     }
 
-    function unpinChannelMessage(string $channelid, string $messageid) {
-        $url = \CharlotteDunois\Yasmin\HTTP\APIEndpoints::format(self::ENDPOINTS['pins']['delete'], $channelid, $messageid);
-        return $this->api->makeRequest('DELETE', $url, array());
+    function crosspostChannelMessage(string $channelid, string $messageid)
+    {
+        $url = \CharlotteDunois\Yasmin\HTTP\APIEndpoints::format(self::ENDPOINTS['messages']['crosspost'], $channelid,
+            $messageid);
+        return $this->api->makeRequest('POST', $url, []);
     }
 
-    function groupDMAddRecipient(string $channelid, string $userid, string $accessToken, string $nick) {
-        $url = \CharlotteDunois\Yasmin\HTTP\APIEndpoints::format(self::ENDPOINTS['groupDM']['add'], $channelid, $userid);
-        return $this->api->makeRequest('PUT', $url, array('data' => array('access_token' => $accessToken, 'nick' => $nick)));
+    function unpinChannelMessage(string $channelid, string $messageid)
+    {
+        $url = \CharlotteDunois\Yasmin\HTTP\APIEndpoints::format(self::ENDPOINTS['pins']['delete'], $channelid,
+            $messageid);
+        return $this->api->makeRequest('DELETE', $url, []);
     }
 
-    function groupDMRemoveRecipient(string $channelid, string $userid) {
-        $url = \CharlotteDunois\Yasmin\HTTP\APIEndpoints::format(self::ENDPOINTS['groupDM']['remove'], $channelid, $userid);
-        return $this->api->makeRequest('DELETE', $url, array());
+    function groupDMAddRecipient(string $channelid, string $userid, string $accessToken, string $nick)
+    {
+        $url = \CharlotteDunois\Yasmin\HTTP\APIEndpoints::format(self::ENDPOINTS['groupDM']['add'], $channelid,
+            $userid);
+        return $this->api->makeRequest('PUT', $url, ['data' => ['access_token' => $accessToken, 'nick' => $nick]]);
+    }
+
+    function groupDMRemoveRecipient(string $channelid, string $userid)
+    {
+        $url = \CharlotteDunois\Yasmin\HTTP\APIEndpoints::format(self::ENDPOINTS['groupDM']['remove'], $channelid,
+            $userid);
+        return $this->api->makeRequest('DELETE', $url, []);
     }
 }

@@ -433,18 +433,39 @@ class Message extends ClientBase {
      * Returns the jump to message link for this message.
      * @return string
      */
-    function getJumpURL() {
+    function getJumpURL()
+    {
         $guild = ($this->channel instanceof \CharlotteDunois\Yasmin\Models\TextChannel ? $this->guild->id : '@me');
-        return 'https://canary.discordapp.com/channels/'.$guild.'/'.$this->channel->getId().'/'.$this->id;
+        return 'https://canary.discordapp.com/channels/' . $guild . '/' . $this->channel->getId() . '/' . $this->id;
     }
 
     /**
      * Pins the message. Resolves with $this.
      * @return \React\Promise\ExtendedPromiseInterface
      */
-    function pin() {
+    function pin()
+    {
         return (new \React\Promise\Promise(function (callable $resolve, callable $reject) {
-            $this->client->apimanager()->endpoints->channel->pinChannelMessage($this->channel->getId(), $this->id)->done(function () use ($resolve) {
+            $this->client->apimanager()->endpoints->channel->pinChannelMessage($this->channel->getId(),
+                $this->id)->done(function () use ($resolve) {
+                $resolve($this);
+            }, $reject);
+        }));
+    }
+
+    /**
+     * Crossposts the message. Resolves with $this.
+     * @return \React\Promise\ExtendedPromiseInterface
+     * @throws \Exception
+     */
+    function crosspost()
+    {
+        if (!$this->channel instanceof AnnouncementChannel) {
+            throw new \Exception("Cannot crosspost messages not in Announcement Channels.");
+        }
+        return (new \React\Promise\Promise(function (callable $resolve, callable $reject) {
+            $this->client->apimanager()->endpoints->channel->crosspostChannelMessage($this->channel->getId(),
+                $this->id)->done(function () use ($resolve) {
                 $resolve($this);
             }, $reject);
         }));
@@ -452,22 +473,25 @@ class Message extends ClientBase {
 
     /**
      * Reacts to the message with the specified unicode or custom emoji. Resolves with an instance of MessageReaction.
-     * @param \CharlotteDunois\Yasmin\Models\Emoji|\CharlotteDunois\Yasmin\Models\MessageReaction|string  $emoji
+     *
+     * @param \CharlotteDunois\Yasmin\Models\Emoji|\CharlotteDunois\Yasmin\Models\MessageReaction|string $emoji
+     *
      * @return \React\Promise\ExtendedPromiseInterface
      * @throws \InvalidArgumentException
      * @see \CharlotteDunois\Yasmin\Models\MessageReaction
      */
-    function react($emoji) {
+    function react($emoji)
+    {
         try {
             $emoji = $this->client->emojis->resolve($emoji);
         } catch (\InvalidArgumentException $e) {
-            if(\is_numeric($emoji)) {
+            if (\is_numeric($emoji)) {
                 throw $e;
             }
 
-            $match = (bool) \preg_match('/(?:<a?:)?(.+):(\d+)/', $emoji, $matches);
-            if($match) {
-                $emoji = $matches[1].':'.$matches[2];
+            $match = (bool)\preg_match('/(?:<a?:)?(.+):(\d+)/', $emoji, $matches);
+            if ($match) {
+                $emoji = $matches[1] . ':' . $matches[2];
             } else {
                 $emoji = \rawurlencode($emoji);
             }
