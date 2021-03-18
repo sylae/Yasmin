@@ -266,7 +266,7 @@
                     
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_getMessageReactions">getMessageReactions</a>(string $channelid, string $messageid, string $emoji, array $querystring = array())
+                    <a href="#method_getMessageReactions">getMessageReactions</a>(string $channelid, string $messageid, string $emoji, array $querystring = [])
         
                                             <p class="no-description">No description</p>
                                     </div>
@@ -278,6 +278,17 @@
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_deleteMessageReactions">deleteMessageReactions</a>(string $channelid, string $messageid)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_deleteMessageReactionsForEmoji">deleteMessageReactionsForEmoji</a>(string $channelid, string $messageid, string $emoji)
         
                                             <p class="no-description">No description</p>
                                     </div>
@@ -321,7 +332,7 @@
                     
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_createChannelInvite">createChannelInvite</a>(string $channelid, array $options = array())
+                    <a href="#method_createChannelInvite">createChannelInvite</a>(string $channelid, array $options = [])
         
                                             <p class="no-description">No description</p>
                                     </div>
@@ -355,6 +366,17 @@
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_pinChannelMessage">pinChannelMessage</a>(string $channelid, string $messageid)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_crosspostChannelMessage">crosspostChannelMessage</a>(string $channelid, string $messageid)
         
                                             <p class="no-description">No description</p>
                                     </div>
@@ -401,7 +423,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/HTTP/Endpoints/Channel.php#L68">line 68</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/HTTP/Endpoints/Channel.php#L70">line 70</a></div>
         <code>                    
     <strong>__construct</strong>(<a href="../../../../CharlotteDunois/Yasmin/HTTP/APIManager.html"><abbr title="CharlotteDunois\Yasmin\HTTP\APIManager">APIManager</abbr></a> $api)
         </code>
@@ -432,7 +454,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getChannel">
-        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/HTTP/Endpoints/Channel.php#L72">line 72</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/HTTP/Endpoints/Channel.php#L74">line 74</a></div>
         <code>                    
     <strong>getChannel</strong>(string $channelid)
         </code>
@@ -461,7 +483,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_modifyChannel">
-        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/HTTP/Endpoints/Channel.php#L77">line 77</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/HTTP/Endpoints/Channel.php#L79">line 79</a></div>
         <code>                    
     <strong>modifyChannel</strong>(string $channelid, array $data, string $reason = &#039;&#039;)
         </code>
@@ -500,7 +522,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_deleteChannel">
-        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/HTTP/Endpoints/Channel.php#L82">line 82</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/HTTP/Endpoints/Channel.php#L84">line 84</a></div>
         <code>                    
     <strong>deleteChannel</strong>(string $channelid, string $reason = &#039;&#039;)
         </code>
@@ -534,7 +556,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getChannelMessages">
-        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/HTTP/Endpoints/Channel.php#L87">line 87</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/HTTP/Endpoints/Channel.php#L89">line 89</a></div>
         <code>                    
     <strong>getChannelMessages</strong>(string $channelid, array $options = array())
         </code>
@@ -568,7 +590,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getChannelMessage">
-        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/HTTP/Endpoints/Channel.php#L92">line 92</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/HTTP/Endpoints/Channel.php#L94">line 94</a></div>
         <code>                    
     <strong>getChannelMessage</strong>(string $channelid, string $messageid)
         </code>
@@ -602,7 +624,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_createMessage">
-        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/HTTP/Endpoints/Channel.php#L97">line 97</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/HTTP/Endpoints/Channel.php#L99">line 99</a></div>
         <code>                    
     <strong>createMessage</strong>(string $channelid, array $options, array $files = array())
         </code>
@@ -641,7 +663,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_editMessage">
-        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/HTTP/Endpoints/Channel.php#L102">line 102</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/HTTP/Endpoints/Channel.php#L104">line 104</a></div>
         <code>                    
     <strong>editMessage</strong>(string $channelid, string $messageid, array $options)
         </code>
@@ -680,7 +702,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_deleteMessage">
-        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/HTTP/Endpoints/Channel.php#L107">line 107</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/HTTP/Endpoints/Channel.php#L109">line 109</a></div>
         <code>                    
     <strong>deleteMessage</strong>(string $channelid, string $messageid, string $reason = &#039;&#039;)
         </code>
@@ -719,7 +741,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_bulkDeleteMessages">
-        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/HTTP/Endpoints/Channel.php#L112">line 112</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/HTTP/Endpoints/Channel.php#L114">line 114</a></div>
         <code>                    
     <strong>bulkDeleteMessages</strong>(string $channelid, array $snowflakes, string $reason = &#039;&#039;)
         </code>
@@ -758,7 +780,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_createMessageReaction">
-        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/HTTP/Endpoints/Channel.php#L117">line 117</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/HTTP/Endpoints/Channel.php#L119">line 119</a></div>
         <code>                    
     <strong>createMessageReaction</strong>(string $channelid, string $messageid, string $emoji)
         </code>
@@ -797,7 +819,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_deleteMessageUserReaction">
-        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/HTTP/Endpoints/Channel.php#L122">line 122</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/HTTP/Endpoints/Channel.php#L124">line 124</a></div>
         <code>                    
     <strong>deleteMessageUserReaction</strong>(string $channelid, string $messageid, string $emoji, string $userid)
         </code>
@@ -841,9 +863,9 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getMessageReactions">
-        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/HTTP/Endpoints/Channel.php#L127">line 127</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/HTTP/Endpoints/Channel.php#L129">line 129</a></div>
         <code>                    
-    <strong>getMessageReactions</strong>(string $channelid, string $messageid, string $emoji, array $querystring = array())
+    <strong>getMessageReactions</strong>(string $channelid, string $messageid, string $emoji, array $querystring = [])
         </code>
     </h3>
     <div class="details">
@@ -885,7 +907,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_deleteMessageReactions">
-        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/HTTP/Endpoints/Channel.php#L132">line 132</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/HTTP/Endpoints/Channel.php#L136">line 136</a></div>
         <code>                    
     <strong>deleteMessageReactions</strong>(string $channelid, string $messageid)
         </code>
@@ -918,8 +940,47 @@
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_deleteMessageReactionsForEmoji">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/HTTP/Endpoints/Channel.php#L143">line 143</a></div>
+        <code>                    
+    <strong>deleteMessageReactionsForEmoji</strong>(string $channelid, string $messageid, string $emoji)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$channelid</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$messageid</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$emoji</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_editChannelPermissions">
-        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/HTTP/Endpoints/Channel.php#L137">line 137</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/HTTP/Endpoints/Channel.php#L150">line 150</a></div>
         <code>                    
     <strong>editChannelPermissions</strong>(string $channelid, string $overwriteid, array $options, string $reason = &#039;&#039;)
         </code>
@@ -963,7 +1024,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_deleteChannelPermission">
-        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/HTTP/Endpoints/Channel.php#L142">line 142</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/HTTP/Endpoints/Channel.php#L157">line 157</a></div>
         <code>                    
     <strong>deleteChannelPermission</strong>(string $channelid, string $overwriteid, string $reason = &#039;&#039;)
         </code>
@@ -1002,7 +1063,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getChannelInvites">
-        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/HTTP/Endpoints/Channel.php#L147">line 147</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/HTTP/Endpoints/Channel.php#L164">line 164</a></div>
         <code>                    
     <strong>getChannelInvites</strong>(string $channelid)
         </code>
@@ -1031,9 +1092,9 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_createChannelInvite">
-        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/HTTP/Endpoints/Channel.php#L152">line 152</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/HTTP/Endpoints/Channel.php#L169">line 169</a></div>
         <code>                    
-    <strong>createChannelInvite</strong>(string $channelid, array $options = array())
+    <strong>createChannelInvite</strong>(string $channelid, array $options = [])
         </code>
     </h3>
     <div class="details">
@@ -1065,7 +1126,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_triggerChannelTyping">
-        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/HTTP/Endpoints/Channel.php#L157">line 157</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/HTTP/Endpoints/Channel.php#L175">line 175</a></div>
         <code>                    
     <strong>triggerChannelTyping</strong>(string $channelid)
         </code>
@@ -1094,7 +1155,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getPinnedChannelMessages">
-        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/HTTP/Endpoints/Channel.php#L162">line 162</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/HTTP/Endpoints/Channel.php#L181">line 181</a></div>
         <code>                    
     <strong>getPinnedChannelMessages</strong>(string $channelid)
         </code>
@@ -1123,7 +1184,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_pinChannelMessage">
-        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/HTTP/Endpoints/Channel.php#L167">line 167</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/HTTP/Endpoints/Channel.php#L187">line 187</a></div>
         <code>                    
     <strong>pinChannelMessage</strong>(string $channelid, string $messageid)
         </code>
@@ -1156,8 +1217,42 @@
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_crosspostChannelMessage">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/HTTP/Endpoints/Channel.php#L194">line 194</a></div>
+        <code>                    
+    <strong>crosspostChannelMessage</strong>(string $channelid, string $messageid)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$channelid</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$messageid</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_unpinChannelMessage">
-        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/HTTP/Endpoints/Channel.php#L172">line 172</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/HTTP/Endpoints/Channel.php#L201">line 201</a></div>
         <code>                    
     <strong>unpinChannelMessage</strong>(string $channelid, string $messageid)
         </code>
@@ -1191,7 +1286,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_groupDMAddRecipient">
-        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/HTTP/Endpoints/Channel.php#L177">line 177</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/HTTP/Endpoints/Channel.php#L208">line 208</a></div>
         <code>                    
     <strong>groupDMAddRecipient</strong>(string $channelid, string $userid, string $accessToken, string $nick)
         </code>
@@ -1235,7 +1330,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_groupDMRemoveRecipient">
-        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/HTTP/Endpoints/Channel.php#L182">line 182</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/HTTP/Endpoints/Channel.php#L215">line 215</a></div>
         <code>                    
     <strong>groupDMRemoveRecipient</strong>(string $channelid, string $userid)
         </code>

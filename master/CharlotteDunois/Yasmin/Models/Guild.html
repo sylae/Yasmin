@@ -131,6 +131,13 @@
                     <p></p>
                 </td>
             </tr>
+                    <tr>
+                <td>PREMIUM_TIER</td>
+                <td class="last">
+                    <p><em>Guild premium tier.</em></p>
+                    <p></p>
+                </td>
+            </tr>
             </table>
 
     
@@ -303,6 +310,14 @@
                 </td>
                 <td>$verificationLevel</td>
                 <td class="last">The verification level of the guild. ({see Guild::VERIFICATION_LEVEL})</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_premiumTier">
+                                        protected                                        string
+                </td>
+                <td>$premiumTier</td>
+                <td class="last">The premium (discord nitro) tier of the Guild. see the PREMIUM_TIER const</td>
                 <td></td>
             </tr>
                     <tr>
@@ -1032,7 +1047,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L319">line 319</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L337">line 337</a></div>
         <code>                    
     <strong>__construct</strong>(<a href="../../../CharlotteDunois/Yasmin/Client.html"><abbr title="CharlotteDunois\Yasmin\Client">Client</abbr></a> $client, array $guild, int|null $shardID = null)
         </code>
@@ -1139,7 +1154,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method___get">
-        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L355">line 355</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L373">line 373</a></div>
         <code>                    mixed
     <strong>__get</strong>(string $name)
         </code>
@@ -1332,7 +1347,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method__patch">
-        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L1276">line 1276</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L1294">line 1294</a></div>
         <code>                    void
     <strong>_patch</strong>(array $guild)
         </code>
@@ -1464,7 +1479,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_addMember">
-        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L412">line 412</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L430">line 430</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>addMember</strong>(<a href="../../../CharlotteDunois/Yasmin/Models/User.html"><abbr title="CharlotteDunois\Yasmin\Models\User">User</abbr></a>|string $user, string $accessToken, array $options = array())
         </code>
@@ -1523,7 +1538,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_ban">
-        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L461">line 461</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L479">line 479</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>ban</strong>(<a href="../../../CharlotteDunois/Yasmin/Models/GuildMember.html"><abbr title="CharlotteDunois\Yasmin\Models\GuildMember">GuildMember</abbr></a>|<a href="../../../CharlotteDunois/Yasmin/Models/User.html"><abbr title="CharlotteDunois\Yasmin\Models\User">User</abbr></a>|string $user, int $days = 0, string $reason = &#039;&#039;)
         </code>
@@ -1573,7 +1588,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_createChannel">
-        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L506">line 506</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L524">line 524</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>createChannel</strong>(array $options, string $reason = &#039;&#039;)
         </code>
@@ -1654,7 +1669,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_createEmoji">
-        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L555">line 555</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L573">line 573</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>createEmoji</strong>(string $file, string $name, array|<abbr title="CharlotteDunois\Collect\Collection">Collection</abbr> $roles = array(), string $reason = &#039;&#039;)
         </code>
@@ -1714,7 +1729,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_createRole">
-        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L605">line 605</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L623">line 623</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>createRole</strong>(array $options, string $reason = &#039;&#039;)
         </code>
@@ -1783,7 +1798,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_delete">
-        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L622">line 622</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L640">line 640</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>delete</strong>()
         </code>
@@ -1813,7 +1828,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_edit">
-        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L656">line 656</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L674">line 674</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>edit</strong>(array $options, string $reason = &#039;&#039;)
         </code>
@@ -1875,7 +1890,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_fetchAuditLog">
-        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L722">line 722</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L740">line 740</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>fetchAuditLog</strong>(array $options = array())
         </code>
@@ -1930,7 +1945,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_fetchBan">
-        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L741">line 741</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L759">line 759</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>fetchBan</strong>(<a href="../../../CharlotteDunois/Yasmin/Models/User.html"><abbr title="CharlotteDunois\Yasmin\Models\User">User</abbr></a>|string $user)
         </code>
@@ -1975,7 +1990,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_fetchBans">
-        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L761">line 761</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L779">line 779</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>fetchBans</strong>()
         </code>
@@ -2010,7 +2025,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_fetchInvites">
-        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L783">line 783</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L801">line 801</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>fetchInvites</strong>()
         </code>
@@ -2045,7 +2060,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_fetchMember">
-        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L804">line 804</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L822">line 822</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>fetchMember</strong>(string $userid)
         </code>
@@ -2090,7 +2105,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_fetchMembers">
-        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L823">line 823</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L841">line 841</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>fetchMembers</strong>(string $query = &#039;&#039;, int $limit = 0)
         </code>
@@ -2144,7 +2159,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_fetchPruneMembers">
-        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L899">line 899</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L917">line 917</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>fetchPruneMembers</strong>(int $days)
         </code>
@@ -2184,7 +2199,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_fetchVanityInvite">
-        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L912">line 912</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L930">line 930</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>fetchVanityInvite</strong>()
         </code>
@@ -2219,7 +2234,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_fetchVoiceRegions">
-        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L935">line 935</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L953">line 953</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>fetchVoiceRegions</strong>()
         </code>
@@ -2254,7 +2269,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_fetchWebhooks">
-        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L955">line 955</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L973">line 973</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>fetchWebhooks</strong>()
         </code>
@@ -2289,7 +2304,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getBannerURL">
-        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L977">line 977</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L995">line 995</a></div>
         <code>                    string|null
     <strong>getBannerURL</strong>(int|null $size = null, string $format = &#039;png&#039;)
         </code>
@@ -2343,7 +2358,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getIconURL">
-        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L996">line 996</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L1014">line 1014</a></div>
         <code>                    string|null
     <strong>getIconURL</strong>(int|null $size = null, string $format = &#039;&#039;)
         </code>
@@ -2397,7 +2412,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getNameAcronym">
-        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L1016">line 1016</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L1034">line 1034</a></div>
         <code>                    string
     <strong>getNameAcronym</strong>()
         </code>
@@ -2427,7 +2442,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getSplashURL">
-        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L1033">line 1033</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L1051">line 1051</a></div>
         <code>                    string|null
     <strong>getSplashURL</strong>(int|null $size = null, string $format = &#039;png&#039;)
         </code>
@@ -2472,7 +2487,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_leave">
-        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L1049">line 1049</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L1067">line 1067</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>leave</strong>()
         </code>
@@ -2502,7 +2517,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_pruneMembers">
-        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L1064">line 1064</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L1082">line 1082</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>pruneMembers</strong>(int $days, bool $withCount = false, string $reason = &#039;&#039;)
         </code>
@@ -2552,7 +2567,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setAFKChannel">
-        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L1078">line 1078</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L1096">line 1096</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>setAFKChannel</strong>(string|<a href="../../../CharlotteDunois/Yasmin/Models/VoiceChannel.html"><abbr title="CharlotteDunois\Yasmin\Models\VoiceChannel">VoiceChannel</abbr></a>|null $channel, string $reason = &#039;&#039;)
         </code>
@@ -2597,7 +2612,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setAFKTimeout">
-        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L1088">line 1088</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L1106">line 1106</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>setAFKTimeout</strong>(int|null $timeout, string $reason = &#039;&#039;)
         </code>
@@ -2642,7 +2657,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setChannelPositions">
-        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L1098">line 1098</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L1116">line 1116</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>setChannelPositions</strong>(array $channels, string $reason = &#039;&#039;)
         </code>
@@ -2687,7 +2702,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setRolePositions">
-        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L1122">line 1122</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L1140">line 1140</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>setRolePositions</strong>(array $roles, string $reason = &#039;&#039;)
         </code>
@@ -2732,7 +2747,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setExplicitContentFilter">
-        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L1146">line 1146</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L1164">line 1164</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>setExplicitContentFilter</strong>(int $filter, string $reason = &#039;&#039;)
         </code>
@@ -2777,7 +2792,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setIcon">
-        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L1156">line 1156</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L1174">line 1174</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>setIcon</strong>(string $icon, string $reason = &#039;&#039;)
         </code>
@@ -2822,7 +2837,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setName">
-        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L1166">line 1166</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L1184">line 1184</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>setName</strong>(string $name, string $reason = &#039;&#039;)
         </code>
@@ -2867,7 +2882,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setOwner">
-        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L1176">line 1176</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L1194">line 1194</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>setOwner</strong>(string|<a href="../../../CharlotteDunois/Yasmin/Models/GuildMember.html"><abbr title="CharlotteDunois\Yasmin\Models\GuildMember">GuildMember</abbr></a> $owner, string $reason = &#039;&#039;)
         </code>
@@ -2912,7 +2927,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setRegion">
-        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L1186">line 1186</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L1204">line 1204</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>setRegion</strong>(string|<a href="../../../CharlotteDunois/Yasmin/Models/VoiceRegion.html"><abbr title="CharlotteDunois\Yasmin\Models\VoiceRegion">VoiceRegion</abbr></a> $region, string $reason = &#039;&#039;)
         </code>
@@ -2957,7 +2972,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setSplash">
-        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L1196">line 1196</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L1214">line 1214</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>setSplash</strong>(string $splash, string $reason = &#039;&#039;)
         </code>
@@ -3002,7 +3017,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setSystemChannel">
-        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L1206">line 1206</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L1224">line 1224</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>setSystemChannel</strong>(string|<a href="../../../CharlotteDunois/Yasmin/Models/TextChannel.html"><abbr title="CharlotteDunois\Yasmin\Models\TextChannel">TextChannel</abbr></a>|null $channel, string $reason = &#039;&#039;)
         </code>
@@ -3047,7 +3062,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setVerificationLevel">
-        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L1216">line 1216</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L1234">line 1234</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>setVerificationLevel</strong>(int $level, string $reason = &#039;&#039;)
         </code>
@@ -3092,7 +3107,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_unban">
-        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L1226">line 1226</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L1244">line 1244</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>unban</strong>(<a href="../../../CharlotteDunois/Yasmin/Models/User.html"><abbr title="CharlotteDunois\Yasmin\Models\User">User</abbr></a>|string $user, string $reason = &#039;&#039;)
         </code>
@@ -3137,7 +3152,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method__addMember">
-        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L1242">line 1242</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L1260">line 1260</a></div>
         <code>                    <a href="../../../CharlotteDunois/Yasmin/Models/GuildMember.html"><abbr title="CharlotteDunois\Yasmin\Models\GuildMember">GuildMember</abbr></a>
     <strong>_addMember</strong>(array $member, bool $initial = false)
         </code>
@@ -3180,7 +3195,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method__removeMember">
-        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L1256">line 1256</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/Guild.php#L1274">line 1274</a></div>
         <code>                    <a href="../../../CharlotteDunois/Yasmin/Models/GuildMember.html"><abbr title="CharlotteDunois\Yasmin\Models\GuildMember">GuildMember</abbr></a>|null
     <strong>_removeMember</strong>(string $userid)
         </code>
