@@ -9,6 +9,8 @@
 
 namespace CharlotteDunois\Yasmin\Utils;
 
+use React\Http\Browser;
+
 /**
  * URL Helper methods.
  */
@@ -26,7 +28,7 @@ class URLHelpers {
     protected static $loop;
     
     /**
-     * @var \Clue\React\Buzz\Browser
+     * @var Browser
      */
     protected static $http;
     
@@ -55,7 +57,7 @@ class URLHelpers {
      * @return void
      * @throws \LogicException
      */
-    static function setHTTPClient(\Clue\React\Buzz\Browser $client) {
+    static function setHTTPClient(Browser $client) {
         if(static::$http !== null) {
             throw new \LogicException('Client has already been set');
         }
@@ -68,12 +70,12 @@ class URLHelpers {
      * @return void
      */
     protected static function internalSetClient() {
-        static::$http = new \Clue\React\Buzz\Browser(static::$loop);
+        static::$http = new Browser(static::$loop);
     }
     
     /**
      * Returns the client. This method may be changed at any time.
-     * @return \Clue\React\Buzz\Browser
+     * @return Browser
      */
     static function getHTTPClient() {
         if(!static::$http) {
@@ -100,7 +102,7 @@ class URLHelpers {
      *
      * @param \Psr\Http\Message\RequestInterface  $request
      * @param array|null                          $requestOptions
-     * @return \React\Promise\ExtendedPromiseInterface
+     * @return \React\Promise\PromiseInterface
      * @see \Psr\Http\Message\ResponseInterface
      */
     static function makeRequest(\Psr\Http\Message\RequestInterface $request, ?array $requestOptions = null) {
@@ -108,15 +110,11 @@ class URLHelpers {
         
         if(!empty($requestOptions)) {
             if(isset($requestOptions['http_errors'])) {
-                $client = $client->withOptions(array(
-                    'obeySuccessCode' => !empty($requestOptions['http_errors'])
-                ));
+                $client = $client->withRejectErrorResponse(!empty($requestOptions['http_errors']));
             }
             
             if(isset($requestOptions['timeout'])) {
-                $client = $client->withOptions(array(
-                    'timeout' => ((float) $requestOptions['timeout'])
-                ));
+                $client = $client->withTimeout((float) $requestOptions['timeout']);
             }
             
             try {
@@ -125,8 +123,8 @@ class URLHelpers {
                 return \React\Promise\reject($e);
             }
         }
-        
-        return $client->send($request);
+
+        return $client->request($request->getMethod(), $request->getUri(), $request->getHeaders(), $request->getBody());
     }
     
     /**

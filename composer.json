@@ -31,13 +31,13 @@
         "sylae/collection": "^0.2.0",
         "sylae/eventemitter": "^0.1.5",
         "sylae/validator": "^0.3.0",
-        "clue/buzz-react": "^2.6.0",
         "psr/http-message": "^1.0",
-        "ratchet/pawl": "^0.3.1",
+        "ratchet/pawl": "^0.4",
         "react/event-loop": "^1.0|^0.5|^0.4.3",
         "react/filesystem": "^0.1.1",
         "react/promise": "^2.7.0",
-        "ringcentral/psr7": "^1.2"
+        "ringcentral/psr7": "^1.2",
+        "react/http": "^1.6"
     },
     "suggest": {
         "charlottedunois/athena": "For Redis-backed ratelimit bucket",
