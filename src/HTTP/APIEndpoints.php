@@ -30,7 +30,9 @@ class APIEndpoints {
         'appicons' => 'app-icons/%s/%s.png',
         'appassets' => 'app-assets/%s/%s.png',
         'channelicons' => 'channel-icons/%s/%s.png',
-        'guildbanners' => 'banners/%s/%s.%s'
+        'guildbanners' => 'banners/%s/%s.%s',
+        'guildmemberavatars' => 'guilds/%s/users/%s/avatars/%s.%s',
+        'guildmemberbanners' => 'guilds/%s/users/%s/banners/%s.%s'
     );
     
     /**

@@ -14,6 +14,8 @@ namespace CharlotteDunois\Yasmin\Models;
  *
  * @property string                                                         $id               The ID of the member.
  * @property string|null                                                    $nickname         The nickname of the member, or null.
+ * @property string|null                                                    $avatar           The hash of the user's server avatar, or null.
+ * @property string|null                                                    $banner           The hash of the user's server banner, or null.
  * @property bool                                                           $deaf             Whether the member is server deafened.
  * @property bool                                                           $mute             Whether the member is server muted.
  * @property \CharlotteDunois\Yasmin\Models\Guild                           $guild            The guild this member belongs to.
@@ -50,6 +52,18 @@ class GuildMember extends ClientBase {
      * @var string|null
      */
     protected $nickname;
+
+    /**
+     * The hash of the user's server avatar, or null.
+     * @var string|null
+     */
+    protected $avatar;
+
+    /**
+     * The hash of the user's server banner, or null.
+     * @var string|null
+     */
+    protected $banner;
     
     /**
      * Whether the member is server deafened.
@@ -256,6 +270,74 @@ class GuildMember extends ClientBase {
                 $resolve($this);
             }, $reject);
         }));
+    }
+
+    /**
+     * Get the guild avatar URL.
+     * @param int|null  $size    Any powers of 2 (16-2048).
+     * @param string    $format  One of png, webp, jpg or gif (empty = default format).
+     * @return string|null
+     * @throws \InvalidArgumentException Thrown if $size is not a power of 2
+     */
+    function getGuildAvatarURL(?int $size = 1024, string $format = '') {
+        if(!\CharlotteDunois\Yasmin\Utils\ImageHelpers::isPowerOfTwo($size)) {
+            throw new \InvalidArgumentException('Invalid size "'.$size.'", expected any powers of 2');
+        }
+
+        if($this->avatar === null) {
+            return null;
+        }
+
+        if(empty($format)) {
+            $format = \CharlotteDunois\Yasmin\Utils\ImageHelpers::getImageExtension($this->avatar);
+        }
+
+        return \CharlotteDunois\Yasmin\HTTP\APIEndpoints::CDN['url'].\CharlotteDunois\Yasmin\HTTP\APIEndpoints::format(\CharlotteDunois\Yasmin\HTTP\APIEndpoints::CDN['guildmemberavatars'], $this->guild->id, $this->id, $this->avatar, $format).(!empty($size) ? '?size='.$size : '');
+    }
+
+    /**
+     * Get the URL of the displayed avatar.
+     * @param int|null  $size    Any powers of 2 (16-2048).
+     * @param string    $format  One of png, webp, jpg or gif (empty = default format).
+     * @return string
+     * @throws \InvalidArgumentException Thrown if $size is not a power of 2
+     */
+    function getDisplayAvatarURL(?int $size = 1024, string $format = '') {
+        return ($this->avatar ? $this->getGuildAvatarURL($size, $format) : $this->user->getDisplayAvatarURL($size));
+    }
+
+    /**
+     * Get the guild banner URL. Currently not exposed to bots.
+     * @param int|null  $size    Any powers of 2 (16-2048).
+     * @param string    $format  One of png, webp, jpg or gif (empty = default format).
+     * @return string|null
+     * @throws \InvalidArgumentException Thrown if $size is not a power of 2
+     */
+    function getGuildBannerURL(?int $size = 1024, string $format = '') {
+        if(!\CharlotteDunois\Yasmin\Utils\ImageHelpers::isPowerOfTwo($size)) {
+            throw new \InvalidArgumentException('Invalid size "'.$size.'", expected any powers of 2');
+        }
+
+        if($this->avatar === null) {
+            return null;
+        }
+
+        if(empty($format)) {
+            $format = \CharlotteDunois\Yasmin\Utils\ImageHelpers::getImageExtension($this->avatar);
+        }
+
+        return \CharlotteDunois\Yasmin\HTTP\APIEndpoints::CDN['url'].\CharlotteDunois\Yasmin\HTTP\APIEndpoints::format(\CharlotteDunois\Yasmin\HTTP\APIEndpoints::CDN['guildmemberbanners'], $this->guild->id, $this->id, $this->banner, $format).(!empty($size) ? '?size='.$size : '');
+    }
+
+    /**
+     * Get the URL of the displayed banner. Currently not exposed to bots.
+     * @param int|null  $size    Any powers of 2 (16-2048).
+     * @param string    $format  One of png, webp, jpg or gif (empty = default format).
+     * @return string|null
+     * @throws \InvalidArgumentException Thrown if $size is not a power of 2
+     */
+    function getDisplayBannerURL(?int $size = 1024, string $format = '') {
+        return ($this->avatar ? $this->getGuildBannerURL($size, $format) : $this->user->getBannerURL($size));
     }
     
     /**
@@ -541,6 +623,12 @@ class GuildMember extends ClientBase {
             $this->nickname = null;
         } elseif($data['nick'] !== $this->nickname) {
             $this->nickname = $data['nick'];
+        }
+
+        if(empty($data['avatar'])) {
+            $this->avatar = null;
+        } elseif($data['avatar'] !== $this->avatar) {
+            $this->avatar = $data['avatar'];
         }
         
         $this->deaf = (bool) ($data['deaf'] ?? false);
