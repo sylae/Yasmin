@@ -26,6 +26,7 @@ class APIEndpoints {
         'splashes' => 'splashes/%s/%s.%s',
         'defaultavatars' => 'embed/avatars/%s.%s',
         'avatars' => 'avatars/%s/%s.%s',
+        'banners' => 'banners/%s/%s.%s',
         'appicons' => 'app-icons/%s/%s.png',
         'appassets' => 'app-assets/%s/%s.png',
         'channelicons' => 'channel-icons/%s/%s.png',

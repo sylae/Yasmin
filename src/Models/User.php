@@ -17,6 +17,7 @@ namespace CharlotteDunois\Yasmin\Models;
  * @property string                                               $discriminator      The discriminator of this user.
  * @property bool                                                 $bot                Is the user a bot? Or are you a bot?
  * @property string|null                                          $avatar             The hash of the user's avatar, or null.
+ * @property string|null                                          $banner             The hash of the user's banner, or null.
  * @property string                                               $email              An email address or maybe nothing at all. More likely to be nothing at all.
  * @property bool|null                                            $mfaEnabled         Whether the user has two factor enabled on their account, or null if no information provided.
  * @property bool|null                                            $verified           Whether the email on this account has been verified, or null if no information provided.
@@ -50,12 +51,18 @@ class User extends ClientBase {
      * @var bool
      */
     protected $bot;
-    
+
     /**
      * The hash of the user's avatar, or null.
      * @var string|null
      */
     protected $avatar;
+
+    /**
+     * The hash of the user's banner, or null.
+     * @var string|null
+     */
+    protected $banner;
     
     /**
      * An email address or maybe nothing at all. More likely to be nothing at all.
@@ -200,7 +207,7 @@ class User extends ClientBase {
         
         return \CharlotteDunois\Yasmin\HTTP\APIEndpoints::CDN['url'].\CharlotteDunois\Yasmin\HTTP\APIEndpoints::format(\CharlotteDunois\Yasmin\HTTP\APIEndpoints::CDN['defaultavatars'], ($this->discriminator % 5), 'png').(!empty($size) ? '?size='.$size : '');
     }
-    
+
     /**
      * Get the avatar URL.
      * @param int|null  $size    Any powers of 2 (16-2048).
@@ -212,16 +219,39 @@ class User extends ClientBase {
         if(!\CharlotteDunois\Yasmin\Utils\ImageHelpers::isPowerOfTwo($size)) {
             throw new \InvalidArgumentException('Invalid size "'.$size.'", expected any powers of 2');
         }
-        
+
         if($this->avatar === null) {
             return null;
         }
-        
+
         if(empty($format)) {
             $format = \CharlotteDunois\Yasmin\Utils\ImageHelpers::getImageExtension($this->avatar);
         }
-        
+
         return \CharlotteDunois\Yasmin\HTTP\APIEndpoints::CDN['url'].\CharlotteDunois\Yasmin\HTTP\APIEndpoints::format(\CharlotteDunois\Yasmin\HTTP\APIEndpoints::CDN['avatars'], $this->id, $this->avatar, $format).(!empty($size) ? '?size='.$size : '');
+    }
+
+    /**
+     * Get the banner URL. Note that discord does not currently expose this to bots 🙃
+     * @param int|null  $size    Any powers of 2 (16-2048).
+     * @param string    $format  One of png, webp, jpg or gif (empty = default format).
+     * @return string|null
+     * @throws \InvalidArgumentException Thrown if $size is not a power of 2
+     */
+    function getBannerURL(?int $size = 1024, string $format = '') {
+        if(!\CharlotteDunois\Yasmin\Utils\ImageHelpers::isPowerOfTwo($size)) {
+            throw new \InvalidArgumentException('Invalid size "'.$size.'", expected any powers of 2');
+        }
+
+        if($this->banner === null) {
+            return null;
+        }
+
+        if(empty($format)) {
+            $format = \CharlotteDunois\Yasmin\Utils\ImageHelpers::getImageExtension($this->banner);
+        }
+
+        return \CharlotteDunois\Yasmin\HTTP\APIEndpoints::CDN['url'].\CharlotteDunois\Yasmin\HTTP\APIEndpoints::format(\CharlotteDunois\Yasmin\HTTP\APIEndpoints::CDN['banners'], $this->id, $this->banner, $format).(!empty($size) ? '?size='.$size : '');
     }
     
     /**
@@ -293,6 +323,7 @@ class User extends ClientBase {
         $this->discriminator = (string) ($user['discriminator'] ?? '0000');
         $this->bot = (!empty($user['bot']));
         $this->avatar = $user['avatar'] ?? null;
+        $this->banner = $user['banner'] ?? null;
         $this->email = (string) ($user['email'] ?? '');
         $this->mfaEnabled = (isset($user['mfa_enabled']) ? !empty($user['mfa_enabled']) : null);
         $this->verified = (isset($user['verified']) ? !empty($user['verified']) : null);
