@@ -31,6 +31,7 @@
                                             <option value="../../../../v0.5.0/index.html" data-version="v0.5.0">v0.5.0</option>
                                             <option value="../../../../v0.5.1/index.html" data-version="v0.5.1">v0.5.1</option>
                                             <option value="../../../../v0.6.0/index.html" data-version="v0.6.0">v0.6.0</option>
+                                            <option value="../../../../v0.7.1/index.html" data-version="v0.7.1">v0.7.1</option>
                                             <option value="../../../../master/index.html" data-version="master">master branch</option>
                                     </select>
             </form>
@@ -126,7 +127,7 @@
             </tr>
                     <tr>
                 <td class="type" id="property_http">
-                    static                    protected                                        <abbr title="Clue\React\Buzz\Browser">Browser</abbr>
+                    static                    protected                                        <abbr title="CharlotteDunois\Yasmin\Utils\Browser">Browser</abbr>
                 </td>
                 <td>$http</td>
                 <td class="last"></td>
@@ -153,7 +154,7 @@
                     static&nbsp;void
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_setHTTPClient">setHTTPClient</a>(<abbr title="Clue\React\Buzz\Browser">Browser</abbr> $client)
+                    <a href="#method_setHTTPClient">setHTTPClient</a>(<abbr title="React\Http\Browser">Browser</abbr> $client)
         
                                             <p>Set the HTTP client used in Yasmin (and in this utility).</p>                </div>
                 <div class="col-md-2"></div>
@@ -170,7 +171,7 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    static&nbsp;<abbr title="Clue\React\Buzz\Browser">Browser</abbr>
+                    static&nbsp;<abbr title="CharlotteDunois\Yasmin\Utils\Browser">Browser</abbr>
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_getHTTPClient">getHTTPClient</a>()
@@ -180,7 +181,7 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    static&nbsp;<abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
+                    static&nbsp;<abbr title="React\Promise\PromiseInterface">PromiseInterface</abbr>
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_makeRequest">makeRequest</a>(<abbr title="Psr\Http\Message\RequestInterface">RequestInterface</abbr> $request, array|null $requestOptions = null)
@@ -216,7 +217,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method_setLoop">
-        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Utils/URLHelpers.php#L39">line 39</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Utils/URLHelpers.php#L41">line 41</a></div>
         <code>        static            void
     <strong>setLoop</strong>(<abbr title="React\EventLoop\LoopInterface">LoopInterface</abbr> $loop)
         </code>
@@ -256,9 +257,9 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setHTTPClient">
-        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Utils/URLHelpers.php#L58">line 58</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Utils/URLHelpers.php#L60">line 60</a></div>
         <code>        static            void
-    <strong>setHTTPClient</strong>(<abbr title="Clue\React\Buzz\Browser">Browser</abbr> $client)
+    <strong>setHTTPClient</strong>(<abbr title="React\Http\Browser">Browser</abbr> $client)
         </code>
     </h3>
     <div class="details">
@@ -277,7 +278,7 @@ before the utilities get initialized by the Client!</p>
 
                     <table class="table table-condensed">
                     <tr>
-                <td><abbr title="Clue\React\Buzz\Browser">Browser</abbr></td>
+                <td><abbr title="React\Http\Browser">Browser</abbr></td>
                 <td>$client</td>
                 <td></td>
             </tr>
@@ -310,7 +311,7 @@ before the utilities get initialized by the Client!</p>
             </div>
                     <div class="method-item">
                     <h3 id="method_internalSetClient">
-        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Utils/URLHelpers.php#L70">line 70</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Utils/URLHelpers.php#L72">line 72</a></div>
         <code>        static    protected        void
     <strong>internalSetClient</strong>()
         </code>
@@ -340,8 +341,8 @@ before the utilities get initialized by the Client!</p>
             </div>
                     <div class="method-item">
                     <h3 id="method_getHTTPClient">
-        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Utils/URLHelpers.php#L78">line 78</a></div>
-        <code>        static            <abbr title="Clue\React\Buzz\Browser">Browser</abbr>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Utils/URLHelpers.php#L80">line 80</a></div>
+        <code>        static            <abbr title="CharlotteDunois\Yasmin\Utils\Browser">Browser</abbr>
     <strong>getHTTPClient</strong>()
         </code>
     </h3>
@@ -357,7 +358,7 @@ before the utilities get initialized by the Client!</p>
 
                     <table class="table table-condensed">
         <tr>
-            <td><abbr title="Clue\React\Buzz\Browser">Browser</abbr></td>
+            <td><abbr title="CharlotteDunois\Yasmin\Utils\Browser">Browser</abbr></td>
             <td></td>
         </tr>
     </table>
@@ -370,8 +371,8 @@ before the utilities get initialized by the Client!</p>
             </div>
                     <div class="method-item">
                     <h3 id="method_makeRequest">
-        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Utils/URLHelpers.php#L106">line 106</a></div>
-        <code>        static            <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Utils/URLHelpers.php#L108">line 108</a></div>
+        <code>        static            <abbr title="React\Promise\PromiseInterface">PromiseInterface</abbr>
     <strong>makeRequest</strong>(<abbr title="Psr\Http\Message\RequestInterface">RequestInterface</abbr> $request, array|null $requestOptions = null)
         </code>
     </h3>
@@ -413,7 +414,7 @@ before the utilities get initialized by the Client!</p>
 
                     <table class="table table-condensed">
         <tr>
-            <td><abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr></td>
+            <td><abbr title="React\Promise\PromiseInterface">PromiseInterface</abbr></td>
             <td></td>
         </tr>
     </table>
@@ -423,6 +424,12 @@ before the utilities get initialized by the Client!</p>
                             <h4>See also</h4>
 
                     <table class="table table-condensed">
+                    <tr>
+                <td>
+                                            <abbr title="Psr\Http\Message\ResponseInterface">ResponseInterface</abbr>
+                                    </td>
+                <td></td>
+            </tr>
             </table>
 
                     </div>
@@ -431,7 +438,7 @@ before the utilities get initialized by the Client!</p>
             </div>
                     <div class="method-item">
                     <h3 id="method_resolveURLToData">
-        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Utils/URLHelpers.php#L138">line 138</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Utils/URLHelpers.php#L136">line 136</a></div>
         <code>        static            <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>resolveURLToData</strong>(string $url, array|null $requestHeaders = null)
         </code>
@@ -476,7 +483,7 @@ before the utilities get initialized by the Client!</p>
             </div>
                     <div class="method-item">
                     <h3 id="method_applyRequestOptions">
-        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Utils/URLHelpers.php#L179">line 179</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Utils/URLHelpers.php#L177">line 177</a></div>
         <code>        static            <abbr title="Psr\Http\Message\RequestInterface">RequestInterface</abbr>
     <strong>applyRequestOptions</strong>(<abbr title="Psr\Http\Message\RequestInterface">RequestInterface</abbr> $request, array $requestOptions)
         </code>

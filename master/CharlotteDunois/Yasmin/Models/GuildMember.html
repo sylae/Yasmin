@@ -31,6 +31,7 @@
                                             <option value="../../../../v0.5.0/index.html" data-version="v0.5.0">v0.5.0</option>
                                             <option value="../../../../v0.5.1/index.html" data-version="v0.5.1">v0.5.1</option>
                                             <option value="../../../../v0.6.0/index.html" data-version="v0.6.0">v0.6.0</option>
+                                            <option value="../../../../v0.7.1/index.html" data-version="v0.7.1">v0.7.1</option>
                                             <option value="../../../../master/index.html" data-version="master">master branch</option>
                                     </select>
             </form>
@@ -142,6 +143,22 @@
                 </td>
                 <td>$nickname</td>
                 <td class="last">The nickname of the member, or null.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_avatar">
+                                                                                string|null
+                </td>
+                <td>$avatar</td>
+                <td class="last">The hash of the user's server avatar, or null.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_banner">
+                                                                                string|null
+                </td>
+                <td>$banner</td>
+                <td class="last">The hash of the user's server banner, or null.</td>
                 <td></td>
             </tr>
                     <tr>
@@ -443,6 +460,46 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getGuildAvatarURL">getGuildAvatarURL</a>(int|null $size = 1024, string $format = &#039;&#039;)
+        
+                                            <p>Get the guild avatar URL.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getDisplayAvatarURL">getDisplayAvatarURL</a>(int|null $size = 1024, string $format = &#039;&#039;)
+        
+                                            <p>Get the URL of the displayed avatar.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getGuildBannerURL">getGuildBannerURL</a>(int|null $size = 1024, string $format = &#039;&#039;)
+        
+                                            <p>Get the guild banner URL. Currently not exposed to bots.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getDisplayBannerURL">getDisplayBannerURL</a>(int|null $size = 1024, string $format = &#039;&#039;)
+        
+                                            <p>Get the URL of the displayed banner. Currently not exposed to bots.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     <a href="../../../CharlotteDunois/Yasmin/Models/Role.html"><abbr title="CharlotteDunois\Yasmin\Models\Role">Role</abbr></a>
                 </div>
                 <div class="col-md-8 type">
@@ -640,7 +697,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/GuildMember.php#L111">line 111</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/GuildMember.php#L125">line 125</a></div>
         <code>                    
     <strong>__construct</strong>(<a href="../../../CharlotteDunois/Yasmin/Client.html"><abbr title="CharlotteDunois\Yasmin\Client">Client</abbr></a> $client, <a href="../../../CharlotteDunois/Yasmin/Models/Guild.html"><abbr title="CharlotteDunois\Yasmin\Models\Guild">Guild</abbr></a> $guild, array $member)
         </code>
@@ -747,7 +804,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method___get">
-        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/GuildMember.php#L130">line 130</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/GuildMember.php#L144">line 144</a></div>
         <code>                    mixed
     <strong>__get</strong>(string $name)
         </code>
@@ -940,7 +997,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method__patch">
-        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/GuildMember.php#L539">line 539</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/GuildMember.php#L621">line 621</a></div>
         <code>                    void
     <strong>_patch</strong>(array $data)
         </code>
@@ -1072,7 +1129,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_addRole">
-        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/GuildMember.php#L174">line 174</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/GuildMember.php#L188">line 188</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>addRole</strong>(<a href="../../../CharlotteDunois/Yasmin/Models/Role.html"><abbr title="CharlotteDunois\Yasmin\Models\Role">Role</abbr></a>|string $role, string $reason = &#039;&#039;)
         </code>
@@ -1117,7 +1174,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_addRoles">
-        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/GuildMember.php#L192">line 192</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/GuildMember.php#L206">line 206</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>addRoles</strong>(array|<abbr title="CharlotteDunois\Collect\Collection">Collection</abbr> $roles, string $reason = &#039;&#039;)
         </code>
@@ -1162,7 +1219,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_ban">
-        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/GuildMember.php#L207">line 207</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/GuildMember.php#L221">line 221</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>ban</strong>(int $days = 0, string $reason = &#039;&#039;)
         </code>
@@ -1207,7 +1264,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_edit">
-        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/GuildMember.php#L231">line 231</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/GuildMember.php#L245">line 245</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>edit</strong>(array $options, string $reason = &#039;&#039;)
         </code>
@@ -1270,8 +1327,224 @@
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_getGuildAvatarURL">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/GuildMember.php#L282">line 282</a></div>
+        <code>                    string|null
+    <strong>getGuildAvatarURL</strong>(int|null $size = 1024, string $format = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the guild avatar URL.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int|null</td>
+                <td>$size</td>
+                <td>Any powers of 2 (16-2048).</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$format</td>
+                <td>One of png, webp, jpg or gif (empty = default format).</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/InvalidArgumentException">InvalidArgumentException</a></td>
+                <td>Thrown if $size is not a power of 2</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDisplayAvatarURL">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/GuildMember.php#L305">line 305</a></div>
+        <code>                    string
+    <strong>getDisplayAvatarURL</strong>(int|null $size = 1024, string $format = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the URL of the displayed avatar.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int|null</td>
+                <td>$size</td>
+                <td>Any powers of 2 (16-2048).</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$format</td>
+                <td>One of png, webp, jpg or gif (empty = default format).</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/InvalidArgumentException">InvalidArgumentException</a></td>
+                <td>Thrown if $size is not a power of 2</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getGuildBannerURL">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/GuildMember.php#L316">line 316</a></div>
+        <code>                    string|null
+    <strong>getGuildBannerURL</strong>(int|null $size = 1024, string $format = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the guild banner URL. Currently not exposed to bots.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int|null</td>
+                <td>$size</td>
+                <td>Any powers of 2 (16-2048).</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$format</td>
+                <td>One of png, webp, jpg or gif (empty = default format).</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/InvalidArgumentException">InvalidArgumentException</a></td>
+                <td>Thrown if $size is not a power of 2</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDisplayBannerURL">
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/GuildMember.php#L339">line 339</a></div>
+        <code>                    string|null
+    <strong>getDisplayBannerURL</strong>(int|null $size = 1024, string $format = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the URL of the displayed banner. Currently not exposed to bots.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int|null</td>
+                <td>$size</td>
+                <td>Any powers of 2 (16-2048).</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$format</td>
+                <td>One of png, webp, jpg or gif (empty = default format).</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" href="http://php.net/InvalidArgumentException">InvalidArgumentException</a></td>
+                <td>Thrown if $size is not a power of 2</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_getColorRole">
-        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/GuildMember.php#L265">line 265</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/GuildMember.php#L347">line 347</a></div>
         <code>                    <a href="../../../CharlotteDunois/Yasmin/Models/Role.html"><abbr title="CharlotteDunois\Yasmin\Models\Role">Role</abbr></a>
     <strong>getColorRole</strong>()
         </code>
@@ -1301,7 +1574,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getDisplayColor">
-        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/GuildMember.php#L287">line 287</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/GuildMember.php#L369">line 369</a></div>
         <code>                    int|null
     <strong>getDisplayColor</strong>()
         </code>
@@ -1331,7 +1604,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getDisplayHexColor">
-        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/GuildMember.php#L300">line 300</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/GuildMember.php#L382">line 382</a></div>
         <code>                    string|null
     <strong>getDisplayHexColor</strong>()
         </code>
@@ -1361,7 +1634,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getHighestRole">
-        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/GuildMember.php#L313">line 313</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/GuildMember.php#L395">line 395</a></div>
         <code>                    <a href="../../../CharlotteDunois/Yasmin/Models/Role.html"><abbr title="CharlotteDunois\Yasmin\Models\Role">Role</abbr></a>
     <strong>getHighestRole</strong>()
         </code>
@@ -1391,7 +1664,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getHoistRole">
-        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/GuildMember.php#L327">line 327</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/GuildMember.php#L409">line 409</a></div>
         <code>                    <a href="../../../CharlotteDunois/Yasmin/Models/Role.html"><abbr title="CharlotteDunois\Yasmin\Models\Role">Role</abbr></a>|null
     <strong>getHoistRole</strong>()
         </code>
@@ -1421,7 +1694,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_isBannable">
-        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/GuildMember.php#L349">line 349</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/GuildMember.php#L431">line 431</a></div>
         <code>                    bool
     <strong>isBannable</strong>()
         </code>
@@ -1451,7 +1724,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_isKickable">
-        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/GuildMember.php#L366">line 366</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/GuildMember.php#L448">line 448</a></div>
         <code>                    bool
     <strong>isKickable</strong>()
         </code>
@@ -1481,7 +1754,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_kick">
-        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/GuildMember.php#L384">line 384</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/GuildMember.php#L466">line 466</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>kick</strong>(string $reason = &#039;&#039;)
         </code>
@@ -1521,7 +1794,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_permissionsIn">
-        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/GuildMember.php#L398">line 398</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/GuildMember.php#L480">line 480</a></div>
         <code>                    <a href="../../../CharlotteDunois/Yasmin/Models/Permissions.html"><abbr title="CharlotteDunois\Yasmin\Models\Permissions">Permissions</abbr></a>
     <strong>permissionsIn</strong>(<a href="../../../CharlotteDunois/Yasmin/Interfaces/GuildChannelInterface.html"><abbr title="CharlotteDunois\Yasmin\Interfaces\GuildChannelInterface">GuildChannelInterface</abbr></a>|string $channel)
         </code>
@@ -1570,7 +1843,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_removeRole">
-        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/GuildMember.php#L413">line 413</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/GuildMember.php#L495">line 495</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>removeRole</strong>(<a href="../../../CharlotteDunois/Yasmin/Models/Role.html"><abbr title="CharlotteDunois\Yasmin\Models\Role">Role</abbr></a>|string $role, string $reason = &#039;&#039;)
         </code>
@@ -1615,7 +1888,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_removeRoles">
-        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/GuildMember.php#L431">line 431</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/GuildMember.php#L513">line 513</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>removeRoles</strong>(<abbr title="CharlotteDunois\Collect\Collection">Collection</abbr>|array $roles, string $reason = &#039;&#039;)
         </code>
@@ -1660,7 +1933,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setDeaf">
-        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/GuildMember.php#L449">line 449</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/GuildMember.php#L531">line 531</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>setDeaf</strong>(bool $deaf, string $reason = &#039;&#039;)
         </code>
@@ -1705,7 +1978,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setMute">
-        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/GuildMember.php#L459">line 459</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/GuildMember.php#L541">line 541</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>setMute</strong>(bool $mute, string $reason = &#039;&#039;)
         </code>
@@ -1750,7 +2023,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setNickname">
-        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/GuildMember.php#L469">line 469</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/GuildMember.php#L551">line 551</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>setNickname</strong>(string $nickname, string $reason = &#039;&#039;)
         </code>
@@ -1795,7 +2068,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setRoles">
-        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/GuildMember.php#L487">line 487</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/GuildMember.php#L569">line 569</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>setRoles</strong>(<abbr title="CharlotteDunois\Collect\Collection">Collection</abbr>|<abbr title="CharlotteDunois\Yasmin\Models\array<\CharlotteDunois\Yasmin\Models\Role>">Role></abbr> $roles, string $reason = &#039;&#039;)
         </code>
@@ -1840,7 +2113,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setVoiceChannel">
-        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/GuildMember.php#L500">line 500</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/GuildMember.php#L582">line 582</a></div>
         <code>                    <abbr title="React\Promise\ExtendedPromiseInterface">ExtendedPromiseInterface</abbr>
     <strong>setVoiceChannel</strong>(<a href="../../../CharlotteDunois/Yasmin/Models/VoiceChannel.html"><abbr title="CharlotteDunois\Yasmin\Models\VoiceChannel">VoiceChannel</abbr></a>|string|null $channel, string $reason = &#039;&#039;)
         </code>
@@ -1895,7 +2168,7 @@ then the member will be disconnected.</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method___clone">
-        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/GuildMember.php#L509">line 509</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/GuildMember.php#L591">line 591</a></div>
         <code>                    void
     <strong>__clone</strong>()
         </code>
@@ -1925,7 +2198,7 @@ then the member will be disconnected.</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method___toString">
-        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/GuildMember.php#L517">line 517</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/GuildMember.php#L599">line 599</a></div>
         <code>                    string
     <strong>__toString</strong>()
         </code>
@@ -1955,7 +2228,7 @@ then the member will be disconnected.</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method__setVoiceState">
-        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/GuildMember.php#L525">line 525</a></div>
+        <div class="location">at         <a href="https://github.com/sylae/yasmin/blob/master/src/Models/GuildMember.php#L607">line 607</a></div>
         <code>                    void
     <strong>_setVoiceState</strong>(array $voice)
         </code>
