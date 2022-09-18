@@ -26,6 +26,7 @@ class ChannelStorage extends Storage implements \CharlotteDunois\Yasmin\Interfac
         4 => 'category',
         5 => 'news',
         6 => 'store',
+        15 => 'forum',
 
         'text' => 0,
         'dm' => 1,
@@ -33,7 +34,8 @@ class ChannelStorage extends Storage implements \CharlotteDunois\Yasmin\Interfac
         'group' => 3,
         'category' => 4,
         'news' => 5,
-        'store' => 6
+        'store' => 6,
+        'forum' => 15,
     );
 
     /**
@@ -188,6 +190,13 @@ class ChannelStorage extends Storage implements \CharlotteDunois\Yasmin\Interfac
 
                 $channel = new \CharlotteDunois\Yasmin\Models\GuildStoreChannel($this->client, $guild, $data);
                 break;
+            case 15: // store
+                if ($guild === null) {
+                    throw new \CharlotteDunois\Yasmin\DiscordException('Unknown guild for guild channel');
+                }
+
+                $channel = new \CharlotteDunois\Yasmin\Models\GuildForumChannel($this->client, $guild, $data);
+                break;
         }
 
         $this->set($channel->id, $channel);
@@ -217,6 +226,8 @@ class ChannelStorage extends Storage implements \CharlotteDunois\Yasmin\Interfac
             return self::CHANNEL_TYPES['news'];
         } elseif($channel instanceof \CharlotteDunois\Yasmin\Interfaces\GuildStoreChannelInterface) {
             return self::CHANNEL_TYPES['store'];
+        } elseif($channel instanceof GuildForumChannel) { // todo: make interface
+            return self::CHANNEL_TYPES['forum'];
         }
 
         return self::CHANNEL_TYPES['text'];
